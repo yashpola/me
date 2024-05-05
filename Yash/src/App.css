@@ -1,0 +1,191 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  font-family: "Special Elite";
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  /* Position in page */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  /* Text */
+  color: brown;
+  text-align: center;
+
+  /* Background */
+  background-color: wheat;
+}
+
+.navbar-body {
+  /* Tabs display */
+  display: inline-flex;
+  justify-content: center;
+  align-content: space-between;
+  text-align: center;
+
+  /* Horizontal spacer */
+  border-bottom: 5px solid brown;
+  width: 100vw;
+}
+
+.nav-item {
+  /* Spacing */
+  flex-grow: 0.15;
+  margin: 5px;
+
+  /* UI */
+  cursor: pointer;
+}
+
+.intro-section {
+  /* Text */
+  text-align: left;
+  color: black;
+
+  /* Display */
+  margin-left: 2%;
+}
+
+.blog-page-links {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  font-family: inherit;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.movie-tv-nav-buttons {
+  background-color: black;
+}
+
+/* Small devices (phones) */
+
+@media only screen and (max-width: 600px) {
+  .navbar-heading {
+    font-size: 30px;
+  }
+  .nav-item {
+    font-size: 10px;
+  }
+
+  .intro-section {
+    margin-top: 30%;
+  }
+  .intro-section-heading {
+    font-size: 30px;
+  }
+
+  .blog-page-card {
+    font-size: 20px;
+  }
+
+  .blog-page-links {
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (landscape tablets, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .navbar-heading {
+    font-size: 50px;
+  }
+  .nav-item {
+    font-size: 20px;
+  }
+
+  .intro-section-heading {
+    font-size: 40px;
+  }
+
+  .blog-page-card {
+    font-size: 30px;
+  }
+
+  .blog-page-links {
+    font-size: 30px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbar-heading {
+    font-size: 60px;
+  }
+  .nav-item {
+    font-size: 30px;
+  }
+
+  .intro-section {
+    margin-top: 20%;
+  }
+  .intro-section-heading {
+    font-size: 40px;
+  }
+
+  .blog-page-card {
+    font-size: 40px;
+  }
+
+  .blog-page-links {
+    font-size: 40px;
+  }
+}
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
