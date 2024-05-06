@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
-import { CatFactResponse, FetchFactFunction } from "./AboutTyoes";
+import { TheVoid } from "../../GlobalCustomTypes";
+import { CatFactResponse } from "./LocalAboutCustomTypes";
 
 export default function CatFact() {
   const [fact, setFact] = useState("Loading...");
 
-  const fetchFact: FetchFactFunction = useCallback(() => {
+  const fetchFact: TheVoid = useCallback(() => {
     fetch("https://catfact.ninja/fact")
       .then((res) => res.json())
       .then((data: CatFactResponse) => setFact(data.fact))

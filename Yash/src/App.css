@@ -58,20 +58,27 @@ a {
 
   /* Display */
   margin-left: 2%;
+  margin-bottom: 10%;
 }
 
-.blog-page-links {
-  background-color: transparent;
-  border: none;
-  font-size: 30px;
-  font-family: inherit;
+.learning-section {
+  padding-top: 200px;
+  margin-left: 100px;
+}
+
+.site-button {
+  background-color: wheat;
+
+  color: brown;
+
+  border-radius: 200px;
+
   cursor: pointer;
-  color: blue;
-  text-decoration: underline;
 }
 
-.movie-tv-nav-buttons {
-  background-color: black;
+.add-post-form {
+  background-color: wheat;
+  padding: 5px;
 }
 
 /* Small devices (phones) */
@@ -81,22 +88,14 @@ a {
     font-size: 30px;
   }
   .nav-item {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .intro-section {
-    margin-top: 30%;
+    margin-top: 25%;
   }
   .intro-section-heading {
     font-size: 30px;
-  }
-
-  .blog-page-card {
-    font-size: 20px;
-  }
-
-  .blog-page-links {
-    font-size: 20px;
   }
 }
 
@@ -106,19 +105,14 @@ a {
     font-size: 50px;
   }
   .nav-item {
-    font-size: 20px;
+    font-size: 25px;
   }
 
+  .intro-section {
+    margin-top: 20%;
+  }
   .intro-section-heading {
     font-size: 40px;
-  }
-
-  .blog-page-card {
-    font-size: 30px;
-  }
-
-  .blog-page-links {
-    font-size: 30px;
   }
 }
 
@@ -128,21 +122,13 @@ a {
     font-size: 60px;
   }
   .nav-item {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .intro-section {
     margin-top: 20%;
   }
   .intro-section-heading {
-    font-size: 40px;
-  }
-
-  .blog-page-card {
-    font-size: 40px;
-  }
-
-  .blog-page-links {
     font-size: 40px;
   }
 }

@@ -1,5 +1,6 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import AboutPage from "../About/AboutPage";
+import LearningsPage from "../Learnings/LearningsPage";
 
 export default function NavBar() {
   return (
@@ -20,7 +21,7 @@ export default function NavBar() {
           </div>
           <div className="nav-item">
             <NavLink
-              to="/blog"
+              to="/learnings"
               style={({ isActive }) => ({
                 textDecoration: isActive ? "underline" : "none",
                 color: isActive ? "white" : "brown",
@@ -55,6 +56,7 @@ export default function NavBar() {
       </div>
       <Routes>
         <Route path="/" element={<AboutPage />} />
+        <Route path="/learnings" element={<LearningsPage />} />
         {/* <Route exact path="/blog" element={<DefaultBlogPage />} />
         <Route exact path="/portfolio" element={<PortfolioPage />} />
         <Route

@@ -1,5 +1,4 @@
 import IntroSection from "./IntroSection";
-import CatFact from "./CatFact";
 
 export default function AboutPage() {
   return (

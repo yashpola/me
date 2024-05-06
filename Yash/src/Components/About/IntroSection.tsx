@@ -46,7 +46,7 @@ export default function IntroSection() {
         <li>Effective Communication for Computing Professionals</li>
       </ul>
       <p>
-        <u>Find me at these places:</u>
+        <u>Find me at these links:</u>
       </p>
       <a
         href="https://www.linkedin.com/in/yashwit-polapragada-7a507923a/"
