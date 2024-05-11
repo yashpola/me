@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
-import NavBar from "./Components/Navigation/NavBar";
+import NavBar from "./components/navigation/NavBar";
 
 function App() {
   return (

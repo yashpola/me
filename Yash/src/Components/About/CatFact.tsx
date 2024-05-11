@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
+
+import { CatFactResponse } from "./AboutCustomTypes";
 import { TheVoid } from "../../GlobalCustomTypes";
-import { CatFactResponse } from "./LocalAboutCustomTypes";
 
 export default function CatFact() {
-  const [fact, setFact] = useState("Loading...");
+  const [fact, setFact] = useState<string>("Loading...");
 
   const fetchFact: TheVoid = useCallback(() => {
     fetch("https://catfact.ninja/fact")
@@ -18,7 +19,7 @@ export default function CatFact() {
 
   return (
     <div>
-      <p style={{ color: "blue" }}>{fact}</p>
+      <p style={{ color: "brown" }}>{fact}</p>
     </div>
   );
 }

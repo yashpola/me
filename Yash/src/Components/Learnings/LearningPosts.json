@@ -1,0 +1,18 @@
+{
+  "Leetcode": [
+    {
+      "title": "Maximise Happiness of Selected Children",
+      "subtitle": "Leetcode 3075",
+      "body": [
+        "This problem is a typical candidate for a greedy strategy.",
+        "First recognise that for any optimal solution that maximises the sum of k number of children's happiness,",
+        "subtracting any one of the children's happiness will necessarily give us the optimal solution for k - 1 children's happiness.",
+        "In a bottom-up sense, this simply means that in every round from 1 to k, we are reliably choosing a child that will maximise our final happiness in the end.",
+        "Second, realise that in any optimal solution over 1 to k selections of children, the child with the maximum happiness in that round is included.",
+        "Again this simply translates to: sort the initial happiness list and select the maximally happy un-selected child at each selection round from 1 to k.",
+        "To meet the additional problem requirements, we decrement the happiness of the child we are selecting by 1...k each time (and only do this the child we are immediately selecting, ",
+        "to prevent k-many full linear iterations of the happiness list). Lastly, ensure that we do not add negative happiness by taking Max(0, child's happiness - decrement) when summing up happiness."
+      ]
+    }
+  ]
+}
