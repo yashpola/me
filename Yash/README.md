@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+## Yashwit's Website (W.I.P.)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Version 2! Migrated from [here](https://yashpola/yashpola). Major differences are is that this site is built using Vanilla CSS instead of MaterialUI (to reduce performance overhead) and Vite-Typescript instead of CreateReactApp-JavaScript. I'm still deployed at [https://yashwit.com](https://yashwit.com)
 
-Currently, two official plugins are available:
+### What I use my site for:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+- Recording my [thoughts](https://yashwit.com/thoughts) on the courses I take in school as well as [Leetcode](https://leetcode.com/) problems I do.
+- [Reviewing](https://yashwit.com/moviestv) movies and tv shows that I watch.
+- Showcasing my [portfolio](https://yashwit.com/portfolio).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Why I remade my site:
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Opportunity to learn Typescript
+- Decouple from MUI and focus on HTML/CSS rules + hygiene
+- Build over Vite instead of CRA
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### What I didn't focus on for this rebuild:
+
+#### (but still want to learn in another project)
+
+---
+
+- GitHub utilisation (Branching, PRs, Commit Structuring etc)
+- Frontend/Backend deployment
+- Look into Next, Express, etc
