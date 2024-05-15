@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
-import { CatFactResponse } from "./AboutCustomTypes";
-import { TheVoid } from "../../GlobalCustomTypes";
+import { CatFactResponse } from "../../utils/typedefs/AboutCustomTypes";
+import { TheVoid } from "../../utils/typedefs/GlobalCustomTypes";
 
 export default function CatFact() {
   const [fact, setFact] = useState<string>("Loading...");

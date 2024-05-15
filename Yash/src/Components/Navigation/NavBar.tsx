@@ -1,7 +1,9 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 
 import AboutPage from "../about/AboutPage";
+import { ComponentMap } from "../moviestv/reviews/ComponentMap";
 import LearningsPage from "../learnings/LearningsPage";
+import MovieTVInfo from "../../data/MovieTVPosts.json";
 import MoviesTVPage from "../moviestv/MoviesTVPage";
 
 export default function NavBar() {
@@ -60,14 +62,17 @@ export default function NavBar() {
         <Route path="/" element={<AboutPage />} />
         <Route path="/learnings" element={<LearningsPage />} />
         <Route path="/moviestv" element={<MoviesTVPage />} />
-        {/* <Route exact path="/blog" element={<DefaultBlogPage />} />
-        <Route exact path="/portfolio" element={<PortfolioPage />} />
-        <Route
-          exact
-          path="/cs2101reflection"
-          element={<CS2101ReflectionPage />}
-        />
-        <Route exact path="*" element={<NoPage />} /> */}
+        {MovieTVInfo.Movies.map((review, idx) => {
+          const ReviewComponent =
+            ComponentMap[`${review.name.replace(/ /g, "")}`];
+          return (
+            <Route
+              key={idx}
+              path={`${review.name.replace(/ /g, "")}`}
+              element={<ReviewComponent review={review} />}
+            />
+          );
+        })}
       </Routes>
     </>
   );

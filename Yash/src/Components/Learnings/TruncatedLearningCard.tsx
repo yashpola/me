@@ -6,10 +6,12 @@ export default function TruncatedLearningCard({
   title,
   subtitle,
   body,
+  link,
 }: {
   title: string;
   subtitle: string;
   body: string[];
+  link: string;
 }) {
   const [cardExpanded, expandCard] = useState<boolean>(false);
 
@@ -19,10 +21,7 @@ export default function TruncatedLearningCard({
       <div className="description">
         <h2>{title}</h2>
         <h4>
-          <a
-            href="https://leetcode.com/problems/maximize-happiness-of-selected-children/description/?envType=daily-question&envId=2024-05-09"
-            title="Leetcode 3075"
-          >
+          <a href={link} title="Link to Problem" target="_blank">
             <u>{subtitle}</u>
           </a>
         </h4>

@@ -1,4 +1,4 @@
-import LearningPosts from "./LearningPosts.json";
+import LearningPosts from "../../data/LearningPosts.json";
 import TruncatedLearningCard from "./TruncatedLearningCard.js";
 
 export default function LearningsPage() {

@@ -1,4 +1,4 @@
-import { MovieTVReview, SortingRules } from "./MoviesTVCustomTypes";
+import { MovieTVReview, SortingRules } from "../typedefs/MoviesTVCustomTypes";
 
 export default function SortByCustomRule(
   review1: MovieTVReview,

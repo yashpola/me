@@ -1,6 +1,7 @@
 import { useState } from "react";
-import MovieTvInfo from "./MovieTvInfo.json";
-import SortByCustomRule from "./Sorters";
+
+import MovieTVPosts from "../../data/MovieTVPosts.json";
+import SortByCustomRule from "../../utils/functions/Sorters";
 
 export default function MoviesTVPage() {
   const [sortRule, setSortRule] = useState<string>("recencym");
@@ -85,7 +86,7 @@ export default function MoviesTVPage() {
           flexWrap: "wrap",
         }}
       >
-        {MovieTvInfo.Movies.sort((review1, review2) => {
+        {MovieTVPosts.Movies.sort((review1, review2) => {
           return SortByCustomRule(review1, review2, sortRule);
         }).map((entry, idx) => {
           return (
@@ -105,47 +106,19 @@ export default function MoviesTVPage() {
                   // padding: "5px",
                 }}
               >
-                <img
-                  src={entry.thumbnail}
-                  style={{ height: "400px", width: "275px" }}
-                />
+                <a
+                  href={`http://localhost:5173/${entry.name.replace(/ /g, "")}`}
+                  target="_blank"
+                >
+                  <img
+                    src={entry.thumbnail}
+                    style={{ height: "400px", width: "275px" }}
+                  />
+                </a>
               </div>
-              {/* <p>{entry.thoughts}</p> */}
             </>
           );
         })}
-        {/* <div
-          style={{
-            display: "flex",
-            textAlign: "center",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "#B19A7A",
-            border: "5px solid #906E3E",
-            padding: "5px",
-          }}
-        >
-          <img
-            src="https://sceneprints.com/cdn/shop/products/s-l1600_5d2635ae-7ab9-42f4-8cbd-17df6de44142.jpg?v=1639523855"
-            style={{ maxHeight: "400px" }}
-          />
-        </div>
-        <div
-          style={{
-            display: "flex",
-            textAlign: "center",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "#B19A7A",
-            border: "5px solid #906E3E",
-            padding: "5px",
-          }}
-        >
-          <img
-            src="https://sceneprints.com/cdn/shop/products/s-l1600_5d2635ae-7ab9-42f4-8cbd-17df6de44142.jpg?v=1639523855"
-            style={{ maxHeight: "400px" }}
-          />
-        </div> */}
       </div>
     </div>
   );

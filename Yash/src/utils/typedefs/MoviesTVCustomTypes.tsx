@@ -23,3 +23,7 @@ export interface SortingRules {
   RECENCYMOST: string;
   RECENCYLEAST: string;
 }
+
+export interface ComponentMapType {
+  [key: string]: React.ComponentType<{ review: MovieTVReview }>;
+}
