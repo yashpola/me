@@ -110,6 +110,18 @@ h3 {
   padding: 10px;
 }
 
+.site-button {
+  cursor: pointer;
+
+  background-color: wheat;
+
+  color: brown;
+  font-size: 20px;
+
+  border-radius: 20px;
+  padding: 10px;
+}
+
 /* Small devices (phones) */
 
 @media only screen and (max-width: 600px) {
