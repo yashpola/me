@@ -122,6 +122,11 @@ h3 {
   padding: 10px;
 }
 
+.movietv-poster {
+  height: 400px;
+  width: 275px;
+}
+
 /* Small devices (phones) */
 
 @media only screen and (max-width: 600px) {

@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import MovieTVPosts from "../../data/MovieTVPosts.json";
 import SortByCustomRule from "../../utils/functions/Sorters";
 import SortingOptionsMenu from "./SortingOptionsMenu";
+
 import { SwapVert } from "@mui/icons-material";
 
 export default function MoviesTVPage() {
   const [sortRule, setSortRule] = useState<string>("recencym");
   const [sortingMenuOpen, openSortingMenu] = useState<boolean>(false);
+
+  function setSorter(sortRule: string) {
+    setSortRule(sortRule);
+    localStorage.setItem("sortRule", sortRule);
+  }
+
+  useEffect(() => {
+    setSorter(localStorage.getItem("sortRule") ?? "recencym");
+  });
 
   return (
     <div>
@@ -26,7 +36,7 @@ export default function MoviesTVPage() {
           <SwapVert style={{ color: "brown" }} />
         </button>
       </div>
-      {sortingMenuOpen && <SortingOptionsMenu setSortRule={setSortRule} />}
+      {sortingMenuOpen && <SortingOptionsMenu setSortRule={setSorter} />}
       <div
         style={{
           display: "flex",
@@ -54,8 +64,9 @@ export default function MoviesTVPage() {
                   target="_blank"
                 >
                   <img
+                    className="movietv-poster"
                     src={entry.thumbnail}
-                    style={{ height: "400px", width: "275px" }}
+                    title="Movie Poster"
                   />
                 </a>
               </div>

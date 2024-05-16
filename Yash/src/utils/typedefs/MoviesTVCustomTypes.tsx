@@ -6,6 +6,7 @@ export interface MovieTVReview {
   year: number;
   boxOffice: number;
   title: string;
+  subtitle: string;
   quote: string;
   thoughts: string[];
   rating: number;

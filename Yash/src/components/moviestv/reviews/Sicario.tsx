@@ -1,10 +1,6 @@
 import MovieReviewPage from "./MovieReviewPage";
 import { MovieTVReview } from "../../../utils/typedefs/MoviesTVCustomTypes";
 
-export default function InglouriousBasterds({
-  review,
-}: {
-  review: MovieTVReview;
-}) {
+export default function Sicario({ review }: { review: MovieTVReview }) {
   return <MovieReviewPage review={review} />;
 }
