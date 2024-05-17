@@ -1,10 +1,11 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 
 import AboutPage from "../about/AboutPage";
-import { ComponentMap } from "../moviestv/reviews/ComponentMap";
+import { ComponentMap } from "../moviestv/ComponentMap";
 import LearningsPage from "../learnings/LearningsPage";
 import MovieTVInfo from "../../data/MovieTVPosts.json";
-import MoviesTVPage from "../moviestv/MoviesTVPage";
+import MoviesDashboard from "../moviestv/MoviesDashboard";
+import TVDashboard from "../moviestv/TVDashboard";
 
 export default function NavBar() {
   return (
@@ -36,13 +37,24 @@ export default function NavBar() {
           </div>
           <div className="nav-item">
             <NavLink
-              to="/moviestv"
+              to="/movies"
               style={({ isActive }) => ({
                 textDecoration: isActive ? "underline" : "none",
                 color: isActive ? "white" : "brown",
               })}
             >
-              Movies/TV
+              Movies
+            </NavLink>
+          </div>
+          <div className="nav-item">
+            <NavLink
+              to="/tv"
+              style={({ isActive }) => ({
+                textDecoration: isActive ? "underline" : "none",
+                color: isActive ? "white" : "brown",
+              })}
+            >
+              TV
             </NavLink>
           </div>
           <div className="nav-item">
@@ -61,8 +73,20 @@ export default function NavBar() {
       <Routes>
         <Route path="/" element={<AboutPage />} />
         <Route path="/learnings" element={<LearningsPage />} />
-        <Route path="/moviestv" element={<MoviesTVPage />} />
+        <Route path="/movies" element={<MoviesDashboard />} />
         {MovieTVInfo.Movies.map((review, idx) => {
+          const ReviewComponent =
+            ComponentMap[`${review.name.replace(/ /g, "")}`];
+          return (
+            <Route
+              key={idx}
+              path={`${review.name.replace(/ /g, "")}`}
+              element={<ReviewComponent review={review} />}
+            />
+          );
+        })}
+        <Route path="/tv" element={<TVDashboard />} />
+        {MovieTVInfo.TV.map((review, idx) => {
           const ReviewComponent =
             ComponentMap[`${review.name.replace(/ /g, "")}`];
           return (

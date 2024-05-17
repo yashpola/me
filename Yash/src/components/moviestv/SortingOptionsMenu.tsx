@@ -1,21 +1,27 @@
 export default function SortingOptionsMenu({
   setSortRule,
+  isMovieDashboard,
 }: {
   setSortRule: (arg0: string) => void;
+  isMovieDashboard: boolean;
 }) {
   return (
     <div>
       <ul>
-        <li>
-          <div onClick={() => setSortRule("bflow")}>
-            Lowest to highest grossing
-          </div>
-        </li>
-        <li>
-          <div onClick={() => setSortRule("bfhigh")}>
-            Highest to lowest grossing
-          </div>
-        </li>
+        {isMovieDashboard && (
+          <>
+            <li>
+              <div onClick={() => setSortRule("bflow")}>
+                Lowest to highest grossing
+              </div>
+            </li>
+            <li>
+              <div onClick={() => setSortRule("bfhigh")}>
+                Highest to lowest grossing
+              </div>
+            </li>
+          </>
+        )}
         <li>
           <div onClick={() => setSortRule("yearl")}>Last to first released</div>
         </li>

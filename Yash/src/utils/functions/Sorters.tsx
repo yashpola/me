@@ -1,8 +1,12 @@
-import { MovieTVReview, SortingRules } from "../typedefs/MoviesTVCustomTypes";
+import {
+  MovieReview,
+  SortingRules,
+  TVReview,
+} from "../typedefs/MoviesTVCustomTypes";
 
 export default function SortByCustomRule(
-  review1: MovieTVReview,
-  review2: MovieTVReview,
+  review1: MovieReview | TVReview,
+  review2: MovieReview | TVReview,
   sortRule: string
 ): number {
   const SortingRules: SortingRules = Object.freeze({
@@ -15,11 +19,22 @@ export default function SortByCustomRule(
     RATINGLOW: "ratingl",
     RATINGHIGH: "ratingh",
   });
+
+  function isMovieReview(review: any): review is MovieReview {
+    return (review as MovieReview).boxOffice !== undefined;
+  }
+
   switch (sortRule) {
     case SortingRules.BOXOFFICELOW:
-      return review1.boxOffice - review2.boxOffice;
+      if (isMovieReview(review1) && isMovieReview(review2)) {
+        return review1.boxOffice - review2.boxOffice;
+      }
+      return 0;
     case SortingRules.BOXOFFICEHIGH:
-      return review2.boxOffice - review1.boxOffice;
+      if (isMovieReview(review1) && isMovieReview(review2)) {
+        return review2.boxOffice - review1.boxOffice;
+      }
+      return 0;
     case SortingRules.YEARFIRST:
       return review1.year - review2.year;
     case SortingRules.YEARLAST:

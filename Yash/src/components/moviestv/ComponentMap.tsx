@@ -1,10 +1,10 @@
-import InglouriousBasterds from "./InglouriousBasterds";
-import { ComponentMapType } from "../../../utils/typedefs/MoviesTVCustomTypes";
+import { ComponentMapType } from "../../utils/typedefs/MoviesTVCustomTypes.tsx";
 import {
   Birdman,
   Casino,
   GangsofNewYork,
   Goodfellas,
+  InglouriousBasterds,
   KillersoftheFlowerMoon,
   NoCountryforOldMen,
   OldBoy,
@@ -15,18 +15,28 @@ import {
   TheBatman,
   ThereWillBeBlood,
   TrainingDay,
-} from "./index.ts";
+} from "./moviereviews/index.ts";
+import {
+  BojackHorseman,
+  MadMen,
+  MindHunter,
+  Suits,
+} from "./tvreviews/index.ts";
 
 export const ComponentMap: ComponentMapType = {
   Birdman,
+  BojackHorseman,
   Casino,
   GangsofNewYork,
   Goodfellas,
   KillersoftheFlowerMoon,
+  MadMen,
+  MindHunter,
   NoCountryforOldMen,
   OldBoy,
   Oppenheimer,
   Sicario,
+  Suits,
   ASpaceOdyssey,
   TheAviator,
   TheBatman,

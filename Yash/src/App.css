@@ -127,6 +127,11 @@ h3 {
   width: 275px;
 }
 
+.youtube-iframe {
+  width: 800px;
+  height: 400px;
+}
+
 /* Small devices (phones) */
 
 @media only screen and (max-width: 600px) {

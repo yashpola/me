@@ -6,7 +6,7 @@ import SortingOptionsMenu from "./SortingOptionsMenu";
 
 import { SwapVert } from "@mui/icons-material";
 
-export default function MoviesTVPage() {
+export default function MoviesDashboard() {
   const [sortRule, setSortRule] = useState<string>("recencym");
   const [sortingMenuOpen, openSortingMenu] = useState<boolean>(false);
 
@@ -36,7 +36,9 @@ export default function MoviesTVPage() {
           <SwapVert style={{ color: "brown" }} />
         </button>
       </div>
-      {sortingMenuOpen && <SortingOptionsMenu setSortRule={setSorter} />}
+      {sortingMenuOpen && (
+        <SortingOptionsMenu setSortRule={setSorter} isMovieDashboard={true} />
+      )}
       <div
         style={{
           display: "flex",

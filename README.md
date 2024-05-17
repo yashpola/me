@@ -9,7 +9,7 @@ Feel free to give me feedback [here](https://github.com/yashpola/me/issues)
 ---
 
 - Recording my [thoughts](https://yashwit.com/thoughts) on the courses I take in school as well as [Leetcode](https://leetcode.com/) problems I do.
-- [Reviewing](https://yashwit.com/moviestv) movies and tv shows that I watch.
+- Reviewing [movies](https://yashwit.com/movies) and [tv shows](https://yashwit.com/tv) that I watch.
 - Showcasing my [portfolio](https://yashwit.com/portfolio).
 
 ### Why I remade my site:

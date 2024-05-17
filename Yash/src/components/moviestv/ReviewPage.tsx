@@ -1,12 +1,16 @@
-import { MovieTVReview } from "../../../utils/typedefs/MoviesTVCustomTypes";
+import {
+  MovieReview,
+  TVReview,
+} from "../../utils/typedefs/MoviesTVCustomTypes";
 
-export default function MovieReviewPage({ review }: { review: MovieTVReview }) {
+export default function ReviewPage({
+  review,
+}: {
+  review: MovieReview | TVReview;
+}) {
   return (
     <div
       style={{
-        // display: "flex",
-        // justifyContent: "center",
-        // alignItems: "center",
         textAlign: "center",
         margin: "2%",
       }}
@@ -28,7 +32,7 @@ export default function MovieReviewPage({ review }: { review: MovieTVReview }) {
       />
       <h4>"{review.quote}"</h4>
       <p>{review.thoughts.join(" ")}</p>
-      <iframe src={review.clip} style={{ width: "800px", height: "400px" }} />
+      <iframe className="youtube-iframe" src={review.clip} />
       <div style={{ textAlign: "left" }}>
         <p>Rating: {review.rating}/5</p>
         <p>Trivia: {review.trivia.join(" ")}</p>

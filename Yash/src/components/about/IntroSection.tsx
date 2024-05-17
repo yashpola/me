@@ -58,10 +58,15 @@ export default function IntroSection() {
           problems I do.
         </li>
         <li>
-          <a href="https://yashwit.com/moviestv" title="Movie/TV Reviews">
-            Reviewing
+          Reviewing{" "}
+          <a href="https://yashwit.com/movies" title="Movie Reviews">
+            movies
           </a>{" "}
-          movies and tv shows that I watch.
+          and{" "}
+          <a href="https://yashwit.com/tv" title="TV Reviews">
+            tv shows
+          </a>{" "}
+          that I watch.
         </li>
         <li>
           Showcasing my{" "}
