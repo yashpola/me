@@ -12,23 +12,30 @@ html {
 }
 
 body {
-  margin: 0;
-
+  /* Background */
   background-color: #eee;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 
+  /* Display */
+  margin: 0;
+
+  /* Text */
   font-family: "Special Elite";
 }
 
 a {
-  text-decoration: none;
+  /* Text */
   color: blue;
+  text-decoration: none;
 }
 
 .navbar {
-  /* Position in page */
+  /* Background */
+  background-color: wheat;
+
+  /* Display */
   /* position: fixed;
   top: 0;
   left: 0;
@@ -37,99 +44,113 @@ a {
   /* Text */
   color: brown;
   text-align: center;
-
-  /* Background */
-  background-color: wheat;
 }
 
 .navbar-body {
-  /* Tabs display */
+  /* Display */
+  align-content: space-between;
   display: inline-flex;
   justify-content: center;
-  align-content: space-between;
   text-align: center;
-
-  /* Horizontal spacer */
-  border-bottom: 5px solid brown;
   width: 100vw;
+
+  /* Border */
+  border-bottom: 5px solid brown;
 }
 
 .nav-item {
-  /* Spacing */
+  /* Display */
+  cursor: pointer;
   flex-grow: 0.15;
   margin: 5px;
-
-  /* UI */
-  cursor: pointer;
 }
 
 .page-section {
-  /* Text */
-  text-align: left;
-  color: black;
-
   /* Display */
-  margin-left: 2%;
   margin-bottom: 10%;
+  margin-left: 2%;
   padding: 10px;
+
+  /* Text */
+  color: black;
+  text-align: left;
 }
 
 h3 {
+  /* Text */
   text-decoration: underline;
 }
 
 .learning-card {
-  display: inline-flex;
-
+  /* Border */
   border: 1.5px solid black;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 
+  /* Display */
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-
+  display: inline-flex;
   margin-bottom: 3%;
 }
 
 .tab {
+  /* Background */
   background-color: brown;
+
+  /* Display */
   width: 100px;
 }
 
 .description {
-  text-align: center;
-
+  /* Background */
   background-color: wheat;
 
-  color: brown;
-
-  border-top-right-radius: 30px;
+  /* Border */
   border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
 
+  /* Display */
+  padding: 10px;
   width: 75vw;
 
-  padding: 10px;
+  /* Text */
+  color: brown;
+  text-align: center;
 }
 
 .site-button {
-  cursor: pointer;
-
+  /* Background */
   background-color: wheat;
 
+  /* Border */
+  border-radius: 20px;
+
+  /* Display */
+  cursor: pointer;
+  padding: 10px;
+
+  /* Text */
   color: brown;
   font-size: 20px;
-
-  border-radius: 20px;
-  padding: 10px;
 }
 
 .movietv-poster {
-  height: 400px;
-  width: 275px;
+  /* Background */
+  background-color: #b19a7a;
+
+  /* Border */
+  border: 5px solid #906e3e;
+
+  /* Display */
+  height: 500px;
+  padding: 10px;
+  width: 325px;
 }
 
 .youtube-iframe {
-  width: 800px;
+  /* Display */
   height: 400px;
+  width: 800px;
 }
 
 /* Small devices (phones) */

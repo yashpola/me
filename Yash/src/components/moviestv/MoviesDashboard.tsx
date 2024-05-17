@@ -49,7 +49,7 @@ export default function MoviesDashboard() {
       >
         {MovieTVPosts.Movies.sort((review1, review2) => {
           return SortByCustomRule(review1, review2, sortRule);
-        }).map((entry, idx) => {
+        }).map((movie, idx) => {
           return (
             <>
               <div
@@ -62,13 +62,13 @@ export default function MoviesDashboard() {
                 }}
               >
                 <a
-                  href={`http://localhost:5173/${entry.name.replace(/ /g, "")}`}
+                  href={`http://localhost:5173/${movie.name.replace(/ /g, "")}`}
                   target="_blank"
                 >
                   <img
                     className="movietv-poster"
-                    src={entry.thumbnail}
-                    title="Movie Poster"
+                    src={movie.thumbnail}
+                    title={`${movie.name} Poster`}
                   />
                 </a>
               </div>

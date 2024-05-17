@@ -19,16 +19,8 @@ export default function ReviewPage({
       <h2>{review.subtitle}</h2>
       <img
         className="movietv-poster"
-        style={{
-          borderRadius: "5px",
-          height: "500px",
-          width: "325px",
-          backgroundColor: "#B19A7A",
-          border: "5px solid #906E3E",
-          padding: "10px",
-        }}
         src={review.thumbnail}
-        title="Movie Image"
+        title={`${review.name} Image`}
       />
       <h4>"{review.quote}"</h4>
       <p>{review.thoughts.join(" ")}</p>
