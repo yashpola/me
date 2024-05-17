@@ -134,7 +134,7 @@ h3 {
   font-size: 20px;
 }
 
-.movietv-poster {
+.movietv-review-image {
   /* Background */
   background-color: #b19a7a;
 
@@ -145,6 +145,12 @@ h3 {
   height: 500px;
   padding: 10px;
   width: 325px;
+}
+
+.movietv-poster {
+  /* Display */
+  height: 400px;
+  width: 275px;
 }
 
 .youtube-iframe {

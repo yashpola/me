@@ -18,7 +18,7 @@ export default function ReviewPage({
       <h1 style={{ textDecoration: "underline" }}>{review.title}</h1>
       <h2>{review.subtitle}</h2>
       <img
-        className="movietv-poster"
+        className="movietv-review-image"
         src={review.thumbnail}
         title={`${review.name} Image`}
       />
