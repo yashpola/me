@@ -1,7 +1,7 @@
 import InglouriousBasterds from "./InglouriousBasterds";
 import { ComponentMapType } from "../../../utils/typedefs/MoviesTVCustomTypes";
 import {
-  BirdMan,
+  Birdman,
   Casino,
   GangsofNewYork,
   Goodfellas,
@@ -18,7 +18,7 @@ import {
 } from "./index.ts";
 
 export const ComponentMap: ComponentMapType = {
-  BirdMan,
+  Birdman,
   Casino,
   GangsofNewYork,
   Goodfellas,

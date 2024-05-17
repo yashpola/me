@@ -1,5 +1,5 @@
 import ASpaceOdyssey from "./ASpaceOdyssey";
-import BirdMan from "./Birdman";
+import Birdman from "./Birdman";
 import Casino from "./Casino";
 import GangsofNewYork from "./GangsofNewYork";
 import Goodfellas from "./Goodfellas";
@@ -15,7 +15,7 @@ import ThereWillBeBlood from "./ThereWillBeBlood";
 import TrainingDay from "./TrainingDay";
 
 export {
-  BirdMan,
+  Birdman,
   Casino,
   GangsofNewYork,
   Goodfellas,

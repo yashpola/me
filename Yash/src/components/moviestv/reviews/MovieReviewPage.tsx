@@ -26,21 +26,15 @@ export default function MovieReviewPage({ review }: { review: MovieTVReview }) {
         src={review.thumbnail}
         title="Movie Image"
       />
-      <br />
-      <br />"{review.quote}"
-      <br />
-      <br />
-      {review.thoughts.join(" ")}
-      <br />
-      <br />
+      <h4>"{review.quote}"</h4>
+      <p>{review.thoughts.join(" ")}</p>
       <iframe src={review.clip} style={{ width: "800px", height: "400px" }} />
-      <br />
-      <br />
       <div style={{ textAlign: "left" }}>
-        Trivia: {review.trivia.join(" ")}
-        <br />
-        <br />
-        If you liked {review.name}, check out: {review.recommendations}
+        <p>Rating: {review.rating}/5</p>
+        <p>Trivia: {review.trivia.join(" ")}</p>
+        <p>
+          If you liked {review.name}, check out: {review.recommendations}
+        </p>
       </div>
     </div>
   );
