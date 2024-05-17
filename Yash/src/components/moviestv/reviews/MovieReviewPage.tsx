@@ -37,7 +37,7 @@ export default function MovieReviewPage({ review }: { review: MovieTVReview }) {
       <br />
       <br />
       <div style={{ textAlign: "left" }}>
-        Trivia: {review.trivia}
+        Trivia: {review.trivia.join(" ")}
         <br />
         <br />
         If you liked {review.name}, check out: {review.recommendations}

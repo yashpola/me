@@ -4,7 +4,7 @@ import Casino from "./Casino";
 import GangsofNewYork from "./GangsofNewYork";
 import Goodfellas from "./Goodfellas";
 import InglouriousBasterds from "./InglouriousBasterds";
-import KillersofTheFlowerMoon from "./KillersofTheFlowerMoon";
+import KillersoftheFlowerMoon from "./KillersoftheFlowerMoon";
 import NoCountryforOldMen from "./NoCountryforOldMen";
 import OldBoy from "./OldBoy";
 import Oppenheimer from "./Oppenheimer";
@@ -20,7 +20,7 @@ export {
   GangsofNewYork,
   Goodfellas,
   InglouriousBasterds,
-  KillersofTheFlowerMoon,
+  KillersoftheFlowerMoon,
   NoCountryforOldMen,
   OldBoy,
   Oppenheimer,
