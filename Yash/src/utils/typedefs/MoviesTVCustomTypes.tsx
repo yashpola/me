@@ -19,8 +19,12 @@ export interface MovieReview extends Review {
 
 export interface TVReview extends Review {}
 
-export interface ComponentMapType {
-  [key: string]: React.ComponentType<{ review: Review }>;
+export interface MovieComponentMapType {
+  [key: string]: React.ComponentType<{ review: MovieReview }>;
+}
+
+export interface TVComponentMapType {
+  [key: string]: React.ComponentType<{ review: TVReview }>;
 }
 
 export interface SortingRules {

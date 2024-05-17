@@ -1,4 +1,7 @@
-import { ComponentMapType } from "../../utils/typedefs/MoviesTVCustomTypes.tsx";
+import {
+  MovieComponentMapType,
+  TVComponentMapType,
+} from "../../utils/typedefs/MoviesTVCustomTypes.tsx";
 import {
   Birdman,
   Casino,
@@ -23,24 +26,27 @@ import {
   Suits,
 } from "./tvreviews/index.ts";
 
-export const ComponentMap: ComponentMapType = {
+export const MovieComponentMap: MovieComponentMapType = {
   Birdman,
-  BojackHorseman,
   Casino,
   GangsofNewYork,
   Goodfellas,
   KillersoftheFlowerMoon,
-  MadMen,
-  MindHunter,
   NoCountryforOldMen,
   OldBoy,
   Oppenheimer,
   Sicario,
-  Suits,
   ASpaceOdyssey,
   TheAviator,
   TheBatman,
   ThereWillBeBlood,
   TrainingDay,
   InglouriousBasterds,
+};
+
+export const TVComponentMap: TVComponentMapType = {
+  BojackHorseman,
+  MadMen,
+  MindHunter,
+  Suits,
 };

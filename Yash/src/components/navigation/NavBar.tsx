@@ -1,7 +1,7 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 
 import AboutPage from "../about/AboutPage";
-import { ComponentMap } from "../moviestv/ComponentMap";
+import { MovieComponentMap, TVComponentMap } from "../moviestv/ComponentMap";
 import LearningsPage from "../learnings/LearningsPage";
 import MovieTVInfo from "../../data/MovieTVPosts.json";
 import MoviesDashboard from "../moviestv/MoviesDashboard";
@@ -76,7 +76,7 @@ export default function NavBar() {
         <Route path="/movies" element={<MoviesDashboard />} />
         {MovieTVInfo.Movies.map((review, idx) => {
           const ReviewComponent =
-            ComponentMap[`${review.name.replace(/ /g, "")}`];
+            MovieComponentMap[`${review.name.replace(/ /g, "")}`];
           return (
             <Route
               key={idx}
@@ -88,7 +88,7 @@ export default function NavBar() {
         <Route path="/tv" element={<TVDashboard />} />
         {MovieTVInfo.TV.map((review, idx) => {
           const ReviewComponent =
-            ComponentMap[`${review.name.replace(/ /g, "")}`];
+            TVComponentMap[`${review.name.replace(/ /g, "")}`];
           return (
             <Route
               key={idx}
