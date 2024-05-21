@@ -24,6 +24,7 @@ export default function ReviewPage({
       />
       <h4>"{review.quote}"</h4>
       <p>{review.thoughts.join(" ")}</p>
+      <br />
       <iframe className="youtube-iframe" src={review.clip} />
       <div style={{ textAlign: "left" }}>
         <p>Rating: {review.rating}/5</p>

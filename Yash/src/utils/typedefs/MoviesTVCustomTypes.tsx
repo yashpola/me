@@ -37,3 +37,5 @@ export interface SortingRules {
   RECENCYMOST: string;
   RECENCYLEAST: string;
 }
+
+export type sortRuleSetter = (arg0: string) => void;

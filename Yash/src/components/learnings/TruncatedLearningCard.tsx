@@ -17,8 +17,8 @@ export default function TruncatedLearningCard({
 
   return (
     <div className="learning-card">
-      <div className="tab" />
-      <div className="description">
+      <div className="learning-card-tab" />
+      <div className="learning-card-body">
         <h2>{title}</h2>
         <h4>
           <a href={link} title="Link to Problem" target="_blank">
@@ -32,9 +32,7 @@ export default function TruncatedLearningCard({
               fontSize="large"
               sx={{ cursor: "pointer" }}
             />
-            <p style={{ textAlign: "left", color: "black" }}>
-              {body.join(" ")}
-            </p>
+            <p className="learning-card-paragraph">{body.join(" ")}</p>
           </>
         ) : (
           <ArrowDropDown

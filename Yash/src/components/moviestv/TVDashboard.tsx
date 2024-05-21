@@ -8,7 +8,7 @@ import { SwapVert } from "@mui/icons-material";
 
 export default function TVDashboard() {
   const [sortRule, setSortRule] = useState<string>("recencym");
-  const [sortingMenuOpen, openSortingMenu] = useState<boolean>(false);
+  const [sortingMenuOpen, setSortingMenuOpen] = useState<boolean>(false);
 
   function setSorter(sortRule: string) {
     setSortRule(sortRule);
@@ -31,7 +31,7 @@ export default function TVDashboard() {
         <button
           className="site-button"
           type="button"
-          onClick={() => openSortingMenu(!sortingMenuOpen)}
+          onClick={() => setSortingMenuOpen(!sortingMenuOpen)}
         >
           <SwapVert style={{ color: "brown" }} />
         </button>
@@ -52,15 +52,7 @@ export default function TVDashboard() {
         }).map((entry, idx) => {
           return (
             <>
-              <div
-                key={idx}
-                style={{
-                  display: "inline-flex",
-                  textAlign: "center",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <div key={idx} className="posters-dashboard">
                 <a
                   href={`http://localhost:5173/${entry.name.replace(/ /g, "")}`}
                   target="_blank"
