@@ -145,10 +145,10 @@ h3 {
   background-color: wheat;
 
   /* Display */
-  align-items: center;
+  /* align-items: center; */
   cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
+  /* display: inline-flex;
+  justify-content: center; */
   margin-bottom: 3%;
   padding: 5px;
 
@@ -167,6 +167,12 @@ h3 {
   text-align: center;
 }
 
+.movietv-poster {
+  /* Display */
+  height: 400px;
+  width: 275px;
+}
+
 .movietv-review-image {
   /* Background */
   background-color: #b19a7a;
@@ -175,17 +181,10 @@ h3 {
   border: 5px solid #906e3e;
 
   /* Display */
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   height: 500px;
   padding: 10px;
   width: 325px;
-
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-}
-
-.movietv-poster {
-  /* Display */
-  height: 400px;
-  width: 275px;
 }
 
 .youtube-iframe {

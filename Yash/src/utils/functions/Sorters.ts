@@ -1,25 +1,11 @@
-import {
-  MovieReview,
-  SortingRules,
-  TVReview,
-} from "../typedefs/MoviesTVCustomTypes";
+import { MovieReview, TVReview } from "../typedefs/MoviesTVCustomTypes";
+import SortingRules from "../Enums";
 
 export default function SortByCustomRule(
   review1: MovieReview | TVReview,
   review2: MovieReview | TVReview,
   sortRule: string
 ): number {
-  const SortingRules: SortingRules = Object.freeze({
-    BOXOFFICELOW: "bflow",
-    BOXOFFICEHIGH: "bfhigh",
-    YEARFIRST: "yearf",
-    YEARLAST: "yearl",
-    RECENCYMOST: "recencym",
-    RECENCYLEAST: "recencyl",
-    RATINGLOW: "ratingl",
-    RATINGHIGH: "ratingh",
-  });
-
   function isMovieReview(review: any): review is MovieReview {
     return (review as MovieReview).boxOffice !== undefined;
   }

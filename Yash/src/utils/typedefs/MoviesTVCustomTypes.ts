@@ -27,7 +27,7 @@ export interface TVComponentMapType {
   [key: string]: React.ComponentType<{ review: TVReview }>;
 }
 
-export interface SortingRules {
+export interface SortingRulesType {
   BOXOFFICELOW: string;
   BOXOFFICEHIGH: string;
   YEARFIRST: string;

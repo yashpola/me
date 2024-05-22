@@ -1,34 +1,67 @@
+import SortingRules from "../../utils/Enums";
 import { sortRuleSetter } from "../../utils/typedefs/MoviesTVCustomTypes";
 
 export default function SortingOptionsMenu({
-  setSortRule,
+  setSorter,
   isMovieDashboard,
 }: {
-  setSortRule: sortRuleSetter;
+  setSorter: sortRuleSetter;
   isMovieDashboard: boolean;
 }) {
   return (
     <div className="sorting-options-menu">
       {isMovieDashboard && (
         <>
-          <div onClick={() => setSortRule("bflow")}>
+          <div
+            id={SortingRules.BOXOFFICELOW}
+            onClick={() => setSorter(SortingRules.BOXOFFICELOW)}
+          >
             Lowest to highest grossing
           </div>
-          <div onClick={() => setSortRule("bfhigh")}>
+          <div
+            id={SortingRules.BOXOFFICEHIGH}
+            onClick={() => setSorter(SortingRules.BOXOFFICEHIGH)}
+          >
             Highest to lowest grossing
           </div>
         </>
       )}
-      <div onClick={() => setSortRule("yearl")}>Last to first released</div>
-      <div onClick={() => setSortRule("yearf")}>First to last released</div>
-      <div onClick={() => setSortRule("recencyl")}>
+      <div
+        id={SortingRules.YEARLAST}
+        onClick={() => setSorter(SortingRules.YEARLAST)}
+      >
+        Last to first released
+      </div>
+      <div
+        id={SortingRules.YEARFIRST}
+        onClick={() => setSorter(SortingRules.YEARFIRST)}
+      >
+        First to last released
+      </div>
+      <div
+        id={SortingRules.RECENCYLEAST}
+        onClick={() => setSorter(SortingRules.RECENCYLEAST)}
+      >
         Least to most recently reviewed
       </div>
-      <div onClick={() => setSortRule("recencym")}>
+      <div
+        id={SortingRules.RECENCYMOST}
+        onClick={() => setSorter(SortingRules.RECENCYMOST)}
+      >
         Most to least recently reviewed
       </div>
-      <div onClick={() => setSortRule("ratingl")}>Lowest to highest rating</div>
-      <div onClick={() => setSortRule("ratingh")}>Highest to lowest rating</div>
+      <div
+        id={SortingRules.RATINGLOW}
+        onClick={() => setSorter(SortingRules.RATINGLOW)}
+      >
+        Lowest to highest rating
+      </div>
+      <div
+        id={SortingRules.RATINGHIGH}
+        onClick={() => setSorter(SortingRules.RATINGHIGH)}
+      >
+        Highest to lowest rating
+      </div>
     </div>
   );
 }

@@ -1,22 +1,29 @@
 import { useEffect, useState } from "react";
 
+import {
+  addTextDecoration,
+  removeTextDecorationMulti,
+} from "../../utils/functions/StyleModifiers";
 import MovieTVPosts from "../../data/MovieTVPosts.json";
 import SortByCustomRule from "../../utils/functions/Sorters";
 import SortingOptionsMenu from "./SortingOptionsMenu";
+import SortingRules from "../../utils/Enums";
 
 import { SwapVert } from "@mui/icons-material";
 
 export default function TVDashboard() {
-  const [sortRule, setSortRule] = useState<string>("recencym");
+  const [sortRule, setSortRule] = useState<string>(SortingRules.RECENCYMOST);
   const [sortingMenuOpen, setSortingMenuOpen] = useState<boolean>(false);
 
   function setSorter(sortRule: string) {
     setSortRule(sortRule);
+    removeTextDecorationMulti(Object.values(SortingRules));
+    addTextDecoration(document.getElementById(`${sortRule}`), "underline");
     localStorage.setItem("sortRule", sortRule);
   }
 
   useEffect(() => {
-    setSorter(localStorage.getItem("sortRule") ?? "recencym");
+    setSorter(localStorage.getItem("sortRule") ?? SortingRules.RECENCYMOST);
   });
 
   return (
@@ -37,7 +44,7 @@ export default function TVDashboard() {
         </button>
       </div>
       {sortingMenuOpen && (
-        <SortingOptionsMenu setSortRule={setSorter} isMovieDashboard={false} />
+        <SortingOptionsMenu setSorter={setSorter} isMovieDashboard={false} />
       )}
       <div
         style={{
