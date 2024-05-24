@@ -30,13 +30,13 @@ export default function SortingOptionsMenu({
         id={SortingRules.YEARLAST}
         onClick={() => setSorter(SortingRules.YEARLAST)}
       >
-        Last to first released
+        Last to first released (year)
       </div>
       <div
         id={SortingRules.YEARFIRST}
         onClick={() => setSorter(SortingRules.YEARFIRST)}
       >
-        First to last released
+        First to last released (year)
       </div>
       <div
         id={SortingRules.RECENCYLEAST}
@@ -54,13 +54,13 @@ export default function SortingOptionsMenu({
         id={SortingRules.RATINGLOW}
         onClick={() => setSorter(SortingRules.RATINGLOW)}
       >
-        Lowest to highest rating
+        Lowest to highest rated
       </div>
       <div
         id={SortingRules.RATINGHIGH}
         onClick={() => setSorter(SortingRules.RATINGHIGH)}
       >
-        Highest to lowest rating
+        Highest to lowest rated
       </div>
     </div>
   );
