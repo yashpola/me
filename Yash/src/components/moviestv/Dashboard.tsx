@@ -4,14 +4,23 @@ import {
   addTextDecoration,
   removeTextDecorationMulti,
 } from "../../utils/functions/StyleModifiers";
-import MovieTVPosts from "../../data/MovieTVPosts.json";
 import SortByCustomRule from "../../utils/functions/Sorters";
 import SortingOptionsMenu from "./SortingOptionsMenu";
-import SortingRules from "../../utils/Enums";
+import { DashboardTypes, SortingRules } from "../../utils/Enums";
 
 import { SwapVert } from "@mui/icons-material";
+import {
+  MovieReview,
+  TVReview,
+} from "../../utils/typedefs/MoviesTVCustomTypes";
 
-export default function MoviesDashboard() {
+export default function Dashboard({
+  type,
+  reviews,
+}: {
+  type: string;
+  reviews: MovieReview[] | TVReview[];
+}) {
   const [sortRule, setSortRule] = useState<string>(SortingRules.RECENCYMOST);
   const [sortingMenuOpen, setSortingMenuOpen] = useState<boolean>(false);
 
@@ -44,7 +53,10 @@ export default function MoviesDashboard() {
         </button>
       </div>
       {sortingMenuOpen && (
-        <SortingOptionsMenu setSorter={setSorter} isMovieDashboard={true} />
+        <SortingOptionsMenu
+          setSorter={setSorter}
+          isMovieDashboard={type === DashboardTypes.MOVIE}
+        />
       )}
       <div
         style={{
@@ -54,26 +66,31 @@ export default function MoviesDashboard() {
           flexWrap: "wrap",
         }}
       >
-        {MovieTVPosts.Movies.sort((review1, review2) => {
-          return SortByCustomRule(review1, review2, sortRule);
-        }).map((movie, idx) => {
-          return (
-            <>
-              <div key={idx} className="posters-dashboard">
-                <a
-                  href={`http://localhost:5173/${movie.name.replace(/ /g, "")}`}
-                  target="_blank"
-                >
-                  <img
-                    className="movietv-poster"
-                    src={movie.thumbnail}
-                    title={`${movie.name} Poster`}
-                  />
-                </a>
-              </div>
-            </>
-          );
-        })}
+        {reviews
+          .sort((review1, review2) => {
+            return SortByCustomRule(review1, review2, sortRule);
+          })
+          .map((entry, idx) => {
+            return (
+              <>
+                <div key={idx} className="posters-dashboard">
+                  <a
+                    href={`http://localhost:5173/${entry.name.replace(
+                      / /g,
+                      ""
+                    )}`}
+                    target="_blank"
+                  >
+                    <img
+                      className="movietv-poster"
+                      src={entry.thumbnail}
+                      title={`${type} Poster`}
+                    />
+                  </a>
+                </div>
+              </>
+            );
+          })}
       </div>
     </div>
   );

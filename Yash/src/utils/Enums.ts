@@ -1,6 +1,9 @@
-import { SortingRulesType } from "./typedefs/MoviesTVCustomTypes";
+import {
+  DashboardType,
+  SortingRulesType,
+} from "./typedefs/MoviesTVCustomTypes";
 
-const SortingRules: SortingRulesType = Object.freeze({
+export const SortingRules: SortingRulesType = Object.freeze({
   BOXOFFICELOW: "bflow",
   BOXOFFICEHIGH: "bfhigh",
   YEARFIRST: "yearf",
@@ -11,4 +14,7 @@ const SortingRules: SortingRulesType = Object.freeze({
   RATINGHIGH: "ratingh",
 });
 
-export default SortingRules;
+export const DashboardTypes: DashboardType = Object.freeze({
+  MOVIE: "Movie",
+  TV: "TV",
+});

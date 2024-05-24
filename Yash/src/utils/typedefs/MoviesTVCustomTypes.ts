@@ -38,4 +38,9 @@ export interface SortingRulesType {
   RECENCYLEAST: string;
 }
 
+export interface DashboardType {
+  MOVIE: string;
+  TV: string;
+}
+
 export type sortRuleSetter = (arg0: string) => void;
