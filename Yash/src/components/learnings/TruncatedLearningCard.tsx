@@ -1,17 +1,12 @@
 import { useState } from "react";
 
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
+import { LearningPostType } from "../../utils/typedefs/LearningsCustomTypes";
 
 export default function TruncatedLearningCard({
-  title,
-  subtitle,
-  body,
-  link,
+  LearningPost,
 }: {
-  title: string;
-  subtitle: string;
-  body: string[];
-  link: string;
+  LearningPost: LearningPostType;
 }) {
   const [cardExpanded, expandCard] = useState<boolean>(false);
 
@@ -19,10 +14,10 @@ export default function TruncatedLearningCard({
     <div className="learning-card">
       <div className="learning-card-tab" />
       <div className="learning-card-body">
-        <h2>{title}</h2>
+        <h2>{LearningPost.title}</h2>
         <h4>
-          <a href={link} title="Link to Problem" target="_blank">
-            <u>{subtitle}</u>
+          <a href={LearningPost.link} title="Link to Problem" target="_blank">
+            <u>{LearningPost.subtitle}</u>
           </a>
         </h4>
         {cardExpanded ? (
@@ -32,7 +27,9 @@ export default function TruncatedLearningCard({
               fontSize="large"
               sx={{ cursor: "pointer" }}
             />
-            <p className="learning-card-paragraph">{body.join(" ")}</p>
+            <p className="learning-card-paragraph">
+              {LearningPost.body.join(" ")}
+            </p>
           </>
         ) : (
           <ArrowDropDown

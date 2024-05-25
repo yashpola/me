@@ -6,8 +6,10 @@ export default function LearningsPage() {
     <>
       <div className="page-section">
         <h3>Knowledge Central</h3>
-        {LearningPosts.Leetcode.map((entry, idx) => {
-          return <TruncatedLearningCard key={idx} {...entry} />;
+        {LearningPosts.Leetcode.map((learningPost, idx) => {
+          return (
+            <TruncatedLearningCard key={idx} LearningPost={learningPost} />
+          );
         })}
       </div>
     </>
