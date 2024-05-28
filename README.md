@@ -1,6 +1,6 @@
 ## Yashwit's Website (W.I.P.)
 
-Version 2! Migrated from [here](https://github.com/yashpola/yashpola). Major differences are is that this site is built using Vanilla CSS instead of MaterialUI (to reduce performance overhead) and Vite-Typescript instead of CreateReactApp-JavaScript. I'm still deployed at [https://yashwit.com](https://yashwit.com)
+Version 2! Migrated from [here](https://github.com/yashpola/yashpola). Major differences are that this site is built using Vanilla CSS instead of MaterialUI (to reduce performance overhead) and Vite-Typescript instead of CreateReactApp-JavaScript. I'm still deployed at [https://yashwit.com](https://yashwit.com)
 
 Feel free to give me feedback [here](https://github.com/yashpola/me/issues)
 
