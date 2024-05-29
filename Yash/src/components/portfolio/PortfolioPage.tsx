@@ -7,7 +7,7 @@ export default function PortfolioPage({
   portfolioPosts: PortfolioPost[];
 }) {
   return (
-    <div className="page-section">
+    <div className="portfolio-page-section">
       {portfolioPosts.map((post, idx) => {
         return <PortfolioCard key={idx} portfolioPost={post} />;
       })}

@@ -197,6 +197,11 @@ standard-anchor {
   width: 800px;
 }
 
+.portfolio-page-section {
+  /* Display */
+  padding: 10px;
+}
+
 .portfolio-card {
   /* Background */
   background-color: wheat;
@@ -209,7 +214,7 @@ standard-anchor {
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   display: block;
   justify-content: center;
-  margin: 20px;
+  margin: 30px;
   padding: 20px;
 
   /* Text */
