@@ -6,6 +6,8 @@ import { DashboardTypes } from "../../utils/Enums";
 import LearningsPage from "../learnings/LearningsPage";
 import { MovieComponentMap, TVComponentMap } from "../moviestv/ComponentMap";
 import MovieTVInfo from "../../data/MovieTVPosts.json";
+import PortfolioPage from "../portfolio/PortfolioPage";
+import PortfolioPosts from "../../data/PortfolioPosts.json";
 
 export default function NavBar() {
   return (
@@ -111,6 +113,12 @@ export default function NavBar() {
             />
           );
         })}
+        <Route
+          path="/portfolio"
+          element={
+            <PortfolioPage portfolioPosts={PortfolioPosts.PortfolioEntries} />
+          }
+        />
       </Routes>
     </>
   );

@@ -25,12 +25,6 @@ body {
   font-family: "Special Elite";
 }
 
-a {
-  /* Text */
-  color: blue;
-  text-decoration: none;
-}
-
 .navbar {
   /* Background */
   background-color: wheat;
@@ -79,6 +73,12 @@ a {
 h3 {
   /* Text */
   text-decoration: underline;
+}
+
+standard-anchor {
+  /* Text */
+  color: blue;
+  text-decoration: none;
 }
 
 .learning-card {
@@ -188,13 +188,52 @@ h3 {
 }
 
 .youtube-iframe {
-  /* Display */
-  height: 400px;
-  width: 800px;
-
+  /* Border */
   border-radius: 15px;
 
+  /* Display */
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  height: 400px;
+  width: 800px;
+}
+
+.portfolio-card {
+  /* Background */
+  background-color: wheat;
+
+  /* Border */
+  border-radius: 10px;
+
+  /* Display */
+  align-items: center;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  display: block;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+
+  /* Text */
+  color: brown;
+}
+
+.portfolio-card-header {
+  /* Background */
+  background-color: brown;
+
+  /* Border */
+  border-radius: 5px;
+
+  /* Text */
+  color: white;
+  padding: 1px;
+  text-align: center;
+}
+
+.portfolio-card-link {
+  /* Text */
+  color: brown;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Small devices (phones) */

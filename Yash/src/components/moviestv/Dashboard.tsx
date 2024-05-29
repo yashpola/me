@@ -47,7 +47,10 @@ export default function Dashboard({
         <button
           className="site-button"
           type="button"
-          onClick={() => setSortingMenuOpen(!sortingMenuOpen)}
+          onClick={(e) => {
+            e.preventDefault();
+            setSortingMenuOpen(!sortingMenuOpen);
+          }}
         >
           <SwapVert style={{ color: "brown" }} />
         </button>

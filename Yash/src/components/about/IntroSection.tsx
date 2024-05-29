@@ -9,6 +9,7 @@ import {
   Telegram,
   Movie,
 } from "@mui/icons-material";
+import Anchor from "../../utils/customelements/Anchor";
 
 export default function IntroSection() {
   return (
@@ -48,31 +49,51 @@ export default function IntroSection() {
       <ul>
         <li>
           Recording my{" "}
-          <a href="https://yashwit.com/learnings" title="Documenting Learnings">
-            thoughts
-          </a>{" "}
+          <Anchor
+            className={"standard-anchor"}
+            href={"https://yashyswebsitev2.vercel.app/learnings"}
+            target={"_blank"}
+            title={"Thoughts tab link"}
+            label={"thoughts"}
+          />{" "}
           on the courses I take in school as well as{" "}
-          <a href="https://leetcode.com" title="Leetcode">
-            Leetcode
-          </a>{" "}
+          <Anchor
+            className={"standard-anchor"}
+            href={"https://leetcode.com"}
+            target={"_blank"}
+            title={"Leetcode link"}
+            label={"Leetcode"}
+          />{" "}
           problems I do.
         </li>
         <li>
           Reviewing{" "}
-          <a href="https://yashwit.com/movies" title="Movie Reviews">
-            movies
-          </a>{" "}
+          <Anchor
+            className={"standard-anchor"}
+            href={"http://localhost:5173/movies"}
+            target={"_blank"}
+            title={"Movies tab link"}
+            label={"movies"}
+          />{" "}
           and{" "}
-          <a href="https://yashwit.com/tv" title="TV Reviews">
-            tv shows
-          </a>{" "}
+          <Anchor
+            className={"standard-anchor"}
+            href={"https://yashyswebsitev2.vercel.app/tv"}
+            target={"_blank"}
+            title={"TV tab link"}
+            label={"tv shows"}
+          />{" "}
           that I watch.
         </li>
         <li>
           Showcasing my{" "}
-          <a href="https://yashwit.com/portfolio" title="Portfolio Page">
-            portfolio.
-          </a>
+          <Anchor
+            className={"standard-anchor"}
+            href={"https://yashyswebsitev2.vercel.app/portfolio"}
+            target={"_blank"}
+            title={"Portfolio tab link"}
+            label={"portfolio"}
+          />{" "}
         </li>
       </ul>
       <p>

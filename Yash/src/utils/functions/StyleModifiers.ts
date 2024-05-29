@@ -34,3 +34,12 @@ export function removeTextDecorationMultiExcept(
     })
     .map(removeTextDecoration);
 }
+
+export function toggleUnderlineOnHover(
+  element: HTMLElement | null,
+  bit: number
+) {
+  bit == 0
+    ? removeTextDecoration(element)
+    : addTextDecoration(element, "underline");
+}

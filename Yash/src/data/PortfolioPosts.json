@@ -1,0 +1,61 @@
+{
+  "PortfolioEntries": [
+    {
+      "Title": "A.R.I.A.",
+      "Subtitle": "Website-based study assistant for NUS students",
+      "Description": [
+        "A repository and grade-based analysis of modules,",
+        "Study-time tracking and motivation,",
+        "Customization through color scheme, profile picture, username"
+      ],
+      "References": [
+        [
+          "Documentation",
+          "https://docs.google.com/document/d/1LfagfeOdkiKYe6ysc-XoEnK6H7rnUqI2WzRXayJLmAk/edit"
+        ],
+        [
+          "Demo",
+          "https://drive.google.com/file/d/1wpu2ayaO2gEmV-KSf4ePeZtkgYs0QHx8/view"
+        ],
+        ["Live", "https://orbital-aria.vercel.app/"],
+        ["Workspace", ""],
+        ["Issues", "https://github.com/yashpola/OrbitalARIA/issues"]
+      ]
+    },
+    {
+      "Title": "H.R. System Tasks Module",
+      "Subtitle": "NUS Fintech Society Project ATLAS",
+      "Description": [
+        "Both member and admin-only views,",
+        "Static clicking and Dynamic drag-and-drop versions,",
+        "Mobile-view designed as well"
+      ],
+      "References": [
+        ["Documentation", ""],
+        ["Demo", ""],
+        ["Live", ""],
+        [
+          "Workspace",
+          "https://www.figma.com/file/lWujcFJxHM5bNvFg1zu8yr/ATLAS-23%2F24?type=design&node-id=7:3&mode=design&t=MxtbQc6sTSslPd8l-1"
+        ],
+        ["Issues", ""]
+      ]
+    },
+    {
+      "Title": "NUSC Impact Experience Project (W.I.P.)",
+      "Subtitle": "Group matchmaking tool",
+      "Description": [
+        "Figma translation to frontend,",
+        "User authentication (3rd party and NUS-auth),",
+        "DBMS"
+      ],
+      "References": [
+        ["Documentation", ""],
+        ["Demo", ""],
+        ["Live", ""],
+        ["Workspace", ""],
+        ["Issues", ""]
+      ]
+    }
+  ]
+}
