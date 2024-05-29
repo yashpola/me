@@ -14,13 +14,19 @@ export default function SortingOptionsMenu({
         <>
           <div
             id={SortingRules.BOXOFFICELOW}
-            onClick={() => setSorter(SortingRules.BOXOFFICELOW)}
+            onClick={(e) => {
+              e.preventDefault();
+              setSorter(SortingRules.BOXOFFICELOW);
+            }}
           >
             Lowest to highest grossing
           </div>
           <div
             id={SortingRules.BOXOFFICEHIGH}
-            onClick={() => setSorter(SortingRules.BOXOFFICEHIGH)}
+            onClick={(e) => {
+              e.preventDefault();
+              setSorter(SortingRules.BOXOFFICEHIGH);
+            }}
           >
             Highest to lowest grossing
           </div>
@@ -28,37 +34,55 @@ export default function SortingOptionsMenu({
       )}
       <div
         id={SortingRules.YEARLAST}
-        onClick={() => setSorter(SortingRules.YEARLAST)}
+        onClick={(e) => {
+          e.preventDefault();
+          setSorter(SortingRules.YEARLAST);
+        }}
       >
         Last to first released (year)
       </div>
       <div
         id={SortingRules.YEARFIRST}
-        onClick={() => setSorter(SortingRules.YEARFIRST)}
+        onClick={(e) => {
+          e.preventDefault();
+          setSorter(SortingRules.YEARFIRST);
+        }}
       >
         First to last released (year)
       </div>
       <div
         id={SortingRules.RECENCYLEAST}
-        onClick={() => setSorter(SortingRules.RECENCYLEAST)}
+        onClick={(e) => {
+          e.preventDefault();
+          setSorter(SortingRules.RECENCYLEAST);
+        }}
       >
         Least to most recently reviewed
       </div>
       <div
         id={SortingRules.RECENCYMOST}
-        onClick={() => setSorter(SortingRules.RECENCYMOST)}
+        onClick={(e) => {
+          e.preventDefault();
+          setSorter(SortingRules.RECENCYMOST);
+        }}
       >
         Most to least recently reviewed
       </div>
       <div
         id={SortingRules.RATINGLOW}
-        onClick={() => setSorter(SortingRules.RATINGLOW)}
+        onClick={(e) => {
+          e.preventDefault();
+          setSorter(SortingRules.RATINGLOW);
+        }}
       >
         Lowest to highest rated
       </div>
       <div
         id={SortingRules.RATINGHIGH}
-        onClick={() => setSorter(SortingRules.RATINGHIGH)}
+        onClick={(e) => {
+          e.preventDefault();
+          setSorter(SortingRules.RATINGHIGH);
+        }}
       >
         Highest to lowest rated
       </div>

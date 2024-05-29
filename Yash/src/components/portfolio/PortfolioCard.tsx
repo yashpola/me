@@ -6,6 +6,14 @@ export default function PortfolioCard({
 }: {
   portfolioPost: PortfolioPost;
 }) {
+  function addUnderlineToText(id: string): void {
+    toggleUnderlineOnHover(document.getElementById(id), 1);
+  }
+
+  function removeUnderlineFromText(id: string): void {
+    toggleUnderlineOnHover(document.getElementById(id), 0);
+  }
+
   return (
     <div className="portfolio-card">
       <div className="portfolio-card-header">
@@ -36,17 +44,11 @@ export default function PortfolioCard({
                   title={"Portfolio card " + ref[1]}
                   onMouseEnter={(e) => {
                     e.preventDefault();
-                    toggleUnderlineOnHover(
-                      document.getElementById("Portfolio card " + ref[1]),
-                      1
-                    );
+                    addUnderlineToText("Portfolio card " + ref[1]);
                   }}
                   onMouseLeave={(e) => {
                     e.preventDefault();
-                    toggleUnderlineOnHover(
-                      document.getElementById("Portfolio card " + ref[1]),
-                      0
-                    );
+                    removeUnderlineFromText("Portfolio card " + ref[1]);
                   }}
                 >
                   {ref[0]}
