@@ -241,6 +241,12 @@ standard-anchor {
   text-decoration: none;
 }
 
+.portfoliopost-page-image {
+  /* Display */
+  height: auto;
+  width: 100%;
+}
+
 /* Small devices (phones) */
 
 @media only screen and (max-width: 600px) {

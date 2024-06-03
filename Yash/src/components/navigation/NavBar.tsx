@@ -8,6 +8,7 @@ import { MovieComponentMap, TVComponentMap } from "../moviestv/ComponentMap";
 import MovieTVInfo from "../../data/MovieTVPosts.json";
 import PortfolioPage from "../portfolio/PortfolioPage";
 import PortfolioPosts from "../../data/PortfolioPosts.json";
+import { PortfolioPostMap } from "../portfolio/ComponentMap";
 
 export default function NavBar() {
   return (
@@ -119,6 +120,17 @@ export default function NavBar() {
             <PortfolioPage portfolioPosts={PortfolioPosts.PortfolioEntries} />
           }
         />
+        {PortfolioPosts.PortfolioEntries.map((post, idx) => {
+          const PortfolioPostComponent =
+            PortfolioPostMap[`${post.Name.replace(/ /g, "")}`];
+          return (
+            <Route
+              key={idx}
+              path={`${post.Name.replace(/ /g, "")}`}
+              element={<PortfolioPostComponent post={post} />}
+            />
+          );
+        })}
       </Routes>
     </>
   );

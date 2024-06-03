@@ -58,6 +58,13 @@ export default function PortfolioCard({
           );
         })}
       </ul>
+      <a href={`http://localhost:5173/${portfolioPost.Name}`} target="_blank">
+        <p
+          style={{ display: "flex", justifyContent: "right", fontSize: "17px" }}
+        >
+          See more
+        </p>
+      </a>
     </div>
   );
 }

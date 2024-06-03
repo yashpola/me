@@ -1,6 +1,7 @@
 {
   "PortfolioEntries": [
     {
+      "Name": "ARIA",
       "Title": "A.R.I.A.",
       "Subtitle": "Website-based study assistant for NUS students",
       "Description": [
@@ -23,6 +24,7 @@
       ]
     },
     {
+      "Name": "HRSystemTasks",
       "Title": "H.R. System Tasks Module",
       "Subtitle": "NUS Fintech Society Project ATLAS",
       "Description": [
@@ -42,6 +44,7 @@
       ]
     },
     {
+      "Name": "IEX",
       "Title": "NUSC Impact Experience Project (W.I.P.)",
       "Subtitle": "Group matchmaking tool",
       "Description": [

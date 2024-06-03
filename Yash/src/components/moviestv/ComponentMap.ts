@@ -1,7 +1,7 @@
 import {
   MovieComponentMapType,
   TVComponentMapType,
-} from "../../utils/typedefs/MoviesTVCustomTypes.tsx";
+} from "../../utils/typedefs/MoviesTVCustomTypes.ts";
 import {
   Birdman,
   Casino,
