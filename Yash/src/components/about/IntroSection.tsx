@@ -21,8 +21,8 @@ export default function IntroSection() {
         style={{ width: "150px", height: "150px", borderRadius: 200 }}
       />
       <p>
-        I'm Yashwit Polapragada but you can call me Yash! I'm currently a
-        sophomore at NUS College, studying Computer Science.
+        I'm Yashwit Polapragada but you can call me Yash! I'm a rising junior at
+        NUS College, studying Computer Science.
       </p>
       <p>
         <u>Tidbits:</u>
@@ -34,14 +34,37 @@ export default function IntroSection() {
         <li>Thinking of getting into tennis and lego collecting.</li>
       </ul>
       <p>
-        <u>What I'm up to now (Spring Semester '24):</u>
+        <u>What I'm up to now (Summer '24):</u>
       </p>
       <ul>
-        <li>Software Engineering</li>
-        <li>Operating Systems</li>
-        <li>Probability and Statistics</li>
-        <li>Design and Analysis of Algorithms</li>
-        <li>Effective Communication for Computing Professionals</li>
+        <li>
+          <a
+            className="standard-anchor"
+            href="https://www.techinterviewhandbook.org/grind75?difficulty=Easy&difficulty=Medium&hours=8&weeks=16"
+            target={"_blank"}
+            title="Grind 143 link"
+          >
+            Grind 143.
+          </a>
+        </li>
+        <li>Travelling to Seattle, NYC and Dallas!</li>
+        <li>
+          Research on the integration of A.I. tools with CS2103T (Software
+          Engineering).
+        </li>
+        <li>Compilers course from Stanford Online.</li>
+        <li>
+          Redo{" "}
+          <a
+            className="standard-anchor"
+            href="https://github.com/yashpola/OrbitalARIA"
+            target="_blank"
+            title="ARIA link"
+          >
+            last year's summer project
+          </a>{" "}
+          with TypeScript and Express.
+        </li>
       </ul>
       <p>
         <u>What I use this site for:</u>
