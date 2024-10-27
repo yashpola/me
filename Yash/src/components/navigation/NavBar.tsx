@@ -27,7 +27,7 @@ export default function NavBar() {
               About
             </NavLink>
           </div>
-          <div className="nav-item">
+          {/* <div className="nav-item">
             <NavLink
               to="/learnings"
               style={({ isActive }) => ({
@@ -37,7 +37,7 @@ export default function NavBar() {
             >
               Learnings
             </NavLink>
-          </div>
+          </div> */}
           <div className="nav-item">
             <NavLink
               to="/movies"

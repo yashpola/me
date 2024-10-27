@@ -78,7 +78,7 @@ export default function Dashboard({
               <>
                 <div key={idx} className="posters-dashboard">
                   <a
-                    href={`https://yashyswebsitev2.vercel.app/${entry.name.replace(
+                    href={`http://localhost:5173/${entry.name.replace(
                       / /g,
                       ""
                     )}`}

@@ -21,56 +21,39 @@ export default function IntroSection() {
         style={{ width: "150px", height: "150px", borderRadius: 200 }}
       />
       <p>
-        I'm Yashwit Polapragada but you can call me Yash! I'm a rising junior at
-        NUS College, studying Computer Science.
+        I'm Yashwit Polapragada but you can call me Yash! I'm a junior at NUS
+        College, studying Computer Science.
       </p>
       <p>
         <u>Tidbits:</u>
       </p>
       <ul>
         <li>
-          I can talk to you about movies, cricket, current affairs, and music.
+          Movie buff, learning tennis and spanish, currently run a 5k in 25:00.
         </li>
-        <li>Thinking of getting into tennis and lego collecting.</li>
+        <li>
+          I'm currently reading <i>A Song of Ice and Fire: Clash of Kings</i>.
+        </li>
+        <li>
+          Thinking of getting back into the keyboard (the musical type) and pick
+          up lego building.
+        </li>
       </ul>
       <p>
-        <u>What I'm up to now (Summer '24):</u>
+        <u>What I'm up to now (Fall Semester '24):</u>
       </p>
       <ul>
-        <li>
-          <a
-            className="standard-anchor"
-            href="https://www.techinterviewhandbook.org/grind75?difficulty=Easy&difficulty=Medium&hours=8&weeks=16"
-            target={"_blank"}
-            title="Grind 143 link"
-          >
-            Grind 143.
-          </a>
-        </li>
-        <li>Travelling to Seattle, NYC and Dallas!</li>
-        <li>
-          Research on the integration of A.I. tools with CS2103T (Software
-          Engineering).
-        </li>
-        <li>Compilers course from Stanford Online.</li>
-        <li>
-          Redo{" "}
-          <a
-            className="standard-anchor"
-            href="https://github.com/yashpola/OrbitalARIA"
-            target="_blank"
-            title="ARIA link"
-          >
-            last year's summer project
-          </a>{" "}
-          with TypeScript and Express.
-        </li>
+        <li>Introduction to Artificial Intelligence and Machine Learning.</li>
+        <li>Theory of Computation.</li>
+        <li>Optimization Algorithms.</li>
+        <li>Internet Architecture.</li>
+        <li>What can I know?</li>
       </ul>
       <p>
         <u>What I use this site for:</u>
       </p>
       <ul>
-        <li>
+        {/* <li>
           Recording my{" "}
           <Anchor
             className={"standard-anchor"}
@@ -88,7 +71,7 @@ export default function IntroSection() {
             label={"Leetcode"}
           />{" "}
           problems I do.
-        </li>
+        </li> */}
         <li>
           Reviewing{" "}
           <Anchor

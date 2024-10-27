@@ -478,6 +478,34 @@
       ],
       "rating": 4,
       "recommendations": "Once Upon a Time in America, There Will Be Blood, Django Unchained"
+    },
+    {
+      "order": 16,
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjI0ZDAwM2QtZTZjNS00NTBiLTg2MzUtMmE4YzgxMDRiODE3XkEyXkFqcGc@._V1_.jpg",
+      "clip": "https://www.youtube.com/embed/c-jegvvarJw?si=ULn7eyYBSaTqtx7K",
+      "name": "The Promised Land",
+      "year": 2023,
+      "boxOffice": 956198,
+      "title": "The Promised Land (2023)",
+      "subtitle": "Nikolaj Arcel | Mads Mikkelsen, Amanda Collin, Simon Bennebjer",
+      "quote": "",
+      "thoughts": [
+        "I think the problem with GONY was that it didn't go hard enough on any of the interesting threads it used. It was neither",
+        "a no-holds-barred satisfying revenge story nor an elaborate sociopolitical examination of 1800s New York nor an in-depth slow-burn character",
+        "study exploring the interplay of xenophobia, class warfare, toxic masculinity and more. I appreciate the experimental (for Scorsese) nature of",
+        "GONY, its design (the costumes - especially for Bill Cutter, set pieces and soundtrack did liven things up) but the movie simply lacked an",
+        "appeal which I could hold onto for longer than 10 minutes at a time. The performances were also not a lot to write home about (which is where",
+        "The Aviator, for example, won out for me even with a similarly slow story). Even Daniel Day-Lewis' entrancing portrayal of a mad and violent but",
+        "surprisingly introspective working man felt less sincere put next to There Will Be Blood (which I couldn't help thinking about in comparison).",
+        "Still, GONY's issues only standout to me because of how much better Scorsese's other films are (which makes me think of the potential GONY had)",
+        "but it is by no means a less-than-good movie."
+      ],
+      "trivia": [
+        "Martin Scorsese recreated 19th-century New York on the lot of Cinecitta studios in Rome. When George Lucas visited the massive set, he",
+        "reportedly turned to Scorsese and said, `Sets like that can be done with computers now.`"
+      ],
+      "rating": 4,
+      "recommendations": "There Will Be Blood, Gangs of New York"
     }
   ],
   "TV": [
