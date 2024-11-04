@@ -8,6 +8,7 @@ import {
   Instagram,
   Telegram,
   Movie,
+  FormatItalic,
 } from "@mui/icons-material";
 import Anchor from "../../utils/customelements/Anchor";
 
@@ -31,12 +32,10 @@ export default function IntroSection() {
         <li>
           Movie buff, learning tennis and spanish, currently run a 5k in 25:00.
         </li>
+        <li>I'm currently reading Dune: Messiah (Frank Herbert).</li>
         <li>
-          I'm currently reading <i>A Song of Ice and Fire: Clash of Kings</i>.
-        </li>
-        <li>
-          Thinking of getting back into the keyboard (the musical type) and pick
-          up lego building.
+          Want to get back into the keyboard (the musical type) and pick up lego
+          building as a hobby.
         </li>
       </ul>
       <p>
