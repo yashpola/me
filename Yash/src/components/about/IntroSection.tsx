@@ -8,7 +8,6 @@ import {
   Instagram,
   Telegram,
   Movie,
-  FormatItalic,
 } from "@mui/icons-material";
 import Anchor from "../../utils/customelements/Anchor";
 
@@ -22,7 +21,7 @@ export default function IntroSection() {
         style={{ width: "150px", height: "150px", borderRadius: 200 }}
       />
       <p>
-        I'm Yashwit Polapragada but you can call me Yash! I'm a junior at NUS
+        I'm Yashwit Polapragada but you can call me Yash! I'm a Junior at NUS
         College, studying Computer Science.
       </p>
       <p>
@@ -30,9 +29,10 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          Movie buff, learning tennis and spanish, currently run a 5k in 25:00.
+          Movie buff, practising tennis and spanish, currently run a 5k in
+          25:00.
         </li>
-        <li>I'm currently reading Dune: Messiah (Frank Herbert).</li>
+        <li>I'm currently reading Children of Dune (Frank Herbert).</li>
         <li>
           Want to get back into the keyboard (the musical type) and pick up lego
           building as a hobby.
