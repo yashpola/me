@@ -29,8 +29,8 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          Movie buff, practising tennis and spanish, currently run a 5k in
-          25:00.
+          Movie enjoyer, practising tennis and spanish, current 5k best is
+          24:29, current 10k best is 1:05:00.
         </li>
         <li>I'm currently reading Children of Dune (Frank Herbert).</li>
         <li>
