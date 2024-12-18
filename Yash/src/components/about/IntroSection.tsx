@@ -1,5 +1,5 @@
 import CatFact from "./CatFact";
-import me from "../../assets/me.JPG";
+import me from "../../assets/headshot.jpg";
 
 import {
   LinkedIn,
@@ -18,7 +18,11 @@ export default function IntroSection() {
       <img
         src={me}
         alt="Yash's Personal Profile Picture"
-        style={{ width: "150px", height: "150px", borderRadius: 200 }}
+        style={{
+          width: "150px",
+          height: "200px",
+          borderRadius: 200,
+        }}
       />
       <p>
         I'm Yashwit Polapragada but you can call me Yash! I'm a Junior at NUS
@@ -29,30 +33,38 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          Movie enjoyer, practising tennis and spanish, current 5k best is
-          24:29, current 10k best is 1:05:00.
+          Movie enjoyer, runner (5k best: 24:29, 10k best: 1:00:00), practising
+          tennis (28 hours so far) and spanish (199-day duolingo streak).
         </li>
-        <li>I'm currently reading Children of Dune (Frank Herbert).</li>
         <li>
-          Want to get back into the keyboard (the musical type) and pick up lego
-          building as a hobby.
+          I'm currently reading <u>Thus Spoke Zarathustra</u> (Friedrich
+          Nietzsche).
+        </li>
+        <li>
+          Want to get back into the keyboard (the musical type), and pick up
+          lego building as a hobby (latest build: NASA Discovery Shuttle with
+          Hubble Space Telescope on 07/12/2024).
         </li>
       </ul>
       <p>
-        <u>What I'm up to now (Fall Semester '24):</u>
+        <u>What I'm up to now (Winter Break '24):</u>
       </p>
       <ul>
-        <li>Introduction to Artificial Intelligence and Machine Learning.</li>
-        <li>Theory of Computation.</li>
-        <li>Optimization Algorithms.</li>
-        <li>Internet Architecture.</li>
-        <li>What can I know?</li>
+        <li>Visiting my grandparents in Visakhapatnam.</li>
+        <li>
+          Reading Thus Spoke Zarathustra (Friedrich Nietzsche), God Emperor of
+          Dune (Frank Herbert), and Hoffman & Kunze's Linear Algebra.
+        </li>
+        <li>
+          Working on this website (to refresh Typescript before my internship in
+          January).
+        </li>
       </ul>
       <p>
         <u>What I use this site for:</u>
       </p>
       <ul>
-        {/* <li>
+        <li>
           Recording my{" "}
           <Anchor
             className={"standard-anchor"}
@@ -61,16 +73,8 @@ export default function IntroSection() {
             title={"Thoughts tab link"}
             label={"thoughts"}
           />{" "}
-          on the courses I take in school as well as{" "}
-          <Anchor
-            className={"standard-anchor"}
-            href={"https://leetcode.com"}
-            target={"_blank"}
-            title={"Leetcode link"}
-            label={"Leetcode"}
-          />{" "}
-          problems I do.
-        </li> */}
+          on the courses I take in school.
+        </li>
         <li>
           Reviewing{" "}
           <Anchor

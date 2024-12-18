@@ -1,19 +1,75 @@
 {
-  "Leetcode": [
+  "Years": [
     {
-      "title": "Maximise Happiness of Selected Children",
-      "subtitle": "Leetcode 3075",
-      "body": [
-        "This problem is a typical candidate for a greedy strategy.",
-        "First recognise that for any optimal solution that maximises the sum of k number of children's happiness,",
-        "subtracting any one of the children's happiness will necessarily give us the optimal solution for k - 1 children's happiness.",
-        "In a bottom-up sense, this simply means that in every round from 1 to k, we are reliably choosing a child that will maximise our final happiness in the end.",
-        "Second, realise that in any optimal solution over 1 to k selections of children, the child with the maximum happiness in that round is included.",
-        "Again this simply translates to: sort the initial happiness list and select the maximally happy un-selected child at each selection round from 1 to k.",
-        "To meet the additional problem requirements, we decrement the happiness of the child we are selecting by 1...k each time (and only do this the child we are immediately selecting, ",
-        "to prevent k-many full linear iterations of the happiness list). Lastly, ensure that we do not add negative happiness by taking Max(0, child's happiness - decrement) when summing up happiness."
-      ],
-      "link": "https://leetcode.com/problems/maximize-happiness-of-selected-children/description/?envType=daily-question&envId=2024-05-09"
+      "Y3S1": {
+        "Computing": [
+          {
+            "code": "CS2109S",
+            "title": "Introduction to AI/ML",
+            "generalreview": "http://disq.us/p/3188fkj",
+            "image": "https://pbs.twimg.com/media/FSDfnEyUcAEUMSd.jpg:large",
+            "prologue": [
+              "Going in to this course, I had honestly no better clue of how AI/ML ",
+              "works than than layman despite the great amount of recent public exposure. Leaving however, I ",
+              "had at least an understanding of the basic motivations of how AI/ML is ",
+              "exercised. Let me start with a brief recap of the whole course."
+            ],
+            "recap": [
+              "First, one needs to understand how an artificial agent could answer a simple factual question. Fortunately, this is easy: ",
+              "the agent reduces the question to a search problem and \"finds\" the answer in a deterministic manner. Take this query: ",
+              "Which movie did Tom Cruise and Nicole Kidman appear in together? How would we program an agent to answer this? "
+            ],
+            "topic": [""]
+          },
+          {
+            "code": "CS3231",
+            "title": "Theory of Computation",
+            "generalreview": "http://disq.us/p/3188oot",
+            "image": "https://preview.redd.it/51c2i8p9ovy31.png?auto=webp&s=5f1ccf07f0d843b344748912f09d16eb86349691",
+            "prologue": [""],
+            "recap": [""],
+            "topic": [""]
+          },
+          {
+            "code": "CS4226",
+            "title": "Internet Architecture",
+            "generalreview": "http://disq.us/p/3188z62",
+            "image": "https://i.imgflip.com/1rivut.jpg",
+            "prologue": [""],
+            "recap": [""],
+            "topic": [""]
+          },
+          {
+            "code": "CS4234",
+            "title": "Optimisation Algorithms",
+            "generalreview": "http://disq.us/p/31898gp",
+            "image": "https://i.redd.it/vehc07hlgmr81.jpg",
+            "prologue": [""],
+            "recap": [""],
+            "topic": [""]
+          }
+        ],
+        "NUSC": [
+          {
+            "code": "NHS2076",
+            "title": "What can I know?",
+            "generalreview": "",
+            "image": "https://images7.memedroid.com/images/UPLOADED918/6741d04540036.jpeg",
+            "prologue": [""],
+            "recap": [""],
+            "topic": [""]
+          },
+          {
+            "code": "NEX3003",
+            "title": "GEx New York City",
+            "generalreview": "",
+            "image": "https://www.nevadacurrent.com/wp-content/uploads/2019/04/Gramsci-Foucault-1.jpg",
+            "prologue": [""],
+            "recap": [""],
+            "topic": [""]
+          }
+        ]
+      }
     }
   ]
 }

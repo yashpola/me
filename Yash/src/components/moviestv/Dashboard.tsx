@@ -52,7 +52,7 @@ export default function Dashboard({
             setSortingMenuOpen(!sortingMenuOpen);
           }}
         >
-          <SwapVert style={{ color: "brown" }} />
+          <SwapVert />
         </button>
       </div>
       {sortingMenuOpen && (
@@ -78,10 +78,7 @@ export default function Dashboard({
               <>
                 <div key={idx} className="posters-dashboard">
                   <a
-                    href={`http://localhost:5173/${entry.name.replace(
-                      / /g,
-                      ""
-                    )}`}
+                    href={`https://yashwit.com/${entry.name.replace(/ /g, "")}`}
                     target="_blank"
                   >
                     <img

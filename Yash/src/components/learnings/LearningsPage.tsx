@@ -1,14 +1,25 @@
-import LearningPosts from "../../data/LearningPosts.json";
-import TruncatedLearningCard from "./TruncatedLearningCard.js";
+import Years from "../../data/Years.json";
 
 export default function LearningsPage() {
   return (
     <>
       <div className="page-section">
-        <h3>Knowledge Central</h3>
-        {LearningPosts.Leetcode.map((learningPost, idx) => {
+        <h1>Years & Semesters</h1>
+        {Years.Years.map((year, idx) => {
           return (
-            <TruncatedLearningCard key={idx} LearningPost={learningPost} />
+            <div className="course-card" key={idx}>
+              <div className="course-tab" />
+              <div className="course-card-body">
+                <h2>
+                  <a
+                    href={`https://yashwit.com/${year}`}
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
+                    {year}
+                  </a>
+                </h2>
+              </div>
+            </div>
           );
         })}
       </div>

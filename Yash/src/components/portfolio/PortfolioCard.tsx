@@ -58,9 +58,15 @@ export default function PortfolioCard({
           );
         })}
       </ul>
-      <a href={`http://localhost:5173/${portfolioPost.Name}`} target="_blank">
+      <a href={`https://yashwit.com/${portfolioPost.Name}`} target="_blank">
         <p
-          style={{ display: "flex", justifyContent: "right", fontSize: "17px" }}
+          style={{
+            display: "flex",
+            justifyContent: "right",
+            fontSize: "17px",
+            color: "white",
+            textDecoration: "none",
+          }}
         >
           See more
         </p>
