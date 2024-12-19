@@ -71,6 +71,11 @@ h3 {
   text-decoration: underline;
 }
 
+.custom-anchor {
+  /* Text */
+  color: black;
+}
+
 standard-anchor {
   /* Text */
   color: blue;

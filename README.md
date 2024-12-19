@@ -1,6 +1,6 @@
 ## Yashwit's Website (W.I.P.)
 
-Version 2! Migrated from [here](https://github.com/yashpola/yashpola). Major differences are that this site is built using Vanilla CSS instead of MaterialUI (to reduce performance overhead) and Vite-Typescript instead of CreateReactApp-JavaScript. I'm still deployed at [https://yashwit.com](https://yashwit.com)
+Version 2! Migrated from [here](https://github.com/yashpola/yashpola) but I'm still deployed at [https://yashwit.com](https://yashwit.com)
 
 Feel free to give me feedback [here](https://github.com/yashpola/me/issues)
 
@@ -8,7 +8,7 @@ Feel free to give me feedback [here](https://github.com/yashpola/me/issues)
 
 ---
 
-- Recording my [thoughts](https://yashwit.com/thoughts) on the courses I take in school as well as [Leetcode](https://leetcode.com/) problems I do.
+- Recording my [thoughts](https://yashwit.com/thoughts) on the courses I take in school.
 - Reviewing [movies](https://yashwit.com/movies) and [tv shows](https://yashwit.com/tv) that I watch.
 - Showcasing my [portfolio](https://yashwit.com/portfolio).
 
@@ -16,9 +16,9 @@ Feel free to give me feedback [here](https://github.com/yashpola/me/issues)
 
 ---
 
-- Opportunity to learn Typescript
-- Decouple from MUI and focus on HTML/CSS rules + hygiene
-- Build over Vite instead of CRA
+- Familiarise with Typescript (I don't see myself returning to JavaScript tbh...).
+- Decouple from MUI (to reduce performance overhead) and focus on purer ground-up building with TSX/HTML/CSS.
+- Build over Vite instead of CRA (also for performance).
 
 ### What I didn't focus on for this rebuild:
 
@@ -26,6 +26,5 @@ Feel free to give me feedback [here](https://github.com/yashpola/me/issues)
 
 ---
 
-- GitHub utilisation (Branching, PRs, Commit Structuring etc)
-- Frontend/Backend deployment
-- Look into Next, Express, etc
+- GitHub utilisation (Branching, PRs, Commit Structuring etc).
+- Frontend/Backend deployment (Next, Express, etc.)

@@ -23,10 +23,10 @@ export default function ReviewPage({
         title={`${review.name} Image`}
       />
       <h4>"{review.quote}"</h4>
-      <p>{review.thoughts.join(" ")}</p>
+      <p style={{ textAlign: "justify" }}>{review.thoughts.join(" ")}</p>
       <br />
       <iframe className="youtube-iframe" src={review.clip} />
-      <div style={{ textAlign: "left" }}>
+      <div style={{ textAlign: "justify" }}>
         <p>Rating: {review.rating}/5</p>
         <p>Trivia: {review.trivia.join(" ")}</p>
         <p>

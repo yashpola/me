@@ -12,7 +12,7 @@ export default function LearningsPage() {
               <div className="course-card-body">
                 <h2>
                   <a
-                    href={`https://yashwit.com/${year}`}
+                    href={`http://localhost:5173/${year}`}
                     style={{ color: "white", textDecoration: "none" }}
                   >
                     {year}

@@ -10,23 +10,34 @@ export default function CoursePage({ course }: { course: CoursePostType }) {
         }}
       >
         <h1 style={{ textDecoration: "underline" }}>{course.title}</h1>
+        <div
+          style={{
+            textAlign: "justify",
+            margin: "2%",
+          }}
+        >
+          <p>{course.prologue}</p>
+        </div>
         <img className="course-review-image" src={course.image} />
-      </div>
-      <div
-        style={{
-          textAlign: "left",
-          margin: "2%",
-        }}
-      >
-        {course.generalreview && (
-          <h2>
-            <a href={course.generalreview} target="_blank">
-              Link to general review (nusmods)
-            </a>
-          </h2>
-        )}
-        <p>{course.prologue}</p>
-        <p>{course.recap}</p>
+        <div
+          style={{
+            textAlign: "justify",
+            margin: "2%",
+          }}
+        >
+          <p>{course.recap}</p>
+          {course.generalreview && (
+            <h2>
+              <a
+                className="custom-anchor"
+                href={course.generalreview}
+                target="_blank"
+              >
+                Link to general review (ysp on nusmods)
+              </a>
+            </h2>
+          )}
+        </div>
       </div>
     </>
   );

@@ -26,8 +26,21 @@
             "title": "Theory of Computation",
             "generalreview": "http://disq.us/p/3188oot",
             "image": "https://preview.redd.it/51c2i8p9ovy31.png?auto=webp&s=5f1ccf07f0d843b344748912f09d16eb86349691",
-            "prologue": [""],
-            "recap": [""],
+            "prologue": [
+              "A course unlike any CS course I've done or will ever do. Theory of Computation was all about generalising (rigorously) the computational ",
+              "power of the machine. Think: what exactly does it mean for a machine to \"compute\" the answer to a problem? Sure, your Algorithms class ",
+              "enumerated and proved to you how certain routines solve certain problems. But how exactly do routines translate in a machine? Probably, your ",
+              "Computer Architecture class enlightened you to the data and control paths. Then, your OS class swooped in to give you process abstraction. ",
+              "These are obviously crucial, but what lies even further beyond? What is the most general representation of a machine? ",
+              "Or indeed, even of a problem that has a specific solution? What exactly can('t) a machine compute? These questions, as an almost historical ",
+              "review of computational innovation, are devised and answered by the theory of computing."
+            ],
+            "recap": [
+              "First thing to note: we deal - more generally - in \"languages\" instead of \"problems\", and talk about \"language acceptance\" ",
+              "instead of \"problem solving\" (in the traditional, Algorithms, sense). Simply put: a machine is given a \"string\" as an input ",
+              "and is asked to verify the string's membership in a specific language. If the machine \"accepts\" only those strings that belong to ",
+              "that language (nothing more or less), then it is said to accept the language as a whole. "
+            ],
             "topic": [""]
           },
           {

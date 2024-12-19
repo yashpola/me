@@ -34,7 +34,7 @@ export default function IntroSection() {
       <ul>
         <li>
           Movie enjoyer, runner (5k best: 24:29, 10k best: 1:00:00), practising
-          tennis (28 hours so far) and spanish (199-day duolingo streak).
+          tennis (28 hours so far) and spanish (200-day duolingo streak).
         </li>
         <li>
           I'm currently reading <u>Thus Spoke Zarathustra</u> (Friedrich
