@@ -34,7 +34,7 @@ export default function IntroSection() {
       <ul>
         <li>
           I'm a movie enjoyer! My current Top 5 are: Arrival, Nope, Taare Zameen
-          Par, and 2001: A Space Odyssey.
+          Par, 2001: A Space Odyssey, and The King of Comedy.
         </li>
         <li>
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
