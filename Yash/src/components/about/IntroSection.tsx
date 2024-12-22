@@ -44,8 +44,8 @@ export default function IntroSection() {
         </li>
         <li>
           Currently reading <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche).
-          My next reads are: <u>God Emperor of Dune</u> (Frank Herbert), A Storm
-          of Swords: Part I (George R.R. Martin),{" "}
+          My next reads are: <u>God Emperor of Dune</u> (Frank Herbert),{" "}
+          <u>A Storm of Swords: Part I</u> (George R.R. Martin),{" "}
           <u>A Critique of Pure Reason</u> (Immanuel Kant).
         </li>
         <li>
