@@ -33,15 +33,23 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          Movie enjoyer, runner (5k best: 24:29, 10k best: 1:00:00), practising
-          tennis (28 hours so far) and spanish (200-day duolingo streak).
+          I'm a movie enjoyer! My current Top 5 are: Arrival, Nope, Taare Zameen
+          Par, and 2001: A Space Odyssey.
         </li>
         <li>
-          I'm currently reading <u>Thus Spoke Zarathustra</u> (Friedrich
-          Nietzsche).
+          Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Want to get back into the keyboard (the musical type), and pick up
+          Learning tennis (28 hours), and spanish (202-day duolingo streak).
+        </li>
+        <li>
+          Currently reading <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche).
+          My next reads are: <u>God Emperor of Dune</u> (Frank Herbert), A Storm
+          of Swords: Part I (George R.R. Martin),{" "}
+          <u>A Critique of Pure Reason</u> (Immanuel Kant).
+        </li>
+        <li>
+          I want to get back into the keyboard (the musical type), and pick up
           lego building as a hobby (latest build: NASA Discovery Shuttle with
           Hubble Space Telescope on 07/12/2024).
         </li>
