@@ -34,13 +34,16 @@ export default function IntroSection() {
       <ul>
         <li>
           I'm a movie enjoyer! My current Top 5 are: Arrival, Nope, Taare Zameen
-          Par, 2001: A Space Odyssey, and The King of Comedy.
+          Par, 2001: A Space Odyssey, and The King of Comedy. My{" "}
+          <a href="https://boxd.it/BAzL8" target="_blank">
+            watchlist.
+          </a>
         </li>
         <li>
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Learning tennis (28 hours), and spanish (202-day duolingo streak).
+          Learning tennis (28 hours), and spanish (206-day duolingo streak).
         </li>
         <li>
           Currently reading <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche).
