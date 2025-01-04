@@ -5,6 +5,7 @@ import {
 import {
   Birdman,
   Casino,
+  Dune,
   GangsofNewYork,
   Goodfellas,
   InglouriousBasterds,
@@ -30,6 +31,7 @@ import {
 export const MovieComponentMap: MovieComponentMapType = {
   Birdman,
   Casino,
+  Dune,
   GangsofNewYork,
   Goodfellas,
   KillersoftheFlowerMoon,

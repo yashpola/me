@@ -7,59 +7,175 @@
             "code": "CS2109S",
             "title": "Introduction to AI/ML",
             "generalreview": "http://disq.us/p/3188fkj",
-            "image": "https://pbs.twimg.com/media/FSDfnEyUcAEUMSd.jpg:large",
+            "meme": "https://pbs.twimg.com/media/FSDfnEyUcAEUMSd.jpg:large",
             "prologue": [
               "Going in to this course, I had honestly no better clue of how AI/ML ",
               "works than than layman despite the great amount of recent public exposure. Leaving however, I ",
               "had at least an understanding of the basic motivations of how AI/ML is ",
               "exercised. Let me start with a brief recap of the whole course."
             ],
-            "recap": [
-              "First, one needs to understand how an artificial agent could answer a simple factual question. Fortunately, this is easy: ",
-              "the agent reduces the question to a search problem and \"finds\" the answer in a deterministic manner. Take this query: ",
-              "Which movie did Tom Cruise and Nicole Kidman appear in together? How would we program an agent to answer this? "
+            "para1": [
+              "As a simpler exercise: how might an artificial agent answer a simple, factual question? Fortunately, this is easy: ",
+              "the agent could reduce the question to a search problem and \"find\" the answer in a deterministic manner. Take this query: ",
+              "provide the smallest number of movies that connect Timothée Chalamet and Robert Pattinson (the answer is 2: Timothée acted with Zendaya in Dune, ",
+              "and Zendaya with Rob in The Drama). To program an agent to compute this, we clearly first need data supporting the query (in this case, actors and movies). ",
+              "Then, we may represent the data in terms of nodes & arcs (example figure below) and simply run the Breadth-First Search algorithm to retrieve our desired path ",
+              "(namely, Tim -> Zendaya -> Rob). While the example I used was simple, in essence the task is to create states representing data, define ",
+              "transitions between them (which may or may not have variable costs, depending on our problem definition), and define start and end points."
             ],
-            "topic": [""]
+            "para2": [
+              "Now, a more complicated ask: how might an artificial agent make decisions/predictions? This is not so easy, but it comes down to math. ",
+              "More generally - we have feature observations (x) which, through some unknown polynomial combination involving unknown weights (w), map ",
+              "to outputs (y) which we try to approximate through a hypothesis function that produces predictions (y'). The task is really to find the ",
+              "best values for the unknown w, which of-course requires first devising a good hypothesis function (prediction line/polynomial combination). ",
+              "What could x and y represent though? Well, likely anything that can be represented as a finite set of attributes over a numerical interval. ",
+              "Two examples: (1) predicting house prices (y) based on location, size, and age (x) and (2) predicting whether a tumor is benign or malignant (y) ",
+              "based on diameter in cm (x). In this course, I learnt of two broad techniques: classification, and regression. Classification, as the name ",
+              "suggests, is the task of labelling/discretizing data while regression (as I learnt it) refers to (usually continuous) aggregation ",
+              "over numerical data. For regression tools, I learned of Decision Trees & Linear Regression. For classification, I learned of Logistic ",
+              "Regression, Support Vector Machines, Perceptrons, and Neural Networks. While both techniques have their use cases, they may sometimes ",
+              "be used in place of other (ML is a very flexible field!). The main difference between these techniques is in their objective functions (used ",
+              "to find the best weights (w), and the complexities with which they describe the relationship between x, w, and y (prediction lines). ",
+              ""
+            ],
+            "para3": [
+              "At the risk of elaborating too much however, I will comment briefly - before closing - on just one of the topics I found to be the most cool: ",
+              "Support Vector Machines (SVMs). First, consider the motivation: we want as confident a classification as possible of training samples x i.e. ",
+              "we do not want our model to predict 1 for 0, and 0 for 1 (as an example). Thus, we focus on what is called the \"margin\" (read: distance) ",
+              "between the two (I say two because in this course we mostly deal with binary classification) classes of observations and aim to maximise it. ",
+              "Of course, this goal is formalised through an objective function (specifically, the Lagrangian quadratic program). I find this cool because (1) I feel ",
+              "it really exemplifies the elegance of ML as making creative use of (conceptually) simple algebra to do most of the work, and (2) combines several ",
+              "enthralling concepts together (to say the least: calculus, quadratic programming, primal/dual, and algebra). To end off with a quote by the late ",
+              "Patrick Winston from MIT: \"You would think that after people have been working on this sort of stuff for 50 or 75 years, there wouldn’t be any ",
+              "tricks in the bag left. But that’s when everybody gets surprised.\""
+            ]
           },
           {
             "code": "CS3231",
             "title": "Theory of Computation",
             "generalreview": "http://disq.us/p/3188oot",
-            "image": "https://preview.redd.it/51c2i8p9ovy31.png?auto=webp&s=5f1ccf07f0d843b344748912f09d16eb86349691",
+            "meme": "https://preview.redd.it/51c2i8p9ovy31.png?auto=webp&s=5f1ccf07f0d843b344748912f09d16eb86349691",
             "prologue": [
               "A course unlike any CS course I've done or will ever do. Theory of Computation was all about generalising (rigorously) the computational ",
               "power of the machine. Think: what exactly does it mean for a machine to \"compute\" the answer to a problem? Sure, your Algorithms class ",
               "enumerated and proved to you how certain routines solve certain problems. But how exactly do routines translate in a machine? Probably, your ",
               "Computer Architecture class enlightened you to the data and control paths. Then, your OS class swooped in to give you process abstraction. ",
               "These are obviously crucial, but what lies even further beyond? What is the most general representation of a machine? ",
-              "Or indeed, even of a problem that has a specific solution? What exactly can('t) a machine compute? These questions, as an almost historical ",
-              "review of computational innovation, are devised and answered by the theory of computing."
+              "Or indeed, even of a problem that has a specific solution? What exactly can('t) a machine compute? These questions, as (basically) a historical ",
+              "review of computational innovation, are devised and answered by the theory of computing. In this recap, I aim - rather ambitiously - to recap the ",
+              "the course content in 3 paragraphs, though I acknowledge now that there will be several many concepts I leave out or explain crudely. But perhaps ",
+              "the task is just Hard ;)"
             ],
-            "recap": [
+            "para1": [
               "First thing to note: we deal - more generally - in \"languages\" instead of \"problems\", and talk about \"language acceptance\" ",
-              "instead of \"problem solving\" (in the traditional, Algorithms, sense). Simply put: a machine is given a \"string\" as an input ",
+              "instead of \"problem solving\" (in the traditional/algorithms sense). Simply put: a machine is given a \"string\" as an input ",
               "and is asked to verify the string's membership in a specific language. If the machine \"accepts\" only those strings that belong to ",
-              "that language (nothing more or less), then it is said to accept the language as a whole. "
+              "that language (nothing more or less), then it is said to accept the language as a whole. Further, the language \"of\" the machine is ",
+              "said to be that language. Now, for some context: a string is simply an ordered sequence of symbols (such as abab) over a fixed, finite ",
+              "alphabet (a predefined set of symbols such as {a, b}), and a language is some countable set of strings over an alphabet (such as ",
+              "{abab, abbb, aa}). Therefore, when I talk about the \"expressive power\" of a machine, I'm really just referring to the languages ",
+              "that such a machine is able to accept. As such, a large part of this course was really just defining and devising machines with increasing ",
+              "levels of expressive power. We start with the basic: deterministic and nondeterministic finite automata (DFAs/NFAs). While these are a good ",
+              "introduction to HOW exactly we define language acceptance for a machine (i.e. in terms of states & transitions). These, as the name ",
+              "suggests, are both finite in memory (required to store symbols), and thus the same in expressive power (although NFAs are more convenient ",
+              "to work with). To then give ourselves memory, we introduce Push-Down Automata (PDA). These are essentially the same as DFAs/NFAs, except ",
+              "they now have exactly 1 infinite stack to store string symbols in the order they are received, and retrieve them in the reverse order. Are ",
+              "there limitations for PDAs too though? Of course! But let's see how we can know this."
             ],
-            "topic": [""]
+            "para2": [
+              "We must prove that each type of machine really can't do what we claim it can't (for instance, no finite automaton can accept a language ",
+              "where all strings contain an equal number, n, of a's and b's for n >= 0). Fortunately, as with most things, we stand on the shoulders of ",
+              "giants. We use a very powerful tool, called the Pumping Lemma, that helps us prove either that a language is NOT regular (i.e. cannot be ",
+              "accepted by a DFA/NFA) or NOT context-free (i.e. cannot be accepted by a PDA) depending on which variant we use. This is because all regular ",
+              "/context-free languages satisfy the Pumping Lemma for regular/context-free languages. Thereby, the PL becomes a necessary (but not ",
+              "sufficient) condition for regular/context-free languages. Finally, before commenting on Turing Machines, I note also two additional constructs ",
+              "taught in this course: regular expressions, and grammars. In fact, to put it simply: regex, grammars, and automata are all varying ways ",
+              "of expressing languages, and are closely related to each other (for example, (1) all regular expressions correspond exactly to the set of ",
+              "of regular languages and can be expressed as a finite automaton or (2) context-free grammars - such as the one below - correspond exactly ",
+              "to the set of context-free languages and can be expressed as a push-down automaton)."
+            ],
+            "para3": [
+              "Turing Machines offer the highest level of expressive power. These gizmos consist minimally of tapes (with blank cells to write symbols into) ",
+              "and a central finite control to do the actual reading, writing, and string acceptance/rejection (called halting for TMs). TMs offer the same ",
+              "expressive power over all variants (single-tape; picture below, multi-tape, multi-track, etc), with these only bringing convenience-benefits ",
+              "like NFAs do over DFAs. Once the course introduced the Turing Machine, it could then talk about much more sophisticated issues than just language ",
+              "acceptance & rejection: namely, the decideability, and complexity of problems. I'll present just one undecideable problem, for the sake of brevity :), which is the ",
+              "Halting Problem. This language involves the set of all arbitrary strings (w) and some Turing Machine (M1) and asks if M1 halts on w (i.e. accepts/",
+              "rejects it in time finite. Is it obvious that this problem is undecidable (i.e. no TM halts on every string in the language)? If its not, then consider this informal ",
+              "proof: suppose (*) there's some machine M2 that solves this problem, and run M2 in this way - [if M1 halts on input w, then keep M2 running ",
+              "forever]. This exposes a contradiction since M2 won't halt whether or not M1 halts, but by supposition (*), M2 should've halted!. ",
+              "There are many such undecideable problems of which some covered in this course are: The Diagonalisation Language, the Universal Language, ",
+              "The Empty Language, etc. In fact, we were taught formal properties of a language as it relates to hardness, two being recursive enumerability ",
+              "(i.e. a TM halts on all valid inputs for a language), and recursiveness (i.e. a TM halts on all inputs), which makes the undecideable languages effectively ",
+              "at least non-recursive. Similarly, complexity - specifically, time/space costs - are defined similarly in a TM-computation sense, and ",
+              "concomitantly so is the concept of NP/NP-Hard/NP-Complete. As a last remark, there is the actual Universal Turing Machine proposed originally ",
+              "by Alan Turing - which claims to be able to decide any recursive language & compute any recursively enumerable language and that might be one of the ",
+              "cooler parts of a load of content which is already groundbreaking to me."
+            ]
           },
           {
             "code": "CS4226",
             "title": "Internet Architecture",
             "generalreview": "http://disq.us/p/3188z62",
-            "image": "https://i.imgflip.com/1rivut.jpg",
+            "meme": "https://i.imgflip.com/1rivut.jpg",
             "prologue": [""],
-            "recap": [""],
-            "topic": [""]
+            "para1": [""],
+            "para2": [""],
+            "para3": [""]
           },
           {
             "code": "CS4234",
             "title": "Optimisation Algorithms",
             "generalreview": "http://disq.us/p/31898gp",
-            "image": "https://i.redd.it/vehc07hlgmr81.jpg",
-            "prologue": [""],
-            "recap": [""],
-            "topic": [""]
+            "meme": "https://i.redd.it/vehc07hlgmr81.jpg",
+            "prologue": [
+              "The basic Algorithm Design course in NUS stops at defining NP-Hardness (recall: a problem which can be reduced in polynomial time from ",
+              "any problem that is solvable in non-deterministic polynomial time i.e. the NP class), and introducing the P=NP problem (can any problem ",
+              "in NP be solved in deterministic polynomial time?). Optimisation Algorithms then takes the baton from here, and proposes three relaxations ",
+              "for optimising (minimising/maximising) over a specific subset of NP-Hard problems called combinatorial problems. These relaxations are over ",
+              "(1) runtime (accept a reasonably nonpolynomial solution), (2) correctness (accept a reasonable approximation of the optimal solution), ",
+              "and (3) generality (solve only special cases of an NP-Hard problem in deterministic polynomial time)."
+            ],
+            "para1": [
+              "The concept of approximating the solution to a combinatorial optimisation problem was introduced using Minimum Vertex Cover (recall: ",
+              "given vertices V and edges E, find a subset of V of minimum cardinality such that it includes at least 1 endpoint of every edge E). MVC ",
+              "is known to be NP-Hard but, as stated above, an optimal solution can be approximated through several methods (a greedy 2-approximation ",
+              "is a notable one). A 2-approximation of VC would therefore mean that the computed vertex cover has at most twice as many vertices ",
+              "as the optimal one. Equally, if we wanted to maximise over something, then a 2-approximation would intuitively mean at least half of the ",
+              "the optimal solution is achieved. Note that an approximation can be within a constant (such as 2 or 3) or function (such as logn). Some ",
+              "problems are in-fact hard even to polynomially approximate, such as the Euclidean+No-Repeats Travelling Salesman Problem. Luckily these, ",
+              "are few and far between in terms of practical use in the real world. The course also covered approximations for a host of problems including ",
+              "but not limited to - Minimum Set Cover, the Travelling Salesman Problem, CNF-SAT, and Maximum Cut. In the end, my favorite approximation ",
+              "algorithm was the Christofides-Serdyukov 1.5-approximation algorithm for TSP. I surmise I will forever be in awe of how this 12-step algorithm ",
+              "that itself made use of minimum spanning trees, euclidean cycles, and edmonds' matching was even conceived of! Perhaps \"favorite\" is a ",
+              "bit of a misnomer though, since I absolutely also loved Linear Programming which is a very simple technique that involves representing ",
+              "the constraints and features of an combinatorial optimisation problem as a linear system, and solving it. Of course, since these problems ",
+              "remain NP-Hard even for the linear system, the Linear Program often also has to be relaxed to retain the polynomial time bound."
+            ],
+            "para2": [
+              "Separately, solving only a special case of an NP-Hard problem in polynomial time was illustrated using Maximum Matching (which, by the way, is ",
+              "a mirror problem to Minimum Vertex Cover) but only in Bipartite Graphs. To work our way up to this though, we started with a very famous ",
+              "theorem in optimisation: Maximum Flow-Minimum Cut (MFMC). This theorem states that in a network comprised of links each with some nonzero capacity, ",
+              "a source s and a sink t, the maximum flow (i.e. the max outflow from s/inflow to t) is equal to the minimum cut (i.e. the set of edges with ",
+              "minimum sum capacity that need to be removed to disconnect all paths from s to t). We first re-constructed the hallmark Ford-Fulkerson ",
+              "method for finding the maximum flow/minimum cut of a network as well as practical implementations of this method (Edmonds-Karp Fat Pipes ",
+              "& Dinitz's) which run in time polynomial (O(V^2E) to be explicit). Then, we applied MFMC (almost verbatim!) to special problems such as ",
+              "maximum matching in bipartite graphs, minimum vertex-disjoint path cover, etc. It's great that we can do this since maximum bipartite matching ",
+              "is itself a very powerful technique to easily solve combinatorial problems (for example: if I have X customers with Y sets of needs and Z ",
+              "agents, how do I select the minimum number of agents such that all customers' needs are met?)."
+            ],
+            "para3": [
+              "Notice that runtime, correctness, and generality are usually traded-off for each other i.e. BECAUSE we are okay with only an approximation ",
+              "of an optimal solution, we can sketch out a solution that runs faster (in this sense, \"solutions\" begin to resemble \"heuristics\"). Finally, ",
+              "as an aside - the course also covered some miscalleneous content on probability-based methods. There was a quick recap of naive randomization",
+              "(often involved crudely assigning probabilities to events based on an intended outcome). But of course, we went beyond to study more refined ",
+              "tricks such as the Lovász Local Lemma (which places a bound on the probability space by judging the indepence of certain events, and ",
+              "derandomization using the method of conditional probabilities (very cool! almost a hack). I am, however, looking forward to NUS' course on ",
+              "Randomized Algorithms (CS5330) to find out more beyond what little Optimisation has covered. All in all, a very encyclopedic course in ",
+              "terms of algorithms for the prominent NP-Hard problems, and while needing to prove every claim was several margins tougher than the expectations ",
+              "of the basic Algorithm Design course, it was still extremely rewarding trying to piece together simple-but-effective solutions to a host ",
+              "of very engaging exercises. "
+            ]
           }
         ],
         "NUSC": [
@@ -67,19 +183,21 @@
             "code": "NHS2076",
             "title": "What can I know?",
             "generalreview": "",
-            "image": "https://images7.memedroid.com/images/UPLOADED918/6741d04540036.jpeg",
+            "meme": "https://images7.memedroid.com/images/UPLOADED918/6741d04540036.jpeg",
             "prologue": [""],
-            "recap": [""],
-            "topic": [""]
+            "para1": [""],
+            "para2": [""],
+            "para3": [""]
           },
           {
             "code": "NEX3003",
             "title": "GEx New York City",
             "generalreview": "",
-            "image": "https://www.nevadacurrent.com/wp-content/uploads/2019/04/Gramsci-Foucault-1.jpg",
+            "meme": "https://www.nevadacurrent.com/wp-content/uploads/2019/04/Gramsci-Foucault-1.jpg",
             "prologue": [""],
-            "recap": [""],
-            "topic": [""]
+            "para1": [""],
+            "para2": [""],
+            "para3": [""]
           }
         ]
       }

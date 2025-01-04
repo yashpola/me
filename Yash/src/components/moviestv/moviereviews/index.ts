@@ -2,6 +2,7 @@ import ASpaceOdyssey from "./ASpaceOdyssey";
 import ThePromisedLand from "./ThePromisedLand";
 import Birdman from "./Birdman";
 import Casino from "./Casino";
+import Dune from "./Dune";
 import GangsofNewYork from "./GangsofNewYork";
 import Goodfellas from "./Goodfellas";
 import InglouriousBasterds from "./InglouriousBasterds";
@@ -19,6 +20,7 @@ export {
   ThePromisedLand,
   Birdman,
   Casino,
+  Dune,
   GangsofNewYork,
   Goodfellas,
   InglouriousBasterds,

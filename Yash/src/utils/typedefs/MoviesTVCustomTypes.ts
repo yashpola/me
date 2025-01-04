@@ -7,7 +7,7 @@ interface Review {
   title: string;
   subtitle: string;
   quote: string;
-  thoughts: string[];
+  thoughts: string[][];
   rating: number;
   trivia: string[];
   recommendations: string;

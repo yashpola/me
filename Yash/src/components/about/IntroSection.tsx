@@ -43,7 +43,7 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Learning tennis (28 hours), and spanish (206-day duolingo streak).
+          Learning tennis (28 hours), and spanish (215-day duolingo streak).
         </li>
         <li>
           Currently reading <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche).
@@ -62,10 +62,7 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>Visiting my grandparents in Visakhapatnam.</li>
-        <li>
-          Reading Thus Spoke Zarathustra (Friedrich Nietzsche), God Emperor of
-          Dune (Frank Herbert), and Hoffman & Kunze's Linear Algebra.
-        </li>
+        <li>Reading Thus Spoke Zarathustra (Friedrich Nietzsche).</li>
         <li>
           Working on this website (to refresh Typescript before my internship in
           January).

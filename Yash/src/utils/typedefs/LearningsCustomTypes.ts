@@ -2,10 +2,16 @@ export interface CoursePostType {
   code: string;
   title: string;
   generalreview: string;
-  image: string;
+  meme: string;
   prologue: string[];
-  recap: string[];
-  topic: string[];
+  para1: string[];
+  para2: string[];
+  para3: string[];
+}
+
+export interface CourseImageType {
+  sources: string[];
+  styles: object[];
 }
 
 export interface CourseComponentMapType {

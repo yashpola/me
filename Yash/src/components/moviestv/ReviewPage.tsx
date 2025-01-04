@@ -23,7 +23,11 @@ export default function ReviewPage({
         title={`${review.name} Image`}
       />
       <h4>"{review.quote}"</h4>
-      <p style={{ textAlign: "justify" }}>{review.thoughts.join(" ")}</p>
+      {review.thoughts.map((paragraph, index) => (
+        <p style={{ textAlign: "justify" }} key={index}>
+          {paragraph}
+        </p>
+      ))}
       <br />
       <iframe className="youtube-iframe" src={review.clip} />
       <div style={{ textAlign: "justify" }}>
