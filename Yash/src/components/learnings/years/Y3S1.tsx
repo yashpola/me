@@ -15,7 +15,7 @@ export default function Y3S1() {
               <div className="course-card-body">
                 <h2>
                   <a
-                    href={`http://localhost:5173/${learningPost.code}`}
+                    href={`https://yashwit.com/${learningPost.code}`}
                     target="_blank"
                     style={{ color: "white", textDecoration: "none" }}
                   >
@@ -36,7 +36,7 @@ export default function Y3S1() {
               <div className="course-card-body">
                 <h2>
                   <a
-                    href={`http://localhost:5173/${learningPost.code}`}
+                    href={`https://yashwit.com/${learningPost.code}`}
                     target="_blank"
                     style={{ color: "white", textDecoration: "none" }}
                   >

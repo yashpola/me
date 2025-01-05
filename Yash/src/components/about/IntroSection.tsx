@@ -10,6 +10,7 @@ import {
   Movie,
 } from "@mui/icons-material";
 import Anchor from "../../utils/customelements/Anchor";
+import { useState } from "react";
 
 export default function IntroSection() {
   return (
@@ -43,7 +44,7 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Learning tennis (28 hours), and spanish (215-day duolingo streak).
+          Learning tennis (28 hours), and spanish (216-day duolingo streak).
         </li>
         <li>
           Currently reading <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche).
