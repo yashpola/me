@@ -10,7 +10,6 @@ import {
   Movie,
 } from "@mui/icons-material";
 import Anchor from "../../utils/customelements/Anchor";
-import { useState } from "react";
 
 export default function IntroSection() {
   return (
