@@ -2,6 +2,7 @@ import ASpaceOdyssey from "./ASpaceOdyssey";
 import ThePromisedLand from "./ThePromisedLand";
 import Birdman from "./Birdman";
 import Casino from "./Casino";
+import Conclave from "./Conclave";
 import Dune from "./Dune";
 import GangsofNewYork from "./GangsofNewYork";
 import Goodfellas from "./Goodfellas";
@@ -10,6 +11,7 @@ import KillersoftheFlowerMoon from "./KillersoftheFlowerMoon";
 import NoCountryforOldMen from "./NoCountryforOldMen";
 import OldBoy from "./OldBoy";
 import Oppenheimer from "./Oppenheimer";
+import Pushpa2 from "./Pushpa2";
 import Sicario from "./Sicario";
 import TheAviator from "./TheAviator";
 import TheBatman from "./TheBatman";
@@ -20,6 +22,7 @@ export {
   ThePromisedLand,
   Birdman,
   Casino,
+  Conclave,
   Dune,
   GangsofNewYork,
   Goodfellas,
@@ -28,6 +31,7 @@ export {
   NoCountryforOldMen,
   OldBoy,
   Oppenheimer,
+  Pushpa2,
   Sicario,
   ASpaceOdyssey,
   TheAviator,

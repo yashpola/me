@@ -5,6 +5,7 @@ import {
 import {
   Birdman,
   Casino,
+  Conclave,
   Dune,
   GangsofNewYork,
   Goodfellas,
@@ -13,6 +14,7 @@ import {
   NoCountryforOldMen,
   OldBoy,
   Oppenheimer,
+  Pushpa2,
   Sicario,
   ASpaceOdyssey,
   TheAviator,
@@ -31,6 +33,7 @@ import {
 export const MovieComponentMap: MovieComponentMapType = {
   Birdman,
   Casino,
+  Conclave,
   Dune,
   GangsofNewYork,
   Goodfellas,
@@ -38,6 +41,7 @@ export const MovieComponentMap: MovieComponentMapType = {
   NoCountryforOldMen,
   OldBoy,
   Oppenheimer,
+  Pushpa2,
   Sicario,
   ASpaceOdyssey,
   TheAviator,
