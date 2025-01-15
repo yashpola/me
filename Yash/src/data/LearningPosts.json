@@ -181,7 +181,7 @@
         "NUSC": [
           {
             "code": "NHS2076",
-            "title": "What can I know?",
+            "title": "What can I know? (W.I.P.)",
             "generalreview": "",
             "meme": "https://images7.memedroid.com/images/UPLOADED918/6741d04540036.jpeg",
             "prologue": [""],
@@ -191,11 +191,20 @@
           },
           {
             "code": "NEX3003",
-            "title": "GEx New York City",
+            "title": "GEx New York City (W.I.P.)",
             "generalreview": "",
-            "meme": "https://www.nevadacurrent.com/wp-content/uploads/2019/04/Gramsci-Foucault-1.jpg",
-            "prologue": [""],
-            "para1": [""],
+            "meme": "https://i.chzbgr.com/full/9835406336/hF3B6E70C/brotpoints-toughenke-30-12-17-baculofa-emery-aspt-cool-would-be-astoria-park-randalls-island-park",
+            "prologue": [
+              "The NUS College Global Experience (GEx) programmes are opportunities for students in NUS Residential Colleges to travel regionally and, ",
+              "internationally to immerse themselves both personally & academically in foreign cultures. I had chosen New York City for GEx, for which ",
+              "I stayed in an accommodation under Barnard College (616 116th Street) from 30th June - 27th July 2024. The NYC programme was a study on ",
+              "Global Cities; specifically, the relationship between the \"Lived\" (Cité) and \"Built\" (Ville) as it relates uniquely to NYC. "
+            ],
+            "para1": [
+              "Frankly, I've always wanted to visit NYC or California given how much exposure I received to these places through popular media in almost ",
+              "all stages of life. In-fact, life itself seemed much larger in these places, and this would of-course agree with the topic of the GEx as ",
+              "well. "
+            ],
             "para2": [""],
             "para3": [""]
           }

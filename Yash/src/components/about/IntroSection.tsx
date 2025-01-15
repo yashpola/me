@@ -2,12 +2,13 @@ import CatFact from "./CatFact";
 import me from "../../assets/headshot.jpg";
 
 import {
-  LinkedIn,
-  GitHub,
+  Book,
   Email,
+  GitHub,
   Instagram,
-  Telegram,
+  LinkedIn,
   Movie,
+  Telegram,
 } from "@mui/icons-material";
 import Anchor from "../../utils/customelements/Anchor";
 
@@ -33,22 +34,24 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! My current Top 5 are: Arrival, Nope, Taare Zameen
-          Par, 2001: A Space Odyssey, and The King of Comedy. My{" "}
+          I'm a movie enjoyer! Recently watched: Conclave (2024). Current Top 5:
+          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
+          The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
-            watchlist.
+            Current watchlist.
           </a>
         </li>
         <li>
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Learning tennis (28 hours), and spanish (216-day duolingo streak).
+          Practising tennis (28 hours), spanish, and german (combined 222-day
+          duolingo streak).
         </li>
         <li>
-          Currently reading <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche).
-          My next reads are: <u>God Emperor of Dune</u> (Frank Herbert),{" "}
-          <u>A Storm of Swords: Part I</u> (George R.R. Martin),{" "}
+          Currently reading <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche),
+          and <u>A Storm of Swords</u> (George R.R. Martin). My next reads are:{" "}
+          <u>God Emperor of Dune</u> (Frank Herbert), and{" "}
           <u>A Critique of Pure Reason</u> (Immanuel Kant).
         </li>
         <li>
@@ -58,14 +61,34 @@ export default function IntroSection() {
         </li>
       </ul>
       <p>
-        <u>What I'm up to now (Winter Break '24):</u>
+        <u>What I'm up to now (Spring '25):</u>
       </p>
       <ul>
-        <li>Visiting my grandparents in Visakhapatnam.</li>
-        <li>Reading Thus Spoke Zarathustra (Friedrich Nietzsche).</li>
         <li>
-          Working on this website (to refresh Typescript before my internship in
-          January).
+          Full-stack Software Engineering internship at{" "}
+          <a
+            href="https://www.factorem.co/about-us"
+            target="_blank"
+            title="Factorem Website Link"
+          >
+            Factorem
+          </a>
+          .
+        </li>
+        <li>
+          Auditing{" "}
+          <a
+            href="https://nusmods.com/courses/CS5330/randomized-algorithms"
+            target="_blank"
+            title="NUSMODS CS5330 Link"
+          >
+            Randomized Algorithms
+          </a>{" "}
+          (graduate-level course; CS5330) at NUS.
+        </li>
+        <li>
+          Taking Entrepreneurship courses (entrepreneurship practicum, discovery
+          & resilience, venture creation) at NUS.
         </li>
       </ul>
       <p>
@@ -139,6 +162,12 @@ export default function IntroSection() {
       </a>
       <a href="https://boxd.it/7HLmD" title="Yashwit's Letterboxd">
         <Movie sx={{ color: "orange" }} />
+      </a>
+      <a
+        href="https://www.goodreads.com/user/show/42299243-yash-polapragada"
+        title="Yashwit's Goodreads"
+      >
+        <Book sx={{ color: "brown" }} />
       </a>
       <p>
         <u>Have a cat fact on me:</u>
