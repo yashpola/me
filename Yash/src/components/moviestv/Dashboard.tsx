@@ -79,7 +79,7 @@ export default function Dashboard({
               <>
                 <div key={idx} className="posters-dashboard">
                   <a
-                    href={`http://localhost:5173/${entry?.name?.replace(
+                    href={`https://yashwit.com/${entry?.name?.replace(
                       / /g,
                       ""
                     )}`}
