@@ -73,17 +73,21 @@ export default function Dashboard({
           .sort((review1, review2) => {
             return SortByCustomRule(review1, review2, sortRule);
           })
+          .filter((entry) => ("include" in entry ? entry?.include : true))
           .map((entry, idx) => {
             return (
               <>
                 <div key={idx} className="posters-dashboard">
                   <a
-                    href={`https://yashwit.com/${entry.name.replace(/ /g, "")}`}
+                    href={`http://localhost:5173/${entry?.name?.replace(
+                      / /g,
+                      ""
+                    )}`}
                     target="_blank"
                   >
                     <img
                       className="movietv-poster"
-                      src={entry.thumbnail}
+                      src={entry?.thumbnail}
                       title={`${type} Poster`}
                     />
                   </a>

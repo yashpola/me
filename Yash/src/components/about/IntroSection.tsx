@@ -10,9 +10,50 @@ import {
   Movie,
   Telegram,
 } from "@mui/icons-material";
+import { Icon, Tooltip } from "@mui/material/";
+
 import Anchor from "../../utils/customelements/Anchor";
 
+import { Social } from "../../utils/typedefs/AboutCustomTypes";
+
 export default function IntroSection() {
+  const socials: Array<Social> = [
+    {
+      name: "Linkedin",
+      icon: <LinkedIn sx={{ color: "#0072b1" }} />,
+      link: "https://www.linkedin.com/in/yashwit-polapragada-7a507923a/",
+    },
+    {
+      name: "GitHub",
+      icon: <GitHub sx={{ color: "black" }} />,
+      link: "https://github.com/yashpola",
+    },
+    {
+      name: "Telegram",
+      icon: <Telegram sx={{ color: "#0088cc" }} />,
+      link: "https://t.me/yashypola",
+    },
+    {
+      name: "Instagram",
+      icon: <Instagram sx={{ color: "red" }} />,
+      link: "https://www.instagram.com/yashypola/",
+    },
+    {
+      name: "Letterboxd",
+      icon: <Movie sx={{ color: "orange" }} />,
+      link: "https://boxd.it/7HLmD",
+    },
+    {
+      name: "Goodreads",
+      icon: <Book sx={{ color: "brown" }} />,
+      link: "https://www.goodreads.com/user/show/42299243-yash-polapragada",
+    },
+    {
+      name: "Email",
+      icon: <Email sx={{ color: "green" }} />,
+      link: "mailto: yashwit@u.nus.edu",
+    },
+  ];
   return (
     <div className="page-section">
       <h3>The ABCs of Me</h3>
@@ -34,9 +75,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Recently watched: Conclave (2024). Current Top 5:
-          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
-          The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: The Substance (2024). Current Top
+          5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey,
+          and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -45,14 +86,14 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (28 hours), spanish, and german (combined 222-day
+          Practising tennis (30 hours), spanish, and german (combined 239-day
           duolingo streak).
         </li>
         <li>
           Currently reading <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche),
           and <u>A Storm of Swords</u> (George R.R. Martin). My next reads are:{" "}
           <u>God Emperor of Dune</u> (Frank Herbert), and{" "}
-          <u>A Critique of Pure Reason</u> (Immanuel Kant).
+          <u>Essays and Aphorisms</u> (Arthur Schopenhauer).
         </li>
         <li>
           I want to get back into the keyboard (the musical type), and pick up
@@ -139,36 +180,15 @@ export default function IntroSection() {
       <p>
         <u>Find me at these links:</u>
       </p>
-      <a
-        href="https://www.linkedin.com/in/yashwit-polapragada-7a507923a/"
-        title="Yashwit's Linkedin"
-      >
-        <LinkedIn sx={{ color: "#0072b1" }} />
-      </a>
-      <a href="https://github.com/yashpola" title="Yashwit's GitHub">
-        <GitHub sx={{ color: "black" }} />
-      </a>
-      <a href="mailto: yashwit@u.nus.edu" title="Yashwit's Email">
-        <Email sx={{ color: "green" }} />
-      </a>{" "}
-      <a
-        href="https://www.instagram.com/yashypola/"
-        title="Yashwit's Instagram"
-      >
-        <Instagram sx={{ color: "red" }} />
-      </a>
-      <a href="https://t.me/yashypola" title="Yashwit's Telegram">
-        <Telegram sx={{ color: "#0088cc" }} />
-      </a>
-      <a href="https://boxd.it/7HLmD" title="Yashwit's Letterboxd">
-        <Movie sx={{ color: "orange" }} />
-      </a>
-      <a
-        href="https://www.goodreads.com/user/show/42299243-yash-polapragada"
-        title="Yashwit's Goodreads"
-      >
-        <Book sx={{ color: "brown" }} />
-      </a>
+      {socials.map((social, idx) => {
+        return (
+          <a href={social?.link} key={idx} title={`Yashwit's ${social?.name}`}>
+            <Tooltip arrow title={social?.name} placement="top">
+              <Icon>{social?.icon}</Icon>
+            </Tooltip>
+          </a>
+        );
+      })}
       <p>
         <u>Have a cat fact on me:</u>
       </p>

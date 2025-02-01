@@ -3,6 +3,7 @@ import ThePromisedLand from "./ThePromisedLand";
 import Birdman from "./Birdman";
 import Casino from "./Casino";
 import Conclave from "./Conclave";
+import Cure from "./Cure";
 import Dune from "./Dune";
 import GangsofNewYork from "./GangsofNewYork";
 import Goodfellas from "./Goodfellas";
@@ -15,6 +16,7 @@ import Pushpa2 from "./Pushpa2";
 import Sicario from "./Sicario";
 import TheAviator from "./TheAviator";
 import TheBatman from "./TheBatman";
+import TheSubstance from "./TheSubstance";
 import ThereWillBeBlood from "./ThereWillBeBlood";
 import TrainingDay from "./TrainingDay";
 
@@ -23,6 +25,7 @@ export {
   Birdman,
   Casino,
   Conclave,
+  Cure,
   Dune,
   GangsofNewYork,
   Goodfellas,
@@ -36,6 +39,7 @@ export {
   ASpaceOdyssey,
   TheAviator,
   TheBatman,
+  TheSubstance,
   ThereWillBeBlood,
   TrainingDay,
 };

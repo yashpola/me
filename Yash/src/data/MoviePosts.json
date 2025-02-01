@@ -1,6 +1,7 @@
 {
   "Movies": [
     {
+      "include": true,
       "order": 1,
       "thumbnail": "https://sceneprints.com/cdn/shop/products/s-l1600_5d2635ae-7ab9-42f4-8cbd-17df6de44142.jpg?v=1639523855",
       "clip": "https://www.youtube.com/embed/coS2CdNd7Io?si=ZXSQG8gbTu99C2N1",
@@ -42,6 +43,7 @@
       "recommendations": "Django Unchained, Once Upon a Time in Hollywood."
     },
     {
+      "include": true,
       "order": 2,
       "thumbnail": "https://image.tmdb.org/t/p/original/bUeiwBQdupBLQthMCHKV7zv56uv.jpg",
       "clip": "https://www.youtube.com/embed/CJ3Ph5nzJUQ?si=ZEMePeTJvw66hGLv",
@@ -68,6 +70,7 @@
       "recommendations": "Heat, L.A. Confidential, American Gangster."
     },
     {
+      "include": true,
       "order": 3,
       "thumbnail": "https://alternativemovieposters.com/wp-content/uploads/2022/02/Atli-Sigursveinsson_Nocountryforoldmen.jpg",
       "name": "No Country for Old Men",
@@ -116,6 +119,7 @@
       "recommendations": "Se7en, American Psycho."
     },
     {
+      "include": true,
       "order": 4,
       "thumbnail": "https://www.posterhub.com.sg/images/detailed/142/111896_Oppenheimer_Teaser_B.jpg",
       "clip": "https://www.youtube.com/embed/tK0IDmSYYGk?si=DSm_m4pqLgVHiJYC",
@@ -161,6 +165,7 @@
       "recommendations": "The Social Network, The Imitation Game, Dunkirk."
     },
     {
+      "include": true,
       "order": 5,
       "thumbnail": "https://i.pinimg.com/736x/78/6b/57/786b57d7c85d6d04d630429b59b1075f.jpg",
       "clip": "https://www.youtube.com/embed/Uz0IOW8fV64?si=k7HTV5GCS02J2xqY",
@@ -204,6 +209,7 @@
       "recommendations": "Prisoners, Incendies, Argo."
     },
     {
+      "include": true,
       "order": 6,
       "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTExMWFhUVFRgXFRgXFxcXFxoXGBcYFxcVFxUYHSggGholHRUXITEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGxAQGy0lHyUvLS0tLS0tLS0tLS0vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIARMAtwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBAUGB//EAEAQAAEDAgQCBwUFBwMFAQAAAAEAAhEDIQQSMUEFUQYiMmFxgZETQqGx8FJicsHRB4KSorLh8SMz0hUkU3PiFP/EABsBAAIDAQEBAAAAAAAAAAAAAAECAAMEBQYH/8QAMREAAgIBAgMGBQQDAQEAAAAAAAECEQMhMQQSUQUiQWFx8BOBkaHRIzKxwTPh8XIU/9oADAMBAAIRAxEAPwDiUIQuCfWQQhChAQhBKIG6BCQuSjy8JKlMV5Ird0CE2/Ip0KDJ2CEIQCCEIUICEIUICEIUIIlQUiIBUJEihGxyEBCgQQhCBAQhI8qAbpWJKbVMAl1gNSpKLQ4gE5RueQ3KjxVbYAQLCetA02vmO5nuV2PHzM5vGcZ8GOit18ijVxxiQ10aSdXeBKzMQXSSNBuNBOny+C0K9FslxIvp5bwNlQxFWDAynYQ2DfwAzHvMrdjilseW4vNLLcpu9SGlWLTafVTP4g47uHeNVNheA4qr2KLz5EK43ofjY/2H6kefJO4x3ZRDiM0Vyxbr30HcN4mHw1wh/P3Xf8XfBaCwa3A8QwxUpVGgG5jbeDvqtjB1w9tjcNa102OaY/JYs+JR70T0/ZHaE836Wb9y2fXr8119uZCELKdwEIQoQEISOUA3Q3OnNSUU5FiwtqwlIAlTAVCN9R4QkaZSqDKq0BCEIBBRVnAS49lqlVbGXZU/C75Jo7lWaVRdbiVXTDRcy0/mEkmO/LsqNGvlbJMu18YW70K4QcVXy3y2NTXs3geZB8gVvWLlWh5KfGvLKTnp+PyR8A6IYnGuGTq0vfqQYEa/iPcvYejnQbBYRgc2mH1I61R4zOPgDZumgWlh6lKkxtNrIa2wAhK/HtIsD3QefgrU6OfOMnsh72jYR3j5eiysdioJmwj+2uyd7UaZOcWHrpssvGul4GUDY6d8F0aePilky7HidmNxXinXuREalpy87Hz2XFcWrgvJptaHQJItPiDZd9ieHMqSHbmxzHlfy+uS5XjnA204yuB5wNjodddUkrZrxKEWrbT6o5ynxIaOaAZA7VgI7V9FI7iFIaubf61WNjBBIkEgqEvBBJ7UDzvc66/PxQ/+eEhl2xxGJtWpetaeWle9joaWOpuEh7eSnIXN4DiLmGD1mnX8/wAX4VvYOo1zeoczet+6M3VbHu9XRZs2Fw9Dudn9oR4qNWubxWz+St2vNbEyIQkJVJ0mASoCFCIjqviEgcnVGShlOEdKKmpuXkOCVCEC4EIQgQSoq2NMU3n7vzt+aslQY2jmblBykub8Lp4VzKzLxKk8cuXen/BivbmYHE3vbzXrvQXhrsNhmH36rQ5x5TcN05R5yvLqWAOYAbeXevUKXEXU2NzAQGt361oBtuV0HkVaHkVweS7mjbNOSZEyZk+nyUtMUmNLi6ImwEkxHrquS6Q9K34VoIZczlmLg6aG1jMn+68+4r0vxNftOgbAW9SInzRSbEnlxxVN/wB/1X3PTuJ9IKAAyPBneBsSCDc3WXiuOtAa5sGIOvIbXvqvKXPJJMwTqt7owfbVqdBzozuawW5kAfNLPE90Pw3GwfclH52dXiekBAzkgkD8xAA71yvEukVWqTOm07eS2OnXRurg3A5muYeQIPoR2YjdcUXJ4x6lXEZW2ktvDzJX157V9fG/M6n+yglK5NVhje4i2Ojrz127dV37yx1q9Hf9x3LJ1vCQqs/+Nm7sptcZjrq19mbgTTqnQkc2VzD3EouqHBBQhQehAlSJVCAhCECAhCFCDSoW4iahH2PTrDMpXJKdFpcZGpLt79UCPgrIJPcxcVOUap+Ov0f90Ppuyva60OI+Wh8CV2+KyUqJeZE3fmM3gk3PLb+y4vEUusWk9rrCPIR3aLZ4ux1TDvGawkmOesgabfHnCvhvqcribatPX+9/9nn3F8Wa1R1Q2JNh3bX38SqRYRrZWamGLb99lPWwgFMOJJc4iTBsBPVbsZt4R3lbk0eWlCTbdamcF1H7OXRxDDuIkNfm9AY+MLnSzTZd70E4QKdZtbEQxmUu6wLQGQ4FxJ0vltulky3Dj1vwR0f7T3OeGuAkDM2N9tN7QvH3NvyXp3THpRS9ploy8ttmtl0G5u7T/K83xlQucXEAEmbJIfuZqz08MF08hryMouTFtPNVpU7j1Y+9PlCgKsiZMu4Sr/Ba2Ws3k7qnz7P8wCoJzDBBGxBUlHmTROHzPFljkXg0/wAnYgpITcPULmtcRBc2YTnLkVTo+iKScU+oBIXJgUgKgL5hrTdPTGJyjDDYVCAhQcEIQgQFBUrlruq/KYNrG3OI7wp1n8To6PnQ38D9BXYa59Tndpxk+Hbj4U/ozTwFQPc15kXIIOsgZfyW7icawtLQ79J3vpP1Zcnwx5BaQRaplDdbzr6BdBXa1z7zAcMwHK0ethO3kr8kq2OVwmLmX6l6fyZdTCMc4ZpyAk21nSSt3hfRhtRvXHULDUEiAQCA4+h17xZGEa2s9zWNZTpkg3GZzcoBIzE6WJ5WXTUqJY6SCGkZWw8mxF2tk2bDW2B77JU29yzLGELUUk36P5GRT6KsYxlT2bSJAgz1ifevMtnaNFhdNuIZqYaXdYwC3LlIuOqeYGRdri8QKYPtDmDWzTMiCY0jYj9eS8z6RU6hDXkABxc+wgbNAHpt+adbmacW8bk1fp76X9znxiCZCic6dUjWwY0SPK00k9DjSySce8JKaSnNJQWpil20MQUIREOuwMGnTjTIFIdLqlwep/osnbM3+Yq8uRNVJrzPonCzWTDCXWMf4RG4aQE5o5oL7wnNKBZFR5tBhqdyR1VOmbJwapoSpPZjGTuhOKVAZRoEIQgOCz+Lzlt9ra9loJHDVPCXK7KOJxfFxuF1Zn8LqtzNBzDKZ6w3jXu1W77Z4BLSZc2/eNx3aHRcmHHKCCezf7pEe9tz9VsYCsfZg6l0kQY2APx2FtVqyQe6PP8AB8Sl3JR31+3/AA6HA4mmwtc9pcDmm5jrajKfO3itM8XIc0gENDpgEaZYgN02adzY+XKU3mRccxrHLTzTXYu8F1vLl+qrV7I2Zfh7y9De4/xM1YBJDZv4WvlnW/qVyvH+NOqRTaIYDZo5gZQZ3KbxbiE9UGbc7LGdUcRpcfvK7HB7s5vGcRCvhw2XRfX7DmguBJ/ilo0vHx0VeJ03UjGQCTcntDX6KrgGVoSOPkdKNr167+/yTMoEoLBzlOZVIFkF7ipqPWPlpLUiLU0hOIShspinlsu4LGZHNA0JAePd/FH2l0EhclEQTpK6ypR6x8Vh4mKTT9T1HYmbJKE4vwql0u/wJTE3hPUbLWTQ+5KzUdpTUUr38SZoQmU3SnoMsjVaAhCEBgQhChASOnZKhEDKmIq0jLHkh32tjzbbTxRhG5cwAsxxjlf/ACpaGCFeuGGAHDWw0Hf4ErocRgadLBBrSDVZWl5MyQ5rRHgMw1H2ua1quVJHm5yl8Zymk3bSrp5/n6nOVHQTli9ptvr4IrvdmM73kd1oEaiFXrWeImJ3+XoVNWxES06ZRfT0PLT4KJUPLIpLpr/RhY6m7MdU1gLZ5rTxsSJyz+irtwbiA8dntEuFvmrlPu6nLycK1lbh/wAXtlN5mwseymOaQtNlEMBLhlIzZfe632j+izq9cvN08ZXtsZ8+PkVyfefh7r+NSMJQ5SOqbi2yaTZNZQ4qOzGJSEFI58oitrxFq9kd66tjrj8K5IldO1+visvErb5ne7DnUsj/APP9llyrlPeCim2QOayLRHoZXN1Q6knoAQlZdFUqBCEIDAhCFCAhCFCEdTM0iozUOI/dIIFvxEeqxfbukzdsEm/Z1gzzmFu1BI8VlYgAEhwhxOZwB6vPP4W0Wvh5aUzzva+Bxl8RNpP6X0+e/wBWVKb9RPoJ8p19FK1gyk92/ON/VUalaXEttfRK3EXB7/gtbicCOVaX78y6KchpN5sI/SPqV0HDchGVxyggXIIt3iL3ErlamKP2W/2TzxJ+5P1pdVyg5I2YuKx4pO39jS4tX7VidpPVPIG/ksNovClqV82swmF4AsmhHlVFPE5lmnzXotvfmDmc9/r+FNEJA8gJgN1ZRllNWqRI8WUKeXJhRRVNpsuYHB5us7sT/EtphTMFUAZlGjm2TgsOWblLU9VwfDwwY1y7ta+v46EwepmPVempSZKztHVhNpIlJQhNYyEpp1schCEBgQhChAQhChAVbHYNtQX6pb7wVlCZScXaK8uKGWDhNWmZNfhgDMjdc0S77XesbQwV1zlzXEqcVT97rLZw2RybTPM9s8DDFGOTGq8Pl4e/Mr1BokDVI07HkmOWo4bq7GIA70Sn03Wjfb/CIipsjITu5GgiL808RGmxUZIoa2mTom5SreGmLagfveX8Ka5oBmUvNrRc8HcUjUwjIaB91TsCXA02upMP1Yq1ljQLnzlq0ew4fh+5GV6Uv4IqTJUwYEjX2bZK8nZVO7NsIxjEVCjaTOqkQaLIy5gQhCAwIQhQgIQhQgIKEhRAxSsLjFE5g+LHqlbhVLjLD7Ink4T57x8PNXYJVNHN7VxKfDSvw1MRrCdB8k72JGojmrVKWX+Z7/mE1z9Z/wALffQ8hypPvGe5sJoU9QEeijynWE5RWugxx3SJCnxZQXVsUBNTsymYyRM23Qui2MeZ0tzT4Fi9KUfac0/zRCvmsdN1kcNOUyttr2u0v81gzJKd0es7MnOfDqDlqtF4aaUvOuo3DutE3VqjRLtFmBsVm2+si1sNiMk2sVTJUzo8PklKLTWqdfQiq0i0wdUxTYmtnMqFKaFsCEIQCCEIUICEIUICChDkQPYYwpKmGNdrg3McsFwA5lseBmdeSY4WP4UdHscG1MpcWtqwx0QDqMtyQBBO5tbkr8Me9Zx+0srWL4fX+BjujeI9mHCnUJkktyGANJDtDtyWdVwVbek/yadOa9K4lRMezBl4yuzNfy9wweuJzbBt28lVwZbUMuEkGQJdY7mD3rapHmnh8LPM6jpJna0ckwgmwXquJwjXNDHMa8BobLmstexkts7w+C4XjnDKVJ3VgXtD80i8k+kWU5kT4Unp7o514hOawnYqwWtzdZ1pvA2m4CvYU0DAzFu2mtoknzNpATOWhQsPe/2vyUPYRrBPIHTxP5BOfRdqd+z88qu16TGRlBzS6by2LZYOuaNUtQj7Vo2MquU2nobMPDRcW5blnhD6b8zCIs3KbScsyZ53UmNw4pmWEzqJi4iZBHgbLJrwC47/AF95GNxjnhgLj1ZPmTrPwScls1PiPhRp7rZr1+3iTf8A6Hve05WnrN97L7zerK2yuYrYgloAsWnMIW/Tx9J0f6jZy+91f6lTnxtJUjqdl8Xjk5qU9XT1pX1rZuvn8iwhB8E01GgOM9jX+HN/Ssy1O02luOQocFiBUph/Ptfi3Qo1TpghOM4qUWqeqJkIE8ks+KAwiFHWrZXMbHbfl/lj80UazXNa8GzvtWTcrqxPiR5nG9V4fT8r6j5TCVDiMdTaJcfhvyWZ/wBWqGRlaCfe+74+ishhlJWjBxHaODE+WUtfLX69L8y9isS29PUnqujst/E79FmOaYyz2dc0dnuUeBbIykn65feVhzBp1bdnVzvvb3WpRUHRxJ5p8VFZGq8N/t/vrslenVdHeOscAysGy0RmO7QOcTt9bdvhsLRIEADXs6WHW7gb/BeKsc2dfP8AOF33B8TinVKbXVH5GtDz7PrS2YaCdwYudpIsTCdowwdm90nxVLB4dzwXF/ZY0mesW5pNrjc/3XkGLxT6ri57i4nUldj+0DEmpifZ+7TY0ARpmAcSedi2/cFx1ShBtcJoNFeeE2rWxEGEpd09zht9d/it3onhGPrEvAlrMwB0JkCY5prK4403SMxrTYO1HrHIqSIablSccMVS4btnz5/JZ5k9/wCirq9TWsnw7Vajq3fqoCEr00lWRRjyStipC2U2UJittEoqvGW5t2bnmHf8UpxlTrdd3X7enWtCglIhyroF5snhJ/V9K/jT00L/AA7F1G9VumqFb6KUA+sQdAwn4tH5pUkscG7aNeDjeIhBRjNpLzNDptw12Gr+zLgc1NsgDlm5+a53N3N/haV1P7RiTiQSSeqB8zHzXJl6MIpKkV58055HKT1H1HF2pJ3UuGAiw+pVfP3qajUjfZSS00Bhl+opSf5HYsiLc1Wi0fWqnxDwZj8X/wA/FV2j+6kNEHiGnk09NCYmNM1o+7LeSPast1UNok2aCYBcRyABJJ7hCrk2CKjYjyyj7vxFYup6I9InYV0ZS5rrauOUzOYNBAPh8RvzVCmXTAsBJ9QPzVj2LxltY2B84UkrBhklr73N/is4zFVX0QamfrARBytY0Ex5LAx9ItiQWyTbe3ctDh7K7S51OQQAHREw4xAB10UOK4fXe4SOtlzAON4JIGv4Skhuac8l8OvQySt3oniQys4kTNMgWGsg76aLMHDK0T7N2saHXlCu8FwVUPDvZuIGYQBeWxmHdqPjyTy2MuF/qL1GcYEv+vRVmtI0hanFsFWDz1Ha95Fom51CyntLXQRB5JEnymvI4/E08iOpqoSp3suo8qdMy5E7GuTE94KYUxTO7EQhKiIbfRGoW1yR/wCM8vtN5pU7oc0Gu4HT2Z/qYkSSZox7Gz+06iW15IiYne/W3/LuXEytHiONqVAA+o51/eM6TufE+qz4RjsLmj32OBKcDCYCnOKjJHRAStDCcHr1Ge1yhtPZ73NYwkGLFxGaPuzoVnhXadU1n0/aEllMAO5NpN1ygaW9Se9QD6m9xbBMoYUNp9erWa2pWeAQGUMwFNozQRmcWujUgNkDQcnk17vr8l3mN4K+rmLqmR76jX1mhubKTTfUbSkkf7VJphu5deLKlwvolTqUy5z3nrlstZ2Q0Z3gtEl9SCxuQaEv1yFGgcydt7+/71OQZVIEAx4K1QL3lrBmc5xDWtkkkk2AHMmFe4fwqnUZUPtGNh4aM7msIbu7LNybcwAHHktXAYalhg+sPZ1HM9oaQL7nM8UWFzWmwaC55Nj1m31iNEjJp6+hUxXDq1EuJktYWtdUYTkzFmYDOABOV3xPNZ1WrWe8BhqOdHulznENl214Ak+q1+PcQdUf7JpcW03EX1e8k53kDcuc4gbZu+Bc4LhX0WuqD2ftqwNGkHuAFKcuerUmzSM1MBusvFudcV3jZml+jqcmMdU19o8E6nM4LquivR7G1ahIdBAksNUCrcEgmlJcNSbgarE4tTp4bENFA5/ZgdZ0OmoJl2WIEGIaZiL7hT4HAuFZ1RzxmotFSvmdL5eb5Rq4gubN9T5p2tDHGb5k31X/AETpB7dlZ1N5e1wcQQ4uB227wB8FlueTcmSdzc91121eo6v/AN1Ub16gFDCtc6CSAA6rUds0DU75iFjv6L1L5KlN2Um4LogZgSCAZuxwgXsOYSJaGmc1zu9H/oxKVPM17iYDRymXHstHjBPgCoWFa+M4fVDm4VjHPqMk1AwFxL3eGwblHmVVrcHrNMFonkHsJ9AZRF5tbKFRQuWk7hGJIEUKpvtTefkFVxmBqUjFRjmHk4EH0KZFWR66FZCEIldG90ObNZ3/AKj/AFMQoOjVfJVcT9gj+Zv6IQZbB6GfiHfNQKWvqolI7C5X32CVNTiEStFnh+IFOo17mh4Bu0gEG0aEEb7qxVxbWtdTpS1rnBxJjM7L2QSPdBkxzvsIzQUigU0XKuOqumajjmf7Q3N3n3yPtd6V2KfGXO6Gkw2TlGbtQNpi/NV2OggqUVe7T/jCVl0FGtXQtUTeyhhSPqdWIQ3Ed2/4vh+6EFdFk+Ry1f2JHuNySSTv+qmq41xoikScgJcG95iT36DVUxV7vezKQP8AuNQpjqUXon9rLfCcbSoEvfRFWo1zDTDnEU2wSXFzRdx7MCY1mVDUx1Sq64aM7pIaxrA4zNyBe/OVReZJKs4TEZXN5N/V1/5irHdaGSKg56ul9fEsYuvUNpcRPM6iI9IHoFFRxFRuheIBFiRY6i2xU76ndz/mCT2nd9fQVKlpR0Z4Yyk5X9ietxis9jmPJOYNFup2YEuDIDzDQJdKzcisEpj03Myv4MY7CtxlamIZUewadV7m/AFQVsQ58ZosImACbky4i7jJNzdFY2UKeOxkyRXNoCEJURaLGAeWukAm2wlCZTteY8JCELHUNNWGJF1ArGK1UBUjsTMu+xqeUiWUStDClSoUBQ4JUkJzUGWodU0CihSvdCYCgg5KchoCkedkgKREC0QzKnAQQlThqjYORMtxZIApnAQU2yzpnVcKZGUiEqJWV64sq6t19FTVsdjBnVSBOb3pqewXTspW4OchIQhAjssYzteSgKEJY7Ivz/5JeoiUIQmKhCgJUKE8SVBQhIaBlRNQhMimW45IlQoEQKSnqPFCEBo7o0q2hVVCFRHY6vEfuFQhCYoGVuyVTQhWQ2MfEfuXoKgJUJihbjqmqEIQHl+5n//Z",
       "clip": "https://www.youtube.com/embed/r92AoUhrrUw?si=t3zOzvKLyhYdiVBG",
@@ -247,6 +253,7 @@
       "recommendations": "No Country for Old Men."
     },
     {
+      "include": true,
       "order": 7,
       "thumbnail": "https://pbs.twimg.com/media/FxOHU6DWcAA4HRb.jpg:large",
       "clip": "https://www.youtube.com/embed/sTha2f-1Ivk?si=fO3RJlPlEVMPN4Vh",
@@ -290,6 +297,7 @@
       "recommendations": "Oppenheimer, The Irishman, Memories of Murder."
     },
     {
+      "include": true,
       "order": 8,
       "thumbnail": "https://i.pinimg.com/736x/13/80/fc/1380fc624653283391862568097fb647.jpg",
       "clip": "https://www.youtube.com/embed/761uRaAoW00?si=REimBAruM3uVfj7g",
@@ -340,6 +348,7 @@
       "recommendations": "Se7en, Zodiac."
     },
     {
+      "include": true,
       "order": 9,
       "thumbnail": "https://i.etsystatic.com/12196920/r/il/c543d4/3770685753/il_fullxfull.3770685753_4sjk.jpg",
       "clip": "https://www.youtube.com/embed/Wy4EfdnMZ5g?si=5nqi2pDBeI9ocU_D",
@@ -374,6 +383,7 @@
       "recommendations": "Arrival, A.I."
     },
     {
+      "include": true,
       "order": 10,
       "thumbnail": "https://www.posterhub.com.sg/images/detailed/3/birdman.jpg",
       "clip": "https://www.youtube.com/embed/y-fQ-xd1whA?si=WbdS5AeB8oMNmhtb",
@@ -409,6 +419,7 @@
       "recommendations": "Steve Jobs, Whiplash."
     },
     {
+      "include": true,
       "order": 11,
       "thumbnail": "https://media-prod.fangoria.com/images/GS_OLD_KEYART_DIGITAL_FIN01.width-800.jpg",
       "clip": "https://www.youtube.com/embed/VwIIDzrVVdc?si=tjGb-hnpkd1bGb1F",
@@ -447,6 +458,7 @@
       "recommendations": "Memento, Incendies."
     },
     {
+      "include": true,
       "order": 12,
       "thumbnail": "https://images.squarespace-cdn.com/content/v1/5e7a8f6d95bc3643e73bc2e8/1587248432903-ORH0WRD2G8QNAZLG8VAK/goodfellas.png?format=2500w",
       "clip": "https://www.youtube.com/embed/yL9rSwrsMHw?si=3Rae83z_b1Av7Z4w",
@@ -496,6 +508,7 @@
       "recommendations": "Casino, The Wolf of Wall Street, The Irishman."
     },
     {
+      "include": true,
       "order": 13,
       "thumbnail": "https://i.pinimg.com/originals/9a/1b/03/9a1b03f00d03a6694989e9a905bdde06.jpg",
       "clip": "https://www.youtube.com/embed/ZxJVaQTWQ24?si=ls7bWn7JUl17iDss",
@@ -539,6 +552,7 @@
       "recommendations": "Goodfellas, The Wolf of Wall Street, The Irishma."
     },
     {
+      "include": true,
       "order": 14,
       "thumbnail": "https://www.limitedruns.com/media/cache/61/a7/61a72aa728be49319fa18ac68a3ab936.jpg",
       "clip": "https://www.youtube.com/embed/2fXF8G50BPQ?si=Sx4osOxzVSOx8hxO",
@@ -563,6 +577,7 @@
       "recommendations": "The Founder, Steve Jobs."
     },
     {
+      "include": true,
       "order": 15,
       "thumbnail": "https://mondoshop.com/cdn/shop/products/Bermejo_GONY_Sm.jpg?v=1654718224",
       "clip": "https://www.youtube.com/embed/ADmX9eMEV9U?si=mrGhNIrwpjehHMh4",
@@ -593,6 +608,7 @@
       "recommendations": "Once Upon a Time in America, There Will Be Blood, Django Unchained."
     },
     {
+      "include": true,
       "order": 16,
       "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjI0ZDAwM2QtZTZjNS00NTBiLTg2MzUtMmE4YzgxMDRiODE3XkEyXkFqcGc@._V1_.jpg",
       "clip": "https://www.youtube.com/embed/c-jegvvarJw?si=ULn7eyYBSaTqtx7K",
@@ -612,6 +628,7 @@
       "recommendations": "There Will Be Blood, Amadeus."
     },
     {
+      "include": true,
       "order": 17,
       "thumbnail": "https://i.redd.it/urbikj69n3b71.jpg",
       "clip": "https://www.youtube.com/embed/DcwUJhDJet4?si=nxAN0lxRSbIlpfpJ",
@@ -706,6 +723,7 @@
       "recommendations": "Arrival, Oppenheimer, The Lord of the Rings"
     },
     {
+      "include": true,
       "order": 18,
       "thumbnail": "https://www.movieposters.com/cdn/shop/files/conclave_bhnpqdw9_600x.jpg?v=1729795566",
       "clip": "https://www.youtube.com/embed/4NSlkrGtVGU?si=7AKn7G2SfYPxLbXF",
@@ -737,10 +755,11 @@
         "This is Carlos Diehz's first major film appearance. He was an architect until 2020, when his last child left home and he decided to take online ",
         "acting classes and go to auditions."
       ],
-      "rating": 3.5,
+      "rating": 3,
       "recommendations": "12 Angry Men, The Two Popes, Doubt"
     },
     {
+      "include": true,
       "order": 19,
       "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/11/Pushpa_2-_The_Rule.jpg",
       "clip": "https://www.youtube.com/embed/wQksDYahKZs?si=JvYPkymlG8iFwsy0",
@@ -810,6 +829,102 @@
       ],
       "rating": 2.5,
       "recommendations": "KGF 1, Salaar: Ceasefire, Jawan"
+    },
+    {
+      "include": false,
+      "order": 20,
+      "thumbnail": "https://cdn.lareviewofbooks.org/unsafe/3840x0/filters:format(jpeg):quality(75)/https%3A%2F%2Fassets.lareviewofbooks.org%2Fuploads%2F202302Kurosawa-Cure.jpg",
+      "clip": "https://www.youtube.com/embed/vnP71l5vSSY?si=NqydbnVytgJ1pU20",
+      "name": "Cure",
+      "year": 1997,
+      "boxOffice": 194515,
+      "title": "Cure (1997)",
+      "subtitle": "Kiyoshi Kurosawa | Kōji Yakusho, Masato Hagiwara, Anna Nakagawa, Tsuyoshi Ujiki",
+      "quote": "All the things that used to be inside me, are not outside. So I can see all the things inside you.",
+      "thoughts": [
+        [
+          "One of the creepier movies I've watched so far, but its possible I felt so since this was my first horror-movie watch in ",
+          "theatres since...Annabelle (2014)? "
+        ],
+        [
+          "The first question I had in my mind after the end was: Cure for what exactly? Clearly, this movie was a lot more metaphorical ",
+          "in its approach than, say, Se7en or Zodiac - where the focus was on the technical details of the crimes themselves with the ",
+          "endgoal of subduing the killer. In fact, in those movies, either the killer is never actually caught or caught too late. ",
+          "In Cure, the culprit is \"held\" twice (once by police officers, and again by a doctor) before being detained \"for ",
+          "good\" by the lead detectives) but the peril still continues (if not surpasses itself). How so? This brings back my ",
+          "initial  "
+        ],
+        [""]
+      ],
+      "trivia": [
+        "Martin Scorsese said this was Kiyoshi Kurosawa's scariest film."
+      ],
+      "rating": 4,
+      "recommendations": "Se7en, Prisoners, Memories of Murder"
+    },
+    {
+      "include": true,
+      "order": 21,
+      "thumbnail": "https://posterspy.com/wp-content/uploads/2024/10/cf33.jpg",
+      "clip": "https://www.youtube.com/embed/Rk3u4_IH0cY?si=wH9f60D5_hVck8ls",
+      "name": "The Substance",
+      "year": 2024,
+      "boxOffice": 76800000,
+      "title": "The Substance (2024)",
+      "subtitle": "Coralie Fargeat | Demi Moore, Margaret Qualley, Dennis Quaid",
+      "quote": "The balance must be respected.",
+      "thoughts": [
+        [
+          "I had quite some internal conflict before coming here but in the end I must conclude that The Substance was just short of greatness. ",
+          "TL;DR - TS suffered from the same lack of depth (despite much breadth) as Gangs of New York, BlacKkKlansman, and Barbie, even ",
+          "while basking in acting prowess with the luxury of a creative take on an old premise. "
+        ],
+        [
+          "To give credit where it's due first ",
+          "though, the acting by all three of Moore, Qualley, and Quaid was highly convincing (especially Moore & Qualley; I certainly ",
+          "wouldn't complain if both of them took home an Academy), and the practical effects were imaginative while still being detailed. ",
+          "In fact, \"imaginative but sufficiently serious\" was, to me, wholly the winning aspect of TS in the first two-thirds (and why ",
+          "Nope is one of my favorite movies in recent times; because it kept things simple especially when in the business of metaphors). ",
+          "To be more specific, I liked the idea of The Substance as a drug with such a taut set of rules that would be impossible to follow ",
+          "for exactly the people addicted it, and yet if broken lead to precisely the kind of irreversible, ghastly effects that motivate ",
+          "usage of The Substance in the first place. Somehow, The Substance is tightly controlled (\"switch without exception you are ",
+          "one single use\"), and yet so easily misused. While the juxtaposition of the old/young self has been done many times (Looper, ",
+          "Self/Less, even Freaky Friday), The Substance had a fairly fresh take on it that connected it to many other social quandaries. "
+        ],
+        [
+          "Yet, I feel like the film was evidently uncertain about its overall message or ending, except that Elisabeth's Hollywood-Star had ",
+          "to make an irony-tainted comeback. A great number of thematic cheques were written from the start to the end (misogyny, addiction, ",
+          "codependence, body dysmorphia, predatory systems, discarding of the elderly, disassociation from self, puritanism, hypocrisy ",
+          "etc.) but none were fully cashed; often the fatal flaw of deeply ambitious movies that try to point out <insert something human ",
+          "& rational> about <insert deeply complicated culture/system> without also being too definitive or finite. "
+        ],
+
+        [
+          "[For what its worth, ",
+          "the most interesting seed of the movie to me was the one of split-consciousness & disassociation, and while it's fine that ",
+          "Forgeat didn't particularly run that theme out, I wish she had played it straight with at least 1 idea. To put it crudely, ",
+          "the movie felt like one of the more underbaked episodes of Black Mirror, or Rick & Morty; a creative premise, but an unsatisfying ",
+          "extension of it.] "
+        ],
+        [
+          "To make things iffier, TS tried writing itself out of a definitive argument by writing-in an ending composed of extreme ",
+          "writing-in an ending composed of extreme body-horror (that kept trying to surpass its own shock-value) complimented by Tarantino ",
+          "-esque grotesqueness & gratuitousness. While I could rationalise the intention of the ending (it definitely wasn't senseless), ",
+          "I think it was overly evasive and a clear departure from the pace of progression of the film's tone thus far. "
+        ],
+        [
+          "To be sure, I can mount a defence of TS for many of its criticisms, but - as I mentioned - there is just something about it ",
+          "(or lack thereof), that prevents it from being a neat 4* success to me. I will say though, that such imaginative/daring movies ",
+          "are very important for modern culture because they gain traction among casual audiences in ways that most such films don't, ",
+          "they keep quieter genres (black comedy, body-horror) alive, and discussions of the themes presented are absolutely crucial. ",
+          "Again though, similar to Barbie/BlackKkKlansman/GoNY, I just wish there was more depth/nuance or at least a commitment towards it."
+        ]
+      ],
+      "trivia": [
+        "Ray Liotta was initially supposed to play the role of Harvey, before his passing, due to which the role went to Dennis Quaid."
+      ],
+      "rating": 3.5,
+      "recommendations": "The Fly, Nope, Self/Less, Poor Things."
     }
   ]
 }

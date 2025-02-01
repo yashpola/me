@@ -117,17 +117,19 @@ export default function NavBar() {
           }
         />
         {/* <Route path="/movies" element={<MoviesDashboard />} /> */}
-        {MoviePosts.Movies.map((review, idx) => {
-          const ReviewComponent =
-            MovieComponentMap[`${review.name.replace(/ /g, "")}`];
-          return (
-            <Route
-              key={idx}
-              path={`${review.name.replace(/ /g, "")}`}
-              element={<ReviewComponent review={review} />}
-            />
-          );
-        })}
+        {MoviePosts.Movies.filter((review) => review.include).map(
+          (review, idx) => {
+            const ReviewComponent =
+              MovieComponentMap[`${review.name.replace(/ /g, "")}`];
+            return (
+              <Route
+                key={idx}
+                path={`${review.name.replace(/ /g, "")}`}
+                element={<ReviewComponent review={review} />}
+              />
+            );
+          }
+        )}
         <Route
           path="/tv"
           element={<Dashboard type={DashboardTypes.TV} reviews={TVPosts.TV} />}

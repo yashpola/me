@@ -14,6 +14,7 @@ interface Review {
 }
 
 export interface MovieReview extends Review {
+  include: boolean;
   boxOffice: number;
 }
 
