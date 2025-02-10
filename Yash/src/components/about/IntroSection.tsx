@@ -86,13 +86,13 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (30 hours), spanish, and german (combined 239-day
+          Practising tennis (30 hours), spanish, and german (combined 247-day
           duolingo streak).
         </li>
         <li>
           Currently reading <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche),
-          and <u>A Storm of Swords</u> (George R.R. Martin). My next reads are:{" "}
-          <u>God Emperor of Dune</u> (Frank Herbert), and{" "}
+          and <u>God Emperor of Dune</u> (Frank Herbert). My next reads are:{" "}
+          <u>A Feast for Crows</u> (George R.R. Martin), and{" "}
           <u>Essays and Aphorisms</u> (Arthur Schopenhauer).
         </li>
         <li>
