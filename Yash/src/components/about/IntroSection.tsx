@@ -86,7 +86,7 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (30 hours), spanish, and german (combined 247-day
+          Practising tennis (31 hours), spanish, and german (combined 248-day
           duolingo streak).
         </li>
         <li>
