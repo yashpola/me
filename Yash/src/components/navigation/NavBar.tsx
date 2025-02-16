@@ -14,6 +14,7 @@ import { PortfolioPostMap } from "../portfolio/ComponentMap";
 import TVPosts from "../../data/TVPosts.json";
 import Years from "../../data/Years.json";
 import { YearComponentMap } from "../learnings/YearComponentMap";
+import Algorithms from "../algorithms/Algorithms";
 
 export default function NavBar() {
   return (
@@ -65,7 +66,7 @@ export default function NavBar() {
               TV
             </NavLink>
           </div>
-          <div className="nav-item">
+          {/* <div className="nav-item">
             <NavLink
               to="/portfolio"
               style={({ isActive }) => ({
@@ -74,6 +75,17 @@ export default function NavBar() {
               })}
             >
               Portfolio (W.I.P.)
+            </NavLink>
+          </div> */}
+          <div className="nav-item">
+            <NavLink
+              to="/algorithms"
+              style={({ isActive }) => ({
+                textDecoration: isActive ? "underline" : "none",
+                color: isActive ? "brown" : "white",
+              })}
+            >
+              Algorithms
             </NavLink>
           </div>
         </div>
@@ -145,7 +157,7 @@ export default function NavBar() {
             />
           );
         })}
-        <Route
+        {/* <Route
           path="/portfolio"
           element={
             <PortfolioPage portfolioPosts={PortfolioPosts.PortfolioEntries} />
@@ -161,7 +173,8 @@ export default function NavBar() {
               element={<PortfolioPostComponent post={post} />}
             />
           );
-        })}
+        })} */}
+        <Route path="/algorithms" element={<Algorithms />} />
       </Routes>
     </>
   );
