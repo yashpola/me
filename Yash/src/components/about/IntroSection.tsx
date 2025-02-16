@@ -1,6 +1,3 @@
-import CatFact from "./CatFact";
-import me from "../../assets/headshot.jpg";
-
 import {
   Book,
   Email,
@@ -12,8 +9,11 @@ import {
 } from "@mui/icons-material";
 import { Icon, Tooltip } from "@mui/material/";
 
-import Anchor from "../../utils/customelements/Anchor";
+import CatFact from "./CatFact";
 
+import me from "../../assets/headshot.jpg";
+
+import Anchor from "../../utils/customelements/Anchor";
 import { Social } from "../../utils/typedefs/AboutCustomTypes";
 
 export default function IntroSection() {
@@ -87,15 +87,15 @@ export default function IntroSection() {
         </li>
         <li>
           Practising tennis (31 hours so-far), spanish, and german (combined
-          248-day duolingo streak).
+          251-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
-          <u>A Storm of Swords</u>(George R.R. Martin). Currently reading:{" "}
-          <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche), and{" "}
+          <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche). Currently
+          reading: <u>Essays and Aphorisms</u> (Arthur Schopenhauer), and{" "}
           <u>God Emperor of Dune</u> (Frank Herbert). Next reads:{" "}
-          <u>A Feast for Crows</u> (George R.R. Martin), and{" "}
-          <u>Essays and Aphorisms</u> (Arthur Schopenhauer).
+          <u>A Feast for Crows</u> (George R.R. Martin), and <u>Hyperion</u>{" "}
+          (Dan Simmons).
         </li>
         <li>
           I want to get back into the keyboard (the musical type), and pick up
