@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import {
   Book,
   Email,
@@ -17,7 +19,7 @@ import Anchor from "../../utils/customelements/Anchor";
 import { Social } from "../../utils/typedefs/AboutCustomTypes";
 
 export default function IntroSection() {
-  const socials: Array<Social> = [
+  const { current: socials }: { current: Array<Social> } = useRef([
     {
       name: "Linkedin",
       icon: <LinkedIn sx={{ color: "#0072b1" }} />,
@@ -53,7 +55,7 @@ export default function IntroSection() {
       icon: <Email sx={{ color: "green" }} />,
       link: "mailto: yashwit@u.nus.edu",
     },
-  ];
+  ]);
   return (
     <div className="page-section">
       <h3>The ABCs of Me</h3>
@@ -86,8 +88,8 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (31 hours so-far), spanish, and german (combined
-          251-day duolingo streak).
+          Practising tennis (32 hours so-far), spanish, and german (combined
+          258-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}

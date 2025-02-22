@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 
 import AboutPage from "../about/AboutPage";
@@ -16,63 +17,40 @@ import Years from "../../data/Years.json";
 import { YearComponentMap } from "../learnings/YearComponentMap";
 
 export default function NavBar() {
+  const { current: navLinkStyle } = useRef(
+    ({ isActive }: { isActive: boolean }) => ({
+      textDecoration: isActive ? "underline" : "none",
+      color: isActive ? "white" : "brown",
+    })
+  );
+
   return (
     <>
       <div className="navbar">
         <div className="navbar-heading">Yashy Polapragada</div>
         <div className="navbar-body">
           <div className="nav-item">
-            <NavLink
-              to="/"
-              style={({ isActive }) => ({
-                textDecoration: isActive ? "underline" : "none",
-                color: isActive ? "brown" : "white",
-              })}
-            >
+            <NavLink to="/" style={navLinkStyle}>
               About
             </NavLink>
           </div>
           <div className="nav-item">
-            <NavLink
-              to="/learnings"
-              style={({ isActive }) => ({
-                textDecoration: isActive ? "underline" : "none",
-                color: isActive ? "brown" : "white",
-              })}
-            >
+            <NavLink to="/learnings" style={navLinkStyle}>
               Learnings
             </NavLink>
           </div>
           <div className="nav-item">
-            <NavLink
-              to="/movies"
-              style={({ isActive }) => ({
-                textDecoration: isActive ? "underline" : "none",
-                color: isActive ? "brown" : "white",
-              })}
-            >
+            <NavLink to="/movies" style={navLinkStyle}>
               Movies
             </NavLink>
           </div>
           <div className="nav-item">
-            <NavLink
-              to="/tv"
-              style={({ isActive }) => ({
-                textDecoration: isActive ? "underline" : "none",
-                color: isActive ? "brown" : "white",
-              })}
-            >
+            <NavLink to="/tv" style={navLinkStyle}>
               TV
             </NavLink>
           </div>
           <div className="nav-item">
-            <NavLink
-              to="/portfolio"
-              style={({ isActive }) => ({
-                textDecoration: isActive ? "underline" : "none",
-                color: isActive ? "brown" : "white",
-              })}
-            >
+            <NavLink to="/portfolio" style={navLinkStyle}>
               Portfolio (W.I.P.)
             </NavLink>
           </div>
