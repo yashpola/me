@@ -77,9 +77,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: The Substance (2024). Current Top
-          5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey,
-          and The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: Nosferatu (2024). Current Top 5:
+          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
+          The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -88,16 +88,15 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (32 hours so-far), spanish, and german (combined
-          258-day duolingo streak).
+          Practising tennis (33 hours so-far), spanish, and german (combined
+          256-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
-          <u>Thus Spoke Zarathustra</u> (Friedrich Nietzsche). Currently
-          reading: <u>Essays and Aphorisms</u> (Arthur Schopenhauer), and{" "}
-          <u>God Emperor of Dune</u> (Frank Herbert). Next reads:{" "}
-          <u>A Feast for Crows</u> (George R.R. Martin), and <u>Hyperion</u>{" "}
-          (Dan Simmons).
+          <u>God Emperor of Dune</u> (Frank Herbert). Currently reading:{" "}
+          <u>Essays and Aphorisms</u> (Arthur Schopenhauer), and{" "}
+          <u>A Feast for Crows</u> (George R.R. Martin). Next read:{" "}
+          <u>Hyperion</u> (Dan Simmons).
         </li>
         <li>
           I want to get back into the keyboard (the musical type), and pick up
