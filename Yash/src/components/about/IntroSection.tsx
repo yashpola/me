@@ -77,7 +77,7 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Nosferatu (2024). Current Top 5:
+          I'm a movie enjoyer! Last watched: Mickey 17 (2025). Current Top 5:
           Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
           The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
@@ -89,12 +89,11 @@ export default function IntroSection() {
         </li>
         <li>
           Practising tennis (33 hours so-far), spanish, and german (combined
-          256-day duolingo streak).
+          271-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
-          <u>God Emperor of Dune</u> (Frank Herbert). Currently reading:{" "}
-          <u>Essays and Aphorisms</u> (Arthur Schopenhauer), and{" "}
+          <u>Essays and Aphorisms</u> (Arthur Schopenhauer). Currently reading:{" "}
           <u>A Feast for Crows</u> (George R.R. Martin). Next read:{" "}
           <u>Hyperion</u> (Dan Simmons).
         </li>
