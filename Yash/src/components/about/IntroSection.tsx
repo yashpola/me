@@ -77,9 +77,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Mickey 17 (2025). Current Top 5:
-          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
-          The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: A Complete Unknown (2024). Current
+          Top 5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space
+          Odyssey, and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -89,13 +89,14 @@ export default function IntroSection() {
         </li>
         <li>
           Practising tennis (33 hours so-far), spanish, and german (combined
-          271-day duolingo streak).
+          276-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
           <u>Essays and Aphorisms</u> (Arthur Schopenhauer). Currently reading:{" "}
-          <u>A Feast for Crows</u> (George R.R. Martin). Next read:{" "}
-          <u>Hyperion</u> (Dan Simmons).
+          <u>Leviathan</u> (Thomas Hobbes), and <u>A Feast for Crows</u> (George
+          R.R. Martin). Next read: <u>Discourse on Inequality</u> (Jean-Jacques
+          Rousseau), and <u>Hyperion</u> (Dan Simmons).
         </li>
         <li>
           I want to get back into the keyboard (the musical type), and pick up
