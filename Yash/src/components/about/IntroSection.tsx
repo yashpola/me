@@ -77,9 +77,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: A Complete Unknown (2024). Current
-          Top 5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space
-          Odyssey, and The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: Court: State v. A Nobody (2025).
+          Current Top 5: Arrival, Shutter Island, Taare Zameen Par, 2001: A
+          Space Odyssey, and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -88,15 +88,15 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (33 hours so-far), spanish, and german (combined
-          276-day duolingo streak).
+          Practising tennis (35 hours so-far), spanish, and german (combined
+          288-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
-          <u>Essays and Aphorisms</u> (Arthur Schopenhauer). Currently reading:{" "}
-          <u>Leviathan</u> (Thomas Hobbes), and <u>A Feast for Crows</u> (George
-          R.R. Martin). Next read: <u>Discourse on Inequality</u> (Jean-Jacques
-          Rousseau), and <u>Hyperion</u> (Dan Simmons).
+          <u>A Feast for Crows</u> (George R.R. Martin). Currently reading:{" "}
+          <u>Leviathan</u> (Thomas Hobbes), and <u>Hyperion</u> (Dan Simmons).
+          Next read: <u>Discourse on Inequality</u> (Jean-Jacques Rousseau), and{" "}
+          <u>A Dance with Dragons</u> (George R.R. Martin).
         </li>
         <li>
           I want to get back into the keyboard (the musical type), and pick up
