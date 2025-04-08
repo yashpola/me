@@ -20,7 +20,7 @@ export default function ProblemDescription({
         <h1 style={{ textAlign: "center", textDecoration: "underline" }}>
           {problem.title}
         </h1>
-        Solution here in:{" "}
+        Solution(s) below in:{" "}
         {problem.languages.map((language, idx) => (
           <p
             key={idx}
