@@ -215,7 +215,7 @@
   "Problems": {
     "TwoSum": {
       "title": "Two Sum",
-      "languages": ["JAVA", "PYTHON"],
+      "languages": ["PYTHON", "JAVA"],
       "description": [
         "Given an array of integers and a target, determine if there are 2 integers at distinct indices that add up to the target and return their indices. ",
         "You may assume there is exactly 1 unique solution per input."
