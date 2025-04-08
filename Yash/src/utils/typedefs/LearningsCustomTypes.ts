@@ -21,3 +21,16 @@ export interface CourseComponentMapType {
 export interface YearComponentMapType {
   [key: string]: React.ComponentType;
 }
+
+export interface ProblemPostType {
+  title: string;
+  languages: string[];
+  description: string[];
+  example: string[];
+  solution: string[];
+  analysis: string[];
+}
+
+export interface ProblemComponentMapType {
+  [key: string]: React.ComponentType<{ problem: ProblemPostType }>;
+}

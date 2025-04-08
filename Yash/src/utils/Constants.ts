@@ -18,3 +18,9 @@ export const DashboardTypes: DashboardType = Object.freeze({
   MOVIE: "Movie",
   TV: "TV",
 });
+
+export const LanguageColorCodes = Object.freeze({
+  JAVA: { primary: "#f89820", secondary: "#5382a1" },
+  JAVASCRIPT: { primary: "#f0db4f", secondary: "#323330" },
+  PYTHON: { primary: "#306998", secondary: "#FFE873" },
+});

@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 
+import { SwapVert } from "@mui/icons-material";
+
+import SortingOptionsMenu from "./SortingOptionsMenu";
+
+import { DashboardTypes, SortingRules } from "../../utils/Constants";
+import SortByCustomRule from "../../utils/functions/Sorters";
 import {
   addTextDecoration,
   removeTextDecorationMulti,
 } from "../../utils/functions/StyleModifiers";
-import SortByCustomRule from "../../utils/functions/Sorters";
-import SortingOptionsMenu from "./SortingOptionsMenu";
-import { DashboardTypes, SortingRules } from "../../utils/Enums";
 
-import { SwapVert } from "@mui/icons-material";
 import {
   MovieReview,
   TVReview,
@@ -79,10 +81,9 @@ export default function Dashboard({
               <>
                 <div key={idx} className="posters-dashboard">
                   <a
-                    href={`https://yashwit.com/${entry?.name?.replace(
-                      / /g,
-                      ""
-                    )}`}
+                    href={`https://yashwit.com/${
+                      type === DashboardTypes.MOVIE ? "movies" : "tv"
+                    }/${entry?.name?.replace(/ /g, "")}`}
                     target="_blank"
                   >
                     <img

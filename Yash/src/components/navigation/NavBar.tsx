@@ -3,18 +3,21 @@ import { Routes, Route, NavLink } from "react-router-dom";
 
 import AboutPage from "../about/AboutPage";
 import { CourseComponentMap } from "../learnings/CourseComponentMap";
-import Dashboard from "../moviestv/Dashboard";
-import { DashboardTypes } from "../../utils/Enums";
 import LearningsPage from "../learnings/LearningsPage";
-import LearningPosts from "../../data/LearningPosts.json";
+import { ProblemComponentMap } from "../learnings/ProblemComponentMap";
+import { YearComponentMap } from "../learnings/YearComponentMap";
 import { MovieComponentMap, TVComponentMap } from "../moviestv/ComponentMap";
-import MoviePosts from "../../data/MoviePosts.json";
-import PortfolioPage from "../portfolio/PortfolioPage";
-import PortfolioPosts from "../../data/PortfolioPosts.json";
+import Dashboard from "../moviestv/Dashboard";
 import { PortfolioPostMap } from "../portfolio/ComponentMap";
+import PortfolioPage from "../portfolio/PortfolioPage";
+
+import LearningPosts from "../../data/LearningPosts.json";
+import PortfolioPosts from "../../data/PortfolioPosts.json";
+import MoviePosts from "../../data/MoviePosts.json";
 import TVPosts from "../../data/TVPosts.json";
 import Years from "../../data/Years.json";
-import { YearComponentMap } from "../learnings/YearComponentMap";
+
+import { DashboardTypes } from "../../utils/Constants";
 
 export default function NavBar() {
   const { current: navLinkStyle } = useRef(
@@ -70,7 +73,7 @@ export default function NavBar() {
           return (
             <Route
               key={idx}
-              path={`${course.code}`}
+              path={`/courses/computing/${course.code}`}
               element={<CourseComponent course={course} />}
             />
           );
@@ -80,8 +83,26 @@ export default function NavBar() {
           return (
             <Route
               key={idx}
-              path={`${course.code}`}
+              path={`/courses/nusc${course.code}`}
               element={<CourseComponent course={course} />}
+            />
+          );
+        })}
+        {Object.keys(LearningPosts.Problems).map((problem, idx) => {
+          const ProblemComponent = ProblemComponentMap[`${problem}`];
+          return (
+            <Route
+              key={idx}
+              path={`/learnings/problems/${problem}`}
+              element={
+                <ProblemComponent
+                  problem={
+                    LearningPosts.Problems[
+                      problem as keyof typeof LearningPosts.Problems
+                    ]
+                  }
+                />
+              }
             />
           );
         })}
@@ -94,7 +115,6 @@ export default function NavBar() {
             />
           }
         />
-        {/* <Route path="/movies" element={<MoviesDashboard />} /> */}
         {MoviePosts.Movies.filter((review) => review.include).map(
           (review, idx) => {
             const ReviewComponent =
@@ -102,7 +122,7 @@ export default function NavBar() {
             return (
               <Route
                 key={idx}
-                path={`${review.name.replace(/ /g, "")}`}
+                path={`/movies/${review.name.replace(/ /g, "")}`}
                 element={<ReviewComponent review={review} />}
               />
             );
@@ -118,7 +138,7 @@ export default function NavBar() {
           return (
             <Route
               key={idx}
-              path={`${review.name.replace(/ /g, "")}`}
+              path={`/tv/${review.name.replace(/ /g, "")}`}
               element={<ReviewComponent review={review} />}
             />
           );

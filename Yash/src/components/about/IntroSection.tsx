@@ -88,8 +88,8 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (35 hours so-far), spanish, and german (combined
-          288-day duolingo streak).
+          Practising tennis (36 hours so-far), spanish, and german (combined
+          302-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
@@ -143,7 +143,7 @@ export default function IntroSection() {
           Recording my{" "}
           <Anchor
             className={"standard-anchor"}
-            href={"https://yashyswebsitev2.vercel.app/learnings"}
+            href={"https://yashwit.com/learnings"}
             target={"_blank"}
             title={"Thoughts tab link"}
             label={"thoughts"}
@@ -154,7 +154,7 @@ export default function IntroSection() {
           Reviewing{" "}
           <Anchor
             className={"standard-anchor"}
-            href={"http://localhost:5173/movies"}
+            href={"https://yashwit.com/movies"}
             target={"_blank"}
             title={"Movies tab link"}
             label={"movies"}
@@ -173,7 +173,7 @@ export default function IntroSection() {
           Showcasing my{" "}
           <Anchor
             className={"standard-anchor"}
-            href={"https://yashyswebsitev2.vercel.app/portfolio"}
+            href={"https://yashwit.com/portfolio"}
             target={"_blank"}
             title={"Portfolio tab link"}
             label={"portfolio"}
@@ -196,6 +196,13 @@ export default function IntroSection() {
         <u>Have a cat fact on me:</u>
       </p>
       <CatFact />
+      <footer
+        style={{
+          bottom: 0,
+        }}
+      >
+        This page was last updated on: 08/04/2025
+      </footer>
     </div>
   );
 }

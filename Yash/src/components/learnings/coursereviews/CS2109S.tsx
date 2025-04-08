@@ -1,9 +1,11 @@
 import CoursePage from "../CoursePage";
+
+import image1 from "../../../assets/moviegraphexample.png";
+
 import {
   CoursePostType,
   CourseImageType,
 } from "../../../utils/typedefs/LearningsCustomTypes";
-import image1 from "../../../assets/moviegraphexample.png";
 
 export default function CS2109S({ course }: { course: CoursePostType }) {
   const images: CourseImageType = {

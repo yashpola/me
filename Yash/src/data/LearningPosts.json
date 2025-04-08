@@ -211,5 +211,35 @@
         ]
       }
     }
-  ]
+  ],
+  "Problems": {
+    "TwoSum": {
+      "title": "Two Sum",
+      "languages": ["JAVA", "PYTHON"],
+      "description": [
+        "Given an array of integers and a target, determine if there are 2 integers at distinct indices that add up to the target and return their indices. ",
+        "You may assume there is exactly 1 unique solution per input."
+      ],
+      "example": [
+        "Input: Array [2, 7, 4, 3, 1] with Target 9. Expected Output: [0, 1]"
+      ],
+      "solution": [
+        "The naive solution to this problem is to check every pair of numbers to see if any sum up to our target. Obviously, this is rather inefficient since for ",
+        "10 numbers we would be doing a 100 operations and 10000 for a 100 (i.e. we would be performing n^2 operations for an array of size n). Hence, let's use a ",
+        "simple algorithm that can only needs to check n numbers to output a result (i.e. 1-pass through the array). The idea is: we just need to record the difference ",
+        "between our target and each member of the array, and check if that difference (i.e. the initial number's 'complement') also exists in the array as a member. Using ",
+        "the above example, we would take 2 and create a mapping (7 : 0) in our table. Why 0? Simply because the question wants us to track the indices of the desirable pair, ",
+        "so we record 0 for 2. Then, when we get to the next number i.e. 7, we check if 7 could've been combined with a ",
+        "previous number to make 9. And we know it can! Since we just recorded 7 for 2. Now, we simply extract the index of the other number (0 for 2 in this case) and return ",
+        "the current index (i.e. 1, for 7) with the retrieved index (0) and return [0, 1]. Fin."
+      ],
+      "analysis": [
+        "The reason this solution works is because of the use of 'maps'. We record the exact amount each number needs to meet the target, and then terminate as soon as we find ",
+        "a match (which can be checked for quickly due to the efficient indexing that maps provide). If we manage to get through the whole array without a single match, we know ",
+        "for sure that no number can meet its target using only other numbers in the array. Or, put another way: we know that no number in the array can be added to a peer ",
+        "to reach the target value. Checking through all possible pairs of values is unnecessary for us to conclude that a particular number will never be useful in meeting the given ",
+        "target."
+      ]
+    }
+  }
 }

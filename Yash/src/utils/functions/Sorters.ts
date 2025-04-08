@@ -1,5 +1,5 @@
 import { MovieReview, TVReview } from "../typedefs/MoviesTVCustomTypes";
-import { SortingRules } from "../Enums";
+import { SortingRules } from "../Constants";
 
 export default function SortByCustomRule(
   review1: MovieReview | TVReview,
