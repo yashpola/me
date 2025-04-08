@@ -234,12 +234,31 @@
         "the current index (i.e. 1, for 7) with the retrieved index (0) and return [0, 1]. Fin."
       ],
       "analysis": [
-        "The reason this solution works is because of the use of 'maps'. We record the exact amount each number needs to meet the target, and then terminate as soon as we find ",
+        "The reason this solution works is because of the use of 'maps'. We record the exact balance each number needs to sum up to the target, and then terminate as soon as we find ",
         "a match (which can be checked for quickly due to the efficient indexing that maps provide). If we manage to get through the whole array without a single match, we know ",
-        "for sure that no number can meet its target using only other numbers in the array. Or, put another way: we know that no number in the array can be added to a peer ",
-        "to reach the target value. Checking through all possible pairs of values is unnecessary for us to conclude that a particular number will never be useful in meeting the given ",
-        "target."
+        "for sure that no number can meet its target using only other numbers in the array. Put another way: we know that no number in the array can be added to another ",
+        "to reach the target value. Checking through all possible pairs of values is simply unnecessary for us to conclude that a particular number will never be useful in meeting ",
+        "the given target."
       ]
+    },
+    "MergeTwoSortedLists": {
+      "title": "Merge Two Sorted Lists",
+      "languages": ["JAVA"],
+      "description": [
+        "Given two linked lists sorted in ascending order, merge all the elements of the two lists into one linked list while preserving the order."
+      ],
+      "example": [
+        "Input: List 1, (1 -> 2 - > 4) and List 2, (1 -> 3 -> 4). Expected Output: List 3, (1 -> 1 -> 2 -> 3 -> 4 -> 4)."
+      ],
+      "solution": [
+        "This is actually simpler than TwoSum. It's just a matter of iterating through both lists, comparing the head of the list at each iteration and slotting the smaller ",
+        "value into the new list until one or both of the lists are exhausted. The only nuance to handle is: what if the two lists are not of equal length? In this case, we ",
+        "just have to stop looking at the shorter list once its done, and just append the remaining whole of the longer list to the result list. Additionally, why do we need ",
+        "to maintain 2 lists 'curr' and 'result'? This is because to build a linked list iteratively, we need to keep shifting our list pointer until it reaches the tail. But ",
+        "the solution demands the head of the resulting list. So, either we build only one list and spend extra time at the end shifting our pointing in reverse until it gets back ",
+        "to the head. Or we can just use 2 lists, and fix one list at the head while using the other list to build up the desired values. Fin."
+      ],
+      "analysis": []
     }
   }
 }

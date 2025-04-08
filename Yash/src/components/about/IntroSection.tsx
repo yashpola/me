@@ -162,7 +162,7 @@ export default function IntroSection() {
           and{" "}
           <Anchor
             className={"standard-anchor"}
-            href={"https://yashyswebsitev2.vercel.app/tv"}
+            href={"https://yashwit.com/tv"}
             target={"_blank"}
             title={"TV tab link"}
             label={"tv shows"}

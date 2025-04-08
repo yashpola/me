@@ -5,10 +5,10 @@ import { ProblemPostType } from "../../utils/typedefs/LearningsCustomTypes";
 
 export default function ProblemDescription({
   problem,
-  solution: code,
+  solutions: codeBlocks,
 }: {
   problem: ProblemPostType;
-  solution: ReactElement;
+  solutions: ReactElement[];
 }) {
   return (
     <>
@@ -20,7 +20,7 @@ export default function ProblemDescription({
         <h1 style={{ textAlign: "center", textDecoration: "underline" }}>
           {problem.title}
         </h1>
-        Attempted in:{" "}
+        Solution here in:{" "}
         {problem.languages.map((language, idx) => (
           <p
             key={idx}
@@ -46,9 +46,21 @@ export default function ProblemDescription({
           <p>{problem.example}</p>
           <h2>Solution</h2>
           <p>{problem.solution}</p>
-          {code}
-          <h2>Analysis</h2>
-          <p>{problem.analysis}</p>
+          {codeBlocks.map((codeBlock, idx) => {
+            return (
+              <>
+                <div key={idx} style={{ margin: "1%" }}>
+                  {codeBlock}
+                </div>
+              </>
+            );
+          })}
+          {problem.analysis.length > 0 && (
+            <>
+              <h2>Analysis</h2>
+              <p>{problem.analysis}</p>
+            </>
+          )}
         </div>
       </div>
     </>

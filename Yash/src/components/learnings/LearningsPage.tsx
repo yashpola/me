@@ -23,7 +23,7 @@ export default function LearningsPage() {
             </div>
           );
         })}
-        <h1>Leetcode</h1>
+        <h1>Problems</h1>
         {Object.keys(LearningPosts.Problems).map((problem, idx) => {
           return (
             <div className="course-card" key={idx}>
