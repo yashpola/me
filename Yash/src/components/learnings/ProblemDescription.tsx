@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 
 import { LanguageColorCodes } from "../../utils/Constants";
+import { isEmptyValue } from "../../utils/functions/Validators";
 import { ProblemPostType } from "../../utils/typedefs/LearningsCustomTypes";
 
 export default function ProblemDescription({
@@ -55,7 +56,7 @@ export default function ProblemDescription({
               </>
             );
           })}
-          {problem.analysis.length > 0 && (
+          {!isEmptyValue(problem.analysis) && (
             <>
               <h2>Analysis</h2>
               <p>{problem.analysis}</p>

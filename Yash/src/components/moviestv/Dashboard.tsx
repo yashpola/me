@@ -5,12 +5,13 @@ import { SwapVert } from "@mui/icons-material";
 import SortingOptionsMenu from "./SortingOptionsMenu";
 
 import { DashboardTypes, SortingRules } from "../../utils/Constants";
+
+import { getUrl } from "../../utils/functions/Getters";
 import SortByCustomRule from "../../utils/functions/Sorters";
 import {
   addTextDecoration,
   removeTextDecorationMulti,
 } from "../../utils/functions/StyleModifiers";
-
 import {
   MovieReview,
   TVReview,
@@ -81,7 +82,7 @@ export default function Dashboard({
               <>
                 <div key={idx} className="posters-dashboard">
                   <a
-                    href={`https://yashwit.com/${
+                    href={`${getUrl()}/${
                       type === DashboardTypes.MOVIE ? "movies" : "tv"
                     }/${entry?.name?.replace(/ /g, "")}`}
                     target="_blank"

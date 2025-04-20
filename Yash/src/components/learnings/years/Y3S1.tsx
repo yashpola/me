@@ -1,5 +1,7 @@
 import LearningPosts from "../../../data/LearningPosts.json";
 
+import { getUrl } from "../../../utils/functions/Getters";
+
 export default function Y3S1() {
   return (
     <>
@@ -15,7 +17,7 @@ export default function Y3S1() {
               <div className="course-card-body">
                 <h2>
                   <a
-                    href={`https://yashwit.com/courses/computing/${learningPost.code}`}
+                    href={`${getUrl()}/courses/computing/${learningPost.code}`}
                     target="_blank"
                     style={{ color: "white", textDecoration: "none" }}
                   >
@@ -36,7 +38,7 @@ export default function Y3S1() {
               <div className="course-card-body">
                 <h2>
                   <a
-                    href={`https://yashwit.com/courses/nusc/${learningPost.code}`}
+                    href={`${getUrl()}/courses/nusc/${learningPost.code}`}
                     target="_blank"
                     style={{ color: "white", textDecoration: "none" }}
                   >

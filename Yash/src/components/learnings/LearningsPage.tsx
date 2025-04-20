@@ -1,6 +1,8 @@
 import LearningPosts from "../../data/LearningPosts.json";
 import Years from "../../data/Years.json";
 
+import { getUrl } from "../../utils/functions/Getters";
+
 export default function LearningsPage() {
   return (
     <>
@@ -13,7 +15,7 @@ export default function LearningsPage() {
               <div className="course-card-body">
                 <h2>
                   <a
-                    href={`https://yashwit.com/${year}`}
+                    href={`${getUrl()}/${year}`}
                     style={{ color: "white", textDecoration: "none" }}
                   >
                     {year}
@@ -31,7 +33,7 @@ export default function LearningsPage() {
               <div className="course-card-body">
                 <h2>
                   <a
-                    href={`https://yashwit.com/learnings/problems/${problem}`}
+                    href={`${getUrl()}/learnings/problems/${problem}`}
                     style={{ color: "white", textDecoration: "none" }}
                   >
                     {

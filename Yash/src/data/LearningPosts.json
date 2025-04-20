@@ -248,7 +248,7 @@
         "Given two linked lists sorted in ascending order, merge all the elements of the two lists into one linked list while preserving the order."
       ],
       "example": [
-        "Input: List 1, (1 -> 2 - > 4) and List 2, (1 -> 3 -> 4). Expected Output: List 3, (1 -> 1 -> 2 -> 3 -> 4 -> 4)."
+        "Input: LList 1, (1 -> 2 - > 4) and LList 2, (1 -> 3 -> 4). Expected Output: LList 3, (1 -> 1 -> 2 -> 3 -> 4 -> 4)."
       ],
       "solution": [
         "This is actually simpler than TwoSum. It's just a matter of iterating through both lists, comparing the head of the list at each iteration and slotting the smaller ",
@@ -257,6 +257,26 @@
         "to maintain 2 lists 'curr' and 'result'? This is because to build a linked list iteratively, we need to keep shifting our list pointer until it reaches the tail. But ",
         "the solution demands the head of the resulting list. So, either we build only one list and spend extra time at the end shifting our pointing in reverse until it gets back ",
         "to the head. Or we can just use 2 lists, and fix one list at the head while using the other list to build up the desired values. Fin."
+      ],
+      "analysis": []
+    },
+    "BestTimeToBuyAndSellStock": {
+      "title": "Best Time To Buy And Sell Stock",
+      "languages": ["PYTHON"],
+      "description": [
+        "Given a list of prices of a given stock from Day 1 to Day N, determine the maximum profit that can be ",
+        "earned from buying and then selling the stock (with a profit of 0 if the stock price is only decreasing)."
+      ],
+      "example": [
+        "Input: List 1, (7, 1, 5, 3, 6, 4). Expected max profit: 5 (buy on day 2, sell on day 5)."
+      ],
+      "solution": [
+        "Simply put, to get a maximum profit we need to buy at a minimum price and sell at a maximum price. ",
+        "Now, a simplistic way to do this would be to compare all pairs of prices with another and take the pair with the highest ",
+        "difference as long as the day we are buying is before the day we are selling. However, we can be smarter by realising ",
+        "that each stock price can either be a new minimum or a new maximum i.e. we may just assume the first price we see is the ",
+        "lowest we can get and then hope that a later price is even lower so we may sell at a profit. If we never encounter a ",
+        "lower price after the first one, then our profit margin will unfortunately never increase past 0."
       ],
       "analysis": []
     }

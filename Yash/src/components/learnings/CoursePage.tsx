@@ -1,3 +1,4 @@
+import { isEmptyValue } from "../../utils/functions/Validators";
 import {
   CoursePostType,
   CourseImageType,
@@ -47,8 +48,8 @@ export default function CoursePage({
         >
           {course.para2 && course.para2}
         </div>
-        {images?.sources[1] && (
-          <img style={images.styles[1]} src={images.sources[1]} />
+        {!isEmptyValue(images?.sources[1]) && (
+          <img style={images?.styles[1]} src={images?.sources[1]} />
         )}
         <div
           style={{
@@ -58,8 +59,8 @@ export default function CoursePage({
         >
           {course.para3 && course.para3}
         </div>
-        {images?.sources[2] && (
-          <img style={images.styles[2]} src={images.sources[2]} />
+        {!isEmptyValue(images?.sources[2]) && (
+          <img style={images?.styles[2]} src={images?.sources[2]} />
         )}
         <div
           style={{
@@ -67,7 +68,7 @@ export default function CoursePage({
             margin: "2%",
           }}
         >
-          {course.generalreview && (
+          {!isEmptyValue(course.generalreview) && (
             <h2>
               <a href={course.generalreview} target="_blank">
                 Link to general review (ysp on nusmods)
