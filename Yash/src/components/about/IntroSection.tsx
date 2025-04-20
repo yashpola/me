@@ -78,7 +78,7 @@ export default function IntroSection() {
       <ul>
         <li>
           I'm a movie enjoyer! Last watched: M (Eine stadt sucht einen mörder)
-          (2025). Current Top 5: Arrival, Shutter Island, Taare Zameen Par,
+          (1931). Current Top 5: Arrival, Shutter Island, Taare Zameen Par,
           2001: A Space Odyssey, and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
