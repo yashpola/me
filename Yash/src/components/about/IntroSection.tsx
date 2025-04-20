@@ -77,9 +77,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Court: State v. A Nobody (2025).
-          Current Top 5: Arrival, Shutter Island, Taare Zameen Par, 2001: A
-          Space Odyssey, and The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: M (Eine stadt sucht einen mörder)
+          (2025). Current Top 5: Arrival, Shutter Island, Taare Zameen Par,
+          2001: A Space Odyssey, and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -89,13 +89,13 @@ export default function IntroSection() {
         </li>
         <li>
           Practising tennis (36 hours so-far), spanish, and german (combined
-          302-day duolingo streak).
+          314-day duolingo streak).
         </li>
         <li>
-          I like philosophy, fantasy, & sci-fi. Last read:{" "}
-          <u>A Feast for Crows</u> (George R.R. Martin). Currently reading:{" "}
-          <u>Leviathan</u> (Thomas Hobbes), and <u>Hyperion</u> (Dan Simmons).
-          Next read: <u>Discourse on Inequality</u> (Jean-Jacques Rousseau), and{" "}
+          I like philosophy, fantasy, & sci-fi. Last read: <u>Hyperion</u> (Dan
+          Simmons). Currently reading: <u>Leviathan</u> (Thomas Hobbes), and{" "}
+          <u>On the Shortness of Life</u> (Seneca). Next read:{" "}
+          <u>Discourse on Inequality</u> (Jean-Jacques Rousseau), and{" "}
           <u>A Dance with Dragons</u> (George R.R. Martin).
         </li>
         <li>
@@ -201,7 +201,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 08/04/2025
+        This page was last updated on: 20/04/2025
       </footer>
     </div>
   );

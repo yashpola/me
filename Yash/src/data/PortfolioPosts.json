@@ -44,20 +44,19 @@
       ]
     },
     {
-      "Name": "IEX",
-      "Title": "NUSC Impact Experience Project (W.I.P.)",
-      "Subtitle": "Group matchmaking tool",
+      "Name": "EduTechMobileApp",
+      "Title": "EduTech Mobile Application",
+      "Subtitle": "Created as part of an assignment for a UI/UX role.",
       "Description": [
-        "Figma translation to frontend,",
-        "User authentication (3rd party and NUS-auth),",
-        "DBMS"
+        "Inclusive of design system including application colors, typography, and icons library.",
+        "Design notes included for each page.",
+        "5 pages including dashboard, customised learning, lesson objectives, class chat, and friends' stories."
       ],
       "References": [
-        ["Documentation", ""],
-        ["Demo", ""],
-        ["Live", ""],
-        ["Workspace", ""],
-        ["Issues", ""]
+        [
+          "Workspace",
+          "https://www.figma.com/design/1K2j5cMyLlN25TY37guxsH/YashwitPolapragada_TexasTechUI-UX_Submission?node-id=0-1&t=mghsMrBmwi5RYw7e-1"
+        ]
       ]
     }
   ]
