@@ -141,6 +141,14 @@ standard-anchor {
   justify-content: space-evenly;
 }
 
+.movie-grid {
+  /* Display */
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .site-button {
   /* Background */
   background-color: brown;

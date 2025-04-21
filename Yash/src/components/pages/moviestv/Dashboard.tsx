@@ -64,7 +64,7 @@ export default function Dashboard({
           isMovieDashboard={type === DashboardTypes.MOVIE}
         />
       )}
-      <div className="grid">
+      <div className="movie-grid">
         {reviews
           .sort((review1, review2) => {
             return SortByCustomRule(review1, review2, sortRule);
