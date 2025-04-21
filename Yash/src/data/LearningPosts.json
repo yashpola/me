@@ -221,7 +221,7 @@
         "You may assume there is exactly 1 unique solution per input."
       ],
       "example": [
-        "Input: Array [2, 7, 4, 3, 1] with Target 9. Expected Output: [0, 1]"
+        "Input: List - [2, 7, 4, 3, 1] with Target 9. Expected Output: [0, 1]"
       ],
       "solution": [
         "The naive solution to this problem is to check every pair of numbers to see if any sum up to our target. Obviously, this is rather inefficient since for ",
@@ -239,7 +239,8 @@
         "for sure that no number can meet its target using only other numbers in the array. Put another way: we know that no number in the array can be added to another ",
         "to reach the target value. Checking through all possible pairs of values is simply unnecessary for us to conclude that a particular number will never be useful in meeting ",
         "the given target."
-      ]
+      ],
+      "image": "https://strapi-iio.s3.us-west-2.amazonaws.com/two_sum_1_3cf64db019.png"
     },
     "MergeTwoSortedLists": {
       "title": "Merge Two Sorted Lists",
@@ -251,14 +252,17 @@
         "Input: LList 1, (1 -> 2 - > 4) and LList 2, (1 -> 3 -> 4). Expected Output: LList 3, (1 -> 1 -> 2 -> 3 -> 4 -> 4)."
       ],
       "solution": [
-        "This is actually simpler than TwoSum. It's just a matter of iterating through both lists, comparing the head of the list at each iteration and slotting the smaller ",
-        "value into the new list until one or both of the lists are exhausted. The only nuance to handle is: what if the two lists are not of equal length? In this case, we ",
-        "just have to stop looking at the shorter list once its done, and just append the remaining whole of the longer list to the result list. Additionally, why do we need ",
+        "This is actually simpler than TwoSum. It's just a matter of traversing through both lists, comparing the heads of the lists at each value and slotting the smaller ",
+        "value into the new list until both of the lists are exhausted. The only nuance to handle is: what if the two lists are not of equal length? In this case, we ",
+        "just have to stop looking at the shorter list once its done, and just append the remaining whole of the longer list to the result list (which we can do since we are ",
+        "assured that both lists are fully sorted. Additionally, why do we need ",
         "to maintain 2 lists 'curr' and 'result'? This is because to build a linked list iteratively, we need to keep shifting our list pointer until it reaches the tail. But ",
-        "the solution demands the head of the resulting list. So, either we build only one list and spend extra time at the end shifting our pointing in reverse until it gets back ",
-        "to the head. Or we can just use 2 lists, and fix one list at the head while using the other list to build up the desired values. Fin."
+        "the solution demands the head of the resulting list. So, either we build only one list and spend extra time at the end shifting our pointer in reverse until it gets back ",
+        "to the head. Or we can just use 2 lists, and fix one list at the head while using the other list to store the desired final values before appending the second ",
+        "list to the first, and then returning the first. Fin."
       ],
-      "analysis": []
+      "analysis": [],
+      "image": "https://favtutor.com/articles/wp-content/uploads/2023/12/Merge-two-sorted-linked-lists.png"
     },
     "BestTimeToBuyAndSellStock": {
       "title": "Best Time To Buy And Sell Stock",
@@ -268,17 +272,25 @@
         "earned from buying and then selling the stock (with a profit of 0 if the stock price is only decreasing)."
       ],
       "example": [
-        "Input: List 1, (7, 1, 5, 3, 6, 4). Expected max profit: 5 (buy on day 2, sell on day 5)."
+        "Input: List - [7, 1, 5, 3, 6, 4]. Expected max profit: 5 (buy on day 2, sell on day 5)."
       ],
       "solution": [
-        "Simply put, to get a maximum profit we need to buy at a minimum price and sell at a maximum price. ",
-        "Now, a simplistic way to do this would be to compare all pairs of prices with another and take the pair with the highest ",
-        "difference as long as the day we are buying is before the day we are selling. However, we can be smarter by realising ",
-        "that each stock price can either be a new minimum or a new maximum i.e. we may just assume the first price we see is the ",
-        "lowest we can get and then hope that a later price is even lower so we may sell at a profit. If we never encounter a ",
-        "lower price after the first one, then our profit margin will unfortunately never increase past 0."
+        "Simply put, to maximise our profit we need to buy at the minimum price and sell at the maximum price. ",
+        "A simplistic way to do this would be to compare all pairs of prices with another and take the pair with the highest ",
+        "difference as long as the day we are buying is before the day we are selling. However, we can be a little smarter by realising ",
+        "that each daily stock price can either be a new minimum or a new maximum i.e. we could just assume the first price we see is the ",
+        "lowest we can get and then hope that either (1) we encounter a higher price later on so we may sell for some non-zero profit or ",
+        "(2) encounter a lower price than the current minimum so that we can buy lower (i.e. at a better price). Notice however, that the usefulness of (2) is ",
+        "contingent on (1) i.e. that the lower buy-price we get can still be later sold at a price that nets us some profit. If the stock price ",
+        "is only decreasing, then case (1) will never happen (because there will never be a higher price than the first), and consequently case (2) ",
+        "will not be of any use (because the price hits a new low everyday, with no opportunity to sell for a profit). "
       ],
-      "analysis": []
+      "analysis": [
+        "This is a very simple example of what is called a 'greedy' algorithm because of its linearity, and the only aim being to maximise profit at the lowest price ",
+        "we could get. The linearity of the algorithm is also assured by the linearity of time, in that we must buy before we sell (hence, we ",
+        "just need to consider each day's price and its potential to maximise profit by being either a new low, or a new high)."
+      ],
+      "image": "https://www.ggorantala.dev/content/images/size/w1460/2024/02/Best-time-to-buy-and-sell-stock-1.png"
     }
   }
 }

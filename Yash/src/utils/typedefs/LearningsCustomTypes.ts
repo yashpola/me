@@ -29,6 +29,7 @@ export interface ProblemPostType {
   example: string[];
   solution: string[];
   analysis: string[];
+  image: string;
 }
 
 export interface ProblemComponentMapType {

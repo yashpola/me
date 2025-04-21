@@ -1,15 +1,18 @@
 import { useRef } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 
-import AboutPage from "../about/AboutPage";
-import { CourseComponentMap } from "../learnings/CourseComponentMap";
-import LearningsPage from "../learnings/LearningsPage";
-import { ProblemComponentMap } from "../learnings/ProblemComponentMap";
-import { YearComponentMap } from "../learnings/YearComponentMap";
-import { MovieComponentMap, TVComponentMap } from "../moviestv/ComponentMap";
-import Dashboard from "../moviestv/Dashboard";
-import { PortfolioPostMap } from "../portfolio/ComponentMap";
-import PortfolioPage from "../portfolio/PortfolioPage";
+import AboutPage from "../pages/about/AboutPage";
+import { CourseComponentMap } from "../pages/learnings/CourseComponentMap";
+import LearningsPage from "../pages/learnings/LearningsPage";
+import { ProblemComponentMap } from "../pages/learnings/ProblemComponentMap";
+import { YearComponentMap } from "../pages/learnings/YearComponentMap";
+import {
+  MovieComponentMap,
+  TVComponentMap,
+} from "../pages/moviestv/ComponentMap";
+import Dashboard from "../pages/moviestv/Dashboard";
+import { PortfolioPostMap } from "../pages/portfolio/ComponentMap";
+import PortfolioPage from "../pages/portfolio/PortfolioPage";
 
 import LearningPosts from "../../data/LearningPosts.json";
 import PortfolioPosts from "../../data/PortfolioPosts.json";
