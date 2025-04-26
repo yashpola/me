@@ -7,7 +7,6 @@ import { getUrl } from "../../../utils/functions/Getters";
 import Grid from "../../layouts/Grid";
 
 export default function LearningsPage() {
-  console.log(getUrl());
   return (
     <>
       <div className="page-section">
