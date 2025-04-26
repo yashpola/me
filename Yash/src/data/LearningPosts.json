@@ -291,6 +291,41 @@
         "just need to consider each day's price and its potential to maximise profit by being either a new low, or a new high)."
       ],
       "image": "https://www.ggorantala.dev/content/images/size/w1460/2024/02/Best-time-to-buy-and-sell-stock-1.png"
+    },
+    "LinkedListCycle": {
+      "title": "Linked List Cycle",
+      "languages": ["C"],
+      "description": [
+        "Determine if a given linked list contains a cycle (i.e. there is some node in the list that can be reached twice ",
+        "by continuously following the links between each pair of nodes consecutively)."
+      ],
+      "example": [
+        "Input: LList (3 -> 2 -> 0 -> 4 -> 2). Expected answer: True, because the last node (4) leads back to the 2nd ",
+        "node (2), and the cycle continues."
+      ],
+      "solution": [
+        "We will use what is called the Hare-and-Tortoise or Fast-and-Slow pointer approach. The basic idea is simple: ",
+        "imagine setting off 2 runners at the same start point, and checking if one runner is able to lap the other ",
+        "before the race is over. Intuitively, if the faster runner reaches the endpoint without passing the slower runner ",
+        "again (or in fact, reaches the end at all), this means there is never a repetition of nodes i.e. a point where the ",
+        "faster runner crosses the slower one again. ",
+        "The translation to code from this analogy is almost exact: initialise both pointers at the head of the list, and ",
+        "always keep 1 pointer 2 steps ahead of the other until either both meet again (in which case there is a cycle) or ",
+        "the advanced pointer reaches the end of the list (in which case, by definition there is no cycle)."
+      ],
+      "analysis": [
+        "An interesting question to ask is: how to determine exactly how much faster the faster runner should be? In the above ",
+        "code for example, why is the faster pointer kept 2 nodes ahead instead of 1, or 3? Well, really the requirement is to ",
+        "prevent 2 situations: 'chasing-the-tail' (in which both pointers are perpetually one node apart from one another), ",
+        "and 'teleporting' (in which the faster pointer is frequently overshooting the slower pointer). It should be obvious ",
+        "that the first situation is a result of the faster pointer not being fast enough (never closing the distance to the ",
+        "slower pointer), and the second is the opposite. Thus, if we maintain the slower node at a pace of 1 node per step, ",
+        "and the faster node at a pace of 2 nodes per step, then the faster node would logically be steadily ",
+        "closing the distance between them by 1 node at a time, and it would take exactly d steps to close an ",
+        "initial distance of d nodes. Now, we can probably still trial/error a ratio other than 1:2 that would still work, but let's ",
+        "keep it simple, stupid."
+      ],
+      "image": "https://static.takeuforward.org/content/starting-of-loop-image8-jG7vA1Si"
     }
   }
 }

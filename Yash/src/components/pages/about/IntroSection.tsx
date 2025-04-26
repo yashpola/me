@@ -159,14 +159,14 @@ export default function IntroSection() {
             title={"Movies tab link"}
             label={"movies"}
           />{" "}
-          and{" "}
+          {/* and{" "}
           <Anchor
             className={"standard-anchor"}
             href={"https://yashwit.com/tv"}
             target={"_blank"}
             title={"TV tab link"}
             label={"tv shows"}
-          />{" "}
+          />{" "} */}
           that I watch.
         </li>
         <li>

@@ -103,7 +103,6 @@ standard-anchor {
   border-top-right-radius: 30px;
 
   /* Display */
-  padding: 10px;
   width: 75vw;
 
   /* Text */
@@ -138,7 +137,7 @@ standard-anchor {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .movie-grid {
@@ -220,7 +219,7 @@ standard-anchor {
 
   /* Display */
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-  margin: 0.5vw;
+  margin: 1vw;
 }
 
 .problem-card-footer {
@@ -297,6 +296,16 @@ standard-anchor {
   width: 100%;
 }
 
+.youtube-iframe {
+  /* Border */
+  border-radius: 15px;
+
+  /* Display */
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  height: 400px;
+  width: 800px;
+}
+
 /* Small devices (phones) */
 
 @media only screen and (max-width: 600px) {
@@ -313,6 +322,11 @@ standard-anchor {
 
   h3 {
     font-size: 30px;
+  }
+
+  .youtube-iframe {
+    height: 200px;
+    width: 400px;
   }
 }
 
@@ -350,16 +364,6 @@ standard-anchor {
   h3 {
     font-size: 40px;
   }
-}
-
-.youtube-iframe {
-  /* Border */
-  border-radius: 15px;
-
-  /* Display */
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-  height: 400px;
-  width: 800px;
 }
 
 /* #root {

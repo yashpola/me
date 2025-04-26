@@ -25,6 +25,7 @@ export const LanguageColorCodes = Object.freeze({
   JAVA: { primary: "#f89820", secondary: "#5382a1" },
   JAVASCRIPT: { primary: "#f0db4f", secondary: "#323330" },
   PYTHON: { primary: "#306998", secondary: "#FFE873" },
+  C: { primary: "#659bd3", secondary: "#FFFFFF" },
 });
 
 export const defaultCodeBlockConfigs = Object.freeze({

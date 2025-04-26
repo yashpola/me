@@ -6,10 +6,7 @@ import { CourseComponentMap } from "../pages/learnings/CourseComponentMap";
 import LearningsPage from "../pages/learnings/LearningsPage";
 import { ProblemComponentMap } from "../pages/learnings/ProblemComponentMap";
 import { YearComponentMap } from "../pages/learnings/YearComponentMap";
-import {
-  MovieComponentMap,
-  TVComponentMap,
-} from "../pages/moviestv/ComponentMap";
+import { MovieComponentMap } from "../pages/moviestv/ComponentMap";
 import Dashboard from "../pages/moviestv/Dashboard";
 import { PortfolioPostMap } from "../pages/portfolio/ComponentMap";
 import PortfolioPage from "../pages/portfolio/PortfolioPage";
@@ -17,7 +14,6 @@ import PortfolioPage from "../pages/portfolio/PortfolioPage";
 import LearningPosts from "../../data/LearningPosts.json";
 import PortfolioPosts from "../../data/PortfolioPosts.json";
 import MoviePosts from "../../data/MoviePosts.json";
-import TVPosts from "../../data/TVPosts.json";
 import Years from "../../data/Years.json";
 
 import { DashboardTypes } from "../../utils/constants/ComponentConstants";
@@ -26,7 +22,7 @@ export default function NavBar() {
   const { current: navLinkStyle } = useRef(
     ({ isActive }: { isActive: boolean }) => ({
       textDecoration: isActive ? "underline" : "none",
-      color: isActive ? "white" : "brown",
+      color: isActive ? "brown" : "white",
     })
   );
 
@@ -47,14 +43,14 @@ export default function NavBar() {
           </div>
           <div className="nav-item">
             <NavLink to="/movies" style={navLinkStyle}>
-              Movies
+              Movie Reviews
             </NavLink>
           </div>
-          <div className="nav-item">
+          {/* <div className="nav-item">
             <NavLink to="/tv" style={navLinkStyle}>
               TV
             </NavLink>
-          </div>
+          </div> */}
           <div className="nav-item">
             <NavLink to="/portfolio" style={navLinkStyle}>
               Portfolio (W.I.P.)
@@ -131,7 +127,7 @@ export default function NavBar() {
             );
           }
         )}
-        <Route
+        {/* <Route
           path="/tv"
           element={<Dashboard type={DashboardTypes.TV} reviews={TVPosts.TV} />}
         />
@@ -145,7 +141,7 @@ export default function NavBar() {
               element={<ReviewComponent review={review} />}
             />
           );
-        })}
+        })} */}
         <Route
           path="/portfolio"
           element={
