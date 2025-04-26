@@ -7,6 +7,7 @@ import { getUrl } from "../../../utils/functions/Getters";
 import Grid from "../../layouts/Grid";
 
 export default function LearningsPage() {
+  console.log(getUrl());
   return (
     <>
       <div className="page-section">
@@ -34,7 +35,7 @@ export default function LearningsPage() {
             return (
               <ProblemCard
                 key={idx}
-                link={`${getUrl()}/learnings/problems/${problem}`}
+                link={`https://yashwit.com/learnings/problems/${problem}`}
                 title={
                   LearningPosts.Problems[
                     problem as keyof typeof LearningPosts.Problems
