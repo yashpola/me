@@ -20,7 +20,7 @@ import MoviePosts from "../../data/MoviePosts.json";
 import TVPosts from "../../data/TVPosts.json";
 import Years from "../../data/Years.json";
 
-import { DashboardTypes } from "../../utils/Constants";
+import { DashboardTypes } from "../../utils/constants/ComponentConstants";
 
 export default function NavBar() {
   const { current: navLinkStyle } = useRef(

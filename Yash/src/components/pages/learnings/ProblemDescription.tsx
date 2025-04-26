@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import { LanguageColorCodes } from "../../../utils/Constants";
+import { LanguageColorCodes } from "../../../utils/constants/ComponentConstants";
 import { isEmptyValue } from "../../../utils/functions/Validators";
 import { ProblemPostType } from "../../../utils/typedefs/LearningsCustomTypes";
 

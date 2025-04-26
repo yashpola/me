@@ -1,4 +1,4 @@
-import { SortingRules } from "../../../utils/Constants";
+import { SortingRules } from "../../../utils/constants/ComponentConstants";
 import { sortRuleSetter } from "../../../utils/typedefs/MoviesTVCustomTypes";
 
 export default function SortingOptionsMenu({

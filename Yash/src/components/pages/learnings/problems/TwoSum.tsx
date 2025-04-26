@@ -3,7 +3,7 @@ import { CopyBlock } from "react-code-blocks";
 
 import ProblemDescription from "../ProblemDescription";
 
-import { defaultCodeBlockConfigs } from "../../../../utils/Constants";
+import { defaultCodeBlockConfigs } from "../../../../utils/constants/ComponentConstants";
 import { ProblemPostType } from "../../../../utils/typedefs/LearningsCustomTypes";
 
 export default function TwoSum({ problem }: { problem: ProblemPostType }) {

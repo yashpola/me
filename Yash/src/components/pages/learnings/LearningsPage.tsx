@@ -35,7 +35,7 @@ export default function LearningsPage() {
             return (
               <ProblemCard
                 key={idx}
-                link={`https://yashwit.com/learnings/problems/${problem}`}
+                link={`${getUrl()}/learnings/problems/${problem}`}
                 title={
                   LearningPosts.Problems[
                     problem as keyof typeof LearningPosts.Problems

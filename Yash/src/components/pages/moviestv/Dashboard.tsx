@@ -4,7 +4,10 @@ import { SwapVert } from "@mui/icons-material";
 
 import SortingOptionsMenu from "./SortingOptionsMenu";
 
-import { DashboardTypes, SortingRules } from "../../../utils/Constants";
+import {
+  DashboardTypes,
+  SortingRules,
+} from "../../../utils/constants/ComponentConstants";
 
 import { getUrl } from "../../../utils/functions/Getters";
 import SortByCustomRule from "../../../utils/functions/Sorters";

@@ -3,7 +3,7 @@ import { obsidian } from "react-code-blocks";
 import {
   DashboardType,
   SortingRulesType,
-} from "./typedefs/MoviesTVCustomTypes";
+} from "../typedefs/MoviesTVCustomTypes";
 
 export const SortingRules: SortingRulesType = Object.freeze({
   BOXOFFICELOW: "bflow",
