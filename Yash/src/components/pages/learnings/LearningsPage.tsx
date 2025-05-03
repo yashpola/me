@@ -1,51 +1,48 @@
-import ProblemCard from "./ProblemCard";
+import { useLocation } from "react-router-dom";
 
 import LearningPosts from "../../../data/LearningPosts.json";
 import Years from "../../../data/Years.json";
 
-import { getUrl } from "../../../utils/functions/Getters";
+import { constructTargetUrl } from "../../../utils/functions/Constructors";
+
+import TitleCard from "./TitleCard";
+import ProblemCard from "./ProblemCard";
+
 import Grid from "../../layouts/Grid";
+import LinkedComponent from "../../navigation/LinkedComponent";
 
 export default function LearningsPage() {
+  const { pathname: basePath } = useLocation();
+
   return (
     <>
       <div className="page-section">
         <h1>School</h1>
         {Years.Years.map((year, idx) => {
           return (
-            <div className="course-card" key={idx}>
-              <div className="course-tab" />
-              <div className="course-card-body">
-                <h2>
-                  <a
-                    href={`${getUrl()}/${year}`}
-                    style={{ color: "white", textDecoration: "none" }}
-                  >
-                    {year}
-                  </a>
-                </h2>
-              </div>
-            </div>
+            <LinkedComponent key={idx} to={constructTargetUrl(basePath, year)}>
+              <TitleCard title={year} />
+            </LinkedComponent>
           );
         })}
         <h1>Problems</h1>
         <Grid>
           {Object.keys(LearningPosts.Problems).map((problem, idx) => {
             return (
-              <ProblemCard
-                key={idx}
-                link={`${getUrl()}/learnings/problems/${problem}`}
-                title={
-                  LearningPosts.Problems[
-                    problem as keyof typeof LearningPosts.Problems
-                  ].title
-                }
-                image={
-                  LearningPosts.Problems[
-                    problem as keyof typeof LearningPosts.Problems
-                  ].image
-                }
-              />
+              <LinkedComponent key={idx} to={`/learnings/${problem}`}>
+                <ProblemCard
+                  title={
+                    LearningPosts.Problems[
+                      problem as keyof typeof LearningPosts.Problems
+                    ].title
+                  }
+                  image={
+                    LearningPosts.Problems[
+                      problem as keyof typeof LearningPosts.Problems
+                    ].image
+                  }
+                />
+              </LinkedComponent>
             );
           })}
         </Grid>

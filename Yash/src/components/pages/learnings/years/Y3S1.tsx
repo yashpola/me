@@ -1,8 +1,16 @@
+import { useLocation } from "react-router-dom";
+
 import LearningPosts from "../../../../data/LearningPosts.json";
 
-import { getUrl } from "../../../../utils/functions/Getters";
+import { constructTargetUrl } from "../../../../utils/functions/Constructors";
+
+import TitleCard from "../TitleCard";
+
+import LinkedComponent from "../../../navigation/LinkedComponent";
 
 export default function Y3S1() {
+  const { pathname: basePath } = useLocation();
+
   return (
     <>
       <div className="page-section">
@@ -12,20 +20,12 @@ export default function Y3S1() {
         </h2>
         {LearningPosts.Years[0].Y3S1.Computing.map((learningPost, idx) => {
           return (
-            <div className="course-card" key={idx}>
-              <div className="course-tab" />
-              <div className="course-card-body">
-                <h2>
-                  <a
-                    href={`${getUrl()}/courses/computing/${learningPost.code}`}
-                    target="_blank"
-                    style={{ color: "white", textDecoration: "none" }}
-                  >
-                    {learningPost.title}
-                  </a>
-                </h2>
-              </div>
-            </div>
+            <LinkedComponent
+              key={idx}
+              to={constructTargetUrl(basePath, learningPost.code)}
+            >
+              <TitleCard title={learningPost.title} />
+            </LinkedComponent>
           );
         })}
         <h2>
@@ -33,20 +33,12 @@ export default function Y3S1() {
         </h2>
         {LearningPosts.Years[0].Y3S1.NUSC.map((learningPost, idx) => {
           return (
-            <div className="course-card" key={idx}>
-              <div className="course-tab" />
-              <div className="course-card-body">
-                <h2>
-                  <a
-                    href={`${getUrl()}/courses/nusc/${learningPost.code}`}
-                    target="_blank"
-                    style={{ color: "white", textDecoration: "none" }}
-                  >
-                    {learningPost.title}
-                  </a>
-                </h2>
-              </div>
-            </div>
+            <LinkedComponent
+              key={idx}
+              to={constructTargetUrl(basePath, learningPost.code)}
+            >
+              <TitleCard title={learningPost.title} />
+            </LinkedComponent>
           );
         })}
       </div>

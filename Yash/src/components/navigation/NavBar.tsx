@@ -4,11 +4,11 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import AboutPage from "../pages/about/AboutPage";
 import { CourseComponentMap } from "../pages/learnings/CourseComponentMap";
 import LearningsPage from "../pages/learnings/LearningsPage";
+import { MovieComponentMap } from "../pages/moviestv/MovieTVComponentMap";
 import { ProblemComponentMap } from "../pages/learnings/ProblemComponentMap";
+import { PortfolioPostMap } from "../pages/portfolio/PortfolioComponentMap";
 import { YearComponentMap } from "../pages/learnings/YearComponentMap";
-import { MovieComponentMap } from "../pages/moviestv/ComponentMap";
 import Dashboard from "../pages/moviestv/Dashboard";
-import { PortfolioPostMap } from "../pages/portfolio/ComponentMap";
 import PortfolioPage from "../pages/portfolio/PortfolioPage";
 
 import LearningPosts from "../../data/LearningPosts.json";
@@ -43,7 +43,7 @@ export default function NavBar() {
           </div>
           <div className="nav-item">
             <NavLink to="/movies" style={navLinkStyle}>
-              Movie Reviews
+              Movie Blog
             </NavLink>
           </div>
           {/* <div className="nav-item">
@@ -53,7 +53,7 @@ export default function NavBar() {
           </div> */}
           <div className="nav-item">
             <NavLink to="/portfolio" style={navLinkStyle}>
-              Portfolio (W.I.P.)
+              Portfolio
             </NavLink>
           </div>
         </div>
@@ -64,7 +64,11 @@ export default function NavBar() {
         {Years.Years.map((year, idx) => {
           const YearComponent = YearComponentMap[`${year}`];
           return (
-            <Route key={idx} path={`${year}`} element={<YearComponent />} />
+            <Route
+              key={idx}
+              path={`/learnings/${year}`}
+              element={<YearComponent />}
+            />
           );
         })}
         {LearningPosts.Years[0].Y3S1.Computing.map((course, idx) => {
@@ -72,7 +76,7 @@ export default function NavBar() {
           return (
             <Route
               key={idx}
-              path={`/courses/computing/${course.code}`}
+              path={`/learnings/Y3S1/${course.code}`}
               element={<CourseComponent course={course} />}
             />
           );
@@ -82,7 +86,7 @@ export default function NavBar() {
           return (
             <Route
               key={idx}
-              path={`/courses/nusc${course.code}`}
+              path={`/learnings/Y3S1/${course.code}`}
               element={<CourseComponent course={course} />}
             />
           );
@@ -92,7 +96,7 @@ export default function NavBar() {
           return (
             <Route
               key={idx}
-              path={`/learnings/problems/${problem}`}
+              path={`/learnings/${problem}`}
               element={
                 <ProblemComponent
                   problem={

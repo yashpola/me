@@ -17,6 +17,7 @@ import Sicario from "./Sicario";
 import TheAviator from "./TheAviator";
 import TheBatman from "./TheBatman";
 import TheSubstance from "./TheSubstance";
+import TheTrumanShow from "./TheTrumanShow";
 import ThereWillBeBlood from "./ThereWillBeBlood";
 import TrainingDay from "./TrainingDay";
 
@@ -40,6 +41,7 @@ export {
   TheAviator,
   TheBatman,
   TheSubstance,
+  TheTrumanShow,
   ThereWillBeBlood,
   TrainingDay,
 };

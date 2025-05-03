@@ -24,6 +24,7 @@ import {
   ThereWillBeBlood,
   TrainingDay,
   ThePromisedLand,
+  TheTrumanShow,
 } from "./moviereviews/index.ts";
 import {
   BojackHorseman,
@@ -50,6 +51,7 @@ export const MovieComponentMap: MovieComponentMapType = {
   TheAviator,
   TheBatman,
   TheSubstance,
+  TheTrumanShow,
   ThereWillBeBlood,
   TrainingDay,
   InglouriousBasterds,

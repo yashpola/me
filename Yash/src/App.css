@@ -82,34 +82,6 @@ standard-anchor {
   text-decoration: none;
 }
 
-.course-card {
-  /* Border */
-  border: 1.5px solid black;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-
-  /* Display */
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-  display: inline-flex;
-  margin-bottom: 3%;
-}
-
-.course-card-body {
-  /* Background */
-  background-color: brown;
-
-  /* Border */
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-
-  /* Display */
-  width: 75vw;
-
-  /* Text */
-  color: white;
-  text-align: center;
-}
-
 .course-review-image {
   /* Background */
   background-color: white;
@@ -122,14 +94,6 @@ standard-anchor {
   height: 400px;
   padding: 10px;
   width: 350px;
-}
-
-.course-tab {
-  /* Background */
-  background-color: white;
-
-  /* Display */
-  width: 100px;
 }
 
 .grid {
@@ -294,6 +258,42 @@ standard-anchor {
   /* Display */
   height: auto;
   width: 100%;
+}
+
+.title-card {
+  /* Border */
+  border: 1.5px solid black;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  /* Display */
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  margin-bottom: 3%;
+}
+
+.title-card-body {
+  /* Background */
+  background-color: brown;
+
+  /* Border */
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+
+  /* Display */
+  width: 75vw;
+
+  /* Text */
+  color: white;
+  text-align: center;
+}
+
+.title-card-tab {
+  /* Background */
+  background-color: white;
+
+  /* Display */
+  width: 100px;
 }
 
 .youtube-iframe {

@@ -77,9 +77,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: M (Eine stadt sucht einen mörder)
-          (1931). Current Top 5: Arrival, Shutter Island, Taare Zameen Par,
-          2001: A Space Odyssey, and The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: Sinners (2025). Current Top 5:
+          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
+          The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -88,8 +88,8 @@ export default function IntroSection() {
           Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (36 hours so-far), spanish, and german (combined
-          314-day duolingo streak).
+          Practising tennis (37 hours so-far), spanish, and german (combined
+          327-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read: <u>Hyperion</u> (Dan
@@ -120,17 +120,6 @@ export default function IntroSection() {
           .
         </li>
         <li>
-          Auditing{" "}
-          <a
-            href="https://nusmods.com/courses/CS5330/randomized-algorithms"
-            target="_blank"
-            title="NUSMODS CS5330 Link"
-          >
-            Randomized Algorithms
-          </a>{" "}
-          (graduate-level course; CS5330) at NUS.
-        </li>
-        <li>
           Taking Entrepreneurship courses (entrepreneurship practicum, discovery
           & resilience, venture creation) at NUS.
         </li>
@@ -151,7 +140,7 @@ export default function IntroSection() {
           on the courses I take in school.
         </li>
         <li>
-          Reviewing{" "}
+          Writing about{" "}
           <Anchor
             className={"standard-anchor"}
             href={"https://yashwit.com/movies"}
@@ -170,13 +159,13 @@ export default function IntroSection() {
           that I watch.
         </li>
         <li>
-          Showcasing my{" "}
+          Showcasing my design{" "}
           <Anchor
             className={"standard-anchor"}
             href={"https://yashwit.com/portfolio"}
             target={"_blank"}
             title={"Portfolio tab link"}
-            label={"portfolio"}
+            label={"portfolio."}
           />{" "}
         </li>
       </ul>
@@ -201,7 +190,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 21/04/2025
+        This page was last updated on: 03/05/2025
       </footer>
     </div>
   );

@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import { SwapVert } from "@mui/icons-material";
-
-import SortingOptionsMenu from "./SortingOptionsMenu";
 
 import {
   DashboardTypes,
   SortingRules,
 } from "../../../utils/constants/ComponentConstants";
 
-import { getUrl } from "../../../utils/functions/Getters";
+import { constructTargetUrl } from "../../../utils/functions/Constructors";
 import SortByCustomRule from "../../../utils/functions/Sorters";
 import {
   addTextDecoration,
@@ -20,6 +19,11 @@ import {
   TVReview,
 } from "../../../utils/typedefs/MoviesTVCustomTypes";
 
+import Poster from "./Poster";
+import SortingOptionsMenu from "./SortingOptionsMenu";
+
+import LinkedComponent from "../../navigation/LinkedComponent";
+
 export default function Dashboard({
   type,
   reviews,
@@ -27,6 +31,8 @@ export default function Dashboard({
   type: string;
   reviews: MovieReview[] | TVReview[];
 }) {
+  const { pathname: basePath } = useLocation();
+
   const [sortRule, setSortRule] = useState<string>(SortingRules.RECENCYMOST);
   const [sortingMenuOpen, setSortingMenuOpen] = useState<boolean>(false);
 
@@ -75,22 +81,15 @@ export default function Dashboard({
           .filter((entry) => ("include" in entry ? entry?.include : true))
           .map((entry, idx) => {
             return (
-              <>
-                <div key={idx} className="posters-dashboard">
-                  <a
-                    href={`${getUrl()}/${
-                      type === DashboardTypes.MOVIE ? "movies" : "tv"
-                    }/${entry?.name?.replace(/ /g, "")}`}
-                    target="_blank"
-                  >
-                    <img
-                      className="movietv-poster"
-                      src={entry?.thumbnail}
-                      title={`${type} Poster`}
-                    />
-                  </a>
-                </div>
-              </>
+              <LinkedComponent
+                key={idx}
+                to={constructTargetUrl(
+                  basePath,
+                  `${entry?.name?.replace(/ /g, "")}`
+                )}
+              >
+                <Poster entry={entry} type={type} />
+              </LinkedComponent>
             );
           })}
       </div>
