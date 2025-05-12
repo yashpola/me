@@ -85,18 +85,19 @@ export default function IntroSection() {
           </a>
         </li>
         <li>
-          Runner (doing a 5k every 2-3 days). 5k best: 24:29, 10k best: 1:00:00.
+          Runner (doing a 5k every 3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (37 hours so-far), spanish, and german (combined
+          Practising tennis (39 hours so-far), spanish, and german (combined
           327-day duolingo streak).
         </li>
         <li>
-          I like philosophy, fantasy, & sci-fi. Last read: <u>Hyperion</u> (Dan
-          Simmons). Currently reading: <u>Leviathan</u> (Thomas Hobbes), and{" "}
-          <u>On the Shortness of Life</u> (Seneca). Next read:{" "}
-          <u>Discourse on Inequality</u> (Jean-Jacques Rousseau), and{" "}
-          <u>A Dance with Dragons</u> (George R.R. Martin).
+          I like philosophy, fantasy, & sci-fi. Last read:{" "}
+          <u>On the Shortness of Life</u> (Seneca). Currently reading:{" "}
+          <u>Essays by</u> (John Stuart Mill), <u>A Dance with Dragons</u>{" "}
+          (George R.R. Martin), <u>Leviathan</u> (Thomas Hobbes). Next reads:{" "}
+          <u>An Essay Concerning the Human Understanding</u> (John Locke), and{" "}
+          <u>The Fellowship of the Ring</u> (J.R.R. Tolkien).
         </li>
         <li>
           I want to get back into the keyboard (the musical type), and pick up
@@ -190,7 +191,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 03/05/2025
+        This page was last updated on: 13/05/2025
       </footer>
     </div>
   );

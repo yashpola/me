@@ -101,7 +101,7 @@ standard-anchor {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .movie-grid {
@@ -206,7 +206,7 @@ standard-anchor {
   border-top-left-radius: 30px;
 
   /* Display */
-  height: 15vw;
+  height: 17vw;
   width: 25vw;
 }
 
@@ -322,6 +322,25 @@ standard-anchor {
 
   h3 {
     font-size: 30px;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  .problem-card-body {
+    width: 90vw;
+  }
+  .problem-card-footer {
+    width: 90vw;
+  }
+  .problem-image {
+    height: 50vw;
+    width: 90vw;
+  }
+
+  .title-card {
+    width: 90vw;
   }
 
   .youtube-iframe {
