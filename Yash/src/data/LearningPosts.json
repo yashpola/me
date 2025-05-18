@@ -333,7 +333,7 @@
       "description": [
         "A binary tree is height-balanced if the heights of the two subnodes of each node never differ by more than 1. ",
         "The height of a node is equal to the length of the longest path of sub-nodes from the node (inclusive), ",
-        "to a leaf."
+        "to a leaf. Given any binary tree, assess if the tree is height-balanced or not."
       ],
       "example": [
         "Input: BinTree (in level-order): [1, 2, 3, 4, 5, null, null, 6, 7]. Expected answer: False, because the left ",
@@ -361,6 +361,43 @@
         "bottomed-out on calculating the depth of any node (i.e. the node has no further subnodes that can contribute to its height)."
       ],
       "image": "https://media.geeksforgeeks.org/wp-content/uploads/20240805164549/balance-vs-unbalance-binnary-tree.webp"
+    },
+    "ReverseLinkedList": {
+      "title": "Reverse Linked List",
+      "languages": ["PYTHON"],
+      "description": [
+        "Given a linked list, rearranged the nodes of the list in reversed order."
+      ],
+      "example": [
+        "Input: LList (1 -> 2 -> 3 -> 4 -> 5 -> º) becomes (5 -> 4 -> 3 -> 2 -> 1 -> º) where º marks the end of the list, i.e. ",
+        "the presence of no further nodes."
+      ],
+      "solution": [
+        "This is a simple problem that makes somewhat creative uses of iterative & recursive approaches. The iterative, ",
+        "approach in this case is, in my view, easier to grasp: start with the the first node, \"push it all the way to the back\", and then  ",
+        "sequentially swap the latter nodes to the front. Using the above example, we start with (1) and º, and create (1 -> º), after ",
+        "which we connect 2 to (1 -> º) to create (2 -> 1 -> º), and so on until we have 5 in hand, and the list we've constructed up till ",
+        "then is (4 -> 3 -> 2 -> 1 -> º) which leaves the only remaining step to set (5 -> 4 -> 3 -> 2 -> 1 -> º). The process here comes ",
+        "down to 4 steps: (1) note down what the neighbor of the current node is, (2) switch the current node's neighbor (->) to point to the newly ",
+        "reversed list up to that node, (3) set the head of the list to the (newly connected) current node, and finally (4) move onto the next ",
+        "node to be swapped to the front. Obviously, this would continue until we've reached the end of the original list, since at that ",
+        "point we should've reversed all the nodes from first to last. The recursive solution, while not a departure from the ",
+        "basics of any recursive solution (having base & inductive cases), is a little trickier to spot. The idea is still the same however: ",
+        "successively swap the nodes from end to start to reverse the list. Reusing the same ",
+        "example list, we traverse to the end (5), then step back to (4) to create (5 -> 4), then to (3) to create (5 -> 4 -> 3), and so on. The ",
+        "only real difference between the two solutions remains that the iterative solution is bottom-up (i.e. we start with 1 -> º, then ",
+        "2 -> 1 -> º...) whereas the recursive one is top-down (i.e. we start with 5, then 5 -> 4, then 5 -> 4 -> 3...)"
+      ],
+      "analysis": [
+        "I expect this problem emphasises that the fundamentals of recursive & iterative solutions don't change all too much. ",
+        "When writing a recursive solution, we start with the base case (in this case, if the list is empty or only contains one node), ",
+        "and then construct the inductive case using wishful thinking (in this case - assuming we already have a fully reversed list for ",
+        "every other node except the first two, and then just swapping those particular two manually - a step which if applied for every pair of nodes ",
+        "recursively, will eventually result in the actual fully reversed list. When writing an iterative solution, we start with the same base case, ",
+        "and then traverse through the list in-order while swapping one node's position at a time such that by the start and end of 1 loop, ",
+        "we know that exactly one more node has been brought to the front of our list thus far."
+      ],
+      "image": "https://www.boardinfinity.com/blog/content/images/2022/10/reverse-a-linked-list-image-cover.png"
     }
   }
 }

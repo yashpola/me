@@ -3,6 +3,7 @@ import {
   BestTimeToBuyAndSellStock,
   LinkedListCycle,
   MergeTwoSortedLists,
+  ReverseLinkedList,
   TwoSum,
 } from "./problems/index.ts";
 
@@ -13,5 +14,6 @@ export const ProblemComponentMap: ProblemComponentMapType = {
   BestTimeToBuyAndSellStock,
   LinkedListCycle,
   MergeTwoSortedLists,
+  ReverseLinkedList,
   TwoSum,
 };

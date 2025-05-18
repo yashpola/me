@@ -77,9 +77,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Sinners (2025). Current Top 5:
-          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
-          The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: Mission Impossible: Final Reckoning
+          (2025). Current Top 5: Arrival, Shutter Island, Taare Zameen Par,
+          2001: A Space Odyssey, and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -88,8 +88,8 @@ export default function IntroSection() {
           Runner (doing a 5k every 3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (39 hours so-far), spanish, and german (combined
-          337-day duolingo streak).
+          Practising tennis (33 hours so-far), spanish, and german (combined
+          343-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
@@ -191,7 +191,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 13/05/2025
+        This page was last updated on: 19/05/2025
       </footer>
     </div>
   );
