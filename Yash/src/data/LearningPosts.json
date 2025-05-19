@@ -398,6 +398,31 @@
         "we know that exactly one more node has been brought to the front of our list thus far."
       ],
       "image": "https://www.boardinfinity.com/blog/content/images/2022/10/reverse-a-linked-list-image-cover.png"
+    },
+    "MajorityElement": {
+      "title": "Majority Element",
+      "languages": ["PYTHON"],
+      "description": [
+        "Given a list of numbers, identify the majority element i.e. the number that appears at least half as many times as there are ",
+        "numbers in the list. It is guaranteed that there is at least 1 majority element in the list."
+      ],
+      "example": [
+        "Input: List - for [1, 1, 1, 2, 2], the majority element is 1."
+      ],
+      "solution": [
+        "The obvious solution would be to simply go through the list and maintain the frequency of each type of number. However, is there a ",
+        "way to solve this problem without needing the extra space to maintain the count of each number? Fortunately, yes! The obvious observation ",
+        "to make is that for a number to be a majority element, it has to occupy more space than is occupied by numbers that are not that ",
+        "number. So really, all that has to be done is to maintain a counter, and check which number \"survives\" the search i.e. occupies ",
+        "at least 1 more space in total than any other number in the list. So, using [1, 1, 1, 2, 2] as an example - the counter starts with ",
+        "0 and the majority element is assumed to be 1 (as a start). Then, as we get to three 1s, the counter gets to 3 (i.e. we know 1 occupies ",
+        "3 spaces in the list) whereas when we see two 2s, the counter is reduced by 1 each time until it sinks to 1 (i.e. we know that 1 only occupies 1 more space than ",
+        "any other number(s) in the list. However, since we terminate our search with the counter at 1, and majority element still 1, it is ",
+        "good enough for us to conclude that 1 is the majority element. If, instead we had [1, 1, 2, 2, 2] - then we might still start ",
+        "with counter = 0 and majority element = 1, but eventually the two 1s (counter = 2) would be tipped by the three 2s and we would ",
+        "end with counter = 1 and majority element = 2, and thus learn that the 2s occupy 1 more space than any other number(s) in the list."
+      ],
+      "image": "https://files.prepinsta.com/2023/03/Majority-Element-In-An-Array-1024x832.webp"
     }
   }
 }
