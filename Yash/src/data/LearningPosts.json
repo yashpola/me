@@ -422,6 +422,7 @@
         "with counter = 0 and majority element = 1, but eventually the two 1s (counter = 2) would be tipped by the three 2s and we would ",
         "end with counter = 1 and majority element = 2, and thus learn that the 2s occupy 1 more space than any other number(s) in the list."
       ],
+      "analysis": [],
       "image": "https://files.prepinsta.com/2023/03/Majority-Element-In-An-Array-1024x832.webp"
     }
   }
