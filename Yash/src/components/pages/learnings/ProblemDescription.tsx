@@ -3,6 +3,7 @@ import { ReactElement } from "react";
 import { LanguageColorCodes } from "../../../utils/constants/ComponentConstants";
 import { isEmptyValue } from "../../../utils/functions/Validators";
 import { ProblemPostType } from "../../../utils/typedefs/LearningsCustomTypes";
+import Chip from "../../chips/Chip";
 
 export default function ProblemDescription({
   problem,
@@ -23,7 +24,7 @@ export default function ProblemDescription({
         </h1>
         Solution(s) below in:{" "}
         {problem.languages.map((language, idx) => (
-          <p
+          <Chip
             key={idx}
             style={{
               backgroundColor:
@@ -39,7 +40,7 @@ export default function ProblemDescription({
             }}
           >
             {language.toLowerCase()}
-          </p>
+          </Chip>
         ))}
         <div style={{ textAlign: "justify" }}>
           <h2>Description</h2>

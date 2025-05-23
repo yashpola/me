@@ -43,3 +43,23 @@ export function toggleUnderlineOnHover(
     ? removeTextDecoration(element)
     : addTextDecoration(element, "underline");
 }
+
+export function addColorProps(
+  element: HTMLElement | null,
+  colorProps: { backgroundColor: string; color: string }
+) {
+  if (element) {
+    element.style.backgroundColor = colorProps?.backgroundColor;
+    element.style.color = colorProps?.color;
+  }
+}
+
+export function removeColorProps(
+  element: HTMLElement | null,
+  defaultColorProps: { backgroundColor: string; color: string }
+) {
+  if (element) {
+    element.style.backgroundColor = defaultColorProps?.backgroundColor;
+    element.style.color = defaultColorProps?.color;
+  }
+}

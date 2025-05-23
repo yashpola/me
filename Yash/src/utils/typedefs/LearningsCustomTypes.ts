@@ -24,6 +24,7 @@ export interface YearComponentMapType {
 
 export interface ProblemPostType {
   title: string;
+  topics: string[];
   languages: string[];
   description: string[];
   example: string[];

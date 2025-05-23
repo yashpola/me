@@ -32,3 +32,20 @@ export const defaultCodeBlockConfigs = Object.freeze({
   showLineNumbers: true,
   theme: obsidian,
 });
+
+export const defaultTopicChipStyle = Object.freeze({
+  backgroundColor: "white",
+  color: "black",
+});
+
+export const ProblemTopics = Object.freeze([
+  "hashmap",
+  "linked list",
+  "two pointers",
+  "greedy",
+  "dynamic programming",
+  "binary tree",
+  "depth-first search",
+  "array",
+  "math",
+]);

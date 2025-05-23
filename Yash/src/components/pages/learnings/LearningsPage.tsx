@@ -1,18 +1,102 @@
+import { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import LearningPosts from "../../../data/LearningPosts.json";
 import Years from "../../../data/Years.json";
 
+import {
+  defaultTopicChipStyle,
+  ProblemTopics,
+} from "../../../utils/constants/ComponentConstants";
 import { constructTargetUrl } from "../../../utils/functions/Constructors";
+import {
+  addColorProps,
+  removeColorProps,
+} from "../../../utils/functions/StyleModifiers";
+import { isEmptyValue } from "../../../utils/functions/Validators";
 
 import TitleCard from "./TitleCard";
 import ProblemCard from "./ProblemCard";
 
+import Chip from "../../chips/Chip";
 import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
 
 export default function LearningsPage() {
   const { pathname: basePath } = useLocation();
+
+  const [selectedTopics, setSelectedTopics] = useState(new Set());
+  const availableTopics = useMemo(() => {
+    return ProblemTopics?.filter((topic) =>
+      new Set(
+        Object.keys(LearningPosts.Problems)?.flatMap(
+          (problem) =>
+            LearningPosts.Problems[
+              problem as keyof typeof LearningPosts.Problems
+            ].topics
+        )
+      ).has(topic)
+    );
+  }, []);
+
+  const filteredTopics = useMemo(() => {
+    return availableTopics?.map((topic) => (
+      <Chip
+        id={`${topic}`}
+        style={{ ...defaultTopicChipStyle, cursor: "pointer" }}
+        onClick={(e) => {
+          e.preventDefault();
+          if (!selectedTopics.has(topic)) {
+            selectedTopics.add(topic);
+            setSelectedTopics(new Set(selectedTopics));
+
+            addColorProps(document.getElementById(topic), {
+              backgroundColor: "brown",
+              color: "white",
+            });
+          } else {
+            selectedTopics.delete(topic);
+            setSelectedTopics(new Set(selectedTopics));
+
+            removeColorProps(document.getElementById(topic), {
+              ...defaultTopicChipStyle,
+            });
+          }
+        }}
+      >
+        {topic}
+      </Chip>
+    ));
+  }, [selectedTopics]);
+
+  const filteredProblems = useMemo(() => {
+    return Object.keys(LearningPosts.Problems)
+      ?.filter(
+        (problem) =>
+          isEmptyValue(selectedTopics) ||
+          LearningPosts.Problems[
+            problem as keyof typeof LearningPosts.Problems
+          ].topics?.some((topic) => selectedTopics.has(topic))
+      )
+      ?.map((problem, idx) => {
+        return (
+          <LinkedComponent key={idx} to={`/learnings/${problem}`}>
+            <ProblemCard
+              title={
+                LearningPosts.Problems[
+                  problem as keyof typeof LearningPosts.Problems
+                ].title
+              }
+              image={
+                LearningPosts.Problems[
+                  problem as keyof typeof LearningPosts.Problems
+                ].image
+              }
+            />
+          </LinkedComponent>
+        );
+      });
+  }, [selectedTopics]);
 
   return (
     <>
@@ -26,26 +110,8 @@ export default function LearningsPage() {
           );
         })}
         <h1>Problems</h1>
-        <Grid>
-          {Object.keys(LearningPosts.Problems).map((problem, idx) => {
-            return (
-              <LinkedComponent key={idx} to={`/learnings/${problem}`}>
-                <ProblemCard
-                  title={
-                    LearningPosts.Problems[
-                      problem as keyof typeof LearningPosts.Problems
-                    ].title
-                  }
-                  image={
-                    LearningPosts.Problems[
-                      problem as keyof typeof LearningPosts.Problems
-                    ].image
-                  }
-                />
-              </LinkedComponent>
-            );
-          })}
-        </Grid>
+        Topics: {filteredTopics}
+        <Grid>{filteredProblems}</Grid>
       </div>
     </>
   );

@@ -215,6 +215,7 @@
   "Problems": {
     "TwoSum": {
       "title": "Two Sum",
+      "topics": ["array", "hashmap"],
       "languages": ["PYTHON", "JAVA"],
       "description": [
         "Given an array of integers and a target, determine if there are 2 integers at distinct indices that add up to the target and return their indices. ",
@@ -244,6 +245,7 @@
     },
     "MergeTwoSortedLists": {
       "title": "Merge Two Sorted Lists",
+      "topics": ["linked list"],
       "languages": ["JAVA"],
       "description": [
         "Given two linked lists sorted in ascending order, merge all the elements of the two lists into one linked list while preserving the order."
@@ -266,6 +268,7 @@
     },
     "BestTimeToBuyAndSellStock": {
       "title": "Best Time To Buy And Sell Stock",
+      "topics": ["array", "greedy"],
       "languages": ["PYTHON"],
       "description": [
         "Given a list of prices of a given stock from Day 1 to Day N, determine the maximum profit that can be ",
@@ -294,6 +297,7 @@
     },
     "LinkedListCycle": {
       "title": "Linked List Cycle",
+      "topics": ["linked list", "two pointers"],
       "languages": ["C"],
       "description": [
         "Determine if a given linked list contains a cycle (i.e. there is some node in the list that can be reached twice ",
@@ -329,6 +333,7 @@
     },
     "BalancedBinaryTree": {
       "title": "Balanced Binary Tree",
+      "topics": ["binary tree", "depth-first search"],
       "languages": ["PYTHON"],
       "description": [
         "A binary tree is height-balanced if the heights of the two subnodes of each node never differ by more than 1. ",
@@ -364,6 +369,7 @@
     },
     "ReverseLinkedList": {
       "title": "Reverse Linked List",
+      "topics": ["linked list"],
       "languages": ["PYTHON"],
       "description": [
         "Given a linked list, rearranged the nodes of the list in reversed order."
@@ -401,6 +407,7 @@
     },
     "MajorityElement": {
       "title": "Majority Element",
+      "topics": ["array", "math"],
       "languages": ["PYTHON"],
       "description": [
         "Given a list of numbers, identify the majority element i.e. the number that appears at least half as many times as there are ",
