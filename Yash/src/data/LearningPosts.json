@@ -268,7 +268,7 @@
     },
     "BestTimeToBuyAndSellStock": {
       "title": "Best Time To Buy And Sell Stock",
-      "topics": ["array", "greedy"],
+      "topics": ["array", "dynamic programming"],
       "languages": ["PYTHON"],
       "description": [
         "Given a list of prices of a given stock from Day 1 to Day N, determine the maximum profit that can be ",

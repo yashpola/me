@@ -63,3 +63,14 @@ export function removeColorProps(
     element.style.color = defaultColorProps?.color;
   }
 }
+
+export function removeColorPropsMulti(
+  elementIDs: string[],
+  defaultColorProps: { backgroundColor: string; color: string }
+) {
+  elementIDs
+    .map((elementID) => {
+      return document.getElementById(elementID);
+    })
+    .map((element) => removeColorProps(element, defaultColorProps));
+}

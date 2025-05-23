@@ -1,6 +1,9 @@
 import { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 
+import { Tooltip } from "@mui/material";
+import { Restore } from "@mui/icons-material";
+
 import LearningPosts from "../../../data/LearningPosts.json";
 import Years from "../../../data/Years.json";
 
@@ -12,6 +15,7 @@ import { constructTargetUrl } from "../../../utils/functions/Constructors";
 import {
   addColorProps,
   removeColorProps,
+  removeColorPropsMulti,
 } from "../../../utils/functions/StyleModifiers";
 import { isEmptyValue } from "../../../utils/functions/Validators";
 
@@ -25,7 +29,7 @@ import LinkedComponent from "../../navigation/LinkedComponent";
 export default function LearningsPage() {
   const { pathname: basePath } = useLocation();
 
-  const [selectedTopics, setSelectedTopics] = useState(new Set());
+  const [selectedTopics, setSelectedTopics] = useState(new Set<string>());
   const availableTopics = useMemo(() => {
     return ProblemTopics?.filter((topic) =>
       new Set(
@@ -40,33 +44,62 @@ export default function LearningsPage() {
   }, []);
 
   const filteredTopics = useMemo(() => {
-    return availableTopics?.map((topic) => (
-      <Chip
-        id={`${topic}`}
-        style={{ ...defaultTopicChipStyle, cursor: "pointer" }}
-        onClick={(e) => {
-          e.preventDefault();
-          if (!selectedTopics.has(topic)) {
-            selectedTopics.add(topic);
-            setSelectedTopics(new Set(selectedTopics));
-
-            addColorProps(document.getElementById(topic), {
-              backgroundColor: "brown",
-              color: "white",
-            });
-          } else {
-            selectedTopics.delete(topic);
-            setSelectedTopics(new Set(selectedTopics));
-
-            removeColorProps(document.getElementById(topic), {
-              ...defaultTopicChipStyle,
-            });
-          }
+    return (
+      <div
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
         }}
       >
-        {topic}
-      </Chip>
-    ));
+        <div>
+          Select topics:{" "}
+          {availableTopics?.map((topic) => (
+            <Chip
+              id={`${topic}`}
+              style={{ ...defaultTopicChipStyle, cursor: "pointer" }}
+              onClick={(e) => {
+                e.preventDefault();
+                if (!selectedTopics.has(topic)) {
+                  selectedTopics.add(topic);
+                  setSelectedTopics(new Set(selectedTopics));
+
+                  addColorProps(document.getElementById(topic), {
+                    backgroundColor: "brown",
+                    color: "white",
+                  });
+                } else {
+                  selectedTopics.delete(topic);
+                  setSelectedTopics(new Set(selectedTopics));
+
+                  removeColorProps(document.getElementById(topic), {
+                    ...defaultTopicChipStyle,
+                  });
+                }
+              }}
+            >
+              {topic}
+            </Chip>
+          ))}
+        </div>
+        <div>
+          <Tooltip arrow title="Reset selected topics." placement="top">
+            <Restore
+              style={{ color: "brown", cursor: "pointer" }}
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedTopics(new Set());
+
+                const _selectedTopics: string[] = [];
+                selectedTopics.forEach((selectedTopic) =>
+                  _selectedTopics.push(selectedTopic)
+                );
+                removeColorPropsMulti(_selectedTopics, defaultTopicChipStyle);
+              }}
+            />
+          </Tooltip>
+        </div>
+      </div>
+    );
   }, [selectedTopics]);
 
   const filteredProblems = useMemo(() => {
@@ -110,7 +143,7 @@ export default function LearningsPage() {
           );
         })}
         <h1>Problems</h1>
-        Topics: {filteredTopics}
+        {filteredTopics}
         <Grid>{filteredProblems}</Grid>
       </div>
     </>
