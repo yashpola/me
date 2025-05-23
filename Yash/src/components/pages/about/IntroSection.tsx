@@ -89,7 +89,7 @@ export default function IntroSection() {
         </li>
         <li>
           Practising tennis (33 hours so-far), spanish, and german (combined
-          343-day duolingo streak).
+          347-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
@@ -191,7 +191,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 19/05/2025
+        This page was last updated on: 23/05/2025
       </footer>
     </div>
   );
