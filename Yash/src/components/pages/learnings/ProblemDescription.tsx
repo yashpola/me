@@ -22,6 +22,11 @@ export default function ProblemDescription({
         <h1 style={{ textAlign: "center", textDecoration: "underline" }}>
           {problem.title}
         </h1>
+        Topics:{" "}
+        {problem.topics.map((language, idx) => (
+          <Chip key={idx}>{language.toLowerCase()}</Chip>
+        ))}
+        <br />
         Solution(s) below in:{" "}
         {problem.languages.map((language, idx) => (
           <Chip

@@ -56,7 +56,7 @@ export default function LearningsPage() {
           {availableTopics?.map((topic) => (
             <Chip
               id={`${topic}`}
-              style={{ ...defaultTopicChipStyle, cursor: "pointer" }}
+              style={{ cursor: "pointer" }}
               onClick={(e) => {
                 e.preventDefault();
                 if (!selectedTopics.has(topic)) {

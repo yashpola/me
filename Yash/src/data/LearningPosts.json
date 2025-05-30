@@ -431,6 +431,72 @@
       ],
       "analysis": [],
       "image": "https://files.prepinsta.com/2023/03/Majority-Element-In-An-Array-1024x832.webp"
+    },
+    "CountingBits": {
+      "title": "Counting Bits",
+      "topics": ["bit manipulation", "dynamic programming"],
+      "languages": ["PYTHON"],
+      "description": [
+        "Given an integer n, compute - in a list - how many 1s are present in the binary representation of every number from 0 to n."
+      ],
+      "example": [
+        "Input: For n = 5, the expected output list is [0, 1, 1, 2, 1, 2] for 0 <-> 0, 1 <-> 1, 2 <-> 10, 3 <-> 11, 4 <-> 100, and 5 <-> 101."
+      ],
+      "solution": [
+        "Do we have to compute the binary representation of every single number from 0 to n? That seems like a necessity at first in ",
+        "order to know how many 1s are in each number. But in fact it isn't necessary, and not needing to do that actually makes our solution ",
+        "so much easier - we use the power of bit manipulation, and dynamic programming. First, is it obvious that the number of 1s in a ",
+        "number X, is nearly the same as the number of 1s in X/2 except for a possible 1-bit difference? In general, the number of bits ",
+        "in a number and twice of the same number, differs by only 1 bit - and that bit is either 1, or 0 (obviously); the implication of this is that there ",
+        "could only be a difference of 1 in the number of 1s between X and X/2. Further, we can even determine whether the extra bit is a 0 or 1, by checking ",
+        "the parity of the number. If its odd, then the extra bit would be 1, otherwise it would be 0; notice the difference between 2 (10), ",
+        "4 (100), and 5 (101). This is how bit manipulation is a big help, since using the relation between the binary representations ",
+        "of a number and half of itself - we can form the rule that the number of 1s in a number is equal to the number of 1s in half of itself ",
+        "+ an additional 1 if the given number is odd (and thus the extra bit is 1). However, this rule is obviously recursive, since to know the ",
+        "number of 1s in a number, one would need the number of 1s in half of that number, and so on & so forth. This is what now makes this a ",
+        "dynamic programming problem - wherein we start with a base case (0 <-> 0) and use the info we got from each number to construct ",
+        "the results for subsequent numbers."
+      ],
+      "analysis": [],
+      "image": "https://blog.kakaocdn.net/dn/2omqt/btrFIeDHAp6/YxZ7ajJC1xSMZE220A8Fuk/img.jpg"
+    },
+    "LongestCommonPrefix": {
+      "title": "Longest Common Prefix",
+      "topics": ["string", "sorting"],
+      "languages": ["PYTHON"],
+      "description": [
+        "Given a list of strings, determine their longest common prefix."
+      ],
+      "example": [
+        "Input: For list [\"flight\", \"flower\", \"flow\"], the longest common prefix is \"fl\"."
+      ],
+      "solution": [
+        "To determine the longest common prefix, we need to check 2 things: (1) that all strings include a common group of characters (which would later form ",
+        "the prefix), and (2) that these characters appear in the same contiguous positions in all strings. The 2nd requirement is easy to fulfil - ",
+        "just comparing strings sequentially (i.e. in-parallel at the same positions/indices) would do. ",
+        "But how to fulfil the 1st requirement in a relatively efficient & simple manner? This is where sorting helps us! To start, we sort ",
+        "all of the strings in lexicographical order (the order in the above example would be [\"flight\", \"flow\", \"flower\"]. Next, we ",
+        "compare the smallest and largest strings, and return their common prefix (if any), and then we are actually done! By sorting, we've reduced our ",
+        "domain of comparison from all strings, to just 2. But why does this even work? Well, let's think of 2 cases. The first is ",
+        "that there are no characters in common between the first and last string - in which case, the longest common prefix between all strings ",
+        "is trivially empty. The second is that there is a character x that is common between the first and last string at position i. Is it possible that the ",
+        "first and last string have x in common at i but no other string does? Well, no because this is where sorting comes into play. ",
+        "If the first and last string have a character x in common at position i that no string in-between does, this means the first string is actually not the ",
+        "smallest string. Why is this the case? Suppose the character in position i for a string in-between is y. Since x is present at i for ",
+        "the largest string, this means x > y. This means that any string with x in it at position i, must come after all strings with y (or smaller) ",
+        "characters at position i - which obviously makes the smallest string, not in-fact the smallest. This is of course a contradiction since ",
+        "we know we already sorted the list lexicographically. Think of an example: [\"ad\", \"ab\", \"ac\", \"ad\"]. The first and last strings seem to share ",
+        "a character \"d\" in the 2nd position that no string in-between does, but this list is not even lexicographically sorted. If it were, ",
+        "then the first string would be \"ab\", and the longest common prefix would be correctly identified as \"a\". Obviously, once the first ",
+        "and last string are mismatched (in this case, at \"b\" and \"d\", we can return the prefix we have so far (since again, a prefix has to be contiguous ",
+        "and once the chain is broken anywhere the prefix ends there too."
+      ],
+      "analysis": [
+        "This solution may not necessarily be more efficient than more brute-force solutions (such as comparing the characters of all ",
+        "strings in every position). However, it is definitely much simpler in-code, and not necessarily much worse in performance. Debugging ",
+        "and testing also tends to be easier with simpler solutions - which is a genuine consideration!"
+      ],
+      "image": "https://www.interviewbit.com/blog/wp-content/uploads/2021/10/Horizantal-Scanning-Approach.png"
     }
   }
 }

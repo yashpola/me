@@ -1,4 +1,5 @@
 import { CSSProperties, MouseEventHandler } from "react";
+import { defaultTopicChipStyle } from "../../utils/constants/ComponentConstants";
 
 export default function Chip({
   children,
@@ -15,8 +16,7 @@ export default function Chip({
     <p
       id={id}
       style={{
-        backgroundColor: "white",
-        color: "black",
+        ...defaultTopicChipStyle,
         display: "inline-flex",
         borderRadius: "10px",
         padding: "5px",

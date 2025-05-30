@@ -1,7 +1,9 @@
 import {
   BalancedBinaryTree,
   BestTimeToBuyAndSellStock,
+  CountingBits,
   LinkedListCycle,
+  LongestCommonPrefix,
   MajorityElement,
   MergeTwoSortedLists,
   ReverseLinkedList,
@@ -13,7 +15,9 @@ import { ProblemComponentMapType } from "../../../utils/typedefs/LearningsCustom
 export const ProblemComponentMap: ProblemComponentMapType = {
   BalancedBinaryTree,
   BestTimeToBuyAndSellStock,
+  CountingBits,
   LinkedListCycle,
+  LongestCommonPrefix,
   MajorityElement,
   MergeTwoSortedLists,
   ReverseLinkedList,

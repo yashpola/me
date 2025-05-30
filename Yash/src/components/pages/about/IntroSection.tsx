@@ -88,8 +88,8 @@ export default function IntroSection() {
           Runner (doing a 5k every 3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
         <li>
-          Practising tennis (33 hours so-far), spanish, and german (combined
-          347-day duolingo streak).
+          Practising tennis (34 hours so-far), spanish, and german (combined
+          354-day duolingo streak).
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
@@ -191,7 +191,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 23/05/2025
+        This page was last updated on: 30/05/2025
       </footer>
     </div>
   );

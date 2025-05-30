@@ -39,13 +39,16 @@ export const defaultTopicChipStyle = Object.freeze({
 });
 
 export const ProblemTopics = Object.freeze([
-  "hashmap",
-  "linked list",
-  "two pointers",
-  "greedy",
-  "dynamic programming",
-  "binary tree",
-  "depth-first search",
   "array",
+  "binary tree",
+  "bit manipulation",
+  "depth-first search",
+  "dynamic programming",
+  "greedy",
+  "hashmap",
   "math",
+  "linked list",
+  "string",
+  "sorting",
+  "two pointers",
 ]);
