@@ -6,6 +6,7 @@ import {
   LongestCommonPrefix,
   MajorityElement,
   MergeTwoSortedLists,
+  MissingNumber,
   ReverseLinkedList,
   TwoSum,
 } from "./problems/index.ts";
@@ -20,6 +21,7 @@ export const ProblemComponentMap: ProblemComponentMapType = {
   LongestCommonPrefix,
   MajorityElement,
   MergeTwoSortedLists,
+  MissingNumber,
   ReverseLinkedList,
   TwoSum,
 };

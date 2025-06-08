@@ -3,6 +3,8 @@ import {
   TVComponentMapType,
 } from "../../../utils/typedefs/MoviesTVCustomTypes.ts";
 import {
+  Arrival,
+  ASpaceOdyssey,
   Birdman,
   Casino,
   Conclave,
@@ -17,7 +19,6 @@ import {
   Oppenheimer,
   Pushpa2,
   Sicario,
-  ASpaceOdyssey,
   TheAviator,
   TheBatman,
   TheSubstance,
@@ -34,6 +35,7 @@ import {
 } from "./tvreviews/index.ts";
 
 export const MovieComponentMap: MovieComponentMapType = {
+  Arrival,
   Birdman,
   Casino,
   Conclave,

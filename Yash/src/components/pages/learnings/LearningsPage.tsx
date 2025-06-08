@@ -84,9 +84,16 @@ export default function LearningsPage() {
         <div>
           <Tooltip arrow title="Reset selected topics." placement="top">
             <Restore
-              style={{ color: "brown", cursor: "pointer" }}
+              style={{
+                color: "brown",
+                cursor: !isEmptyValue(selectedTopics) ? "pointer" : "",
+              }}
               onClick={(e) => {
                 e.preventDefault();
+                if (isEmptyValue(selectedTopics)) {
+                  return;
+                }
+
                 setSelectedTopics(new Set());
 
                 const _selectedTopics: string[] = [];
@@ -104,6 +111,7 @@ export default function LearningsPage() {
 
   const filteredProblems = useMemo(() => {
     return Object.keys(LearningPosts.Problems)
+      ?.reverse()
       ?.filter(
         (problem) =>
           isEmptyValue(selectedTopics) ||

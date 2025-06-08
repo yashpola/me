@@ -1,3 +1,4 @@
+import Arrival from "./Arrival";
 import ASpaceOdyssey from "./ASpaceOdyssey";
 import ThePromisedLand from "./ThePromisedLand";
 import Birdman from "./Birdman";
@@ -22,7 +23,8 @@ import ThereWillBeBlood from "./ThereWillBeBlood";
 import TrainingDay from "./TrainingDay";
 
 export {
-  ThePromisedLand,
+  Arrival,
+  ASpaceOdyssey,
   Birdman,
   Casino,
   Conclave,
@@ -37,11 +39,11 @@ export {
   Oppenheimer,
   Pushpa2,
   Sicario,
-  ASpaceOdyssey,
   TheAviator,
   TheBatman,
   TheSubstance,
-  TheTrumanShow,
   ThereWillBeBlood,
   TrainingDay,
+  ThePromisedLand,
+  TheTrumanShow,
 };

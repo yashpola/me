@@ -497,6 +497,42 @@
         "and testing also tends to be easier with simpler solutions - which is a genuine consideration!"
       ],
       "image": "https://www.interviewbit.com/blog/wp-content/uploads/2021/10/Horizantal-Scanning-Approach.png"
+    },
+    "MissingNumber": {
+      "title": "Missing Number",
+      "topics": ["array", "bit manipulation", "math"],
+      "languages": ["PYTHON"],
+      "description": [
+        "Given an array of n integers, there will be 1 integer from 0 to n (inclusive) that is missing. Find this number."
+      ],
+      "example": [
+        "Input: For list [3, 0, 2] of 3 numbers, the missing number between 0 and 3, is 1."
+      ],
+      "solution": [
+        "Four ways to solve this problem. The first is trivial: sort the list, and then identify the missing number at the point where there is a ",
+        "is a mismatch between the index of a number and the number itself (for the above case, we sort the list to get [0, 2, 3], and ",
+        "when we see 2 occupying index 1 instead of 1, we know that 1 is missing). The second is equally trivial: create a separate list of integers ",
+        "from 0 to n, and then just check individually that each number is present in the original list. While these two methods solve the ",
+        "problem for us, they do not do so very efficiently (taking up more time & space respectively, than needed). The third method, is therefore an ",
+        "optimisation which exploits the idea of sums. If we sum up the numbers from 0, 1, ..., n, and then take the difference between this ",
+        "and the sum of the numbers in the given list, would we not automatically find the missing number? Since 0 + 1 + 2 + 3 = 6 - (0 + 2 + 3) = 1. ",
+        "In fact, we don't even need to calculate the sum of 0 to n by-hand, if we just use the sum formula - n(n + 1) / 2, which would instantly ",
+        "give us 6 with no additional summation required. While this solution is theoretically good enough, given that it uses no extra time or space ",
+        "than is just required to sum up the n - 1 numbers in the given list, it is exposed to the risk of integer overflow if we're working with ",
+        "summing very large numbers. The 4th solution, is thus an enhancement in terms of safety - by using bit manipulation. The key idea is that ",
+        "the XOR (Exclusive Or) of a number with itself, is 0. While the XOR of a number with 0, is the number itself. Why is this useful? Well, ",
+        "if we compare the list of 0 to n and the list of given numbers side-by-side, we realise that there will necessarily be exactly 2 copies of ",
+        "each number except the missing one (i.e. 0-0, 1, 2-2, 3-3). What we can then do, is XOR all the numbers together (i.e. 0 ^ 0 ^ 1 ^ 2 ^ 2 ^ 3 ^ 3) ",
+        "and we would end up with (0 ^ 1 ^ 0 ^ 0), which - as has just been said - is 1. How neat!"
+      ],
+      "analysis": [
+        "Apart from the basic concepts of XOR (the results of XORing a number with itself, and a number with 0), the key utility of XOR ",
+        "is that, like addition & multiplication, it is commutative (i.e. a ^ b = b ^ a), and associative (i.e. (a ^ b) ^ c = a ^ (b ^ c)) - both properties which can be proven ",
+        "easily using truth tables or boolean algebra. This allows us to directly XOR all the numbers together without needing to group them first. ",
+        "I.e. if we're given [3, 0, 2] as our list - we can directly do 0 ^ 1 ^ 2 ^ 3 ^ 3 ^ 0 ^ 2 to get 1, without need to actually sort and ",
+        "arrange our XOR to execute exactly 0 ^ 0 ^ 1 ^ 2 ^ 2 ^ 3 ^ 3."
+      ],
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqOO2T5Q106XzjBS6CLt1uyzOHjgqZ4UaqaVNfgYivJB8PN99-ZjU7-fZMK9UQSNb9q_MNv74DTX8_oaDqawhSK_wMuW5ORQ2pV6gJt__SfAi3I1VRVfxQ4K4nRt48JzpB3uPQxeQhSI5D/s1600/2.png"
     }
   }
 }

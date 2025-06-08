@@ -5,6 +5,7 @@ import LinkedListCycle from "./LinkedListCycle";
 import LongestCommonPrefix from "./LongestCommonPrefix";
 import MajorityElement from "./MajorityElement";
 import MergeTwoSortedLists from "./MergeTwoSortedLists";
+import MissingNumber from "./MissingNumber";
 import ReverseLinkedList from "./ReverseLinkedList";
 import TwoSum from "./TwoSum";
 
@@ -16,6 +17,7 @@ export {
   LongestCommonPrefix,
   MajorityElement,
   MergeTwoSortedLists,
+  MissingNumber,
   ReverseLinkedList,
   TwoSum,
 };
