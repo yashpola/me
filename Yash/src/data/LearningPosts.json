@@ -216,6 +216,7 @@
     "TwoSum": {
       "title": "Two Sum",
       "topics": ["array", "hashmap"],
+      "difficulty": "EASY",
       "languages": ["PYTHON", "JAVA"],
       "description": [
         "Given an array of integers and a target, determine if there are 2 integers at distinct indices that add up to the target and return their indices. ",
@@ -246,6 +247,7 @@
     "MergeTwoSortedLists": {
       "title": "Merge Two Sorted Lists",
       "topics": ["linked list"],
+      "difficulty": "EASY",
       "languages": ["JAVA"],
       "description": [
         "Given two linked lists sorted in ascending order, merge all the elements of the two lists into one linked list while preserving the order."
@@ -269,6 +271,7 @@
     "BestTimeToBuyAndSellStock": {
       "title": "Best Time To Buy And Sell Stock",
       "topics": ["array", "dynamic programming"],
+      "difficulty": "EASY",
       "languages": ["PYTHON"],
       "description": [
         "Given a list of prices of a given stock from Day 1 to Day N, determine the maximum profit that can be ",
@@ -298,6 +301,7 @@
     "LinkedListCycle": {
       "title": "Linked List Cycle",
       "topics": ["linked list", "two pointers"],
+      "difficulty": "EASY",
       "languages": ["C"],
       "description": [
         "Determine if a given linked list contains a cycle (i.e. there is some node in the list that can be reached twice ",
@@ -334,6 +338,7 @@
     "BalancedBinaryTree": {
       "title": "Balanced Binary Tree",
       "topics": ["binary tree", "depth-first search"],
+      "difficulty": "EASY",
       "languages": ["PYTHON"],
       "description": [
         "A binary tree is height-balanced if the heights of the two subnodes of each node never differ by more than 1. ",
@@ -370,6 +375,7 @@
     "ReverseLinkedList": {
       "title": "Reverse Linked List",
       "topics": ["linked list"],
+      "difficulty": "EASY",
       "languages": ["PYTHON"],
       "description": [
         "Given a linked list, rearranged the nodes of the list in reversed order."
@@ -408,6 +414,7 @@
     "MajorityElement": {
       "title": "Majority Element",
       "topics": ["array", "math"],
+      "difficulty": "EASY",
       "languages": ["PYTHON"],
       "description": [
         "Given a list of numbers, identify the majority element i.e. the number that appears at least half as many times as there are ",
@@ -435,6 +442,7 @@
     "CountingBits": {
       "title": "Counting Bits",
       "topics": ["bit manipulation", "dynamic programming"],
+      "difficulty": "EASY",
       "languages": ["PYTHON"],
       "description": [
         "Given an integer n, compute - in a list - how many 1s are present in the binary representation of every number from 0 to n."
@@ -463,6 +471,7 @@
     "LongestCommonPrefix": {
       "title": "Longest Common Prefix",
       "topics": ["string", "sorting"],
+      "difficulty": "EASY",
       "languages": ["PYTHON"],
       "description": [
         "Given a list of strings, determine their longest common prefix."
@@ -501,6 +510,7 @@
     "MissingNumber": {
       "title": "Missing Number",
       "topics": ["array", "bit manipulation", "math"],
+      "difficulty": "EASY",
       "languages": ["PYTHON"],
       "description": [
         "Given an array of n integers, there will be 1 integer from 0 to n (inclusive) that is missing. Find this number."
@@ -533,6 +543,63 @@
         "arrange our XOR to execute exactly 0 ^ 0 ^ 1 ^ 2 ^ 2 ^ 3 ^ 3."
       ],
       "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqOO2T5Q106XzjBS6CLt1uyzOHjgqZ4UaqaVNfgYivJB8PN99-ZjU7-fZMK9UQSNb9q_MNv74DTX8_oaDqawhSK_wMuW5ORQ2pV6gJt__SfAi3I1VRVfxQ4K4nRt48JzpB3uPQxeQhSI5D/s1600/2.png"
+    },
+    "MaximumSubarray": {
+      "title": "Maximum Subarray",
+      "difficulty": "MEDIUM",
+      "topics": ["array", "dynamic programming"],
+      "languages": ["PYTHON"],
+      "description": [
+        "Given an array of integers, find the maximum sum value of the numbers in any subarray of the original array."
+      ],
+      "example": [
+        "Input: For array [-2, 1, -3, 4, -1, 2, 1, -5, 4], the subarray [4, -1, 2, 1] has the largest sum 6."
+      ],
+      "solution": [
+        "This is a typical dynamic programming problem since it involves optimising over some unknown number of combinations of a variable-size input. The question becomes - how to converge ",
+        "efficiently on the maximum subarray sum without needing to compare all possible subarrays. Intuitive idea: imagine starting off our search at the first number of the array, ",
+        "and adding each subsequent number into the sum so long as the number is able to contribute positively to the sum at hand. If it is the case that adding a subsequent number ",
+        "would detract from the sum to the point that we are better off re-starting our sum from the number at hand, then we will do just that. Using the above example, we start with -2, and ",
+        "then consider 1. Since 1 + (-2) = -1 > -2, adding 1 is useful. However, once we get to -3, we realise (-3) + (-1) = -4 < -3, and so our summation ends at -1 as the maximum. When we get ",
+        "to 4 though, we see -3 + 4 = 1 < 4, and our summation restarts again from 4 with our new maximum becoming 4. Eventually, we reach 4 + -1 + 2 + 1 (= 6) as the new maximum before we encounter ",
+        "the -5 and 4 that winds our sum down to 6 - 5 + 4 = 5, which is worse than 6. As a result, we keep 6 in the end."
+      ],
+      "analysis": [
+        "What does this problem require? 2 things - a \"local\" maximum, and a \"global\" maximum. Our local maximum ensures that our summation is \"productive\" by signalling a \"sum restart\" ",
+        "when necessary (i.e. a signal to check the next subarray already since the current subarray will definitely not get more optimal by adding more consecutive numbers). ",
+        "Our global maximum ensures our summation is \"optimal\" by comparing successive \"productive\" subarray sums, and retaining the bigger one each time - till we've scanned the whole array. ",
+        "This solution thus stays linear in runtime (i.e. only requires 1-pass through the whole array) by exploiting the nature of subarrays as contiguous (we can safely \"restart\" the summation ",
+        "once a consecutive number is better - instead of worrying about a combination of disjoint numbers across the array), and by using local and global maximums to store and check maximality."
+      ],
+      "image": "https://miro.medium.com/v2/resize:fit:676/1*UrQhblF8B-6QoEC6E7kWow.png"
+    },
+    "InsertInterval": {
+      "title": "Insert Interval",
+      "difficulty": "MEDIUM",
+      "topics": ["array"],
+      "languages": ["PYTHON"],
+      "description": [
+        "Given an array of intervals (one interval being in the form of <start, end>) sorted in ascending order of start time, insert a given new interval into the array such that the new interval does not overlap ",
+        "with any of the existing intervals, and all the intervals are still sorted. Merge overlapping intervals if necessary."
+      ],
+      "example": [
+        "Input: For array [<1, 3>, <6, 9>], the new interval <2, 5> would be inserted into the array as such: [<1, 3>, <2, 5>, <6, 9>] (ascending order of start time), and then the ",
+        "overlapping intervals <1, 3> and <2, 5> would be merged to become <1, 5> thus leaving the new intervals array as [<1, 5>, <6, 9>]. "
+      ],
+      "solution": [
+        "The tasks for this problem are clear - inserting the new interval in the right place, and making sure it does not overlap with any of the other intervals. The difficulty is just ",
+        "implementing it in an efficient and simple manner. Let's break it down into 3 steps. First, identify all the intervals that end before the new interval starts. These are the first ",
+        "\"half\"of intervals - the ones which come before the new interval chronologically, and do not overlap with it. Second, identify the intervals that start after the new interval ends. ",
+        "These are the \"back-half\" intervals - the ones which come after the new interval chronlogically, and do not overlap with it. The third step is the \"tricky\" part - the middle intervals ",
+        "that do overlap with the new interval (if any). Notice that regardless of the nature of the overlap (full or partial), we just need to adjust the new ",
+        "interval to resolve the overlap. We can do this by comparing the new interval with each overlapping interval, and creating a new interval that covers both (what the question calls: \"merging\"). ",
+        "For example, in the above example, <1, 3> and <2, 5> have a partial overlap since <2, 5> starts in between <1, 3>. To create the merged interval, we compare 1 and 2 and retain the start ",
+        "point as 1 (since 1 < 2), and compare 3 and 5 and retain the end point as 5 (since 5 > 3). The non-overlapping (merged) interval is thus <1, 5>. Similarly, if we have an overlap such as ",
+        "<1, 5> and <2, 3> where the new interval is fully subsumed within an old interval, then we retain the merged interval as <1, 5> since its start & end points cover both intervals. Alternatively ",
+        "if we have an overlap such as <2, 5> and new interval <1, 3>, we take 1 from <1, 3> and 5 from <2, 5> and create <1, 5> as the merged interval. Basically, we merge overlapping intervals ",
+        "by adjusting the new interval to cover all the endpoints of all its overlapping intervals such all ranges are preserved."
+      ],
+      "image": "https://learn.innoskrit.in/content/images/2023/12/4-2.png"
     }
   }
 }

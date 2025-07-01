@@ -77,9 +77,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Mission Impossible: Final Reckoning
-          (2025). Current Top 5: Arrival, Shutter Island, Taare Zameen Par,
-          2001: A Space Odyssey, and The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: Fantastic Mr. Fox (2009). Current
+          Top 5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space
+          Odyssey, and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -87,10 +87,7 @@ export default function IntroSection() {
         <li>
           Runner (doing a 5k every 3 days). 5k best: 24:29, 10k best: 1:00:00.
         </li>
-        <li>
-          Practising tennis (35 hours so-far), spanish, and german (combined
-          364-day duolingo streak).
-        </li>
+        <li>Practising tennis (36 hours so-far), spanish, and german.</li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
           <u>On the Shortness of Life</u> (Seneca). Currently reading:{" "}
@@ -106,24 +103,10 @@ export default function IntroSection() {
         </li>
       </ul>
       <p>
-        <u>What I'm up to now (Spring '25):</u>
+        <u>What I'm up to now (July '25):</u>
       </p>
       <ul>
-        <li>
-          Full-stack Software Engineering internship at{" "}
-          <a
-            href="https://www.factorem.co/about-us"
-            target="_blank"
-            title="Factorem Website Link"
-          >
-            Factorem
-          </a>
-          .
-        </li>
-        <li>
-          Taking Entrepreneurship courses (entrepreneurship practicum, discovery
-          & resilience, venture creation) at NUS.
-        </li>
+        <li>On a trip to France, Italy, and Switzerland.</li>
       </ul>
       <p>
         <u>What I use this site for:</u>
@@ -191,7 +174,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 09/06/2025
+        This page was last updated on: 01/07/2025
       </footer>
     </div>
   );

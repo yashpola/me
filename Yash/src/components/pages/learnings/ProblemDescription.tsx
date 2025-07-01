@@ -1,6 +1,9 @@
 import { ReactElement } from "react";
 
-import { LanguageColorCodes } from "../../../utils/constants/ComponentConstants";
+import {
+  DifficultyColorCodes,
+  LanguageColorCodes,
+} from "../../../utils/constants/ComponentConstants";
 import { isEmptyValue } from "../../../utils/functions/Validators";
 import { ProblemPostType } from "../../../utils/typedefs/LearningsCustomTypes";
 import Chip from "../../chips/Chip";
@@ -22,11 +25,22 @@ export default function ProblemDescription({
         <h1 style={{ textAlign: "center", textDecoration: "underline" }}>
           {problem.title}
         </h1>
-        Topics:{" "}
-        {problem.topics.map((language, idx) => (
-          <Chip key={idx}>{language.toLowerCase()}</Chip>
-        ))}
-        <br />
+        <div>
+          Topics:{" "}
+          {problem.topics.map((language, idx) => (
+            <Chip key={idx}>{language.toLowerCase()}</Chip>
+          ))}
+          | Difficulty:{" "}
+          <Chip
+            style={
+              DifficultyColorCodes[
+                problem.difficulty as keyof typeof DifficultyColorCodes
+              ]
+            }
+          >
+            {problem.difficulty.toLowerCase()}
+          </Chip>
+        </div>
         Solution(s) below in:{" "}
         {problem.languages.map((language, idx) => (
           <Chip

@@ -6,3 +6,11 @@ export function isEmptyValue(val: any) {
   }
   return isEmpty(val);
 }
+
+export function isAnyEmptyValue(...vals: Array<any>) {
+  return vals.some(isEmptyValue);
+}
+
+export function isAllEmptyValue(...vals: Array<any>) {
+  return vals.every(isEmptyValue);
+}

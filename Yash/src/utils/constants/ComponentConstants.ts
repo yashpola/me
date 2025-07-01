@@ -28,6 +28,12 @@ export const LanguageColorCodes = Object.freeze({
   C: { primary: "#659bd3", secondary: "#FFFFFF" },
 });
 
+export const DifficultyColorCodes = Object.freeze({
+  EASY: { color: "white", backgroundColor: "green" },
+  MEDIUM: { color: "black", backgroundColor: "orange" },
+  HARD: { color: "white", backgroundColor: "red" },
+});
+
 export const defaultCodeBlockConfigs = Object.freeze({
   showLineNumbers: true,
   theme: obsidian,
@@ -37,6 +43,8 @@ export const defaultTopicChipStyle = Object.freeze({
   backgroundColor: "white",
   color: "black",
 });
+
+export const ProblemDifficulties = Object.freeze(["EASY", "MEDIUM", "HARD"]);
 
 export const ProblemTopics = Object.freeze([
   "array",

@@ -9,6 +9,8 @@ import Years from "../../../data/Years.json";
 
 import {
   defaultTopicChipStyle,
+  DifficultyColorCodes,
+  ProblemDifficulties,
   ProblemTopics,
 } from "../../../utils/constants/ComponentConstants";
 import { constructTargetUrl } from "../../../utils/functions/Constructors";
@@ -17,7 +19,10 @@ import {
   removeColorProps,
   removeColorPropsMulti,
 } from "../../../utils/functions/StyleModifiers";
-import { isEmptyValue } from "../../../utils/functions/Validators";
+import {
+  isAllEmptyValue,
+  isEmptyValue,
+} from "../../../utils/functions/Validators";
 
 import TitleCard from "./TitleCard";
 import ProblemCard from "./ProblemCard";
@@ -30,8 +35,11 @@ export default function LearningsPage() {
   const { pathname: basePath } = useLocation();
 
   const [selectedTopics, setSelectedTopics] = useState(new Set<string>());
-  const availableTopics = useMemo(() => {
-    return ProblemTopics?.filter((topic) =>
+  const [selectedDifficulties, setSelectedDifficulties] = useState(
+    new Set<string>()
+  );
+  const [availableTopics, availableDifficulties] = useMemo(() => {
+    const _availableTopics = ProblemTopics?.filter((topic) =>
       new Set(
         Object.keys(LearningPosts.Problems)?.flatMap(
           (problem) =>
@@ -41,21 +49,63 @@ export default function LearningsPage() {
         )
       ).has(topic)
     );
+    const _availableDifficulties = ProblemDifficulties?.filter((difficulty) =>
+      new Set(
+        Object.keys(LearningPosts.Problems)?.map(
+          (problem) =>
+            LearningPosts.Problems[
+              problem as keyof typeof LearningPosts.Problems
+            ].difficulty
+        )
+      ).has(difficulty)
+    );
+
+    return [_availableTopics, _availableDifficulties];
   }, []);
+
+  const resetFiltersButton = useMemo(
+    () => (
+      <div style={{ marginLeft: "10px" }}>
+        <Tooltip arrow title="Reset filters." placement="top">
+          <Restore
+            style={{
+              color: "brown",
+              cursor: "pointer",
+            }}
+            onClick={(e) => {
+              e.preventDefault();
+              if (isAllEmptyValue(selectedTopics, selectedDifficulties)) {
+                return;
+              }
+
+              removeColorPropsMulti(
+                [
+                  ...Array.from(selectedTopics),
+                  ...Array.from(selectedDifficulties),
+                ],
+                defaultTopicChipStyle
+              );
+
+              setSelectedTopics(new Set());
+              setSelectedDifficulties(new Set());
+            }}
+            fontSize="small"
+          />
+        </Tooltip>
+      </div>
+    ),
+    []
+  );
 
   const filteredTopics = useMemo(() => {
     return (
-      <div
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-        }}
-      >
+      <div>
+        Select topics:
         <div>
-          Select topics:{" "}
           {availableTopics?.map((topic) => (
             <Chip
               id={`${topic}`}
+              key={`${topic}`}
               style={{ cursor: "pointer" }}
               onClick={(e) => {
                 e.preventDefault();
@@ -81,43 +131,63 @@ export default function LearningsPage() {
             </Chip>
           ))}
         </div>
-        <div>
-          <Tooltip arrow title="Reset selected topics." placement="top">
-            <Restore
-              style={{
-                color: "brown",
-                cursor: !isEmptyValue(selectedTopics) ? "pointer" : "",
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                if (isEmptyValue(selectedTopics)) {
-                  return;
-                }
-
-                setSelectedTopics(new Set());
-
-                const _selectedTopics: string[] = [];
-                selectedTopics.forEach((selectedTopic) =>
-                  _selectedTopics.push(selectedTopic)
-                );
-                removeColorPropsMulti(_selectedTopics, defaultTopicChipStyle);
-              }}
-            />
-          </Tooltip>
-        </div>
       </div>
     );
-  }, [selectedTopics]);
+  }, [selectedTopics, selectedDifficulties]);
+
+  const filteredDifficulties = useMemo(() => {
+    return (
+      <div>
+        Select difficulties:{" "}
+        {availableDifficulties?.map((difficulty) => (
+          <Chip
+            id={`${difficulty}`}
+            key={`${difficulty}`}
+            style={{ cursor: "pointer" }}
+            onClick={(e) => {
+              e.preventDefault();
+              if (!selectedDifficulties.has(difficulty)) {
+                selectedDifficulties.add(difficulty);
+                setSelectedDifficulties(new Set(selectedDifficulties));
+
+                addColorProps(
+                  document.getElementById(difficulty),
+                  DifficultyColorCodes[
+                    difficulty as keyof typeof DifficultyColorCodes
+                  ]
+                );
+              } else {
+                selectedDifficulties.delete(difficulty);
+                setSelectedDifficulties(new Set(selectedDifficulties));
+
+                removeColorProps(document.getElementById(difficulty), {
+                  ...defaultTopicChipStyle,
+                });
+              }
+            }}
+          >
+            {difficulty.toLowerCase()}
+          </Chip>
+        ))}
+      </div>
+    );
+  }, [selectedDifficulties, selectedTopics]);
 
   const filteredProblems = useMemo(() => {
     return Object.keys(LearningPosts.Problems)
       ?.reverse()
       ?.filter(
         (problem) =>
-          isEmptyValue(selectedTopics) ||
-          LearningPosts.Problems[
-            problem as keyof typeof LearningPosts.Problems
-          ].topics?.some((topic) => selectedTopics.has(topic))
+          (isEmptyValue(selectedTopics) ||
+            LearningPosts.Problems[
+              problem as keyof typeof LearningPosts.Problems
+            ].topics?.some((topic) => selectedTopics.has(topic))) &&
+          (isEmptyValue(selectedDifficulties) ||
+            selectedDifficulties.has(
+              LearningPosts.Problems[
+                problem as keyof typeof LearningPosts.Problems
+              ].difficulty
+            ))
       )
       ?.map((problem, idx) => {
         return (
@@ -133,11 +203,18 @@ export default function LearningsPage() {
                   problem as keyof typeof LearningPosts.Problems
                 ].image
               }
+              difficultyColorStyle={
+                DifficultyColorCodes[
+                  LearningPosts.Problems[
+                    problem as keyof typeof LearningPosts.Problems
+                  ].difficulty as keyof typeof DifficultyColorCodes
+                ]
+              }
             />
           </LinkedComponent>
         );
       });
-  }, [selectedTopics]);
+  }, [selectedTopics, selectedDifficulties]);
 
   return (
     <>
@@ -150,8 +227,13 @@ export default function LearningsPage() {
             </LinkedComponent>
           );
         })}
-        <h1>Problems</h1>
+        <h1 style={{ display: "flex", flexDirection: "row" }}>
+          Problems
+          {!isAllEmptyValue(selectedDifficulties, selectedTopics) &&
+            resetFiltersButton}
+        </h1>
         {filteredTopics}
+        {filteredDifficulties}
         <Grid>{filteredProblems}</Grid>
       </div>
     </>
