@@ -174,7 +174,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 01/07/2025
+        This page was last updated on: 02/07/2025
       </footer>
     </div>
   );

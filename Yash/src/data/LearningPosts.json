@@ -559,10 +559,13 @@
         "This is a typical dynamic programming problem since it involves optimising over some unknown number of combinations of a variable-size input. The question becomes - how to converge ",
         "efficiently on the maximum subarray sum without needing to compare all possible subarrays. Intuitive idea: imagine starting off our search at the first number of the array, ",
         "and adding each subsequent number into the sum so long as the number is able to contribute positively to the sum at hand. If it is the case that adding a subsequent number ",
-        "would detract from the sum to the point that we are better off re-starting our sum from the number at hand, then we will do just that. Using the above example, we start with -2, and ",
-        "then consider 1. Since 1 + (-2) = -1 > -2, adding 1 is useful. However, once we get to -3, we realise (-3) + (-1) = -4 < -3, and so our summation ends at -1 as the maximum. When we get ",
-        "to 4 though, we see -3 + 4 = 1 < 4, and our summation restarts again from 4 with our new maximum becoming 4. Eventually, we reach 4 + -1 + 2 + 1 (= 6) as the new maximum before we encounter ",
-        "the -5 and 4 that winds our sum down to 6 - 5 + 4 = 5, which is worse than 6. As a result, we keep 6 in the end."
+        "would detract from the sum to the point that we are better off re-starting our sum from the number at hand, then we will do just that. Using the above example, we start with a sum of -2 ",
+        "(it being the first number), and then consider 1. Since 1 + (-2) = -1 < 1, we realise that -2 is actually useless to us since we are better off just having a sum consisting of only 1. ",
+        "We then get to -3 and we see that (-3) + 1 = -2 > -3. In this case, -2 is not worse than -3, but neither is -2 better than 1. Thus, while we don't yet ditch this subarray ([1, -3]) at -2, we still ",
+        "retain our best sum thus far as 1. In essence, we keep the rolling total of 1 + (-3) + ... in hopes of it eventually picking up. But if we can't ever sum to something greater than 1, ",
+        "then we conclude that 1 was actually the best we can get. Luckily for us though, once we get to to 4, we see 1 + (-3) + 4 = 2 < 4, and our summation restarts again from 4 with our new ",
+        "maximum becoming 4. Why? Again, we realise that we are better off with a sum consisting of just 4, instead of 1 + (-3) + 4. Eventually, we reach 4 + -1 + 2 + 1 (= 6) as the new maximum ",
+        "before we encounter the -5 and 4 that winds our sum down to 6 - 5 + 4 = 5, which is no better than 6. As a result, we keep 6 in the end. And 6 is indeed, the best we can do!"
       ],
       "analysis": [
         "What does this problem require? 2 things - a \"local\" maximum, and a \"global\" maximum. Our local maximum ensures that our summation is \"productive\" by signalling a \"sum restart\" ",
