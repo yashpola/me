@@ -117,11 +117,11 @@ standard-anchor {
   background-color: brown;
 
   /* Border */
-  border-radius: 20px;
+  border-radius: 15px;
 
   /* Display */
   cursor: pointer;
-  padding: 10px;
+  padding: 1px;
 
   /* Text */
   color: white;
@@ -325,7 +325,10 @@ standard-anchor {
   }
 
   .grid {
-    display: block;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .problem-card-body {

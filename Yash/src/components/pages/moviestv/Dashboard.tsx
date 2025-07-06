@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import { SwapVert } from "@mui/icons-material";
+import { NavigateBefore, NavigateNext, SwapVert } from "@mui/icons-material";
+
+import useGridPagination, { ACTION_TYPES } from "../../../hooks/useGridPagination";
 
 import {
   DashboardTypes,
@@ -22,7 +24,11 @@ import {
 import Poster from "./Poster";
 import SortingOptionsMenu from "./SortingOptionsMenu";
 
+import FlexColumn from "../../layouts/FlexColumn";
+import FlexRow from "../../layouts/FlexRow";
+import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
+import Caption from "../../typography/Caption";
 
 export default function Dashboard({
   type,
@@ -32,6 +38,9 @@ export default function Dashboard({
   reviews: MovieReview[] | TVReview[];
 }) {
   const { pathname: basePath } = useLocation();
+
+  const [{tableQueryParams}, {executeUpdateTableQueryParams = () => {}}] = useGridPagination({data: reviews})
+  const {page = 1, pageSize = 5, totalCount = 0} = tableQueryParams || {}
 
   const [sortRule, setSortRule] = useState<string>(SortingRules.RECENCYMOST);
   const [sortingMenuOpen, setSortingMenuOpen] = useState<boolean>(false);
@@ -52,20 +61,22 @@ export default function Dashboard({
       <div
         className="page-section"
         style={{
-          marginBottom: "2%",
+          marginBottom: "0%",
         }}
       >
-        <h3>Lights, camera...</h3>
-        <button
-          className="site-button"
-          type="button"
-          onClick={(e) => {
-            e.preventDefault();
-            setSortingMenuOpen(!sortingMenuOpen);
-          }}
-        >
-          <SwapVert />
-        </button>
+        <FlexRow>
+          <h3 style={{marginRight: "20px"}}>Lights, camera...</h3>
+          <button
+            className="site-button"
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              setSortingMenuOpen(!sortingMenuOpen);
+            }}
+          >
+            <SwapVert />
+          </button>
+        </FlexRow>
       </div>
       {sortingMenuOpen && (
         <SortingOptionsMenu
@@ -73,13 +84,29 @@ export default function Dashboard({
           isMovieDashboard={type === DashboardTypes.MOVIE}
         />
       )}
-      <div className="movie-grid">
+      <FlexRow style={{justifyContent: "center"}}>
+        <div>{page > 1 && <NavigateBefore className="site-button" onClick={() => executeUpdateTableQueryParams(ACTION_TYPES.DECREMENT_PAGE)} />}</div>
+        <FlexColumn style={{margin: "15px"}}>
+          <div>
+            Page {page} of {Math.ceil(totalCount / pageSize)}
+          </div>
+          <Caption>
+            <div>
+              Showing {((page - 1) * pageSize) + 1} - {(((page - 1) * pageSize) + pageSize)} of {totalCount}.
+            </div>
+          </Caption>
+        </FlexColumn>
+        <div>{page < Math.ceil(totalCount / pageSize) && <NavigateNext className="site-button" onClick={() => executeUpdateTableQueryParams(ACTION_TYPES.INCREMENT_PAGE)}/>}</div>
+      </FlexRow>
+      <br/>
+      <Grid>
         {reviews
           .sort((review1, review2) => {
             return SortByCustomRule(review1, review2, sortRule);
           })
           .filter((entry) => ("include" in entry ? entry?.include : true))
-          .map((entry, idx) => {
+          .slice((page - 1) * pageSize, ((page - 1) * pageSize) + pageSize)
+          .map((entry, idx) => {  
             return (
               <LinkedComponent
                 key={idx}
@@ -92,7 +119,7 @@ export default function Dashboard({
               </LinkedComponent>
             );
           })}
-      </div>
+      </Grid>
     </div>
   );
 }

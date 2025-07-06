@@ -28,6 +28,7 @@ import TitleCard from "./TitleCard";
 import ProblemCard from "./ProblemCard";
 
 import Chip from "../../chips/Chip";
+import FlexRow from "../../layouts/FlexRow";
 import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
 
@@ -227,11 +228,11 @@ export default function LearningsPage() {
             </LinkedComponent>
           );
         })}
-        <h1 style={{ display: "flex", flexDirection: "row" }}>
-          Problems
-          {!isAllEmptyValue(selectedDifficulties, selectedTopics) &&
-            resetFiltersButton}
-        </h1>
+        <FlexRow>
+          <h1>Problems</h1>
+          <div>{!isAllEmptyValue(selectedDifficulties, selectedTopics) &&
+            resetFiltersButton}</div>
+        </FlexRow>
         {filteredTopics}
         {filteredDifficulties}
         <Grid>{filteredProblems}</Grid>
