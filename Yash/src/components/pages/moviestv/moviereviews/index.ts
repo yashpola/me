@@ -7,6 +7,7 @@ import Conclave from "./Conclave";
 import Cure from "./Cure";
 import Dune from "./Dune";
 import GangsofNewYork from "./GangsofNewYork";
+import Gladiator from "./Gladiator";
 import Goodfellas from "./Goodfellas";
 import InglouriousBasterds from "./InglouriousBasterds";
 import KillersoftheFlowerMoon from "./KillersoftheFlowerMoon";
@@ -31,6 +32,7 @@ export {
   Cure,
   Dune,
   GangsofNewYork,
+  Gladiator,
   Goodfellas,
   InglouriousBasterds,
   KillersoftheFlowerMoon,

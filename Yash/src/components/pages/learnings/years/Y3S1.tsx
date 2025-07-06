@@ -28,19 +28,6 @@ export default function Y3S1() {
             </LinkedComponent>
           );
         })}
-        <h2>
-          <u>NUSC</u>
-        </h2>
-        {LearningPosts.Years[0].Y3S1.NUSC.map((learningPost, idx) => {
-          return (
-            <LinkedComponent
-              key={idx}
-              to={constructTargetUrl(basePath, learningPost.code)}
-            >
-              <TitleCard title={learningPost.title} />
-            </LinkedComponent>
-          );
-        })}
       </div>
     </>
   );

@@ -191,7 +191,7 @@ export default function LearningsPage() {
       )
       ?.map((problem, idx) => {
         return (
-          <LinkedComponent key={idx} to={`/learnings/${problem}`}>
+          <LinkedComponent key={idx} to={constructTargetUrl(basePath, problem)}>
             <ProblemCard
               title={
                 LearningPosts.Problems[

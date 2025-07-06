@@ -77,9 +77,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Fantastic Mr. Fox (2009). Current
-          Top 5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space
-          Odyssey, and The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: Gladiator (2000). Current Top 5:
+          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
+          The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -174,7 +174,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 02/07/2025
+        This page was last updated on: 06/07/2025
       </footer>
     </div>
   );
