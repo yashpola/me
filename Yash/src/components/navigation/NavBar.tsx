@@ -81,16 +81,6 @@ export default function NavBar() {
             />
           );
         })}
-        {LearningPosts.Years[0].Y3S1.NUSC.map((course, idx) => {
-          const CourseComponent = CourseComponentMap[`${course.code}`];
-          return (
-            <Route
-              key={idx}
-              path={`/learnings/Y3S1/${course.code}`}
-              element={<CourseComponent course={course} />}
-            />
-          );
-        })}
         {Object.keys(LearningPosts.Problems).map((problem, idx) => {
           const ProblemComponent = ProblemComponentMap[`${problem}`];
           return (
