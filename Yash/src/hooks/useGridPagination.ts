@@ -28,7 +28,5 @@ export default function useGridPagination({data}: {data: any[]}) {
         }       
     }
 
-
-
     return [{tableQueryParams}, {executeUpdateTableQueryParams}]
 }

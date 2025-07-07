@@ -8,7 +8,7 @@ import { MovieComponentMap } from "../pages/moviestv/MovieTVComponentMap";
 import { ProblemComponentMap } from "../pages/learnings/ProblemComponentMap";
 import { PortfolioPostMap } from "../pages/portfolio/PortfolioComponentMap";
 import { YearComponentMap } from "../pages/learnings/YearComponentMap";
-import Dashboard from "../pages/moviestv/Dashboard";
+import MovieTVDashboard from "../pages/moviestv/MovieTVDashboard";
 import PortfolioPage from "../pages/portfolio/PortfolioPage";
 
 import LearningPosts from "../../data/LearningPosts.json";
@@ -102,7 +102,7 @@ export default function NavBar() {
         <Route
           path="/movies"
           element={
-            <Dashboard
+            <MovieTVDashboard
               type={DashboardTypes.MOVIE}
               reviews={MoviePosts.Movies}
             />

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import { NavigateBefore, NavigateNext, SwapVert } from "@mui/icons-material";
@@ -30,7 +30,7 @@ import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
 import Caption from "../../typography/Caption";
 
-export default function Dashboard({
+export default function MovieTVDashboard({
   type,
   reviews,
 }: {
@@ -38,9 +38,6 @@ export default function Dashboard({
   reviews: MovieReview[] | TVReview[];
 }) {
   const { pathname: basePath } = useLocation();
-
-  const [{tableQueryParams}, {executeUpdateTableQueryParams = () => {}}] = useGridPagination({data: reviews})
-  const {page = 1, pageSize = 5, totalCount = 0} = tableQueryParams || {}
 
   const [sortRule, setSortRule] = useState<string>(SortingRules.RECENCYMOST);
   const [sortingMenuOpen, setSortingMenuOpen] = useState<boolean>(false);
@@ -55,6 +52,22 @@ export default function Dashboard({
   useEffect(() => {
     setSorter(localStorage.getItem("sortRule") ?? SortingRules.RECENCYMOST);
   });
+
+  const filteredAndSortedReviews = useMemo(() => {
+    return reviews
+            .sort((review1, review2) => {
+              return SortByCustomRule(review1, review2, sortRule);
+            })
+            .filter((entry) => ("include" in entry ? entry?.include : true))
+  }, [sortRule])
+
+  const [{tableQueryParams = {}}, {executeUpdateTableQueryParams = () => {}}] = useGridPagination({data: filteredAndSortedReviews})
+  const {page = 1, pageSize = 5, totalCount = filteredAndSortedReviews?.length} = tableQueryParams || {}
+
+  const paginatedReviews = useMemo(() => {
+      return filteredAndSortedReviews
+              .slice((page - 1) * pageSize, ((page - 1) * pageSize) + pageSize)
+  }, [tableQueryParams, sortRule])
 
   return (
     <div>
@@ -92,7 +105,7 @@ export default function Dashboard({
           </div>
           <Caption>
             <div>
-              Showing {((page - 1) * pageSize) + 1} - {(((page - 1) * pageSize) + pageSize)} of {totalCount}.
+              Showing {((page - 1) * pageSize) + 1} - {Math.min((((page - 1) * pageSize) + pageSize), totalCount)} of {totalCount}.
             </div>
           </Caption>
         </FlexColumn>
@@ -100,12 +113,7 @@ export default function Dashboard({
       </FlexRow>
       <br/>
       <Grid>
-        {reviews
-          .sort((review1, review2) => {
-            return SortByCustomRule(review1, review2, sortRule);
-          })
-          .filter((entry) => ("include" in entry ? entry?.include : true))
-          .slice((page - 1) * pageSize, ((page - 1) * pageSize) + pageSize)
+        {paginatedReviews
           .map((entry, idx) => {  
             return (
               <LinkedComponent
