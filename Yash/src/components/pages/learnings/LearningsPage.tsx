@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import { Tooltip } from "@mui/material";
@@ -7,6 +7,9 @@ import { Restore } from "@mui/icons-material";
 import LearningPosts from "../../../data/LearningPosts.json";
 import Years from "../../../data/Years.json";
 
+import useGridPagination, {
+  ACTION_TYPES,
+} from "../../../hooks/useGridPagination";
 import {
   defaultTopicChipStyle,
   DifficultyColorCodes,
@@ -28,6 +31,7 @@ import TitleCard from "./TitleCard";
 import ProblemCard from "./ProblemCard";
 
 import Chip from "../../chips/Chip";
+import PaginationHeader from "../../headers/PaginationHeader";
 import FlexRow from "../../layouts/FlexRow";
 import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
@@ -95,43 +99,41 @@ export default function LearningsPage() {
         </Tooltip>
       </div>
     ),
-    []
+    [selectedTopics, selectedDifficulties]
   );
 
   const filteredTopics = useMemo(() => {
     return (
       <div>
-        Select topics:
-        <div>
-          {availableTopics?.map((topic) => (
-            <Chip
-              id={`${topic}`}
-              key={`${topic}`}
-              style={{ cursor: "pointer" }}
-              onClick={(e) => {
-                e.preventDefault();
-                if (!selectedTopics.has(topic)) {
-                  selectedTopics.add(topic);
-                  setSelectedTopics(new Set(selectedTopics));
+        Topics:{" "}
+        {availableTopics?.map((topic) => (
+          <Chip
+            id={`${topic}`}
+            key={`${topic}`}
+            style={{ cursor: "pointer" }}
+            onClick={(e) => {
+              e.preventDefault();
+              if (!selectedTopics.has(topic)) {
+                selectedTopics.add(topic);
+                setSelectedTopics(new Set(selectedTopics));
 
-                  addColorProps(document.getElementById(topic), {
-                    backgroundColor: "brown",
-                    color: "white",
-                  });
-                } else {
-                  selectedTopics.delete(topic);
-                  setSelectedTopics(new Set(selectedTopics));
+                addColorProps(document.getElementById(topic), {
+                  backgroundColor: "brown",
+                  color: "white",
+                });
+              } else {
+                selectedTopics.delete(topic);
+                setSelectedTopics(new Set(selectedTopics));
 
-                  removeColorProps(document.getElementById(topic), {
-                    ...defaultTopicChipStyle,
-                  });
-                }
-              }}
-            >
-              {topic}
-            </Chip>
-          ))}
-        </div>
+                removeColorProps(document.getElementById(topic), {
+                  ...defaultTopicChipStyle,
+                });
+              }
+            }}
+          >
+            {topic}
+          </Chip>
+        ))}
       </div>
     );
   }, [selectedTopics, selectedDifficulties]);
@@ -139,7 +141,7 @@ export default function LearningsPage() {
   const filteredDifficulties = useMemo(() => {
     return (
       <div>
-        Select difficulties:{" "}
+        Difficulties:{" "}
         {availableDifficulties?.map((difficulty) => (
           <Chip
             id={`${difficulty}`}
@@ -217,6 +219,29 @@ export default function LearningsPage() {
       });
   }, [selectedTopics, selectedDifficulties]);
 
+  console.log(filteredProblems);
+
+  const [
+    { tableQueryParams = {} },
+    { executeUpdateTableQueryParams = () => {} },
+  ] = useGridPagination({ data: filteredProblems });
+  const {
+    page = 1,
+    pageSize = 5,
+    totalCount = filteredProblems?.length,
+  } = tableQueryParams || {};
+
+  const paginatedProblems = useMemo(() => {
+    return filteredProblems.slice(
+      (page - 1) * pageSize,
+      (page - 1) * pageSize + pageSize
+    );
+  }, [tableQueryParams, selectedTopics, selectedDifficulties]);
+
+  useEffect(() => {
+    executeUpdateTableQueryParams(ACTION_TYPES.UPDATE_TOTALCOUNT);
+  }, [selectedTopics, selectedDifficulties]);
+
   return (
     <>
       <div className="page-section">
@@ -230,12 +255,24 @@ export default function LearningsPage() {
         })}
         <FlexRow>
           <h1>Problems</h1>
-          <div>{!isAllEmptyValue(selectedDifficulties, selectedTopics) &&
-            resetFiltersButton}</div>
+          <div>
+            {!isAllEmptyValue(selectedDifficulties, selectedTopics) &&
+              resetFiltersButton}
+          </div>
         </FlexRow>
         {filteredTopics}
         {filteredDifficulties}
-        <Grid>{filteredProblems}</Grid>
+        <PaginationHeader
+          paginationProps={{ page, pageSize, totalCount }}
+          paginationActions={{
+            onClickNavigateBefore: () =>
+              executeUpdateTableQueryParams(ACTION_TYPES.DECREMENT_PAGE),
+            onClickNavigateNext: () =>
+              executeUpdateTableQueryParams(ACTION_TYPES.INCREMENT_PAGE),
+          }}
+        />
+        <br />
+        <Grid>{paginatedProblems}</Grid>
       </div>
     </>
   );

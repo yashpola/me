@@ -77,7 +77,7 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Gladiator (2000). Current Top 5:
+          I'm a movie enjoyer! Last watched: Superman (2025). Current Top 5:
           Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
           The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
@@ -92,7 +92,7 @@ export default function IntroSection() {
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
           <u>On the Shortness of Life</u> (Seneca). Currently reading:{" "}
           <u>Essays by</u> (John Stuart Mill), <u>A Dance with Dragons</u>{" "}
-          (George R.R. Martin), <u>Leviathan</u> (Thomas Hobbes). Next reads:{" "}
+          (George R.R. Martin). Next reads:{" "}
           <u>An Essay Concerning the Human Understanding</u> (John Locke), and{" "}
           <u>The Fellowship of the Ring</u> (J.R.R. Tolkien).
         </li>
@@ -174,7 +174,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 06/07/2025
+        This page was last updated on: 27/07/2025
       </footer>
     </div>
   );

@@ -2,31 +2,39 @@ import { useReducer } from "react"
 import { tableQueryParamsType } from "../utils/typedefs/GlobalCustomTypes"
 
 export const ACTION_TYPES = {
-    INCREMENT_PAGE: "INCREMENT_PAGE",
-    DECREMENT_PAGE: "DECREMENT_PAGE"
-}
+  INCREMENT_PAGE: "INCREMENT_PAGE",
+  DECREMENT_PAGE: "DECREMENT_PAGE",
+  UPDATE_TOTALCOUNT: "UPDATE_TOTALCOUNT",
+};
 
-export default function useGridPagination({data}: {data: any[]}) {
-    const [tableQueryParams, updateTableQueryParams] = useReducer((prev: tableQueryParamsType, next: tableQueryParamsType) => {{
-        return {...prev, ...next}
-    }}, {
-        page: 1,
-        pageSize: 5,
-        totalCount: data?.length || 0,
-        searchTerm: "",
-    })
-
-    const executeUpdateTableQueryParams = (action: string) => {
-        const {page = 1} = tableQueryParams || {}
-        switch (action) {
-            case ACTION_TYPES.INCREMENT_PAGE:
-                updateTableQueryParams({page: page + 1})
-                break;
-            case ACTION_TYPES.DECREMENT_PAGE:
-                 updateTableQueryParams({page: page - 1})
-                 break;
-        }       
+export default function useGridPagination({ data }: { data: any[] }) {
+  const [tableQueryParams, updateTableQueryParams] = useReducer(
+    (prev: tableQueryParamsType, next: tableQueryParamsType) => {
+      {
+        return { ...prev, ...next };
+      }
+    },
+    {
+      page: 1,
+      pageSize: 5,
+      totalCount: data?.length || 0,
+      searchTerm: "",
     }
+  );
 
-    return [{tableQueryParams}, {executeUpdateTableQueryParams}]
+  const executeUpdateTableQueryParams = (action: string) => {
+    const { page = 1 } = tableQueryParams || {};
+    switch (action) {
+      case ACTION_TYPES.INCREMENT_PAGE:
+        updateTableQueryParams({ page: page + 1 });
+        break;
+      case ACTION_TYPES.DECREMENT_PAGE:
+        updateTableQueryParams({ page: page - 1 });
+        break;
+      case ACTION_TYPES.UPDATE_TOTALCOUNT:
+        updateTableQueryParams({ totalCount: data?.length });
+    }
+  };
+
+  return [{ tableQueryParams }, { executeUpdateTableQueryParams }];
 }

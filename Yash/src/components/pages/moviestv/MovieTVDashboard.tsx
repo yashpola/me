@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import { NavigateBefore, NavigateNext, SwapVert } from "@mui/icons-material";
+import { SwapVert } from "@mui/icons-material";
 
-import useGridPagination, { ACTION_TYPES } from "../../../hooks/useGridPagination";
+import useGridPagination, {
+  ACTION_TYPES,
+} from "../../../hooks/useGridPagination";
 
 import {
   DashboardTypes,
@@ -24,11 +26,10 @@ import {
 import Poster from "./Poster";
 import SortingOptionsMenu from "./SortingOptionsMenu";
 
-import FlexColumn from "../../layouts/FlexColumn";
 import FlexRow from "../../layouts/FlexRow";
 import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
-import Caption from "../../typography/Caption";
+import PaginationHeader from "../../headers/PaginationHeader";
 
 export default function MovieTVDashboard({
   type,
@@ -55,19 +56,28 @@ export default function MovieTVDashboard({
 
   const filteredAndSortedReviews = useMemo(() => {
     return reviews
-            .sort((review1, review2) => {
-              return SortByCustomRule(review1, review2, sortRule);
-            })
-            .filter((entry) => ("include" in entry ? entry?.include : true))
-  }, [sortRule])
+      .sort((review1, review2) => {
+        return SortByCustomRule(review1, review2, sortRule);
+      })
+      .filter((entry) => ("include" in entry ? entry?.include : true));
+  }, [sortRule]);
 
-  const [{tableQueryParams = {}}, {executeUpdateTableQueryParams = () => {}}] = useGridPagination({data: filteredAndSortedReviews})
-  const {page = 1, pageSize = 5, totalCount = filteredAndSortedReviews?.length} = tableQueryParams || {}
+  const [
+    { tableQueryParams = {} },
+    { executeUpdateTableQueryParams = () => {} },
+  ] = useGridPagination({ data: filteredAndSortedReviews });
+  const {
+    page = 1,
+    pageSize = 5,
+    totalCount = filteredAndSortedReviews?.length,
+  } = tableQueryParams || {};
 
   const paginatedReviews = useMemo(() => {
-      return filteredAndSortedReviews
-              .slice((page - 1) * pageSize, ((page - 1) * pageSize) + pageSize)
-  }, [tableQueryParams, sortRule])
+    return filteredAndSortedReviews.slice(
+      (page - 1) * pageSize,
+      (page - 1) * pageSize + pageSize
+    );
+  }, [tableQueryParams, sortRule]);
 
   return (
     <div>
@@ -78,7 +88,7 @@ export default function MovieTVDashboard({
         }}
       >
         <FlexRow>
-          <h3 style={{marginRight: "20px"}}>Lights, camera...</h3>
+          <h3 style={{ marginRight: "20px" }}>Lights, camera...</h3>
           <button
             className="site-button"
             type="button"
@@ -97,36 +107,30 @@ export default function MovieTVDashboard({
           isMovieDashboard={type === DashboardTypes.MOVIE}
         />
       )}
-      <FlexRow style={{justifyContent: "center"}}>
-        <div>{page > 1 && <NavigateBefore className="site-button" onClick={() => executeUpdateTableQueryParams(ACTION_TYPES.DECREMENT_PAGE)} />}</div>
-        <FlexColumn style={{margin: "15px"}}>
-          <div>
-            Page {page} of {Math.ceil(totalCount / pageSize)}
-          </div>
-          <Caption>
-            <div>
-              Showing {((page - 1) * pageSize) + 1} - {Math.min((((page - 1) * pageSize) + pageSize), totalCount)} of {totalCount}.
-            </div>
-          </Caption>
-        </FlexColumn>
-        <div>{page < Math.ceil(totalCount / pageSize) && <NavigateNext className="site-button" onClick={() => executeUpdateTableQueryParams(ACTION_TYPES.INCREMENT_PAGE)}/>}</div>
-      </FlexRow>
-      <br/>
+      <PaginationHeader
+        paginationProps={{ page, pageSize, totalCount }}
+        paginationActions={{
+          onClickNavigateBefore: () =>
+            executeUpdateTableQueryParams(ACTION_TYPES.DECREMENT_PAGE),
+          onClickNavigateNext: () =>
+            executeUpdateTableQueryParams(ACTION_TYPES.INCREMENT_PAGE),
+        }}
+      />
+      <br />
       <Grid>
-        {paginatedReviews
-          .map((entry, idx) => {  
-            return (
-              <LinkedComponent
-                key={idx}
-                to={constructTargetUrl(
-                  basePath,
-                  `${entry?.name?.replace(/ /g, "")}`
-                )}
-              >
-                <Poster entry={entry} type={type} />
-              </LinkedComponent>
-            );
-          })}
+        {paginatedReviews.map((entry, idx) => {
+          return (
+            <LinkedComponent
+              key={idx}
+              to={constructTargetUrl(
+                basePath,
+                `${entry?.name?.replace(/ /g, "")}`
+              )}
+            >
+              <Poster entry={entry} type={type} />
+            </LinkedComponent>
+          );
+        })}
       </Grid>
     </div>
   );
