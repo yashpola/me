@@ -27,9 +27,9 @@ body {
 
 .navbar {
   /* Background */
-  background-image: url("assets/dunecovercropped.png");
+  background-image: url("assets/yashbanner.jpeg");
   background-size: cover;
-  /* background-position: center; */
+  background-position: center;
 
   /* Text */
   color: white;

@@ -13,7 +13,7 @@ import { Icon, Tooltip } from "@mui/material/";
 
 import CatFact from "./CatFact";
 
-import me from "../../../assets/headshot.jpg";
+import me from "../../../assets/yashheadshot.jpeg";
 
 import Anchor from "../../../utils/customelements/Anchor";
 import { Social } from "../../../utils/typedefs/AboutCustomTypes";
@@ -63,13 +63,13 @@ export default function IntroSection() {
         src={me}
         alt="Yash's Personal Profile Picture"
         style={{
-          width: "150px",
-          height: "200px",
-          borderRadius: 200,
+          width: "175px",
+          height: "225px",
+          borderRadius: 75,
         }}
       />
       <p>
-        I'm Yashwit Polapragada but you can call me Yash! I'm a Junior at NUS
+        I'm Yashwit Polapragada but you can call me Yash! I'm a Senior at NUS
         College, studying Computer Science.
       </p>
       <p>
@@ -84,9 +84,7 @@ export default function IntroSection() {
             Current watchlist.
           </a>
         </li>
-        <li>
-          Runner (doing a 5k every 3 days). 5k best: 24:29, 10k best: 1:00:00.
-        </li>
+        <li>Currently training for a half-marathon with a 10k every week.</li>
         <li>Practising tennis (36 hours so-far), spanish, and german.</li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}

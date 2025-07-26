@@ -29,7 +29,7 @@ export default function NavBar() {
   return (
     <>
       <div className="navbar">
-        <div className="navbar-heading">Yashy Polapragada</div>
+        <div className="navbar-heading">Yashy P</div>
         <div className="navbar-body">
           <div className="nav-item">
             <NavLink to="/" style={navLinkStyle}>
