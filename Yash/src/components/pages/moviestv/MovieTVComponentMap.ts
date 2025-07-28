@@ -22,11 +22,12 @@ import {
   Sicario,
   TheAviator,
   TheBatman,
+  TheNorthman,
   TheSubstance,
-  ThereWillBeBlood,
-  TrainingDay,
   ThePromisedLand,
   TheTrumanShow,
+  ThereWillBeBlood,
+  TrainingDay,
 } from "./moviereviews/index.ts";
 import {
   BojackHorseman,
@@ -45,6 +46,7 @@ export const MovieComponentMap: MovieComponentMapType = {
   GangsofNewYork,
   Gladiator,
   Goodfellas,
+  InglouriousBasterds,
   KillersoftheFlowerMoon,
   NoCountryforOldMen,
   OldBoy,
@@ -54,12 +56,12 @@ export const MovieComponentMap: MovieComponentMapType = {
   ASpaceOdyssey,
   TheAviator,
   TheBatman,
+  TheNorthman,
+  ThePromisedLand,
   TheSubstance,
   TheTrumanShow,
-  ThereWillBeBlood,
   TrainingDay,
-  InglouriousBasterds,
-  ThePromisedLand,
+  ThereWillBeBlood,
 };
 
 export const TVComponentMap: TVComponentMapType = {

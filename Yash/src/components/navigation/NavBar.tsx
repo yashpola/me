@@ -7,14 +7,12 @@ import LearningsPage from "../pages/learnings/LearningsPage";
 import { MovieComponentMap } from "../pages/moviestv/MovieTVComponentMap";
 import { ProblemComponentMap } from "../pages/learnings/ProblemComponentMap";
 import { PortfolioPostMap } from "../pages/portfolio/PortfolioComponentMap";
-import { YearComponentMap } from "../pages/learnings/YearComponentMap";
 import MovieTVDashboard from "../pages/moviestv/MovieTVDashboard";
 import PortfolioPage from "../pages/portfolio/PortfolioPage";
 
 import LearningPosts from "../../data/LearningPosts.json";
 import PortfolioPosts from "../../data/PortfolioPosts.json";
 import MoviePosts from "../../data/MoviePosts.json";
-import Years from "../../data/Years.json";
 
 import { DashboardTypes } from "../../utils/constants/ComponentConstants";
 
@@ -61,17 +59,7 @@ export default function NavBar() {
       <Routes>
         <Route path="/" element={<AboutPage />} />
         <Route path="/learnings" element={<LearningsPage />} />
-        {Years.Years.map((year, idx) => {
-          const YearComponent = YearComponentMap[`${year}`];
-          return (
-            <Route
-              key={idx}
-              path={`/learnings/${year}`}
-              element={<YearComponent />}
-            />
-          );
-        })}
-        {LearningPosts.Years[0].Y3S1.Computing.map((course, idx) => {
+        {LearningPosts.Years[0].Y3S1.map((course, idx) => {
           const CourseComponent = CourseComponentMap[`${course.code}`];
           return (
             <Route

@@ -175,7 +175,7 @@ standard-anchor {
   width: 325px;
 }
 
-.problem-card-body {
+.summary-card-body {
   /* Border */
   border: 2.5px solid black;
   border-top-right-radius: 30px;
@@ -186,7 +186,7 @@ standard-anchor {
   margin: 1vw;
 }
 
-.problem-card-footer {
+.summary-card-footer {
   /* Background */
   background-color: brown;
 
@@ -200,7 +200,7 @@ standard-anchor {
   text-align: center;
 }
 
-.problem-image {
+.summary-thumbnail {
   /* Border */
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
@@ -281,7 +281,7 @@ standard-anchor {
   border-top-right-radius: 30px;
 
   /* Display */
-  width: 75vw;
+  width: 50vw;
 
   /* Text */
   color: white;
@@ -331,19 +331,24 @@ standard-anchor {
     justify-content: center;
   }
 
-  .problem-card-body {
+  .summary-card-body {
     width: 90vw;
   }
-  .problem-card-footer {
+  .summary-card-footer {
     width: 90vw;
   }
-  .problem-image {
+  .summary-thumbnail {
     height: 50vw;
     width: 90vw;
   }
 
   .title-card {
+    width: 90vw
+  }
+
+  .title-card-body {
     width: 90vw;
+    font-size: 10px;
   }
 
   .youtube-iframe {

@@ -2,6 +2,7 @@ export interface CoursePostType {
   code: string;
   title: string;
   generalreview: string;
+  thumbnail: string;
   meme: string;
   prologue: string[];
   para1: string[];

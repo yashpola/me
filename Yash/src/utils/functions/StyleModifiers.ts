@@ -68,7 +68,6 @@ export function removeColorPropsMulti(
   elementIDs: string[],
   defaultColorProps: { backgroundColor: string; color: string }
 ) {
-  console.log(elementIDs)
   elementIDs
     .map((elementID) => {
       return document.getElementById(elementID);

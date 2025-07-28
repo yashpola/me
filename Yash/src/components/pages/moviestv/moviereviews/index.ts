@@ -1,6 +1,5 @@
 import Arrival from "./Arrival";
 import ASpaceOdyssey from "./ASpaceOdyssey";
-import ThePromisedLand from "./ThePromisedLand";
 import Birdman from "./Birdman";
 import Casino from "./Casino";
 import Conclave from "./Conclave";
@@ -18,6 +17,8 @@ import Pushpa2 from "./Pushpa2";
 import Sicario from "./Sicario";
 import TheAviator from "./TheAviator";
 import TheBatman from "./TheBatman";
+import TheNorthman from "./TheNorthman";
+import ThePromisedLand from "./ThePromisedLand";
 import TheSubstance from "./TheSubstance";
 import TheTrumanShow from "./TheTrumanShow";
 import ThereWillBeBlood from "./ThereWillBeBlood";
@@ -43,9 +44,10 @@ export {
   Sicario,
   TheAviator,
   TheBatman,
+  TheNorthman,
   TheSubstance,
-  ThereWillBeBlood,
-  TrainingDay,
   ThePromisedLand,
   TheTrumanShow,
+  ThereWillBeBlood,
+  TrainingDay,
 };

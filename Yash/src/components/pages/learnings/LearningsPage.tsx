@@ -5,7 +5,6 @@ import { Tooltip } from "@mui/material";
 import { Restore } from "@mui/icons-material";
 
 import LearningPosts from "../../../data/LearningPosts.json";
-import Years from "../../../data/Years.json";
 
 import useGridPagination, {
   ACTION_TYPES,
@@ -27,8 +26,8 @@ import {
   isEmptyValue,
 } from "../../../utils/functions/Validators";
 
-import TitleCard from "./TitleCard";
-import ProblemCard from "./ProblemCard";
+import SummaryCard from "../../cards/SummaryCard";
+import SchoolSection from "./SchoolSection";
 
 import Chip from "../../chips/Chip";
 import PaginationHeader from "../../headers/PaginationHeader";
@@ -195,7 +194,7 @@ export default function LearningsPage() {
       ?.map((problem, idx) => {
         return (
           <LinkedComponent key={idx} to={constructTargetUrl(basePath, problem)}>
-            <ProblemCard
+            <SummaryCard
               title={
                 LearningPosts.Problems[
                   problem as keyof typeof LearningPosts.Problems
@@ -218,8 +217,6 @@ export default function LearningsPage() {
         );
       });
   }, [selectedTopics, selectedDifficulties]);
-
-  console.log(filteredProblems);
 
   const [
     { tableQueryParams = {} },
@@ -245,16 +242,14 @@ export default function LearningsPage() {
   return (
     <>
       <div className="page-section">
-        <h1>School</h1>
-        {Years.Years.map((year, idx) => {
-          return (
-            <LinkedComponent key={idx} to={constructTargetUrl(basePath, year)}>
-              <TitleCard title={year} />
-            </LinkedComponent>
-          );
-        })}
+        <h1>
+          <u>School</u>
+        </h1>
+        <SchoolSection />
         <FlexRow>
-          <h1>Problems</h1>
+          <h1>
+            <u>Problems</u>
+          </h1>
           <div>
             {!isAllEmptyValue(selectedDifficulties, selectedTopics) &&
               resetFiltersButton}
