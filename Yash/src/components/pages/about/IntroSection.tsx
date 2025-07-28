@@ -77,7 +77,7 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Superman (2025). Current Top 5:
+          I'm a movie enjoyer! Last watched: The King (2019). Current Top 5:
           Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
           The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
@@ -172,7 +172,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 27/07/2025
+        This page was last updated on: 28/07/2025
       </footer>
     </div>
   );
