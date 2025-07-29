@@ -30,7 +30,7 @@ import SummaryCard from "../../cards/SummaryCard";
 import SchoolSection from "./SchoolSection";
 
 import Chip from "../../chips/Chip";
-import PaginationHeader from "../../headers/PaginationHeader";
+import PaginationToolbar from "../../headers/PaginationToolbar";
 import FlexRow from "../../layouts/FlexRow";
 import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
@@ -242,10 +242,6 @@ export default function LearningsPage() {
   return (
     <>
       <div className="page-section">
-        <h1>
-          <u>School</u>
-        </h1>
-        <SchoolSection />
         <FlexRow>
           <h1>
             <u>Problems</u>
@@ -257,7 +253,9 @@ export default function LearningsPage() {
         </FlexRow>
         {filteredTopics}
         {filteredDifficulties}
-        <PaginationHeader
+        <Grid>{paginatedProblems}</Grid>
+        <br />
+        <PaginationToolbar
           paginationProps={{ page, pageSize, totalCount }}
           paginationActions={{
             onClickNavigateBefore: () =>
@@ -267,7 +265,12 @@ export default function LearningsPage() {
           }}
         />
         <br />
-        <Grid>{paginatedProblems}</Grid>
+        <hr style={{ borderColor: "brown", borderWidth: "1.5px" }} />
+        <br />
+        <h1>
+          <u>School</u>
+        </h1>
+        <SchoolSection />
       </div>
     </>
   );

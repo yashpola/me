@@ -180,6 +180,30 @@
             "of very engaging exercises. "
           ]
         }
+      ],
+      "Y4S1": [
+        {
+          "code": "CS3210",
+          "title": "Parallel Computing",
+          "generalreview": "",
+          "thumbnail": "https://hpc.llnl.gov/sites/default/files/styles/with_sidebar_1_up/public/parallelProblem.gif?itok=u4OKbOB5",
+          "meme": "https://i.programmerhumor.io/2025/03/d1db667d187952a5a156a4ef5a2cf548.png",
+          "prologue": [""],
+          "para1": [""],
+          "para2": [""],
+          "para3": [""]
+        },
+        {
+          "code": "CS4248",
+          "title": "Natural Language Processing",
+          "generalreview": "",
+          "thumbnail": "https://www.blumeglobal.com/media/wp-content/uploads/2018/11/NLP-image-scaled.jpg?rnd=133498791419900000",
+          "meme": "https://i.programmerhumor.io/2025/03/547be04ea016a275a9fbcc93b422b844.jpeg",
+          "prologue": [""],
+          "para1": [""],
+          "para2": [""],
+          "para3": [""]
+        }
       ]
     }
   ],

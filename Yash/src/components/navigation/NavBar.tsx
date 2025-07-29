@@ -69,6 +69,16 @@ export default function NavBar() {
             />
           );
         })}
+        {LearningPosts.Years[0].Y4S1.map((course, idx) => {
+          const CourseComponent = CourseComponentMap[`${course.code}`];
+          return (
+            <Route
+              key={idx}
+              path={`/learnings/Y4S1/${course.code}`}
+              element={<CourseComponent course={course} />}
+            />
+          );
+        })}
         {Object.keys(LearningPosts.Problems).map((problem, idx) => {
           const ProblemComponent = ProblemComponentMap[`${problem}`];
           return (

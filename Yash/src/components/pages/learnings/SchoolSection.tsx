@@ -1,16 +1,9 @@
-import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import LearningPosts from "../../../data/LearningPosts.json";
-import Years from "../../../data/Years.json";
+import Terms from "../../../data/AcademicTerms.json";
 
-import { defaultTopicChipStyle } from "../../../utils/constants/ComponentConstants";
 import { constructTargetUrl } from "../../../utils/functions/Constructors";
-import {
-  addColorProps,
-  removeColorProps,
-} from "../../../utils/functions/StyleModifiers";
-import { isEmptyValue } from "../../../utils/functions/Validators";
 
 import SummaryCard from "../../cards/SummaryCard";
 import Chip from "../../chips/Chip";
@@ -21,66 +14,33 @@ import LinkedComponent from "../../navigation/LinkedComponent";
 export default function SchoolSection() {
   const { pathname: basePath } = useLocation();
 
-  const [selectedTerms, setSelectedTerms] = useState<string[]>([]);
-
   return (
     <>
-      {Years.Years.map((term) => {
+      {Terms.Terms.map((term) => {
         return (
           <div key={`${term}`}>
             <FlexRow>
-              <div>Terms:&nbsp;</div>
-              <Chip
-                id={`${term}`}
-                style={{ cursor: "pointer" }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (!selectedTerms.includes(term)) {
-                    setSelectedTerms([...selectedTerms, term]);
-
-                    addColorProps(document.getElementById(term), {
-                      backgroundColor: "brown",
-                      color: "white",
-                    });
-                  } else {
-                    setSelectedTerms(
-                      selectedTerms.filter(
-                        (selectedTerm) => selectedTerm !== term
-                      )
-                    );
-
-                    removeColorProps(document.getElementById(term), {
-                      ...defaultTopicChipStyle,
-                    });
-                  }
-                }}
-              >
+              <div>Term:&nbsp;</div>
+              <Chip id={`${term}`} style={{ cursor: "pointer" }}>
                 {term}
               </Chip>
             </FlexRow>
             <Grid>
               {LearningPosts.Years.flatMap((_year) =>
-                _year[term as keyof typeof _year].map((course, idx) =>
-                  isEmptyValue(selectedTerms) ||
-                  selectedTerms?.includes(term) ? (
-                    <LinkedComponent
-                      key={idx}
-                      to={constructTargetUrl(
-                        basePath,
-                        `${term}/${course.code}`
-                      )}
-                    >
-                      <SummaryCard
-                        title={course.title}
-                        image={course.thumbnail}
-                      />
-                    </LinkedComponent>
-                  ) : (
-                    <></>
-                  )
-                )
+                _year[term as keyof typeof _year].map((course, idx) => (
+                  <LinkedComponent
+                    key={idx}
+                    to={constructTargetUrl(basePath, `${term}/${course.code}`)}
+                  >
+                    <SummaryCard
+                      title={course.title}
+                      image={course.thumbnail}
+                    />
+                  </LinkedComponent>
+                ))
               )}
             </Grid>
+            <br />
           </div>
         );
       })}

@@ -5,7 +5,7 @@ import FlexColumn from "../layouts/FlexColumn";
 import FlexRow from "../layouts/FlexRow";
 import Caption from "../typography/Caption";
 
-export default function PaginationHeader({
+export default function PaginationToolbar({
   paginationProps,
   paginationActions,
 }: {

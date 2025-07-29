@@ -29,7 +29,7 @@ import SortingOptionsMenu from "./SortingOptionsMenu";
 import FlexRow from "../../layouts/FlexRow";
 import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
-import PaginationHeader from "../../headers/PaginationHeader";
+import PaginationToolbar from "../../headers/PaginationToolbar";
 
 export default function MovieTVDashboard({
   type,
@@ -107,7 +107,7 @@ export default function MovieTVDashboard({
           isMovieDashboard={type === DashboardTypes.MOVIE}
         />
       )}
-      <PaginationHeader
+      <PaginationToolbar
         paginationProps={{ page, pageSize, totalCount }}
         paginationActions={{
           onClickNavigateBefore: () =>

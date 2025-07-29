@@ -193,7 +193,7 @@ standard-anchor {
   /* Display */
   padding-bottom: 10px;
   padding-top: 10px;
-  width: 25vw;
+  width: 15vw;
 
   /* Text */
   color: white;
@@ -206,8 +206,8 @@ standard-anchor {
   border-top-left-radius: 30px;
 
   /* Display */
-  height: 17vw;
-  width: 25vw;
+  height: 10vw;
+  width: 15vw;
 }
 
 .portfolio-page-section {
@@ -332,14 +332,14 @@ standard-anchor {
   }
 
   .summary-card-body {
-    width: 90vw;
+    width: 75vw;
   }
   .summary-card-footer {
-    width: 90vw;
+    width: 75vw;
   }
   .summary-thumbnail {
-    height: 50vw;
-    width: 90vw;
+    height: 30vw;
+    width: 75vw;
   }
 
   .title-card {
