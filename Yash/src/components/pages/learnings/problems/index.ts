@@ -9,6 +9,7 @@ import MaximumSubarray from "./MaximumSubarray";
 import MergeTwoSortedLists from "./MergeTwoSortedLists";
 import MissingNumber from "./MissingNumber";
 import ReverseLinkedList from "./ReverseLinkedList";
+import ThreeSum from "./ThreeSum";
 import TwoSum from "./TwoSum";
 
 export {
@@ -23,5 +24,6 @@ export {
   MergeTwoSortedLists,
   MissingNumber,
   ReverseLinkedList,
+  ThreeSum,
   TwoSum,
 };

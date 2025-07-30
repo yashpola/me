@@ -600,6 +600,48 @@
       ],
       "analysis": [],
       "image": "https://learn.innoskrit.in/content/images/2023/12/4-2.png"
+    },
+    "ThreeSum": {
+      "title": "3Sum",
+      "difficulty": "MEDIUM",
+      "topics": ["array", "two pointers"],
+      "languages": ["PYTHON"],
+      "description": [
+        "Given an array of integers, find all distinct triplets of integers which each sum to 0 when adding the 3 integers in the triplet together."
+      ],
+      "example": [
+        "Input: For array [-1, 0, 1, 2, -1, -4], all possible triplets are [-1, 0, 1], [-1, -1, 2], and [0, 1, -1]. So, the expected output is [[-1, 0, 1], [-1, -1, 2]] since [-1, 0, 1] and ",
+        "[0, 1, -1] are indistinct so we need only retain one."
+      ],
+      "solution": [
+        "In theory, the solution for this is simple. To make the search for \"0-triplets\" easier, we just take each number in the list, and check if there are 2 other numbers which if added ",
+        "to the number at hand, would result in 0. That is, instead of permuting over 3 numbers, we fix 1 number at a time and permute over the other 2 instead. How to do this efficiently though, i.e. either find the other 2 ",
+        "integers quickly or quickly conclude that the number at hand can't be in any 0-triplet? This is where sorting the array helps us, for a similar reason as it helps in binary search. ",
+        "In short: if a possible triplet would lead to a sum that is greater than 0, it means we don't need to consider pairs with any numbers greater than these as the sum of these ",
+        "triplets would be even greater. Equivalently, if a possible triplet would lead to a sum that is smaller than 0, it means we don't need to consider pairs with any numbers smaller ",
+        "than these, as the resulting triplet-sum would be even smaller. The last thing to check for, is making sure we avoid duplicate triplets. Again, since our array is sorted, this is easy ",
+        "since duplicate numbers would be grouped together and if we notice that if a consecutive number is one that we just finished forming a triplet for - we can simply skip it. As usual, let's do ",
+        "an example run-through, using the array [-1, 0, 1, 2, -1, -4]. First, we sort this to get [-4, -1, -1, 0, 1, 2]. Then, in the first round we fix -4 as the number and try to find 2 numbers, x and y, ",
+        "that sum to 4 such that -4 + x + y would be 0. We check for -1 + 2 which is 1, and which is smaller than 4 - indicating that we should use a bigger left operand to try to increase our sum. ",
+        "We then try 0 + 2 = 2, which being still not enough, we try 1 + 2 = 3. By the next round, we are only left with 2, and since we can't use the same number more than once, we're out of luck with finding 2 distinct ",
+        "numbers to complement -4 to get 0, and thus we eliminate -4 as possibly being part of any triplet. Notice the \"left\" movement here. We exploit the fact that the numbers are listed ",
+        "in ascending order and thus if we want our sum to get bigger, we simply fix our right operand (the bigger number), and keep shifting our left operand from left to right (increasing values). ",
+        "Obviously, if we wanted our sum to get smaller, we would instead fix our left operand (the smaller number) and keep shifting our right operand from right to left (decreasing values). ",
+        "In the next round, we fix -1 and repeat the same process (i.e. find 2 numbers which when added to -1, would result in 0). We try -1 + 2 = 1 at first, which already gives us 1. Thus, our first triplet becomes [-1, -1, 2]. Now, we check for other possible pairs ",
+        "that could complement -1 to form 0. We try 0 + 1 = 1, which fortunately again is exactly what we want. So, our second triplet becomes [-1, 0, 1]. At this point, we've exhausted the search for -1 and ",
+        "move onto the next number in the array which is also -1. As mentioned, we skip this -1 since we just covered -1, and any triplets we discover now would consist of the same numbers. In this way, ",
+        "we carry on until we've exhausted the triplet-search for all numbers in the array."
+      ],
+      "analysis": [
+        "This solution is not extremely efficient - coming in at O(n^2) due to checking roughly (n/2) + (n - 1)/2 + (n - 2)/2 + (n - 3)/2...values in total. But in general, it is a decent ",
+        "optimisation over the O(n^3) brute force checking of all possible triplets in the array. The code above also includes a small but additional optimisation by discarding checking values ",
+        "that are greater than 0, since any values further than this point would obviously only lead to a sum greater than 0 (remember, the array is sorted in non-decreasing order). So for example, with an array like ",
+        "[-1, 0, 1, 2, 3, 4], we would get the triplet [-1, 0, 1] and then stop checking for triplets after 0 since no possible triplet amongst [1, 2, 3, 4] would ever have a sum of 0. This, ",
+        "does not change the big-O complexity of our solution since in the worst case, all or most of our numbers would be <= 0 (like in the initial example [-4, -1, -1, 0, 1, 2]), in which case ",
+        "we cannot discard most of the array. But on average, we may be able to discard half the array if there are an equal number of positive & negative integers, reducing our work by half again to ",
+        "1/4(n + n - 1 + n - 2 + ...)."
+      ],
+      "image": "https://miro.medium.com/v2/resize:fit:1400/1*BysOt8xlCGUSZqZ1y9i4NQ.png"
     }
   }
 }

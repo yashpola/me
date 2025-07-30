@@ -10,6 +10,7 @@ import {
   MergeTwoSortedLists,
   MissingNumber,
   ReverseLinkedList,
+  ThreeSum,
   TwoSum,
 } from "./problems/index.ts";
 
@@ -27,5 +28,6 @@ export const ProblemComponentMap: ProblemComponentMapType = {
   MergeTwoSortedLists,
   MissingNumber,
   ReverseLinkedList,
+  ThreeSum,
   TwoSum,
 };
