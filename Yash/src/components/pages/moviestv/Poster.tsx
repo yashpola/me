@@ -3,13 +3,7 @@ import {
   TVReview,
 } from "../../../utils/typedefs/MoviesTVCustomTypes";
 
-export default function Poster({
-  entry,
-  type,
-}: {
-  entry: MovieReview | TVReview;
-  type: string;
-}) {
+export default function Poster({ entry }: { entry: MovieReview | TVReview }) {
   return (
     <div className="posters-dashboard">
       <img

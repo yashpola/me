@@ -127,7 +127,7 @@ export default function MovieTVDashboard({
                 `${entry?.name?.replace(/ /g, "")}`
               )}
             >
-              <Poster entry={entry} type={type} />
+              <Poster entry={entry} />
             </LinkedComponent>
           );
         })}
