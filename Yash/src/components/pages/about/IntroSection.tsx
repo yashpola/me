@@ -62,6 +62,7 @@ export default function IntroSection() {
       <img
         src={me}
         alt="Yash's Personal Profile Picture"
+        title="Yash's Personal Profile Picture"
         style={{
           width: "175px",
           height: "225px",
@@ -77,9 +78,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: The King (2019). Current Top 5:
-          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
-          The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: A Man Called Otto (2022). Current
+          Top 5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space
+          Odyssey, and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -101,10 +102,14 @@ export default function IntroSection() {
         </li>
       </ul>
       <p>
-        <u>What I'm up to now (July '25):</u>
+        <u>What I'm up to now (Fall Semester '25):</u>
       </p>
       <ul>
-        <li>On a trip to France, Italy, and Switzerland.</li>
+        <li>Natural Language Processing.</li>
+        <li>Parallel Computing.</li>
+        <li>German I.</li>
+        <li>Zoomorphism: Understanding Animal and Human Behavior.</li>
+        <li>Geometry and the Emergence of Perspective.</li>
       </ul>
       <p>
         <u>What I use this site for:</u>
@@ -119,7 +124,8 @@ export default function IntroSection() {
             title={"Thoughts tab link"}
             label={"thoughts"}
           />{" "}
-          on the courses I take in school.
+          on algorithm problems I do in my free-time, and the courses I take in
+          school.
         </li>
         <li>
           Writing about{" "}
@@ -172,7 +178,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 30/07/2025
+        This page was last updated on: 04/08/2025
       </footer>
     </div>
   );

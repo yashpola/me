@@ -642,6 +642,48 @@
         "1/4(n + n - 1 + n - 2 + ...)."
       ],
       "image": "https://miro.medium.com/v2/resize:fit:1400/1*BysOt8xlCGUSZqZ1y9i4NQ.png"
+    },
+    "ProductOfArrayExceptSelf": {
+      "title": "Product of Array / Self",
+      "difficulty": "MEDIUM",
+      "topics": ["array"],
+      "languages": ["PYTHON"],
+      "description": [
+        "Given an array of integers, at each integer - calculate what the product of all the integers of the array would be, excluding that integer."
+      ],
+      "example": [
+        "Given the array [1, 2, 3, 4], the expected output is [24, 12, 8, 6] i.e. [2 x 3 x 4, 1 x 3 x 4, 1 x 2 x 4, 1 x 2 x 3]."
+      ],
+      "solution": [
+        "It would be trivial to solve this problem if we could calculate the product of the array once, and then simply divide this product at each integer of the array (i.e. calculate ",
+        "1 x 2 x 3 x 4 = 24, and then return [24 / 1, 24 / 2, 24 / 3, 24 / 4]. So let's assume we're not allowed to use the division operation. Further, let's also assume that we must find a ",
+        "more efficient solution than simply re-calculating the product n times and excluding 1 integer every time (which would be in the order of n^2). These constraints spice things up a bit, but it seems the ",
+        "solution is still fortunately quite simple if we just use the concept of prefix & suffix products! For context, a \"prefix product\" is a multiplication of a sequence of integers up to and ",
+        "including each integer in the list. For example, the prefix product sequence of [1, 2, 3, 4] would be [1, 2, 6, 24] i.e. [1, 1 x 2, 1 x 2 x 3, 1 x 2 x 3 x 4]. It is a sort of \"precomputation\" ",
+        "tool that helps us keep track of the running product over an increasing subsequence of the array. A suffix product can be analogously understood (the suffix product sequence of [1, 2, 3, 4] ",
+        "would be [24, 24, 12, 4], for example). How does this help us? Well, we can think of the requested array in the problem to be a combination of prefix-and-suffix product. When calculating ",
+        "the products at the start for example, the suffix product of the integers at the back is more relevant, while for the products at the back, the prefix product of the beginning integers is useful. ",
+        "To show how the combination is done, let us use the example of [1, 2, 3, 4]. First, we build the prefix array (but instead of multiplying till 4, we just calculate the prefix product of 1, 2, 3). ",
+        "We now have [1, 1, 2, 6] as our prefix product array ([1, 1, 1 x 2, 1 x 2 x 3]). Why did we not include 4? Remember that for the final output array, the final element should be the product of the ",
+        "array without 4 (i.e. 1 x 2 x 3). Now, we use the same array to combine our suffix products, and the resulting array synthesized should be the expected output array. Specifically, ",
+        "with [1, 1, 2, 6], we work backwards from the 2nd last integer (again, since 6 is already correct for the final output), and multiply each integer with the suffix product at the previous stage. So ",
+        "for 2, i.e. the 3rd integer in the prefix array, we multiply the suffix product at the 4th integer - i.e. 4 in this case - since the 3rd integer is the product of the first 2 integers of the array ",
+        "and the only thing missing is the 4th integer (with the 3rd integer of the original array to be excluded). Moving on, for the 2nd integer in the prefix array, we multiply the suffix product ",
+        "of the the 4th and 3rd integers of the original array - i.e. 4 x 3 = 12 since the 2nd integer of the prefix array is the first integer of the original array, and needs to be multiplied ",
+        "with the 3rd and 4th integers of the original array (i.e. exclude the 2nd integer of the original array) to form the expected output."
+      ],
+      "analysis": [
+        "This solution is unconventional, and not very easy to think of. The first part is figuring out how to know to bring prefix & suffix products into this. To me, its the notion of ",
+        "\"running products\" that is the hint. Once we construct the running products from start to end (not including the end), and from end to start, we need only to combine them in a ",
+        "way that cleverly excludes exactly the integers we want to exclude (which again, should be easier because prefix & suffix products are already a form of combining elements in subsequences ",
+        "instead of all at once. Figuring out how exactly to combine the suffix products into the prefix product array is then, the next trick. ",
+        "To realise how to do this, perhaps we can think of how to match the \"places\" of the integers in the prefix product array to the integers that are supposed to ",
+        "form their product in the final array. For example, we know the 3rd integer of the final array should be the product of the 1st, 2nd, and 4th integers. In the prefix array, we have the ",
+        "3rd integer as the product of the first 2 integers - all that is missing is the 4th. Similarly, we know the 2nd integer of the final array should be the product of the 1st, 3rd, and ",
+        "4th integers, and in the prefix array it is the 1st integer - what is missing is the 3rd and 4th. Hence, we know that we should be increasing the suffix sum as we go down the prefix ",
+        "array and multiplying the prefix products. And more importantly, each integer should be multiplied by the suffix product of the previous integers."
+      ],
+      "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8y9wb620m4n7kakyj5rn.png"
     }
   }
 }

@@ -15,7 +15,8 @@ export default function Poster({
       <img
         className="movietv-poster"
         src={entry?.thumbnail}
-        title={`${type} Poster`}
+        alt={`${entry?.name} Poster`}
+        title={`${entry?.name} Poster`}
       />
     </div>
   );

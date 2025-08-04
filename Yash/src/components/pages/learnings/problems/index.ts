@@ -8,6 +8,7 @@ import MajorityElement from "./MajorityElement";
 import MaximumSubarray from "./MaximumSubarray";
 import MergeTwoSortedLists from "./MergeTwoSortedLists";
 import MissingNumber from "./MissingNumber";
+import ProductOfArrayExceptSelf from "./ProductOfArrayExceptSelf";
 import ReverseLinkedList from "./ReverseLinkedList";
 import ThreeSum from "./ThreeSum";
 import TwoSum from "./TwoSum";
@@ -23,6 +24,7 @@ export {
   MaximumSubarray,
   MergeTwoSortedLists,
   MissingNumber,
+  ProductOfArrayExceptSelf,
   ReverseLinkedList,
   ThreeSum,
   TwoSum,

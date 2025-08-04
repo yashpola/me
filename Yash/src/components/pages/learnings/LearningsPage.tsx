@@ -34,6 +34,7 @@ import PaginationToolbar from "../../headers/PaginationToolbar";
 import FlexRow from "../../layouts/FlexRow";
 import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
+import FlexColumn from "../../layouts/FlexColumn";
 
 export default function LearningsPage() {
   const { pathname: basePath } = useLocation();
@@ -103,8 +104,14 @@ export default function LearningsPage() {
 
   const filteredTopics = useMemo(() => {
     return (
-      <div>
-        Topics:{" "}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         {availableTopics?.map((topic) => (
           <Chip
             id={`${topic}`}
@@ -130,7 +137,14 @@ export default function LearningsPage() {
               }
             }}
           >
-            {topic}
+            {`${topic} (${
+              Object.keys(LearningPosts.Problems).filter((problem) =>
+                LearningPosts.Problems[
+                  problem as keyof typeof LearningPosts.Problems
+                ].topics.includes(topic)
+              ).length
+            })
+            `}
           </Chip>
         ))}
       </div>
@@ -139,8 +153,7 @@ export default function LearningsPage() {
 
   const filteredDifficulties = useMemo(() => {
     return (
-      <div>
-        Difficulties:{" "}
+      <div style={{ display: "flex", justifyContent: "center" }}>
         {availableDifficulties?.map((difficulty) => (
           <Chip
             id={`${difficulty}`}
@@ -168,7 +181,15 @@ export default function LearningsPage() {
               }
             }}
           >
-            {difficulty.toLowerCase()}
+            {`${difficulty.toLowerCase()} (${
+              Object.keys(LearningPosts.Problems).filter(
+                (problem) =>
+                  LearningPosts.Problems[
+                    problem as keyof typeof LearningPosts.Problems
+                  ].difficulty === difficulty
+              ).length
+            })
+            `}
           </Chip>
         ))}
       </div>
@@ -252,6 +273,7 @@ export default function LearningsPage() {
           </div>
         </FlexRow>
         {filteredTopics}
+        <br />
         {filteredDifficulties}
         <Grid>{paginatedProblems}</Grid>
         <br />
