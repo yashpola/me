@@ -34,7 +34,6 @@ import PaginationToolbar from "../../headers/PaginationToolbar";
 import FlexRow from "../../layouts/FlexRow";
 import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
-import FlexColumn from "../../layouts/FlexColumn";
 
 export default function LearningsPage() {
   const { pathname: basePath } = useLocation();
