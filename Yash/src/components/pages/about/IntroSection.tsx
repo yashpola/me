@@ -78,7 +78,7 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: A Man Called Otto (2022). Current
+          I'm a movie enjoyer! Last watched: A Beautiful Mind (2001). Current
           Top 5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space
           Odyssey, and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
@@ -86,7 +86,7 @@ export default function IntroSection() {
           </a>
         </li>
         <li>Currently training for a half-marathon with a 10k every week.</li>
-        <li>Practising tennis (36 hours so-far), spanish, and german.</li>
+        <li>Practising tennis (37 hours so-far), spanish, and german.</li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
           <u>On the Shortness of Life</u> (Seneca). Currently reading:{" "}
@@ -178,7 +178,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 04/08/2025
+        This page was last updated on: 12/08/2025
       </footer>
     </div>
   );

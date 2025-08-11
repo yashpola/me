@@ -1,5 +1,5 @@
-import { useReducer } from "react"
-import { tableQueryParamsType } from "../utils/typedefs/GlobalCustomTypes"
+import { useReducer, useEffect } from "react";
+import { tableQueryParamsType } from "../utils/typedefs/GlobalCustomTypes";
 
 export const ACTION_TYPES = {
   INCREMENT_PAGE: "INCREMENT_PAGE",
@@ -8,19 +8,35 @@ export const ACTION_TYPES = {
 };
 
 export default function useGridPagination({ data }: { data: any[] }) {
-  const [tableQueryParams, updateTableQueryParams] = useReducer(
-    (prev: tableQueryParamsType, next: tableQueryParamsType) => {
-      {
-        return { ...prev, ...next };
-      }
-    },
-    {
+  const initialParams: tableQueryParamsType = (() => {
+    const cached = localStorage.getItem("Cached Grid Params");
+    if (cached) {
+      try {
+        return JSON.parse(cached);
+      } catch {}
+    }
+    return {
       page: 1,
       pageSize: 5,
       totalCount: data?.length || 0,
       searchTerm: "",
-    }
+    };
+  })();
+
+  const [tableQueryParams, updateTableQueryParams] = useReducer(
+    (prev: tableQueryParamsType, next: Partial<tableQueryParamsType>) => ({
+      ...prev,
+      ...next,
+    }),
+    initialParams
   );
+
+  useEffect(() => {
+    localStorage.setItem(
+      "Cached Grid Params",
+      JSON.stringify(tableQueryParams)
+    );
+  }, [tableQueryParams]);
 
   const executeUpdateTableQueryParams = (action: string) => {
     const { page = 1 } = tableQueryParams || {};
@@ -33,6 +49,7 @@ export default function useGridPagination({ data }: { data: any[] }) {
         break;
       case ACTION_TYPES.UPDATE_TOTALCOUNT:
         updateTableQueryParams({ totalCount: data?.length });
+        break;
     }
   };
 

@@ -13,7 +13,7 @@ export default function ProductOfArrayExceptSelf({
 }) {
   const solutions: ReactElement[] = [
     <CopyBlock
-      text={`define productOfArrayExceptSelf(nums: List[int]) -> List[int]:
+      text={`def productOfArrayExceptSelf(nums: List[int]) -> List[int]:
         prefixSums = [1] * len(nums)
         for i in range(1, len(nums)):
             prefixSums[i] = prefixSums[i - 1] * nums[i - 1]

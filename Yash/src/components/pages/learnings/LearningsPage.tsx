@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import { Tooltip } from "@mui/material";
-import { Restore } from "@mui/icons-material";
+import { Expand, Restore } from "@mui/icons-material";
 
 import LearningPosts from "../../../data/LearningPosts.json";
 
@@ -31,12 +31,15 @@ import SchoolSection from "./SchoolSection";
 
 import Chip from "../../chips/Chip";
 import PaginationToolbar from "../../headers/PaginationToolbar";
+import FlexColumn from "../../layouts/FlexColumn";
 import FlexRow from "../../layouts/FlexRow";
 import Grid from "../../layouts/Grid";
 import LinkedComponent from "../../navigation/LinkedComponent";
 
 export default function LearningsPage() {
   const { pathname: basePath } = useLocation();
+
+  const [filtersExpanded, setFiltersExpanded] = useState(false);
 
   const [selectedTopics, setSelectedTopics] = useState(new Set<string>());
   const [selectedDifficulties, setSelectedDifficulties] = useState(
@@ -271,9 +274,22 @@ export default function LearningsPage() {
               resetFiltersButton}
           </div>
         </FlexRow>
-        {filteredTopics}
-        <br />
-        {filteredDifficulties}
+        <FlexColumn>
+          <div>{filtersExpanded ? "Collapse" : "Expand"} Filters</div>
+          <Expand
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              setFiltersExpanded(!filtersExpanded);
+            }}
+          />
+        </FlexColumn>
+        {filtersExpanded && (
+          <>
+            {filteredTopics}
+            <br />
+            {filteredDifficulties}
+          </>
+        )}
         <Grid>{paginatedProblems}</Grid>
         <br />
         <PaginationToolbar

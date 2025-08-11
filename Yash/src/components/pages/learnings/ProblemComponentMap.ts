@@ -1,6 +1,7 @@
 import {
   BalancedBinaryTree,
   BestTimeToBuyAndSellStock,
+  CombinationSum,
   CountingBits,
   InsertInterval,
   LinkedListCycle,
@@ -11,6 +12,8 @@ import {
   MissingNumber,
   ProductOfArrayExceptSelf,
   ReverseLinkedList,
+  RottingOranges,
+  SearchRotatedSortedArray,
   ThreeSum,
   TwoSum,
 } from "./problems/index.ts";
@@ -20,6 +23,7 @@ import { ProblemComponentMapType } from "../../../utils/typedefs/LearningsCustom
 export const ProblemComponentMap: ProblemComponentMapType = {
   BalancedBinaryTree,
   BestTimeToBuyAndSellStock,
+  CombinationSum,
   CountingBits,
   InsertInterval,
   LinkedListCycle,
@@ -30,6 +34,8 @@ export const ProblemComponentMap: ProblemComponentMapType = {
   MissingNumber,
   ProductOfArrayExceptSelf,
   ReverseLinkedList,
+  RottingOranges,
+  SearchRotatedSortedArray,
   ThreeSum,
   TwoSum,
 };

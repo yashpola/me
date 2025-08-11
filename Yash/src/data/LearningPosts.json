@@ -684,6 +684,115 @@
         "array and multiplying the prefix products. And more importantly, each integer should be multiplied by the suffix product of the previous integers."
       ],
       "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8y9wb620m4n7kakyj5rn.png"
+    },
+    "RottingOranges": {
+      "title": "RottingOranges",
+      "difficulty": "MEDIUM",
+      "topics": ["array"],
+      "languages": ["PYTHON"],
+      "description": [
+        "You are given a grid (i.e. 2D array) of integers - either 0, 1, or 2. 0 represents an empty cell, 1 represents a fresh orange, and 2 represents a rotting orange. You are told ",
+        "that at any 1 time, a single rotting orange can rot any fresh oranges in its 4-dimensional (i.e. one cell up/down, or one cell right/left) vicinity. Those rotting oranges can then ",
+        "rot the oranges adjacent to them, in the next round. Count the minimum number of rounds it would take for all the oranges in the grid to rot. If this is impossible (i.e. there is some ",
+        "orange that is unreachable 4-directionally, and hence cannot be rotted), return -1."
+      ],
+      "example": [
+        "Given the grid [[2, 1, 1], [1, 1, 0], [0, 1, 1]], the expected output is a minimum 4 rounds of rotting for the grid to become [[2, 2, 2], [2, 2, 0], [0, 2, 2]]."
+      ],
+      "solution": [
+        "This problem has 2 requirements: analyse the duration of the quickest rotting process by executing it, and ensure that this rotting process does not run-into duplicates i.e. rotting ",
+        "oranges that were already rotted before. Now, what if I told you that you don't have to think too hard about what rotting process would be quickest? Simply imagine that the oranges ",
+        "were growing on a tree (as would be their natural place!) instead of represented on a grid. Now imagine the tree start rotting from the top, with the topmost orange rotting the ",
+        "oranges on the same stem as it, with those oranges rotting oranges connected to their stems. In this way, the rot spreads from top to bottom, breadth-wise, with all oranges connected ",
+        "by connecting stems (or sets of branches) rotted together by the end. If this sounds familiar, it is indeed just Breadth-First Search but as applied to a grid (or 2D array) instead of ",
+        "a graph (or tree). In essence, we garner a queue of all the already rotten oranges in the tree (I shall say this instead of \"grid\"), and treat them as \"roots\" which spread their ",
+        "rot breadth-wise to their neighboring branch/stem fresh oranges. We dequeue 1 rotten orange, rot all its fresh neighbors 4-directionally, and then enqueue the newly rotted neighbors so ",
+        "they shall spread the good word of their rot to their neighbors (i.e. when these newly rotted oranges are later themselves dequeued). But wait, what about the problem of not adding ",
+        "duplicate oranges to the queue such that we are rotting the same oranges over and over again in a spiral? Well, the fix is simple: we first count how many fresh oranges were present at ",
+        "the start, and then terminate our search once we've run out of fresh oranges to rot (obviously, we would need to subtract 1 from this count each time we execute a 4-way rot for each ",
+        "rotting orange in queue). This way, if we still have rotten oranges in queue but our count of fresh oranges has bottomed out, this is our warning that any enqueued oranges are duplicates ",
+        "and cannot possibly be rotting any fresh oranges."
+      ],
+      "analysis": [
+        "This is a pretty basic application of breadth-first search to 2D arrays (the code above is quite simple), but the idea of applying BFS to grids requires some \"daring\" to begin with. ",
+        "We can treat the cells of a grid, as the nodes of a graph, and we can treat the neighboring cells of a cell ([i + 1, j], [i - 1, j], [i, j + 1], [i, j - 1]) as the adjacent nodes of a ",
+        "node. We simply just to have to be careful about \"invalid\" directions i.e. those that exceed the boundaries of the grid, or those that correspond to empty cells or already rotten oranges. ",
+        "Notice that the solution would not actually need to be modified too much even if oranges could rot each other diagonally; we would just be adding a few more directions ",
+        "([i + 1, j + 1], [i - 1, j - 1], [i + 1, j - 1], [i + 1, j - 1], ...) in how we enqueue new \"nodes\" (cells, or oranges) to our queue."
+      ],
+      "image": "https://miro.medium.com/1*bwmno6oBUdtCnQeCp89wOQ.png"
+    },
+    "CombinationSum": {
+      "title": "CombinationSum",
+      "difficulty": "MEDIUM",
+      "topics": ["array"],
+      "languages": ["PYTHON"],
+      "description": [
+        "Given an array of distinct integers and a target sum, find all unique combinations of integers in the array that sum up to the given target. Any integer can be re-used in the same combination ",
+        "without limitation, as long as no two combinations consist of the same integers."
+      ],
+      "example": [
+        "Given the array [2, 3, 6, 7] and the target sum 7, the possible combinations are [2, 2, 3], and [7]. Notice that only one of [2, 2, 3], [2, 3, 2], and [3, 2, 2] would be included."
+      ],
+      "solution": [
+        "This problem is a good introduction to a solving technique called \"Backtracking\". Backtracking, in theory, is simple: when a problem requires us to explore some finite collection ",
+        "of possibilities over a finite set of elements in search of some target combination(s), then we start small and build our possibilities smartly i.e. by checking if including x element ",
+        "in y combination would result in getting closer to the target, and then \"backtracking\" on that possibility if not. So, in this problem in particular - we first consider combinations ",
+        "of size 1 (i.e. consisting of one integer: [2], [3], [6], [7]), and then size 2 (i.e. [2, 2], [2, 3]..., [3, 3], [3, 6], ...), and so on. At each level, we check whether the next level ",
+        "is worth exploring. For example, we may explore up to [2, 2, 3], and then realise that since the target here is already 7, adding any of the remaining integers (in this case, 6, or 7), ",
+        "to the combination [2, 2, 3], would only overshoot 7. Hence, we add [2, 2, 3] to our set of desired combinations, \"backtrack\" from it, and move onto exploring another possible set of ",
+        "combinations. Now, notice, that a combination can either grow breadth-wise or depth-wise. Breadth-wise, for example, would be something like [2, 3, 6, 7], whereas depth-wise would be ",
+        "[2, 2, 2, 2]. So, essentially what we have to do is explore each integer in-depth (cutting-off when the sum reaches or overshoots the target), and add breadth to each depth-level. ",
+        "So for the integer 2, we would explore [2], [2, 2], [2, 2, 2], [2, 2, 2, 2], [2, 3], [2, 2, 3], [2, 2, 2, 3], etc. While this works in rooting out all possible combinations across ",
+        "the whole array, we can be smarter in eliminating possibilities both breadth-wise and depth-wise. Again, once we've reached or overshot the target - we can quit adding more numbers. ",
+        "So depth-wise, we can stop at [2, 2, 2, 2] since the sum is 8 and we've already overshot 7. Meanwhile breadth-wise, we can stop at [2, 2, 3] instead of trying [2, 2, 3, 6] and [2, 2, 3, 7] ",
+        "since [2, 2, 3] already equals 7. However, what is the assurance that adding numbers would necessarily increase the combination sum? After all, it was never stated that the array would ",
+        "only consist of positive integers, so something like [2, 2, 3, -1, 1] would also be acceptable. This is where it helps to sort the initial array in ascending order before finding combinations! ",
+        "With this step, we can be sure that integers from further \"down the line\" would only increase the existing sum since their values are increasing. One more concern though: what about ",
+        "the part where duplicate combinations are disallowed? Well, that's a little bit more of a gimmick in our code - we simply ensure that everytime we begin to construct a new combination sum, ",
+        "we do not allow the integer in focus to be paired with integers that we've already considered in the past. Simply put, once we finish all combinations that start with 2, and then move ",
+        "onto those that start with 3, we only follow-up with integers that are >= 3. This eliminates adding duplicate combinations like [3, 2, 2] after having added [2, 2, 3] in the previous round - ",
+        "i.e. the round where we focused on 2 to construct combinations such as [2, ...]."
+      ],
+      "analysis": [
+        "Backtracking is best visualised in the form of a tree. We start with the \"base case\" - in this case an empty combination [] - and then create our \"levels of depth\" - in this case ",
+        "slowly increasing the size of the combinations we're interested in - in this case 1 integer, then 2, then 3, and so on. The branches (or breadth) of the tree would consist ",
+        "of the possible combinations themselves at each depth-level - in this case Level 1 would be [2], [3], [6], [7], Level 2 would be [2, 2], [2, 3], ..., [3, 3], [3, 6], and so-on. After ",
+        "drawing out the full combination tree, we begin picking our fruits i.e. the desired/target combinations. And if we apply the smart approach, we wouldn't even need to draw the full combination ",
+        "tree since we disregard or \"prune\" either branches or depth-levels that would certainly not yield any fruitful results. As an aside, applying pruning improved the runtime performance ",
+        "of the above code from 7ms (~84th percentile) to 3ms (~97th percentile)."
+      ],
+      "image": "https://miro.medium.com/1*f1ZRTjP5tmg6K4gHDnXnlg.png"
+    },
+    "SearchRotatedSortedArray": {
+      "title": "SearchRotatedSortedArray",
+      "difficulty": "MEDIUM",
+      "topics": ["array"],
+      "languages": ["PYTHON"],
+      "description": [
+        "Given an array of distinct integers sorted in ascending order, it is possible that the array has been \"rotated\" some number of times. Rotated in this context means, for the integers ",
+        "in the array to be shifted left or right some k amount of times where k is an integer in the array. The goal is, given some number n where n is an integer in the array, to find the index ",
+        "of it - which could have shifted by some factor of k, in the possibly rotated array."
+      ],
+      "example": [
+        "Given the array [0, 1, 2, 4, 5, 6, 7], rotated to become [4, 5, 6, 7, 0, 1, 2] i.e. k = 4, find the new index of the number 0. The expected output would be 4."
+      ],
+      "solution": [
+        "Obviously, we could just conduct a linear search on this array to find the new index of the target number, so let's veto that problem-solving technique and instead task ourselves to ",
+        "to find the index within at most log(n) operations. Immediately, binary search comes to mind. How do we utilise binary search to find the new index of the number? It's actually simple ",
+        "if we keep in mind where binary search is applicable - only when the list is sorted. Keeping that in mind, let's recognise that in a rotated array, there is a middle index, and either ",
+        "the left extreme to the middle index is sorted, or the middle index to the right extreme. In the above example, the middle is 7, and it is the left side [4, 5, 6, 7] that is sorted instead ",
+        "of [7, 0, 1, 2]. Thus, what we must do is assess which half is sorted, and execute our binary search on that half to find the target number. Of course, it is a little more complicated than ",
+        "that since the array is still rotated, which means our number could be \"hiding\" in the unsorted half. For example again with the above case, though it is [4, 5, 6, 7] that is ",
+        "sorted, the target 0 is within [7, 0, 1, 2]. Hence, what we do is set our start point to be middle + 1, and our end point to be the right extreme such that we then explore [0, 1, 2] which ",
+        "is still sorted. Now, why can't we just regularly check which range of numbers our target falls into? For example, why can't we just check 4 <= 0 < 7 or 0 <= 0 < 2 and then eliminate ",
+        "the invalid range? Well, this does work for the array [4, 5, 6, 7, 0, 1, 2]. But consider the array [5, 1, 3] with target 5. At the start we would check 5 <= 5 < 1 which would be eliminated as invalid ",
+        "and well, there already arises a problem. In essence, we could be misled into discarding a possible range if do not first ensure that we are checking a range that is properly ordered for our ",
+        "purposes. Our goal in this problem should be narrow down which range of numbers our target falls within, and we can only do this if we are sure that the range we are checking follows ",
+        "a monotonically increasing (or decreasing) sequence - the crux of binary search!"
+      ],
+      "analysis": [],
+      "image": "https://read.learnyard.com/content/images/2025/02/Search-in-rotated-sorted-array-leetcode-solution.png"
     }
   }
 }
