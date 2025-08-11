@@ -198,6 +198,7 @@ standard-anchor {
   /* Text */
   color: white;
   text-align: center;
+  word-wrap: break-word
 }
 
 .summary-thumbnail {
