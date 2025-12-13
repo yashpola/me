@@ -18,6 +18,7 @@ import Sicario from "./Sicario";
 import TheAviator from "./TheAviator";
 import TheBatman from "./TheBatman";
 import TheNorthman from "./TheNorthman";
+import ThePrestige from "./ThePrestige";
 import ThePromisedLand from "./ThePromisedLand";
 import TheSubstance from "./TheSubstance";
 import TheTrumanShow from "./TheTrumanShow";
@@ -46,6 +47,7 @@ export {
   TheBatman,
   TheNorthman,
   TheSubstance,
+  ThePrestige,
   ThePromisedLand,
   TheTrumanShow,
   ThereWillBeBlood,

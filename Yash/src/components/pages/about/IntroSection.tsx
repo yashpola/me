@@ -78,15 +78,17 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: A Beautiful Mind (2001). Current
-          Top 5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space
-          Odyssey, and The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: Zootopia 2 (2025). Current Top 5:
+          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
+          The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
         </li>
-        <li>Currently training for a half-marathon with a 10k every week.</li>
-        <li>Practising tennis (37 hours so-far), spanish, and german.</li>
+        <li>
+          Recently completed a half-marathon (3:06:00), now training speed for
+          2.4k (goal: 0:11:00)
+        </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
           <u>On the Shortness of Life</u> (Seneca). Currently reading:{" "}
@@ -102,14 +104,12 @@ export default function IntroSection() {
         </li>
       </ul>
       <p>
-        <u>What I'm up to now (Fall Semester '25):</u>
+        <u>What I'm up to now (December Holidays):</u>
       </p>
       <ul>
-        <li>Natural Language Processing.</li>
-        <li>Parallel Computing.</li>
-        <li>German I.</li>
-        <li>Zoomorphism: Understanding Animal and Human Behavior.</li>
-        <li>Geometry and the Emergence of Perspective.</li>
+        <li>Unwinding!</li>
+        <li>Updating my website.</li>
+        <li>ML Research.</li>
       </ul>
       <p>
         <u>What I use this site for:</u>
@@ -178,7 +178,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 12/08/2025
+        This page was last updated on: 13/12/2025
       </footer>
     </div>
   );

@@ -1263,6 +1263,68 @@
       ],
       "rating": 3.5,
       "recommendations": "Valhalla Rising, Gladiator, Oldboy"
+    },
+    {
+      "include": true,
+      "order": 26,
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5c93c8bcaadd3439cb8eee02/1570028032849-9FZK7WV96LYJDHIJLLAX/The+Prestige.png?format=1500w",
+      "clip": "https://www.youtube.com/embed/J8ZXT2HTxqE?si=M2VJoJEfb53ZtLqx",
+      "name": "The Prestige",
+      "year": 2006,
+      "boxOffice": 109000000,
+      "title": "The Prestige (2006)",
+      "subtitle": "Christopher Nolan | Hugh Jackman, Christian Bale, Scarlett Johansson",
+      "quote": "No one cares about the man in the box, the man who disappears.",
+      "thoughts": [
+        [
+          "On this rewatch of The Prestige, I attended more closely to the theme of obsession."
+        ],
+        [
+          "The destructive nature of obsession was always abundantly messaged to the audience; starting on a strong note with the excellence-obsessed Borden unintentionally killing Angier's wife, ",
+          "and the peppering-in of Cutter's and Tesla's warnings against Angier's egotism etc. But what I noticed that was interesting about these two different types of obsession, was Borden's obsession ",
+          "as the artefact of a split personality, and the interplay with and influence of it on Angier's obsession."
+        ],
+        [
+          "Among both the Bordens, it is clear that one is a lot more of a family man (putting Sarah & Jess on equal standing to his performance), while the other had his heart dominated by the excellence ",
+          "of his performance. They're understood to be twins (i.e. two distinct men trying, and struggling, to present as a single man - for the sake of their performance). But, if we take the idea of 2 men ",
+          "with differing passions as a metaphor instead for 1 man suffering between 2 passions (of loving his family, and of perfecting his game), it gets more interesting. One half of Borden knows that becoming ",
+          "the best at anything requires the sacrifice of all other distractions/desires; one must live only for greatness. The other has adoration for Sarah and Jess, and isn't willing to demean their place in his ",
+          "life, in favor of perfecting his art. His relationship with his work becomes increasingly tumultuous, and a source of internal conflict. The twin aspect, in my opinion, is just a concretization of this ",
+          "notion. It is plausibly the result of his guilt over the death of Angier's wife."
+        ],
+        [
+          "With Angier, we only see 1 man transforming into another, with the darkening of his heart as obsession consumes him. Initially, he is driven only by vengeance for his wife - the disbelief that Borden ",
+          "could sacrifice her for the sake of getting a kick out of 1 trick. He gradually drops this motivation, and later pursues only besting Borden and becoming the greater showman, to the gross extent that he ",
+          "uses Borden's own daughter against him to extract his trick (even after already dominating his performance, and dooming him to execution). Angier, ironically, becomes the soulless ghoul he thinks of Borden ",
+          "to be (in the initial stages). This to me, is a representation of the addictive nature of obsession. It makes all things seem reasonable, no matter how (self-)destructive they are. This is obvious in Cutter ",
+          "(as a neutral observer)'s disgust at Angier's actions, to the point where he willingly abets Angier's murder at the hands of Borden."
+        ],
+        [
+          "Is Angier a black-and-white villain though? Obviously no. He expresses that he detests Borden for enjoying the family life he (Angier) couldn't, but in my opinion - this detestation is not just out of the regret ",
+          "that Angier needlessly lost his wife, but that Borden seems to be enjoying both his work and his personal life: an expectation which Angier is possibly struggling with. The contrast here of Angier's view of Borden ",
+          "as undeservedly enjoying both family and work, against Borden struggling with the same, is another important concept: obsession is superficially driven. Angier led himself down a destructive spiral, out of the idea ",
+          "that Borden was happy in his obsession, which was an illusion that wasn't true. Of course, we do not really see Borden's view as fully, with hints of the same jealousy & bewilderment for Angier's act, but it seems ",
+          "that this does not really affect Borden in the same way that it does Angier - with the former being more tormented by his inner split instead of the external Angier."
+        ],
+        [
+          "Crucially, Angier and Borden differ in how they fare in their internal conflict against obsession. Borden eventually wins, with the half of him that loves Sarah & Jess, remaining alive (the fanatic side dying), whereas ",
+          "Angier repeatedly (literally) kills the part of him that feels the consequences of his obsession. While the movie frames Angier's killing of his duplicates as a measure against trouble (especially with Angier's troubled ",
+          "history with dupes, and his dislike for their wanting some of his attention), I feel the killing was chiefly a figurative way of showing Angier killing the part of his conscience that suffers from his exploits ",
+          "(since acknowledging the suffering may only tempt him to stop the act). It is no coincidence that he chooses to drown his duplicates in the same (or similar) water tank that his wife died in: a symbol of obsession, and ",
+          "perhaps his subtle acceptance of the notion that people need to die for the obsessions of others. He does stop the act eventually though, to some credit."
+        ],
+        [
+          "So, ultimately we see obsession in two different directions. Borden is 1 man split in 2 ways, but eventually overcoming his obsession for perfection and instead sticking by Jess. Angier is 1 man, transforming negatively, ",
+          "eventually becoming so overcome by obsession that he regularly gambles with his soul, still winning nothing in the end. Even more strikingly, Borden comes back to kill Angier in the end, as a final comeuppance for exploiting ",
+          "his daughter & dooming him (just as Angier tried to kill him at the start): it seems then that both men recognised (at opposite points) that they were cancers to each other, and to society, and tried to wipe each other out. ",
+          "The only difference is that Angier developed in a way that even his own life became meaningless to him."
+        ]
+      ],
+      "trivia": [
+        "Root, Angier's on-stage double, announces that he has played Faust and Caesar in the past. Both characters were destroyed by their own ambition, as is Angier."
+      ],
+      "rating": 4.5,
+      "recommendations": "Whiplash."
     }
   ]
 }
