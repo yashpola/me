@@ -1325,6 +1325,74 @@
       ],
       "rating": 4.5,
       "recommendations": "Whiplash."
+    },
+    {
+      "include": true,
+      "order": 27,
+      "thumbnail": "https://media.posterlounge.com/img/products/710000/705308/705308_poster.jpg",
+      "clip": "https://www.youtube.com/embed/E1nSwpxRuJo?si=FLlRYxEcbowS8R3e",
+      "name": "American Psycho",
+      "year": 2000,
+      "boxOffice": 34200000,
+      "title": "American Psycho (2000)",
+      "subtitle": "Mary Harron | Christian Bale, Willem Dafoe",
+      "quote": "There is an idea of a Patrick Bateman. Some kind of abstraction. But there is no real me, only an entity.",
+      "thoughts": [
+        [
+          "I have a vague memory of this movie as about a sociopath trapped in the dark recesses of own mind, realising in the end that aside from not feeling real love, he is not to feel real punishment either - ",
+          "any sort of emotional closure is denied to him. ",
+          "But upon rewatch, I newly realised just how vulnerable Patrick Bateman is portrayed to be, trapped in a society that is meant to be just as sociopathic as he is. And I want to focus on his perspective. "
+        ],
+        [
+          "*Disclaimer: I write the rest of this from the perspective that Bateman imagined everything, and has committed no actual crimes yet."
+        ],
+        [
+          "I once read that the intersection of capitalism and the patriarchy is a state in which men are supposed to let other men exploit them at work, and women are ",
+          "in-turn supposed to let men exploit them at home. I feel that American Psycho represented a similar oppressive structure, with the portrayal of Patrick Batemen ",
+          "as haunted by a small-minded, superficial, prestige-hungry bunch of executives, thus motivating his private fantasies wherein he transmits his resulting pain onto ",
+          "the social margins of society: the homeless, sex workers, small-time models, etc. In essence, the groups he believes would let him enact his fantasies most easily. ",
+          "His self-doubt only catches up to him as he begins to fantasise out of bounds: killing his secretary, mass-murdering random civilians, and blowing up police officers. ",
+          "Did he reach the apex of his guilt? Maybe. But I believe these events were more-so a representation of his spiralling psychosis, couched by his complete isolation within ",
+          "the world. His fantasies get increasingly attention-seeking, and frankly absurd: chasing a woman while naked holding a chainsaw, and engaging in public shoot-ups. ",
+          "Attention-seeking, precisely because he is desperate for someone to acknowledge him beyond the facade he painstakingly maintains, and nobody ever gives that visibility to him even to the end. "
+        ],
+        [
+          "Of course, the imagined murder of Paul Allen, indeed the very start of an increasingly disturbing chain of homicidal fantasies, is an outlier (with Allen being a fellow ",
+          "privileged Yuppie instead of an easily overlooked stranger). I believe this was the indication to viewers that Bateman's real rage & depression stems from his working society. ",
+          "Each of them compete on the most banal of things (suits, business cards, lunch & dinner reservations, spectacle frames, etc), and sit around talking drudgery about jews & women. ",
+          "Allen symbolised the worst of this culture to Bateman (likely because he appeared to be succeeding through it), and Bateman scapegoated him for it. Do I believe Bateman is truly ",
+          "an intellectual beyond his peers, instead of the pseudo-intellectual that viewers may suspect him to be? Honestly, yes. His critiques of music, monologued to his secretary & victims ",
+          "(the only ones who would fully hear him out), and his platitudinal speeches about morality & civil society to his coworkers (greeted only by mockery & eye-rolls); I believe these are ",
+          "his genuine interests, and are core aspects of his personality that are disregarded by or unknown to his peers in favour of shallow talk of materialism and politics - which disgusts him. ",
+          "Yet, my view is that he does not truly identify that this is the cause of his anguish until later. He spasms in his own pain & isolation, resuming the facade where necessary."
+        ],
+        [
+          "Two things which are interesting while we're here: the recurring theme of various characters being mistaken both in name & face by distant colleagues (to the end that his own lawyer couldn't ",
+          "recognise him), and the character of Luis, a closeted homosexual in a deeply homophobic society. The first bit just grounds the notion of blurred identity in the film, deepening Bateman's psychosis ",
+          "regarding not being seen & having to put up a constant performance. There is something interesting too in Allen's total disappearance being eventually dismissed due to supposed sightings in London ",
+          "(or was some other Yuppie mistaken for him?) - it seems that Bateman is not the only victim of loss of identity. It's a cultural phenomenon & we just get to see Batmen's inner-recoil against it. ",
+          "The second bit, I believe is more of a parallel commentary on toxic masculinity. They say that a straight man's worst fear is being seen (objectified) by gay men in the same way he sees (objectifies) ",
+          "women, and I believe that was the notion in-play here. Bateman, the violent & misogynistic murderer who sadistically toys with sex workers as if it were nothing, is absolutely spooked by the smallest ",
+          "advancement on him by Luis. Interestingly, prior to being spooked, he was ready to murder Luis over his having the superior business card. Why did he drop the attempt? Perhaps a mix of fear and complete ",
+          "disgust. Luis doesn't deserve a space even in his cruellest fantasy."
+        ],
+        [
+          "Back to Allen, I believe it is no coincidence that he was reported missing at the same time Bateman fantasised killing him, setting off an investigation which put Bateman on the defensive against the ",
+          "prying Detective Kimball. The whole ordeal triggered Bateman's self-litigation of his worsening psychosis, with the detective's questions pushing Bateman to a mental corner. With Allen's disappearance/murder, ",
+          "Bateman began to identify the root of his psychosis and by the end of the film he has finally successfully done so. "
+        ],
+        [
+          "However, where does he go from there? He does not get treatment (the pills don't seem to be working), nor does he talk about his psychosis (although we do not know what conspired after Jean saw his gruesome ",
+          "(drawings). He decides that he no longer needs to feel guilt or find a healthy outlet for his pain, because he has finally decided that everyone else is just as poorly functioning as human beings as him. ",
+          "Whether he has determined to turn fantasy into reality and genuinely inflict his pain onto others or simply start speaking his mind more about the pain he feels, it is unclear."
+        ]
+      ],
+      "trivia": [
+        "Christian Bale insisted on getting Bret Easton Ellis's approval for his portrayal before filming and arranged a meeting. Bale showed up to the meeting dressed and groomed as Bateman, even introducing himself as \"Patrick Bateman\". ",
+        "After 10 minutes Easton Ellis begged Bale to stop because his hands were shaking and he could not take it anymore. Easton Ellis has said this was the single creepiest moment of his life."
+      ],
+      "rating": 4.5,
+      "recommendations": "Fight Club, Taxi Driver, Se7en."
     }
   ]
 }

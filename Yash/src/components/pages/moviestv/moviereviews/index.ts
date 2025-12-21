@@ -1,3 +1,4 @@
+import AmericanPsycho from "./AmericanPsycho";
 import Arrival from "./Arrival";
 import ASpaceOdyssey from "./ASpaceOdyssey";
 import Birdman from "./Birdman";
@@ -26,6 +27,7 @@ import ThereWillBeBlood from "./ThereWillBeBlood";
 import TrainingDay from "./TrainingDay";
 
 export {
+  AmericanPsycho,
   Arrival,
   ASpaceOdyssey,
   Birdman,

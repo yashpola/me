@@ -3,6 +3,7 @@ import {
   TVComponentMapType,
 } from "../../../utils/typedefs/MoviesTVCustomTypes.ts";
 import {
+  AmericanPsycho,
   Arrival,
   ASpaceOdyssey,
   Birdman,
@@ -38,6 +39,7 @@ import {
 } from "./tvreviews/index.ts";
 
 export const MovieComponentMap: MovieComponentMapType = {
+  AmericanPsycho,
   Arrival,
   Birdman,
   Casino,

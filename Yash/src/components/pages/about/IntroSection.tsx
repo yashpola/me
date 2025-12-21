@@ -86,8 +86,9 @@ export default function IntroSection() {
           </a>
         </li>
         <li>
-          Recently completed a half-marathon (3:06:00), now training speed for
-          2.4k (goal: 0:11:00)
+          Recently completed a half-marathon (03:01:00), now training speed for
+          2.4k (goal: 0:11:00). Once a week: A fast 5k (aiming for 0:25:00), and
+          a slower 10k (aiming for 01:00:00)
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
@@ -178,7 +179,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 13/12/2025
+        This page was last updated on: 21/12/2025
       </footer>
     </div>
   );
