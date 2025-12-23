@@ -165,7 +165,7 @@
       "recommendations": "The Social Network, The Imitation Game, Dunkirk."
     },
     {
-      "include": true,
+      "include": false,
       "order": 5,
       "thumbnail": "https://i.pinimg.com/736x/78/6b/57/786b57d7c85d6d04d630429b59b1075f.jpg",
       "clip": "https://www.youtube.com/embed/Uz0IOW8fV64?si=k7HTV5GCS02J2xqY",
@@ -1393,6 +1393,97 @@
       ],
       "rating": 4.5,
       "recommendations": "Fight Club, Taxi Driver, Se7en."
+    },
+    {
+      "include": true,
+      "order": 28,
+      "thumbnail": "https://i.pinimg.com/736x/78/6b/57/786b57d7c85d6d04d630429b59b1075f.jpg",
+      "clip": "https://www.youtube.com/embed/Uz0IOW8fV64?si=k7HTV5GCS02J2xqY",
+      "name": "Sicario",
+      "year": 2015,
+      "boxOffice": 85000000,
+      "title": "Sicario (2015)",
+      "subtitle": "Denis Villeneuve | Emily Blunt, Benicio Del Toro, Josh Brolin",
+      "quote": "You're asking me how a watch works. For now, let's just keep an eye on the time.",
+      "thoughts": [
+        [
+          "My 3rd watch of Sicario, and it actually gets better every time. What I remember already noticing on the first watch, is something I feel I'm able to ",
+          "more fully express now: the care that Sicario takes to represent the depravity of the situation and crucially, the effect it has on all parties. "
+        ],
+        [
+          "When films from Hollywood are made on subjects like these, they're usually criticised of at-best simplifying, and at-worst propagandising. Even something ",
+          "with a more modern sensibility like Alex Garland's Warfare, for example, is suspect of minimising the harms of American Imperialism because it focuses too ",
+          "much on the victimhood of the perpetrators and not enough on that of the people whose homes are invaded to this day (their pain is implied, never explored). ",
+          "The War on Drugs is obviously slightly different, in-that its not so clearly motivated by selfish imperialism. Perhaps Matt (Josh Brolin) was genuine when he ",
+          "speaks of the objective of the type of black ops portrayed as being to salvage the millions of US citizens who are hooked on hard drugs, or worse become ",
+          "collateral in cartel retaliation (the event that kicked off the film, and brought Kate into the action). ",
+          "Still, the story could have fallen into the same trap of objectifying the Mexicans, using them only as moustache-twirling antagonists and nothing more. ",
+          "It importantly doesn't. The evidence? At least 3, my highlights: "
+        ],
+        [
+          "(1) The portrayal of Officer Silvio, narrated orthogonally to the main story and not merged-in until the final conflict. Its important to show that those ",
+          "\"on the other side\", like him, also have entirely normal lives (a son who loves football whom he cares for, a wife who dotes on them), and are not generic. ",
+          "They should not only become relevant as scapegoats for the personal development of the protagonists. Once we are first exposed to Silvio's civilian life with ",
+          "bias as to his moral character, can we then feel an earned melancholy at the final shot of his son looking at his dad's empty bed, no longer able to play ",
+          "football with him forever. Of course, we should feel sad nonetheless, but that's exactly what elevates Sicario - in that it does not lazily ask us to conjure ",
+          "up the necessary emotions at \"theoretically\" sad events. It uses effective storytelling like this to induce an authentic reaction."
+        ],
+        [
+          "(2) When the cartel boss, Fausto, drops the context of \"Who do you think we learnt it from?\". This is a transparent commentary on the US Government's complicity ",
+          "in regularly creating & arming militias (like cartels) as part of efforts to destabilise target regimes and/or manipulate the order to their liking. While some ",
+          "may view this dialogue as veering toward tawdry exposition, I feel that it complements very well the talk that Matt has with Kate in-parallel outside. He admits ",
+          "as much the desire of the US Govt to control the narrative, propping up \"bad\" actors if & when necessary. This shifts Fausto's 1-liner from a cliched last-ditch ",
+          "survival attempt, to genuine historical context that he wants to remind Alejandro of. "
+        ],
+        [
+          "(3) The final shot of the movie being that of Silvio's wife, son, and the other families at the football ground. This to me, is the most conscious choice that could've ",
+          "been made to clarify where Sicario wanted to put the most nuance in the story. Ultimately, Kate & Reg are alive and relatively safe, and Matt and Alejandro will move on ",
+          "to their next op. It is people like Silvio's wife & son who are forced to swallow rather quickly their personal tragedy - another indictment of how the costs exacted by ",
+          "the War on Drugs has become their life; a levy they must be ready to pay anytime."
+        ],
+        [
+          "It's also interesting to me how Ted and Silvio mirror each other, both corrupt cops in their respective countries. Was this a purposeful reflection? Maybe. I feel ",
+          "that both of them paid a very heavy price for being mere cogs in a very unforgiving machine (Ted being tortured and then likely imprisoned; Silvio murdered). On the ",
+          "moral plane, they were on the receiving end of Alejandro's rage at these \"low-level\" cogs selling-out the integrity of their positions for measly rewards. In other ",
+          "words, he detested what he perceived to be a complete lack of spine. Obviously, its more nuanced than that. There is no viable exit from this line of business for ",
+          "cogs like Ted and Silvio, especially when they have people they care about or livelihoods to be made. Perhaps the point of the mirroring was for its own sake, to say ",
+          "that their behaviour is an artefact of human nature. Being a corrupt cop at the dregs of a dark and massive operation is not exclusive to \"lawless lands\" like Mexico, ",
+          "as may be simplistically expected."
+        ],
+        [
+          "One more thing I liked about Sicario is Kate's role in it. Just as Matt exploited Kate to legitimise his black op, I feel that the story itself exploited Kate to ",
+          "intercept our feelings about the proceedings. Often, we are naturally directed to imagine ourselves in the protagonists' shoes. Again, the issue with films on ",
+          "subjects like these is that even through the trauma depicted, people still end-up desiring the glory of the combatant whose POV they're fitted with. The average ",
+          "viewer, when comparing their uneventful life to that of the war veteran they see shooting, stabbing, screaming, and sprinting through conflict, can't help but wish ",
+          "to share in that scenario (no-matter the side-effects). Sicario cuts us off at the pass here, and shows us exactly how we would act: helpless, like Kate. We think we ",
+          "would at-least have the decency to whistleblow on the whole operation, but even raising our pistol at Alejandro, we still cannot bring ourselves to do anything because ",
+          "we follow the rules to the letter for fear of prosecution otherwise (either by us to our inner selves, or by some authority). "
+        ],
+        [
+          "This is another interesting thing - was Kate's objection to everything an ethical one, or a legal one? There are good reasons to conclude ethical, given how discomfited ",
+          "she felt shooting a Federale at the start, or her going out of the way to disarm Alejandro as he was brazenly coercing Officer Silvio (instead of taking Matt's advice ",
+          "and letting things quietly blow over). Yet, it is also implied heavily that she is more concerned about procedure, and would be more comfortable acting on things as ",
+          "long as it were formally sanctioned. It could be both an ethical & legal objection too. She wrestles with the Kafkaesque-nature of her mission, wishing for clearer ",
+          "orders, but is also at odds with the general spirit of the mission. Again, its a very rich food for thought, when its framed as a challenge to us viewers."
+        ],
+        [
+          "A long analysis can also be written about the nature of Alejandro's vendetta itself; leading to his cold-blooded murder of Fausto's wife & kids, his rape (or general ",
+          "torture) of Guillermo, his brutality with Ted, and more. To me, the standout line is: \"that's what we're dealing with\". Matt says this about Fausto's execution of ",
+          "Alejandro's family, to justify his extrajudicial murder to Kate, but honestly the same can be said of Matt & Alejandro themselves. In the end, they're all humans who ",
+          "share the ability to become inhuman. Everyone declares \"all bets are off\" when it comes to furthering their own interests, and the ones to suffer most in the end ",
+          "are those didn't choose to gamble."
+        ],
+        [
+          "Sicario opened with its lead message: that the term \"Sicario\" has meant both invader & defender depending on who you ask, and this is exactly what we see in the ",
+          "film. We start with the usual protagonists - the US Authorities - acting as the defenders of their home (from cartel violence), and we ended with them becoming ",
+          "equal-opportunity invaders with innocent bystanders in Mexico knowing their permission to live could be revoked any day."
+        ]
+      ],
+      "rating": 5,
+      "trivia": [
+        "The score of Sicario was inspired from Jaws (1975), to exude ominous and sinister themes."
+      ],
+      "recommendations": "Prisoners, Incendies."
     }
   ]
 }
