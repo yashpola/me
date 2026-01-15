@@ -18,6 +18,7 @@ import Pushpa2 from "./Pushpa2";
 import Sicario from "./Sicario";
 import TheAviator from "./TheAviator";
 import TheBatman from "./TheBatman";
+import TheDarkKnight from "./TheDarkKnight";
 import TheNorthman from "./TheNorthman";
 import ThePrestige from "./ThePrestige";
 import ThePromisedLand from "./ThePromisedLand";
@@ -47,6 +48,7 @@ export {
   Sicario,
   TheAviator,
   TheBatman,
+  TheDarkKnight,
   TheNorthman,
   TheSubstance,
   ThePrestige,

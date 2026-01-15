@@ -93,10 +93,10 @@ export default function IntroSection() {
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
           <u>On the Shortness of Life</u> (Seneca). Currently reading:{" "}
-          <u>Essays by</u> (John Stuart Mill), <u>A Dance with Dragons</u>{" "}
-          (George R.R. Martin). Next reads:{" "}
+          <u>Essays by</u> (John Stuart Mill), <u>The Fellowship of the Ring</u>{" "}
+          (J.R.R. Tolkien). Next reads:{" "}
           <u>An Essay Concerning the Human Understanding</u> (John Locke), and{" "}
-          <u>The Fellowship of the Ring</u> (J.R.R. Tolkien).
+          <u>The Two Towers</u> (J.R.R. Tolkien).
         </li>
         <li>
           I want to get back into the keyboard (the musical type), and pick up
@@ -105,12 +105,15 @@ export default function IntroSection() {
         </li>
       </ul>
       <p>
-        <u>What I'm up to now (December Holidays):</u>
+        <u>What I'm up to now (Spring '26'):</u>
       </p>
       <ul>
-        <li>Unwinding!</li>
-        <li>Updating my website.</li>
-        <li>ML Research.</li>
+        <li>Computer Vision and Pattern Recognition.</li>
+        <li>Global Social Thought.</li>
+        <li>Science and Society.</li>
+        <li>
+          Independent Study: Historical Overview of the Gradient Descent method.
+        </li>
       </ul>
       <p>
         <u>What I use this site for:</u>
@@ -179,7 +182,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 21/12/2025
+        This page was last updated on: 15/01/2026
       </footer>
     </div>
   );
