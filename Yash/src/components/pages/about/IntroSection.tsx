@@ -78,9 +78,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Zootopia 2 (2025). Current Top 5:
-          Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey, and
-          The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: Marty Supreme (2025). Current Top
+          5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey,
+          and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
@@ -113,6 +113,17 @@ export default function IntroSection() {
         <li>Science and Society.</li>
         <li>
           Independent Study: Historical Overview of the Gradient Descent method.
+        </li>
+        <li>
+          Research Assistant in the{" "}
+          <a href="https://cssh.nus.edu.sg/" target="_blank">
+            NUS Center for Computational Social Science and Humanities
+          </a>
+          .
+        </li>
+        <li>
+          Auditing: Fundamentals of Logic in CS, Linear Algebra II, Computing
+          for Quantitative Finance
         </li>
       </ul>
       <p>
