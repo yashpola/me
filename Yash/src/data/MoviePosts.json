@@ -930,7 +930,7 @@
     {
       "include": true,
       "order": 22,
-      "thumbnail": "https://postertok.com/wp-content/uploads/2024/02/5337.webp",
+      "thumbnail": "https://image.tmdb.org/t/p/original/aeUVs9t8i9ZsqhL2IOYCfVQpMsu.jpg",
       "clip": "https://www.youtube.com/embed/TcG157VFbuY?si=yGdj8GqHhUdrimpp",
       "name": "The Truman Show",
       "year": 1998,
@@ -1329,7 +1329,7 @@
     {
       "include": true,
       "order": 27,
-      "thumbnail": "https://media.posterlounge.com/img/products/710000/705308/705308_poster.jpg",
+      "thumbnail": "https://cdn.displate.com/artwork/857x1200/2024-12-18/6a9e59fb-caea-4972-bb34-670ffd7c2634.jpg",
       "clip": "https://www.youtube.com/embed/E1nSwpxRuJo?si=FLlRYxEcbowS8R3e",
       "name": "American Psycho",
       "year": 2000,
@@ -1560,6 +1560,34 @@
         "Many believe that one of the key reasons why the Academy moved from five Best Picture nominations to ten was because two of the best received movies of the year, this movie and WALL·E (2008), were not amongst the five nominees."
       ],
       "recommendations": "Inception, Sicario."
+    },
+    {
+      "include": false,
+      "order": 30,
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5c93c8bcaadd3439cb8eee02/1570028032849-9FZK7WV96LYJDHIJLLAX/The+Prestige.png?format=1500w",
+      "clip": "https://www.youtube.com/embed/J8ZXT2HTxqE?si=M2VJoJEfb53ZtLqx",
+      "name": "Breaking Bad",
+      "year": 2008,
+      "boxOffice": 0,
+      "title": "Breaking Bad (2008)",
+      "subtitle": "Vince Gilligan | Bryan Cranston, Aaron Paul",
+      "quote": "I did it for me. I liked it, I was good at it, and it was...really...I was alive.",
+      "thoughts": [
+        [
+          "What's the value of being good at something? Is it worth becoming a fugitive drug lord, hated by your family, with several deaths at ur doorstep? I  "
+        ],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""]
+      ],
+      "trivia": [
+        "Root, Angier's on-stage double, announces that he has played Faust and Caesar in the past. Both characters were destroyed by their own ambition, as is Angier."
+      ],
+      "rating": 5,
+      "recommendations": "Better Call Saul, Mad Men, The Sopranos."
     }
   ]
 }

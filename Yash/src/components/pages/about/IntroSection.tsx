@@ -78,17 +78,17 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: Marty Supreme (2025). Current Top
-          5: Arrival, Shutter Island, Taare Zameen Par, 2001: A Space Odyssey,
+          I'm a movie enjoyer! Last watched: The Umbrellas of Cherbourg (1964).
+          Current Top 5: Arrival, Shutter Island, Taare Zameen Par, LaLaLand,
           and The King of Comedy.{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             Current watchlist.
           </a>
         </li>
         <li>
-          Recently completed a half-marathon (03:01:00), now training speed for
-          2.4k (goal: 0:11:00). Once a week: A fast 5k (aiming for 0:25:00), and
-          a slower 10k (aiming for 01:00:00)
+          Completed a half-marathon last December. Now I take it easier with a 5
+          or 10k every week. Aim to get my speed back up with 3 milestones:
+          2.4km in 11:00, 5km in 25:00, and 10km in 60:00.
         </li>
         <li>
           I like philosophy, fantasy, & sci-fi. Last read:{" "}
@@ -105,25 +105,15 @@ export default function IntroSection() {
         </li>
       </ul>
       <p>
-        <u>What I'm up to now (Spring '26'):</u>
+        <u>What I'm up to now (Summer '26'):</u>
       </p>
       <ul>
-        <li>Computer Vision and Pattern Recognition.</li>
-        <li>Global Social Thought.</li>
-        <li>Science and Society.</li>
-        <li>
-          Independent Study: Historical Overview of the Gradient Descent method.
-        </li>
         <li>
           Research Assistant in the{" "}
           <a href="https://cssh.nus.edu.sg/" target="_blank">
             NUS Center for Computational Social Science and Humanities
           </a>
           .
-        </li>
-        <li>
-          Auditing: Fundamentals of Logic in CS, Linear Algebra II, Computing
-          for Quantitative Finance
         </li>
       </ul>
       <p>
@@ -193,7 +183,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 15/01/2026
+        This page was last updated on: 01/06/2026
       </footer>
     </div>
   );
