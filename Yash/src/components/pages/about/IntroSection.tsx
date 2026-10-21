@@ -7,6 +7,7 @@ import {
   Instagram,
   LinkedIn,
   Movie,
+  SpeakerNotes,
   Telegram,
 } from "@mui/icons-material";
 import { Icon, Tooltip } from "@mui/material/";
@@ -41,6 +42,11 @@ export default function IntroSection() {
       link: "https://www.instagram.com/yashypola/",
     },
     {
+      name: "Substack",
+      icon: <SpeakerNotes sx={{ color: "purple" }} />,
+      link: "https://substack.com/@yashypola",
+    },
+    {
       name: "Letterboxd",
       icon: <Movie sx={{ color: "orange" }} />,
       link: "https://boxd.it/7HLmD",
@@ -70,56 +76,61 @@ export default function IntroSection() {
         }}
       />
       <p>
-        I'm Yashwit Polapragada but you can call me Yash! I'm a Senior at NUS
-        College, studying Computer Science.
+        I'm Yashwit Polapragada but you can call me Yash! I'm a recent NUS CS
+        grad & current full-time Research Assistant in the NUS DISA, working for
+        the{" "}
+        <a href="https://cssh.nus.edu.sg/" target="_blank">
+          Center for Computational Social Sciences and Humanities
+        </a>{" "}
+        on a project exploring LLM-driven simulations to refine public policy
+        creation.
       </p>
       <p>
         <u>Tidbits:</u>
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: The Umbrellas of Cherbourg (1964).
-          Current Top 5: Arrival, Shutter Island, Taare Zameen Par, LaLaLand,
-          and The King of Comedy.{" "}
+          I'm a movie enjoyer! Last watched: The Social Reckoning (2026).
+          Current Top 5: Arrival, Taare Zameen Par, Spirited Away, Gladiator,
+          and Dune 2. Here's my{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
-            Current watchlist.
+            current watchlist.
           </a>
         </li>
         <li>
-          Completed a half-marathon last December. Now I take it easier with a 5
-          or 10k every week. Aim to get my speed back up with 3 milestones:
-          2.4km in 11:00, 5km in 25:00, and 10km in 60:00.
+          Completed a half-marathon last December. Took a break from running for
+          4 months and am just slowly restarting with 5ks before I ramp back up
+          to 10ks.
         </li>
         <li>
-          I like philosophy, fantasy, & sci-fi. Last read:{" "}
-          <u>On the Shortness of Life</u> (Seneca). Currently reading:{" "}
-          <u>Essays by</u> (John Stuart Mill), <u>The Fellowship of the Ring</u>{" "}
-          (J.R.R. Tolkien). Next reads:{" "}
-          <u>An Essay Concerning the Human Understanding</u> (John Locke), and{" "}
-          <u>The Two Towers</u> (J.R.R. Tolkien).
+          I like philosophy, fantasy, & sci-fi. Last read: <u>Berserk Vol. 1</u>{" "}
+          (Miura Kentarou). Currently reading: <u>Essays by</u> (John Stuart
+          Mill), and <u>The Left Hand of Darkness</u> (Ursula K. Le Guin). Next
+          reads: <u>An Essay Concerning the Human Understanding</u> (John
+          Locke), and <u>LOTR: Fellowship of the Ring</u> (J.R.R. Tolkien).
         </li>
         <li>
-          I want to get back into the keyboard (the musical type), and pick up
-          lego building as a hobby (latest build: NASA Discovery Shuttle with
-          Hubble Space Telescope on 07/12/2024).
+          I am slowly getting back into the keyboard (the musical type), and in
+          the long-term I want to pick up lego building as a hobby (latest
+          build: NASA Discovery Shuttle with Hubble Space Telescope on
+          07/12/2024).
         </li>
       </ul>
       <p>
-        <u>What I'm up to now (Summer '26'):</u>
+        <u>What I'm up to now in my job:</u>
       </p>
       <ul>
         <li>
-          Research Assistant in the{" "}
-          <a href="https://cssh.nus.edu.sg/" target="_blank">
-            NUS Center for Computational Social Science and Humanities
-          </a>
-          .
+          Deep-dive literature review & coding-up simple experiments! My harness
+          of choice is Google Antigravity and I mostly use Gemini 3.8-Flash
+          (haven't tried Argon yet).
         </li>
       </ul>
       <p>
         <u>What I use this site for:</u>
       </p>
       <ul>
+        <li>Introducing myself (obviously!),</li>
         <li>
           Recording my{" "}
           <Anchor
@@ -129,8 +140,8 @@ export default function IntroSection() {
             title={"Thoughts tab link"}
             label={"thoughts"}
           />{" "}
-          on algorithm problems I do in my free-time, and the courses I take in
-          school.
+          on problems I do for fun, anything interesting I learn, and some
+          courses I took in school.
         </li>
         <li>
           Writing about{" "}
@@ -163,7 +174,7 @@ export default function IntroSection() {
         </li>
       </ul>
       <p>
-        <u>Find me at these links:</u>
+        <u>Find more of me at these links:</u>
       </p>
       {socials.map((social, idx) => {
         return (
@@ -183,7 +194,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 01/06/2026
+        This page was last updated on: 21/10/2026
       </footer>
     </div>
   );
