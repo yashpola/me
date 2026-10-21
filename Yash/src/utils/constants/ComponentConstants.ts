@@ -48,6 +48,8 @@ export const ProblemDifficulties = Object.freeze(["EASY", "MEDIUM", "HARD"]);
 
 export const ProblemTopics = Object.freeze([
   "array",
+  "backtracking",
+  "binary search",
   "binary tree",
   "bit manipulation",
   "depth-first search",

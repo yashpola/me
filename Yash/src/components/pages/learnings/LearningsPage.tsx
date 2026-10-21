@@ -244,7 +244,10 @@ export default function LearningsPage() {
   const [
     { tableQueryParams = {} },
     { executeUpdateTableQueryParams = () => {} },
-  ] = useGridPagination({ data: filteredProblems });
+  ] = useGridPagination({
+    data: filteredProblems,
+    cacheKey: "GridParams-Learnings",
+  });
   const {
     page = 1,
     pageSize = 5,

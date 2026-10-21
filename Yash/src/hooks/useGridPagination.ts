@@ -7,13 +7,30 @@ export const ACTION_TYPES = {
   UPDATE_TOTALCOUNT: "UPDATE_TOTALCOUNT",
 };
 
-export default function useGridPagination({ data }: { data: any[] }) {
+export default function useGridPagination({
+  data,
+  cacheKey = "Cached Grid Params",
+}: {
+  data: unknown[];
+  cacheKey?: string;
+}) {
   const initialParams: tableQueryParamsType = (() => {
-    const cached = localStorage.getItem("Cached Grid Params");
-    if (cached) {
-      try {
-        return JSON.parse(cached);
-      } catch {}
+    if (cacheKey) {
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) {
+        try {
+          const parsed = JSON.parse(cached);
+          return {
+            page: 1,
+            pageSize: 5,
+            searchTerm: "",
+            ...parsed,
+            totalCount: data?.length || 0,
+          };
+        } catch {
+          // ignore corrupted cache
+        }
+      }
     }
     return {
       page: 1,
@@ -31,15 +48,25 @@ export default function useGridPagination({ data }: { data: any[] }) {
     initialParams
   );
 
+  const { page = 1, pageSize = 5, totalCount } = tableQueryParams;
+
   useEffect(() => {
-    localStorage.setItem(
-      "Cached Grid Params",
-      JSON.stringify(tableQueryParams)
-    );
-  }, [tableQueryParams]);
+    const currentTotal = data?.length || 0;
+    const maxPage = Math.max(1, Math.ceil(currentTotal / pageSize));
+    if (page > maxPage) {
+      updateTableQueryParams({ page: 1, totalCount: currentTotal });
+    } else if (totalCount !== currentTotal) {
+      updateTableQueryParams({ totalCount: currentTotal });
+    }
+  }, [data?.length, page, pageSize, totalCount]);
+
+  useEffect(() => {
+    if (cacheKey) {
+      localStorage.setItem(cacheKey, JSON.stringify(tableQueryParams));
+    }
+  }, [cacheKey, tableQueryParams]);
 
   const executeUpdateTableQueryParams = (action: string) => {
-    const { page = 1 } = tableQueryParams || {};
     switch (action) {
       case ACTION_TYPES.INCREMENT_PAGE:
         updateTableQueryParams({ page: page + 1 });
@@ -48,7 +75,7 @@ export default function useGridPagination({ data }: { data: any[] }) {
         updateTableQueryParams({ page: page - 1 });
         break;
       case ACTION_TYPES.UPDATE_TOTALCOUNT:
-        updateTableQueryParams({ totalCount: data?.length });
+        updateTableQueryParams({ totalCount: data?.length || 0 });
         break;
     }
   };

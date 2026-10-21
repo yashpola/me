@@ -55,17 +55,20 @@ export default function MovieTVDashboard({
   });
 
   const filteredAndSortedReviews = useMemo(() => {
-    return reviews
+    return [...reviews]
+      .filter((entry) => ("include" in entry ? entry?.include : true))
       .sort((review1, review2) => {
         return SortByCustomRule(review1, review2, sortRule);
-      })
-      .filter((entry) => ("include" in entry ? entry?.include : true));
-  }, [sortRule]);
+      });
+  }, [reviews, sortRule]);
 
   const [
     { tableQueryParams = {} },
     { executeUpdateTableQueryParams = () => {} },
-  ] = useGridPagination({ data: filteredAndSortedReviews });
+  ] = useGridPagination({
+    data: filteredAndSortedReviews,
+    cacheKey: `GridParams-${type}`,
+  });
   const {
     page = 1,
     pageSize = 5,
