@@ -13,6 +13,7 @@ import Goodfellas from "./Goodfellas";
 import InglouriousBasterds from "./InglouriousBasterds";
 import KillersoftheFlowerMoon from "./KillersoftheFlowerMoon";
 import LaLaLand from "./LaLaLand";
+import Moonlight from "./Moonlight";
 import NoCountryforOldMen from "./NoCountryforOldMen";
 import OldBoy from "./OldBoy";
 import Oppenheimer from "./Oppenheimer";
@@ -49,6 +50,7 @@ export {
   InglouriousBasterds,
   KillersoftheFlowerMoon,
   LaLaLand,
+  Moonlight,
   NoCountryforOldMen,
   OldBoy,
   Oppenheimer,

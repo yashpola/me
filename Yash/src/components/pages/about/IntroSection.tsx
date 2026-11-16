@@ -90,24 +90,25 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: The Social Reckoning (2026).
-          Current Top 5: Arrival, Taare Zameen Par, Spirited Away, Gladiator,
-          and Dune 2. Here's my{" "}
+          I'm a movie enjoyer! Last watched: Moonlight (11/11/2026). Current Top
+          5: Arrival, Taare Zameen Par, Spirited Away, Gladiator, and Dune 2.
+          Here's my{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             current watchlist.
           </a>
         </li>
         <li>
-          Completed a half-marathon last December. Took a break from running for
-          4 months and am just slowly restarting with 5ks before I ramp back up
-          to 10ks.
+          Completed a half-marathon last December. Took a break from running
+          this year for 5 months (June-Oct) and am just slowly restarting with
+          5ks before I ramp back up to 10ks.
         </li>
         <li>
-          I like philosophy, fantasy, & sci-fi. Last read: <u>Berserk Vol. 1</u>{" "}
-          (Miura Kentarou). Currently reading: <u>Essays by</u> (John Stuart
-          Mill), and <u>The Left Hand of Darkness</u> (Ursula K. Le Guin). Next
-          reads: <u>An Essay Concerning the Human Understanding</u> (John
-          Locke), and <u>LOTR: Fellowship of the Ring</u> (J.R.R. Tolkien).
+          I like philosophy, fantasy, & sci-fi. Last read:{" "}
+          <u>The Three Musketeers</u> (Alexandre Dumas). Currently reading:{" "}
+          <u>An Essay Concerning the Human Understanding</u> (John Locke), and{" "}
+          <u>LOTR: Fellowship of the Ring</u> (J.R.R. Tolkien). Next reads:{" "}
+          <u>The Republic (Plato)</u> and{" "}
+          <u>LOTR: The Two Towers (J.R.R. Tolkien)</u>.
         </li>
         <li>
           I am slowly getting back into the keyboard (the musical type), and in
@@ -123,7 +124,10 @@ export default function IntroSection() {
         <li>
           Deep-dive literature review & coding-up simple experiments! My harness
           of choice is Google Antigravity and I mostly use Gemini 3.8-Flash
-          (haven't tried Argon yet).
+          (haven't tried Hydrogen, Argon, or Carbon yet).
+        </li>
+        <li>
+          Coming up with research proposals for the next 6-8 months of work.
         </li>
       </ul>
       <p>
@@ -194,7 +198,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 21/10/2026
+        This page was last updated on: 16/11/2026
       </footer>
     </div>
   );
