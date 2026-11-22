@@ -90,9 +90,9 @@ export default function IntroSection() {
       </p>
       <ul>
         <li>
-          I'm a movie enjoyer! Last watched: All We Imagine As Light
-          (17/11/2026). Current Top 5: Arrival, Taare Zameen Par, Spirited Away,
-          Gladiator, and Dune 2. Here's my{" "}
+          I'm a movie enjoyer! Last watched: Rocky (21/11/2026). Current Top 5:
+          Arrival, Taare Zameen Par, Spirited Away, Gladiator, and Dune 2.
+          Here's my{" "}
           <a href="https://boxd.it/BAzL8" target="_blank">
             current watchlist.
           </a>
@@ -124,11 +124,9 @@ export default function IntroSection() {
         <li>
           Deep-dive literature review & coding-up simple experiments! My harness
           of choice is Google Antigravity and I mostly use Gemini 3.8-Flash but
-          am trying Hydrogen for coding specifically.
+          am trying Hydrogen for coding specifically. May want to try Neon too!
         </li>
-        <li>
-          Coming up with research proposals for the next 6-8 months of work.
-        </li>
+        <li>Refining research goals for the next 6-8 months of work.</li>
       </ul>
       <p>
         <u>What I use this site for:</u>
@@ -198,7 +196,7 @@ export default function IntroSection() {
           bottom: 0,
         }}
       >
-        This page was last updated on: 19/11/2026
+        This page was last updated on: 22/11/2026
       </footer>
     </div>
   );
